@@ -1,4 +1,4 @@
-;;; compiler.lisp --- 
+;;; compiler.lisp ---
 
 ;; copyright (C) 2012, 2013 David Vazquez
 ;; Copyright (C) 2012 Raimon Grau
@@ -68,7 +68,7 @@
         (incf index))
       output)))
 
-#+common-lisp
+#-jscl
 (defun indent (&rest string)
   (with-output-to-string (*standard-output*)
     (with-input-from-string (input (apply #'code string))
@@ -86,62 +86,6 @@
 ;;; value will be used, so we can optimize to avoid the VALUES
 ;;; function call.
 (defvar *multiple-value-p* nil)
-
-;; A very simple defstruct built on lists. It supports just slot with
-;; an optional default initform, and it will create a constructor,
-;; predicate and accessors for you.
-(defmacro def!struct (name &rest slots)
-  (unless (symbolp name)
-    (error "It is not a full defstruct implementation."))
-  (let* ((name-string (symbol-name name))
-         (slot-descriptions
-          (mapcar (lambda (sd)
-                    (cond
-                      ((symbolp sd)
-                       (list sd))
-                      ((and (listp sd) (car sd) (cddr sd))
-                       sd)
-                      (t
-                       (error "Bad slot description `~S'." sd))))
-                  slots))
-         (predicate (intern (concat name-string "-P"))))
-    `(progn
-       ;; Constructor
-       (defun ,(intern (concat "MAKE-" name-string)) (&key ,@slot-descriptions)
-         (list ',name ,@(mapcar #'car slot-descriptions)))
-       ;; Predicate
-       (defun ,predicate (x)
-         (and (consp x) (eq (car x) ',name)))
-       ;; Copier
-       (defun ,(intern (concat "COPY-" name-string)) (x)
-         (copy-list x))
-       ;; Slot accessors
-       ,@(with-collect
-          (let ((index 1))
-            (dolist (slot slot-descriptions)
-              (let* ((name (car slot))
-                     (accessor-name (intern (concat name-string "-" (string name)))))
-                (collect
-                    `(defun ,accessor-name (x)
-                       (unless (,predicate x)
-                         (error "The object `~S' is not of type `~S'" x ,name-string))
-                       (nth ,index x)))
-                ;; TODO: Implement this with a higher level
-                ;; abstraction like defsetf or (defun (setf ..))
-                (collect
-                    `(define-setf-expander ,accessor-name (x)
-                       (let ((object (gensym))
-                             (new-value (gensym)))
-                         (values (list object)
-                                 (list x)
-                                 (list new-value)
-                                 `(progn
-                                    (rplaca (nthcdr ,',index ,object) ,new-value) 
-                                    ,new-value)
-                                 `(,',accessor-name ,object)))))
-                (incf index)))))
-       ',name)))
-
 
 ;;; Environment
 
@@ -554,28 +498,36 @@
       (incf index))
     output))
 
-(defvar *literal-table* nil)
-(defvar *literal-counter* 0)
-
-;;; BOOTSTRAP MAGIC: During bootstrap, we record the macro definitions
-;;; as lists. Once everything is compiled, we want to dump the whole
-;;; global environment to the output file to reproduce it in the
+;;; BOOTSTRAP MAGIC: We record the macro definitions as lists during
+;;; the bootstrap. Once everything is compiled, we want to dump the
+;;; whole global environment to the output file to reproduce it in the
 ;;; run-time. However, the environment must contain expander functions
 ;;; rather than lists. We do not know how to dump function objects
-;;; itself, so we mark the definitions with this object and the
+;;; itself, so we mark the list definitions with this object and the
 ;;; compiler will be called when this object has to be dumped.
 ;;; Backquote/unquote does a similar magic, but this use is exclusive.
+;;;
+;;; Indeed, perhaps to compile the object other macros need to be
+;;; evaluated. For this reason we define a valid macro-function for
+;;; this symbol.
 (defvar *magic-unquote-marker* (gensym "MAGIC-UNQUOTE"))
+#-jscl
+(setf (macro-function *magic-unquote-marker*)
+      (lambda (form &optional environment)
+        (declare (ignore environment))
+        (second form)))
+
+(defvar *literal-table* nil)
+(defvar *literal-counter* 0)
 
 (defun genlit ()
   (code "l" (incf *literal-counter*)))
 
 (defun dump-symbol (symbol)
-  #+common-lisp
+  #-jscl
   (let ((package (symbol-package symbol)))
     (if (eq package (find-package "KEYWORD"))
-        (code "(new Symbol(" (dump-string (symbol-name symbol)) ", "
-              (dump-string (package-name package)) "))")
+        (code "(new Symbol(" (dump-string (symbol-name symbol)) ", " (dump-string (package-name package)) "))")
         (code "(new Symbol(" (dump-string (symbol-name symbol)) "))")))
   #+jscl
   (let ((package (symbol-package symbol)))
@@ -606,13 +558,17 @@
     ((floatp sexp) (float-to-string sexp))
     ((characterp sexp) (code "\"" (escape-string (string sexp)) "\""))
     (t
-     (or (cdr (assoc sexp *literal-table* :test #'equal))
+     (or (cdr (assoc sexp *literal-table* :test #'eql))
          (let ((dumped (typecase sexp
                          (symbol (dump-symbol sexp))
                          (string (dump-string sexp))
                          (cons
+                          ;; BOOTSTRAP MAGIC: See the root file
+                          ;; jscl.lisp and the function
+                          ;; `dump-global-environment' for futher
+                          ;; information.
                           (if (eq (car sexp) *magic-unquote-marker*)
-                              (ls-compile (cdr sexp))
+                              (ls-compile (second sexp))
                               (dump-cons sexp)))
                          (array (dump-array sexp)))))
            (if (and recursive (not (symbolp sexp)))
@@ -620,6 +576,8 @@
                (let ((jsvar (genlit)))
                  (push (cons sexp jsvar) *literal-table*)
                  (toplevel-compilation (code "var " jsvar " = " dumped))
+                 (when (keywordp sexp)
+                   (toplevel-compilation (code jsvar ".value = " jsvar)))
                  jsvar)))))))
 
 
@@ -1432,6 +1390,9 @@
 (define-builtin boundp (x)
   (js!bool (code "(" x ".value !== undefined)")))
 
+(define-builtin fboundp (x)
+  (js!bool (code "(" x ".fvalue !== undefined)")))
+
 (define-builtin symbol-value (x)
   (js!selfcall
     "var symbol = " x ";" *newline*
@@ -1579,6 +1540,14 @@
     (indent "r.push(" (ls-compile nil) ");" *newline*)
     "return r;" *newline*))
 
+;;; FIXME: should take optional min-extension.
+;;; FIXME: should use fill-pointer instead of the absolute end of array
+(define-builtin vector-push-extend (new vector)
+  (js!selfcall
+    "var v = " vector ";" *newline*
+    "v.push(" new ");" *newline*
+    "return v;"))
+
 (define-builtin arrayp (x)
   (js!bool
    (js!selfcall
@@ -1597,6 +1566,18 @@
     "var i = " n ";" *newline*
     "if (i < 0 || i >= x.length) throw 'Out of range';" *newline*
     "return x[i] = " value ";" *newline*))
+
+(define-builtin afind (value array)
+  (js!selfcall
+    "var v = " value ";" *newline*
+    "var x = " array ";" *newline*
+    "return x.indexOf(v);" *newline*))
+
+(define-builtin aresize (array new-size)
+  (js!selfcall
+    "var x = " array ";" *newline*
+    "var n = " new-size ";" *newline*
+    "return x.length = n;" *newline*))
 
 (define-builtin get-internal-real-time ()
   "(new Date()).getTime()")
@@ -1631,7 +1612,7 @@
             `(%js-vref ,var))))
 
 
-#+common-lisp
+#-jscl
 (defvar *macroexpander-cache*
   (make-hash-table :test #'eq))
 
@@ -1642,7 +1623,7 @@
     (if (and b (eq (binding-type b) 'macro))
         (let ((expander (binding-value b)))
           (cond
-            #+common-lisp
+            #-jscl
             ((gethash b *macroexpander-cache*)
              (setq expander (gethash b *macroexpander-cache*)))
             ((listp expander)
@@ -1655,7 +1636,7 @@
                ;; function with the compiled one.
                ;;
                #+jscl (setf (binding-value b) compiled)
-               #+common-lisp (setf (gethash b *macroexpander-cache*) compiled)
+               #-jscl (setf (gethash b *macroexpander-cache*) compiled)
                (setq expander compiled))))
           expander)
         nil)))
@@ -1670,7 +1651,7 @@
     ((and (consp form) (symbolp (car form)))
      (let ((macrofun (!macro-function (car form))))
        (if macrofun
-           (values (apply macrofun (cdr form)) t)
+           (values (funcall macrofun (cdr form)) t)
            (values form nil))))
     (t
      (values form nil))))
@@ -1689,7 +1670,7 @@
        (concat (translate-function function) arglist))
       ((and (symbolp function)
             #+jscl (eq (symbol-package function) (find-package "COMMON-LISP"))
-            #+common-lisp t)
+            #-jscl t)
        (code (ls-compile `',function) ".fvalue" arglist))
       (t
        (code (ls-compile `#',function) arglist)))))
