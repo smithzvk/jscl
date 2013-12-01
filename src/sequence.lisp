@@ -13,6 +13,20 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with JSCL.  If not, see <http://www.gnu.org/licenses/>.
 
+(/debug "loading sequence.lisp!")
+
+(defun length (seq)
+  (cond
+    ((stringp seq)
+     (string-length seq))
+    ((arrayp seq)
+     (oget seq "length"))
+    ((listp seq)
+     (list-length seq))))
+
+(defun sequencep (thing)
+  (or (listp thing) (vectorp thing)))
+
 (defun not-seq-error (thing)
   (error "`~S' is not of type SEQUENCE" thing))
 
@@ -48,12 +62,36 @@
         (when (funcall predicate x)
           (return x)))))
 
-(defun position (elt sequence &key key (test #'eql testp)
-                     (test-not #'eql test-not-p))
-  (do-sequence (x sequence index)
-    (when (satisfies-test-p elt x :key key :test test :testp testp
-                           :test-not test-not :test-not-p test-not-p ) 
-      (return index))))
+(defun position (elt sequence
+                 &key key (test #'eql testp)
+                   (test-not #'eql test-not-p)
+                   (start 0) end)
+  ;; TODO: Implement START and END efficiently for all the sequence
+  ;; functions.
+  (let ((end (or end (length sequence))))
+    (do-sequence (x sequence index)
+      (when (and (<= start index)
+                 (< index end)
+                 (satisfies-test-p elt x
+                                   :key key :test test :testp testp
+                                   :test-not test-not :test-not-p test-not-p))
+        (return index)))))
+
+;; TODO: need to support &key from-end
+(defun position-if (predicate sequence
+                 &key key (start 0) end)
+  ;; TODO: Implement START and END efficiently for all the sequence
+  ;; functions.
+  (let ((end (or end (length sequence))))
+    (do-sequence (x sequence index)
+      (when (and (<= start index)
+                 (< index end)
+                 (funcall predicate (if key (funcall key x) x)))
+        (return index)))))
+
+(defun position-if-not (predicate sequence
+                 &key key (start 0) end)
+  (position-if (complement predicate) sequence :key key :start start :end end))
 
 (defun remove (x seq &key key (test #'eql testp) (test-not #'eql test-not-p))
   (cond
@@ -63,7 +101,7 @@
      (let* ((head (cons nil nil))
             (tail head))
        (do-sequence (elt seq)
-         (unless (satisfies-test-p x elt :key key :test test :testp testp 
+         (unless (satisfies-test-p x elt :key key :test test :testp testp
                                    :test-not test-not :test-not-p test-not-p)
            (let ((new (list elt)))
              (rplacd tail new)
@@ -72,7 +110,7 @@
     (t
      (let (vector)
        (do-sequence (elt seq index)
-         (if (satisfies-test-p x elt :key key :test test :testp testp 
+         (if (satisfies-test-p x elt :key key :test test :testp testp
                                :test-not test-not :test-not-p test-not-p)
              ;; Copy the beginning of the vector only when we find an element
              ;; that does not match.
@@ -130,7 +168,7 @@
      (if b
        (let ((diff (- b a)))
          (cond
-           ((zerop  diff) ()) 
+           ((zerop  diff) ())
            ((minusp diff)
             (error "Start index must be smaller than end index"))
            (t
@@ -140,11 +178,106 @@
                 (setq pointer (cdr pointer))
                 (when (null pointer)
                   (error "Ending index larger than length of list")))
-              (rplacd pointer ()) 
+              (rplacd pointer ())
               drop-a))))
        (copy-list (nthcdr a seq))))
-    ((arrayp seq) 
-     (if b
-       (slice seq a b)
-       (slice seq a)))
+    ((vectorp seq)
+     (let* ((b (or b (length seq)))
+            (size (- b a))
+            (new (make-array size :element-type (array-element-type seq))))
+       (do ((i 0 (1+ i))
+            (j a (1+ j)))
+           ((= j b) new)
+         (aset new i (aref seq j)))))
     (t (not-seq-error seq))))
+
+(defun copy-seq (sequence)
+  (subseq sequence 0))
+
+
+;;; Reduce (based on SBCL's version)
+
+(defun reduce (function sequence &key key from-end (start 0) end (initial-value nil ivp))
+  (let ((key (or key #'identity))
+        (end (or end (length sequence))))
+    (if (= end start)
+        (if ivp initial-value (funcall function))
+        (macrolet ((reduce-list (function sequence key start end initial-value ivp from-end)
+                     `(let ((sequence
+                             ,(if from-end
+                                  `(reverse (nthcdr ,start ,sequence))
+                                  `(nthcdr ,start ,sequence))))
+                        (do ((count (if ,ivp ,start (1+ ,start))
+                                    (1+ count))
+                             (sequence (if ,ivp sequence (cdr sequence))
+                                       (cdr sequence))
+                             (value (if ,ivp ,initial-value (funcall ,key (car sequence)))
+                                    ,(if from-end
+                                         `(funcall ,function (funcall ,key (car sequence)) value)
+                                         `(funcall ,function value (funcall ,key (car sequence))))))
+                            ((>= count ,end) value)))))
+          (if from-end
+              (reduce-list function sequence key start end initial-value ivp t)
+              (reduce-list function sequence key start end initial-value ivp nil))))))
+
+(defun elt (sequence index)
+  (when (< index 0)
+    (error "The index ~D is below zero." index))
+  (etypecase sequence
+    (list
+     (let ((i 0))
+       (dolist (elt sequence)
+         (when (eql index i)
+           (return-from elt elt))
+         (incf i))
+       (error "The index ~D is too large for ~A of length ~D." index 'list i)))
+    (array
+     (let ((length (length sequence)))
+       (when (>= index length)
+         (error "The index ~D is too large for ~A of length ~D." index 'vector length))
+       (aref sequence index)))))
+
+(defun mismatch (sequence1 sequence2 &key key (test #'eql testp) (test-not nil test-not-p)
+                                       (start1 0) (end1 (length sequence1))
+                                       (start2 0) (end2 (length sequence2)))
+  (let ((index1 start1)
+        (index2 start2))
+    (while (and (<= index1 end1) (<= index2 end2))
+      (when (or (eql index1 end1) (eql index2 end2))
+        (return-from mismatch (if (eql end1 end2) NIL index1)))
+      (unless (satisfies-test-p (elt sequence1 index1) (elt sequence2 index2)
+                                :key key :test test :testp testp
+                                :test-not test-not :test-not-p test-not-p)
+        (return-from mismatch index1))
+      (incf index1)
+      (incf index2))))
+
+(defun list-search (sequence1 list2 args)
+  (let ((length1 (length sequence1))
+        (position 0))
+    (while list2
+      (let ((mismatch (apply #'mismatch sequence1 list2 args)))
+        (when (or (not mismatch) (>= mismatch length1))
+          (return-from list-search position)))
+      (pop list2)
+      (incf position))))
+
+(defun vector-search (sequence1 vector2 args)
+  (let ((length1 (length sequence1)))
+    (dotimes (position (length vector2))
+      (let ((mismatch (apply #'mismatch sequence1 (subseq vector2 position) args)))
+        (when (or (not mismatch) (>= mismatch length1))
+          (return-from vector-search position))))))
+
+(defun search (sequence1 sequence2 &rest args &key key test test-not)
+  (unless (sequencep sequence1)
+    (not-seq-error sequence1))
+  (when (or (and (listp sequence1) (null sequence1))
+            (and (vectorp sequence1) (zerop (length sequence1))))
+    (return-from search 0))
+  (funcall
+   (typecase sequence2
+     (list #'list-search)
+     (array #'vector-search)
+     (t (not-seq-error sequence2)))
+   sequence1 sequence2 args))

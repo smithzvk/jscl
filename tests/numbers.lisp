@@ -8,11 +8,13 @@
 (test (= (max 1)     1))
 (test (= (max 1 2 3) 3))
 (test (= (max 3 2 1) 3))
+(test (= (max 1 2 3 4 5) 5))
 
 ;;; MIN
 (test (= (min 1)     1))
 (test (= (min 1 2 3) 1))
 (test (= (min 3 2 1) 1))
+(test (= (min 9 3 8 7 6 3 3) 3))
 
 ;;; EVENP
 (test      (evenp  2))
@@ -66,3 +68,21 @@
 (test             (floatp    pi))
 (test             (floatp (- pi)))
 (test        (not (floatp    1)))
+
+;;; GCD
+(test (= 0 (gcd)))
+(test (= 6 (gcd 60 42)))
+(test (= 1 (gcd 3333 -33 101)))
+(test (= 11 (gcd 3333 -33 1002001)))
+(test (= 7 (gcd 91 -49)))
+(test (= 7 (gcd 63 -42 35)))
+(test (= 5 (gcd 5)))
+(test (= 4 (gcd -4)))
+
+;;; LCM
+(test (= 10 (lcm 10)))
+(test (= 150 (lcm 25 30)))
+(test (= 360 (lcm -24 18 10)))
+(test (= 70 (lcm 14 35)))
+(test (= 0 (lcm 0 5)))
+(test (= 60 (lcm 1 2 3 4 5 6)))

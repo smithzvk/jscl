@@ -13,20 +13,34 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with JSCL.  If not, see <http://www.gnu.org/licenses/>.
 
+(/debug "loading package.lisp!")
+
 (defvar *package-list* nil)
 
 (defun list-all-packages ()
   (copy-list *package-list*))
 
-(defun make-package (name &key use)
-  (let ((package (new))
-        (use (mapcar #'find-package-or-fail use)))
-    (oset package "packageName" name)
-    (oset package "symbols" (new))
-    (oset package "exports" (new))
-    (oset package "use" use)
-    (push package *package-list*)
+(defun %make-package (name use)
+  (let ((package (new)))
+    (setf (oget package "packageName") name)
+    (setf (oget package "symbols") (new))
+    (setf (oget package "exports") (new))
+    (setf (oget package "use") use)
+    (if (find name *package-list* :key (lambda (s) (oget s "packageName")) :test #'equal)
+        (error "A package namded `~a' already exists." name)
+        (push package *package-list*))
     package))
+
+(defun resolve-package-list (packages)
+  (let (result)
+    (dolist (package (mapcar #'find-package-or-fail packages))
+      (pushnew package result :test #'eq))
+    (reverse result)))
+
+(defun make-package (name &key use)
+  (%make-package
+   (string name)
+   (resolve-package-list use)))
 
 (defun packagep (x)
   (and (objectp x) (in "symbols" x)))
@@ -73,9 +87,29 @@
 
 (defvar *package* *common-lisp-package*)
 
-(defmacro in-package (package-designator)
-  `(eval-when-compile
-     (setq *package* (find-package-or-fail ,package-designator))))
+(defmacro in-package (string-designator)
+  `(eval-when (:compile-toplevel :load-toplevel :execute)
+     (setq *package* (find-package-or-fail ',string-designator))))
+
+(defmacro defpackage (package &rest options)
+  (let (use)
+    (dolist (option options)
+      (ecase (car option)
+       (:use
+        (setf use (append use (cdr option))))))
+    `(eval-when (:compile-toplevel :load-toplevel :execute)
+       (%defpackage ',(string package) ',use))))
+
+(defun redefine-package (package use)
+  (setf (oget package "use") use)
+  package)
+
+(defun %defpackage (name use)
+  (let ((package (find-package name))
+        (use (resolve-package-list use)))
+    (if package
+        (redefine-package package use)
+        (%make-package name use))))
 
 ;; This function is used internally to initialize the CL package
 ;; with the symbols built during bootstrap.
@@ -86,12 +120,12 @@
               *common-lisp-package*))
          (symbols (%package-symbols package))
          (exports (%package-external-symbols package)))
-    (oset symbol "package" package)
-    (oset symbols (symbol-name symbol) symbol)
+    (setf (oget symbol "package") package)
+    (setf (oget symbols (symbol-name symbol)) symbol)
     ;; Turn keywords self-evaluated and export them.
     (when (eq package *keyword-package*)
-      (oset symbol "value" symbol)
-      (oset exports (symbol-name symbol) symbol))))
+      (setf (oget symbol "value") symbol)
+      (setf (oget exports (symbol-name symbol)) symbol))))
 
 (defun find-symbol (name &optional (package *package*))
   (let* ((package (find-package-or-fail package))
@@ -122,13 +156,13 @@
           (let ((symbols (%package-symbols package)))
             (oget symbols name)
             (let ((symbol (make-symbol name)))
-              (oset symbol "package" package)
+              (setf (oget symbol "package") package)
               (when (eq package *keyword-package*)
-                (oset symbol "value" symbol)
+                (setf (oget symbol "value") symbol)
                 (export (list symbol) package))
               (when *intern-hook*
                 (funcall *intern-hook* symbol))
-              (oset symbols name symbol)
+              (setf (oget symbols name) symbol)
               (values symbol nil)))))))
 
 (defun symbol-package (symbol)
@@ -139,7 +173,7 @@
 (defun export (symbols &optional (package *package*))
   (let ((exports (%package-external-symbols package)))
     (dolist (symb symbols t)
-      (oset exports (symbol-name symb) symb))))
+      (setf (oget exports (symbol-name symb)) symb))))
 
 (defun %map-external-symbols (function package)
   (map-for-in function (%package-external-symbols package)))
@@ -152,6 +186,10 @@
 (defun %map-all-symbols (function)
   (dolist (package *package-list*)
     (map-for-in function (%package-symbols package))))
+
+(defun %map-all-external-symbols (function)
+  (dolist (package *package-list*)
+    (map-for-in function (%package-external-symbols package))))
 
 (defmacro do-symbols ((var &optional (package '*package*) result-form)
                       &body body)
@@ -173,9 +211,12 @@
 (defmacro do-all-symbols ((var &optional result-form) &body body)
   `(block nil (%map-all-symbols (lambda (,var) ,@body)) ,result-form))
 
-(defun find-all-symbols (string)
+(defmacro do-all-external-symbols ((var &optional result-form) &body body)
+  `(block nil (%map-all-external-symbols (lambda (,var) ,@body)) ,result-form))
+
+(defun find-all-symbols (string &optional external-only)
   (let (symbols)
     (dolist (package *package-list* symbols)
       (multiple-value-bind (symbol status) (find-symbol string package)
-        (when status
+        (when (if external-only (eq status :external) status)
           (pushnew symbol symbols :test #'eq))))))

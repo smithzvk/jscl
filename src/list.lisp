@@ -13,6 +13,8 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with JSCL.  If not, see <http://www.gnu.org/licenses/>.
 
+(/debug "loading list.lisp!")
+
 ;;;; Various list functions
 
 (defun cons (x y) (cons x y))
@@ -37,6 +39,12 @@
 
 (defun cdr (x) (cdr x))
 
+(defun rplaca (cons x)
+  (rplaca cons x))
+
+(defun rplacd (cons x)
+  (rplacd cons x))
+
 (defun first   (x) (car    x))
 (defun second  (x) (cadr   x))
 (defun third   (x) (caddr  x))
@@ -59,6 +67,13 @@
                ((null (cddr x)) (rplacd x (cadr x))))
            (cons arg others))))
 
+(defun list-length (list)
+  (let ((l 0))
+    (while (not (null list))
+      (incf l)
+      (setq list (cdr list)))
+    l))
+
 (defun nthcdr (n list)
   (while (and (plusp n) list)
     (setq n (1- n))
@@ -67,6 +82,16 @@
 
 (defun nth (n list)
   (car (nthcdr n list)))
+
+(define-setf-expander nth (n list)
+  (let ((g!list (gensym))
+        (g!index (gensym))
+        (g!value (gensym)))
+    (values (list g!list g!index)
+            (list list n)
+            (list g!value)
+            `(rplaca (nthcdr ,g!index ,g!list) ,g!value)
+            `(nth ,g!index ,g!list))))
 
 (defun caar (x) (car (car x)))
 (defun cadr (x) (car (cdr x)))
@@ -98,6 +123,24 @@
 (defun cddadr (x) (cdr (cdadr x)))
 (defun cdddar (x) (cdr (cddar x)))
 (defun cddddr (x) (cdr (cdddr x)))
+
+(defun append-two (list1 list2)
+  (if (null list1)
+      list2
+      (cons (car list1)
+            (append (cdr list1) list2))))
+
+(defun append (&rest lists)
+  (!reduce #'append-two lists nil))
+
+(defun revappend (list1 list2)
+  (while list1
+    (push (car list1) list2)
+    (setq list1 (cdr list1)))
+  list2)
+
+(defun reverse (list)
+  (revappend list '()))
 
 (defun sublis (alist tree &key key (test #'eql testp) (test-not #'eql test-not-p))
   (when (and testp test-not-p)
@@ -154,18 +197,6 @@
     (when (eql tail object)
       (return-from tailp t))))
 
-(defmacro pop (place)
-  (multiple-value-bind (dummies vals newval setter getter)
-    (get-setf-expansion place)
-    (let ((head (gensym)))
-      `(let* (,@(mapcar #'list dummies vals) 
-              (,head ,getter)
-              (,(car newval) (cdr ,head))
-              ,@(cdr newval)) 
-         ,setter
-         (car ,head)))))
-
-
 (defun map1 (func list)
   (with-collect
     (while list
@@ -184,10 +215,29 @@
                (rplaca tail (cdar tail)))
              (collect (apply func elems))))))))
 
+(defun mapn (func list)
+  (with-collect
+    (while list
+      (collect (funcall func list))
+      (setq list (cdr list)))))
+
+(defun maplist (func list &rest lists)
+  (let ((lists (cons list lists)))
+    (with-collect
+      (block loop
+        (loop
+           (let ((elems (mapn #'car lists)))
+             (do ((tail lists (cdr tail)))
+                 ((null tail))
+               (when (null (car tail)) (return-from loop))
+               (rplaca tail (cdar tail)))
+             (collect (apply func elems))))))))
+
 (defun mapc (func &rest lists)
-  (do* ((elems (map1 #'car lists) (map1 #'car lists-rest))
-        (lists-rest (map1 #'cdr lists) (map1 #'cdr lists-rest)))
-       ((dolist (x elems) (when (null x) (return t)))
+  (do* ((tails lists (map1 #'cdr tails))
+        (elems (map1 #'car tails)
+               (map1 #'car tails)))
+       ((dolist (x tails) (when (null x) (return t)))
         (car lists))
     (apply func elems)))
 
@@ -259,7 +309,7 @@
             (list x)
             (list new-value)
             `(progn (rplacd ,cons ,new-value) ,new-value)
-            `(car ,cons))))
+            `(cdr ,cons))))
 
 
 ;; The NCONC function is based on the SBCL's one.
@@ -307,6 +357,54 @@
 (defun intersection (list1 list2 &key (test #'eql) (key #'identity))
   (let ((new-list ()))
     (dolist (x list1)
-      (when (member x list2 :test test :key key)
+      (when (member (funcall key x) list2 :test test :key key)
         (push x new-list)))
     new-list))
+
+(defun get-properties (plist indicator-list)
+  (do* ((plist plist (cddr plist))
+        (cdr (cdr plist) (cdr plist))
+        (car (car plist) (car plist)))
+      ((null plist) (values nil nil nil))
+    (when (null cdr)
+      (error "malformed property list ~S" plist))
+    (let ((found (member car indicator-list :test #'eq)))
+      (when found
+        (return (values car (cadr plist) plist))))))
+
+(defun getf (plist indicator &optional default)
+  (do* ((plist plist (cddr plist))
+        (cdr (cdr plist) (cdr plist))
+        (car (car plist) (car plist)))
+      ((null plist) default)
+    (when (null cdr)
+      (error "malformed property list ~S" plist))
+    (when (eq indicator car)
+      (return (cadr plist)))))
+
+(defun %putf (plist indicator new-value)
+  (do* ((tail plist (cddr tail))
+        (cdr (cdr tail) (cdr tail))
+        (car (car tail) (car tail)))
+      ((null tail) (list* indicator new-value plist))
+    (when (null cdr)
+      (error "malformed property list ~S" tail))
+    (when (eq indicator car)
+      ;; TODO: should be cadr, needs a defsetf for that
+      (setf (car (cdr tail)) new-value)
+      (return tail))))
+
+(define-setf-expander getf (plist indicator &optional default)
+  (multiple-value-bind (dummies vals newval setter getter)
+      (get-setf-expansion plist)
+    (let ((store (gensym))
+          (indicator-sym (gensym))
+          (default-sym (and default (gensym))))
+      (values `(,indicator-sym ,@(and default `(,default-sym)) ,@dummies)
+              `(,indicator ,@(and default `(,default)) ,@vals)
+              `(,store)
+              `(let ((,(car newval) (%putf ,getter ,indicator-sym ,store))
+                     ,@(cdr newval))
+                 ,setter
+                 ,store)
+              `(getf ,getter ,indicator-sym ,@(and default `(,default-sym)))))))

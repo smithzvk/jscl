@@ -1,8 +1,5 @@
 ;;; print.lisp ---
 
-;; Copyright (C) 2012, 2013 David Vazquez
-;; Copyright (C) 2012 Raimon Grau
-
 ;; JSCL is free software: you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License as
 ;; published by the Free Software Foundation, either version 3 of the
@@ -16,19 +13,36 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with JSCL.  If not, see <http://www.gnu.org/licenses/>.
 
+(/debug "loading print.lisp!")
+
 ;;; Printer
+
+(defun lisp-escape-string (string)
+  (let ((output "")
+        (index 0)
+        (size (length string)))
+    (while (< index size)
+      (let ((ch (char string index)))
+        (when (or (char= ch #\") (char= ch #\\))
+          (setq output (concat output "\\")))
+        (when (or (char= ch #\newline))
+          (setq output (concat output "\\"))
+          (setq ch #\n))
+        (setq output (concat output (string ch))))
+      (incf index))
+    (concat "\"" output "\"")))
 
 ;;; Return T if the string S contains characters which need to be
 ;;; escaped to print the symbol name, NIL otherwise.
-(defun escape-symbol-name-p (s &optional uppercase)
+(defun escape-symbol-name-p (s)
   (let ((dots-only t))
     (dotimes (i (length s))
       (let ((ch (char s i)))
         (setf dots-only (and dots-only (char= ch #\.)))
         (when (or (terminalp ch)
                   (char= ch #\:)
-                  (and uppercase (not (char= ch (char (string-upcase (string ch)) 0))))
                   (char= ch #\\)
+                  (not (char= ch (char-upcase ch)))
                   (char= ch #\|))
           (return-from escape-symbol-name-p t))))
     dots-only))
@@ -80,13 +94,13 @@
 #+nil
 (mapcar #'potential-number-p '("/" "/5" "+" "1+" "1-" "foo+" "ab.cd" "_" "^" "^/-"))
 
-(defun escape-token-p (string &optional uppercase)
+(defun escape-token-p (string)
   (or (potential-number-p string)
-      (escape-symbol-name-p string uppercase)))
+      (escape-symbol-name-p string)))
 
 ;;; Returns the token in a form that can be used for reading it back.
-(defun escape-token (s &optional uppercase)
-  (if (escape-token-p s uppercase)
+(defun escape-token (s)
+  (if (escape-token-p s)
       (let ((result "|"))
         (dotimes (i (length s))
           (let ((ch (char s i)))
@@ -97,43 +111,39 @@
         (concat result "|"))
       s))
 
-(defvar *print-escape* t)
-(defvar *print-circle* nil)
+#+jscl (defvar *print-escape* t)
+#+jscl (defvar *print-circle* nil)
 
-(defun write-to-string (form &optional known-objects object-ids)
-  (when (and (not known-objects) *print-circle*)
-    ;; To support *print-circle* some objects must be tracked for
-    ;; sharing: conses, arrays and apparently-uninterned symbols.
-    ;; These objects are placed in an array and a parallel array is
-    ;; used to mark if they're found multiple times by assining them
-    ;; an id starting from 1.
-    ;;
-    ;; After the tracking has been completed the printing phas can
-    ;; begin: if an object has an id > 0 then #<n>= is prefixed and
-    ;; the id is changed to negative. If an object has an id < 0 then
-    ;; #<-n># is printed instead of the object.
-    ;;
-    ;; The processing is O(n^2) with n = number of tracked objects,
-    ;; but it should be reasonably fast because is based on afind that
-    ;; is a primitive function that compiles to [].indexOf.
-    (setf known-objects (make-array 100))
-    (setf object-ids (make-array 100))
-    (let ((n 0)
-          (sz 100)
-          (count 0))
+;; To support *print-circle* some objects must be tracked for sharing:
+;; conses, arrays and apparently-uninterned symbols.  These objects
+;; are placed in an array and a parallel array is used to mark if
+;; they're found multiple times by assining them an id starting from
+;; 1.
+;;
+;; After the tracking has been completed the printing phase can begin:
+;; if an object has an id > 0 then #<n>= is prefixed and the id is
+;; changed to negative. If an object has an id < 0 then #<-n># is
+;; printed instead of the object.
+;;
+;; The processing is O(n^2) with n = number of tracked
+;; objects. Hopefully it will become good enough when the new compiler
+;; is available.
+(defun scan-multiple-referenced-objects (form)
+  (let ((known-objects (make-array 0 :adjustable t :fill-pointer 0))
+        (object-ids    (make-array 0 :adjustable t :fill-pointer 0)))
+    (vector-push-extend nil known-objects)
+    (vector-push-extend 0 object-ids)
+    (let ((count 0))
       (labels ((mark (x)
-                 (let ((i (afind x known-objects)))
-                   (if (= i -1)
-                       (progn
-                         (when (= n sz)
-                           (setf sz (* 2 sz))
-                           (aresize known-objects sz)
-                           (aresize object-ids sz))
-                         (aset known-objects (1- (incf n)) x)
-                         t)
-                       (unless (aref object-ids i)
-                         (aset object-ids i (incf count))
-                         nil))))
+                 (let ((i (position x known-objects)))
+                   (cond
+                     ((null i)
+                      (vector-push-extend x known-objects)
+                      (vector-push-extend 0 object-ids)
+                      t)
+                     (t
+                      (setf (aref object-ids i) (incf count))
+                      nil))))
                (visit (x)
                  (cond
                    ((and x (symbolp x) (null (symbol-package x)))
@@ -142,113 +152,187 @@
                     (when (mark x)
                       (visit (car x))
                       (visit (cdr x))))
-                   ((arrayp x)
+                   ((vectorp x)
                     (when (mark x)
                       (dotimes (i (length x))
                         (visit (aref x i))))))))
-        (visit form))))
-  (let ((prefix ""))
-    (when (and *print-circle*
-               (or (consp form)
-                   (arrayp form)
-                   (and form (symbolp form) (null (symbol-package form)))))
-      (let* ((ix (afind form known-objects))
-             (id (aref object-ids ix)))
-        (cond
-          ((and id (> id 0))
-           (setf prefix (format nil "#~S=" id))
-           (aset object-ids ix (- id)))
-          ((and id (< id 0))
-           (return-from write-to-string (format nil "#~S#" (- id)))))))
-    (concat prefix
-            (cond
-              ((null form) "NIL")
-              ((symbolp form)
-               (let ((name (symbol-name form))
-                     (package (symbol-package form)))
-                 ;; Check if the symbol is accesible from the current package. It
-                 ;; is true even if the symbol's home package is not the current
-                 ;; package, because it could be inherited.
-                 (if (eq form (find-symbol (symbol-name form)))
-                     (escape-token (symbol-name form) (not (eq package *js-package*)))
-                     ;; Symbol is not accesible from *PACKAGE*, so let us prefix
-                     ;; the symbol with the optional package or uninterned mark.
-                     (concat (cond
-                               ((null package) "#")
-                               ((eq package (find-package "KEYWORD")) "")
-                               (t (escape-token (package-name package) t)))
-                             ":"
-                             (if (and package
-                                      (eq (second (multiple-value-list
-                                                      (find-symbol name package)))
-                                          :internal))
-                                 ":"
-                                 "")
-                             (escape-token name (not (eq package *js-package*)))))))
-              ((integerp form) (integer-to-string form))
-              ((floatp form) (float-to-string form))
-              ((characterp form)
-               (concat "#\\"
-                       (case form
-                         (#\newline "newline")
-                         (#\space "space")
-                         (otherwise (string form)))))
-              ((stringp form) (if *print-escape*
-                                  (concat "\"" (escape-string form) "\"")
-                                  form))
-              ((functionp form)
-               (let ((name (oget form "fname")))
-                 (if name
-                     (concat "#<FUNCTION " name ">")
-                     (concat "#<FUNCTION>"))))
-              ((listp form)
-               (concat "("
-                       (join-trailing (mapcar (lambda (x)
-                                                (write-to-string x known-objects object-ids))
-                                              (butlast form)) " ")
-                       (let ((last (last form)))
-                         (if (null (cdr last))
-                             (write-to-string (car last) known-objects object-ids)
-                             (concat (write-to-string (car last) known-objects object-ids)
-                                     " . "
-                                     (write-to-string (cdr last) known-objects object-ids))))
-                       ")"))
-              ((arrayp form)
-               (let ((result "#(")
-                     (sep ""))
-                 (dotimes (i (length form))
-                   (setf result (concat result sep
-                                        (write-to-string (aref form i)
-                                                         known-objects
-                                                         object-ids)))
-                   (setf sep " "))
-                 (concat result ")")))
-              ((packagep form)
-               (concat "#<PACKAGE " (package-name form) ">"))
-              (t "#<javascript object>")))))
+        (visit form)))
+    (values known-objects object-ids)))
 
-(defun prin1-to-string (form)
-  (let ((*print-escape* t))
-    (write-to-string form)))
+;;; Write an integer to stream.
+;;; TODO: Support for different basis.
+(defun write-integer (value stream)
+  (write-string (integer-to-string value) stream))
 
-(defun princ-to-string (form)
-  (let ((*print-escape* nil))
-    (write-to-string form)))
+;;; This version of format supports only ~A for strings and ~D for
+;;; integers. It is used to avoid circularities. Indeed, it just
+;;; ouputs to streams.
+(defun simple-format (stream fmt &rest args)
+  (do ((i 0 (1+ i)))
+      ((= i (length fmt)))
+    (let ((char (char fmt i)))
+      (if (char= char #\~)
+          (let ((next (if (< i (1- (length fmt)))
+                          (char fmt (1+ i))
+                          (error "`~~' appears in the last position of the format control string ~S." fmt))))
+            (ecase next
+              (#\~ (write-char #\~ stream))
+              (#\d (write-integer (pop args) stream))
+              (#\a (write-string (pop args) stream)))
+            (incf i))
+          (write-char char stream)))))
 
-(defun write-line (x)
-  (write-string x)
-  (write-string *newline*)
-  x)
 
-(defun warn (string)
-  (write-string "WARNING: ")
-  (write-line string))
+(defun write-aux (form stream known-objects object-ids)
+  (when *print-circle*
+    (let* ((ix (or (position form known-objects) 0))
+           (id (aref object-ids ix)))
+      (cond
+        ((and id (> id 0))
+         (simple-format stream "#~d=" id)
+         (setf (aref object-ids id) (- id)))
+        ((and id (< id 0))
+         (simple-format stream "#~d#" (- id))
+         (return-from write-aux)))))
+  (typecase form
+    ;; NIL
+    (null
+     (write-string "NIL" stream))
+    ;; Symbols
+    (symbol
+     (let ((name (symbol-name form))
+           (package (symbol-package form)))
+       ;; Check if the symbol is accesible from the current package. It
+       ;; is true even if the symbol's home package is not the current
+       ;; package, because it could be inherited.
+       (if (eq form (find-symbol (symbol-name form)))
+           (write-string (escape-token (symbol-name form)) stream)
+           ;; Symbol is not accesible from *PACKAGE*, so let us prefix
+           ;; the symbol with the optional package or uninterned mark.
+           (progn
+             (cond
+               ((null package) (write-char #\# stream))
+               ((eq package (find-package "KEYWORD")))
+               (t (write-char (escape-token (package-name package)) stream)))
+             (write-char #\: stream)
+             (let ((symbtype (and package (second (multiple-value-list (find-symbol name package))))))
+               (when (and package (eq symbtype :internal))
+                 (write-char #\: stream)))
+             (write-string (escape-token name) stream)))))
+    ;; Integers
+    (integer
+     (write-integer form stream))
+    ;; Floats
+    (float
+     (write-string (float-to-string form) stream))
+    ;; Characters
+    (character
+     (write-string "#\\" stream)
+     (case form
+       (#\newline (write-string "newline" stream))
+       (#\space   (write-string "space"   stream))
+       (otherwise (write-char form stream))))
+    ;; Strings
+    (string
+     (if *print-escape*
+         (write-string (lisp-escape-string form) stream)
+         (write-string form stream)))
+    ;; Functions
+    (function
+     (let ((name #+jscl (oget form "fname")
+                 #-jscl nil))
+       (if name
+           (simple-format stream "#<FUNCTION ~a>" name)
+           (write-string "#<FUNCTION>" stream))))
+    ;; Lists
+    (list
+     (write-char #\( stream)
+     (unless (null form)
+       (write-aux (car form) stream known-objects object-ids)
+       (do ((tail (cdr form) (cdr tail)))
+           ;; Stop on symbol OR if the object is already known when we
+           ;; accept circular printing.
+           ((or (atom tail)
+                (and *print-circle*
+                     (let* ((ix (or (position tail known-objects) 0))
+                            (id (aref object-ids ix)))
+                       (not (zerop id)))))
+            (unless (null tail)
+              (write-string " . " stream)
+              (write-aux tail stream known-objects object-ids)))
+         (write-char #\space stream)
+         (write-aux (car tail) stream known-objects object-ids)))
+     (write-char #\) stream))
+    ;; Vectors
+    (vector
+     (write-string "#(" stream)
+     (when (plusp (length form))
+       (write-aux (aref form 0) stream known-objects object-ids)
+       (do ((i 1 (1+ i)))
+           ((= i (length form)))
+         (write-char #\space stream)
+         (write-aux (aref form i) stream known-objects object-ids)))
+     (write-char #\) stream))
+    ;; Packages
+    (package
+     (simple-format stream "#<PACKAGE ~a>" (package-name form)))
+    ;; Others
+    (otherwise
+     (write-string "#<javascript object>" stream))))
 
-(defun print (x)
-  (write-line (prin1-to-string x))
-  x)
 
-(defun format (destination fmt &rest args)
+#+jscl
+(defun write (form &key (stream *standard-output*))
+  (write-aux form stream))
+
+(defun !write-to-string (form)
+  (with-output-to-string (output)
+    (multiple-value-bind (objs ids)
+        (scan-multiple-referenced-objects form)
+      (write-aux form output objs ids))))
+#+jscl (fset 'write-to-string (fdefinition '!write-to-string))
+
+#+jscl
+(progn
+  
+  (defun prin1-to-string (form)
+    (let ((*print-escape* t))
+      (write-to-string form)))
+
+  (defun princ-to-string (form)
+    (let ((*print-escape* nil))
+      (write-to-string form)))
+
+  (defun terpri ()
+    (write-char #\newline)
+    (values))
+  
+  (defun write-line (x)
+    (write-string x)
+    (terpri)
+    x)
+  
+  (defun warn (fmt &rest args)
+    (write-string "WARNING: ")
+    (apply #'format t fmt args)
+    (terpri))
+  
+  (defun print (x)
+    (write-line (prin1-to-string x))
+    x))
+
+;;; Format
+
+(defun format-special (chr arg)
+  (case (char-upcase chr)
+    (#\S (prin1-to-string arg))
+    (#\A (princ-to-string arg))
+    (#\D (princ-to-string arg))
+    (t
+     (warn "~S is not implemented yet, using ~~S instead" chr)
+     (prin1-to-string arg))))
+
+(defun !format (destination fmt &rest args)
   (let ((len (length fmt))
         (i 0)
         (res "")
@@ -258,22 +342,20 @@
         (if (char= c #\~)
             (let ((next (char fmt (incf i))))
               (cond
-               ((char= next #\~)
-                (concatf res "~"))
-               ((char= next #\%)
-                (concatf res *newline*))
-               (t
-                (concatf res (format-special next (car arguments)))
-                (pop arguments))))
-            (setq res (concat res (char-to-string c))))
+                ((char= next #\~)
+                 (concatf res "~"))
+                ((char= next #\%)
+                 (concatf res (string #\newline)))
+                ((char= next #\*)
+                 (pop arguments))
+                (t
+                 (concatf res (format-special next (car arguments)))
+                 (pop arguments))))
+            (setq res (concat res (string c))))
         (incf i)))
     (if destination
         (progn
           (write-string res)
           nil)
         res)))
-
-(defun format-special (chr arg)
-  (case chr
-    (#\S (prin1-to-string arg))
-    (#\a (princ-to-string arg))))
+#+jscl (fset 'format (fdefinition '!format))

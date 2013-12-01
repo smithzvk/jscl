@@ -34,16 +34,14 @@
        ((not ,condition))
      ,@body))
 
-(defmacro eval-when-compile (&body body)
-  `(eval-when (:compile-toplevel :load-toplevel :execute)
-     ,@body))
-
-(defun concat-two (s1 s2)
-  (concatenate 'string s1 s2))
-
 (defun aset (array idx value)
   (setf (aref array idx) value))
 
-(eval-when-compile
+(eval-when (:compile-toplevel :load-toplevel :execute)
   (defun concat (&rest strs)
     (apply #'concatenate 'string strs)))
+
+(defun /debug (x)
+  (declare (ignorable x))
+  ;; (write-line x)
+  )

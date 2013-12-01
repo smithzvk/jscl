@@ -16,8 +16,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with JSCL.  If not, see <http://www.gnu.org/licenses/>.
 
-(defvar *newline* "
-")
+(/debug "loading utils.lisp!")
 
 (defmacro concatf (variable &body form)
   `(setq ,variable (concat ,variable (progn ,@form))))
@@ -91,3 +90,14 @@
   (let ((key-val (if key (funcall key y) y))
         (fn (if test-not-p (complement test-not) test)))
     (funcall fn x key-val)))
+
+
+(defun interleave (list element &optional after-last-p)
+  (unless (null list)
+    (with-collect
+      (collect (car list))
+      (dolist (x (cdr list))
+        (collect element)
+        (collect x))
+      (when after-last-p
+        (collect element)))))

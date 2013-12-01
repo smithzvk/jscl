@@ -22,45 +22,91 @@
 
 (in-package :jscl)
 
-(defvar *source*
-  '(("boot"             :target)
-    ("compat"           :host)
-    ("utils"            :both)
-    ("list"             :target)
-    ("string"           :target)
-    ("sequence"         :target)
-    ("print"            :target)
-    ("package"          :target)
-    ("ffi"              :target)
-    ("misc"             :target)
-    ("numbers"          :target)
-    ("read"             :both)
-    ("defstruct"        :both)
-    ("lambda-list"      :both)
-    ("backquote"        :both)
-    ("compiler"         :both)
-    ("toplevel"         :target)))
+(defvar *base-directory*
+  (or #.*load-pathname* *default-pathname-defaults*))
 
-(defun source-pathname
-    (filename &key (directory '(:relative "src")) (type nil) (defaults filename))
-  (if type
-      (make-pathname :type type :directory directory :defaults defaults)
-      (make-pathname            :directory directory :defaults defaults)))
+;;; List of all the source files that need to be compiled, and whether they
+;;; are to be compiled just by the host, by the target JSCL, or by both.
+;;; All files have a `.lisp' extension, and
+;;; are relative to src/
+;;; Subdirectories are indicated by the presence of a list rather than a
+;;; keyword in the second element of the list. For example, this list:
+;;;  (("foo"    :target)
+;;;   ("bar"
+;;;     ("baz"  :host)
+;;;     ("quux" :both)))
+;;; Means that src/foo.lisp and src/bar/quux.lisp need to be compiled in the
+;;; target, and that src/bar/baz.lisp and src/bar/quux.lisp need to be
+;;; compiled in the host
+(defvar *source*
+  '(("boot"          :target)
+    ("compat"        :host)
+    ("utils"         :both)
+    ("numbers"       :target)
+    ("char"          :target)
+    ("list"          :target)
+    ("array"         :target)
+    ("string"        :target)
+    ("sequence"      :target)
+    ("stream"        :target)
+    ("print"         :target)
+    ("documentation" :target)
+    ("misc"          :target)
+    ("ffi"           :target)
+    ("package"       :target)
+
+    ("read"          :both)
+    ("defstruct"     :both)
+    ("lambda-list"   :both)
+    ("backquote"     :both)
+    ("compiler"
+     ("codegen"      :both)
+     ("compiler"     :both))
+    ("toplevel"      :target)))
+
+(defun get-files (file-list type dir)
+  "Traverse FILE-LIST and retrieve a list of the files within which match
+   either TYPE or :BOTH, processing subdirectories."
+  (let ((file (car file-list)))
+    (cond
+      ((null file-list)
+       ())
+      ((listp (cadr file))
+       (append
+         (get-files (cdr file)      type (append dir (list (car file))))
+         (get-files (cdr file-list) type dir)))
+      ((member (cadr file) (list type :both))
+       (cons (source-pathname (car file) :directory dir :type "lisp")
+             (get-files (cdr file-list) type dir)))
+      (t
+       (get-files (cdr file-list) type dir)))))
+
+(defmacro do-source (name type &body body)
+  "Iterate over all the source files that need to be compiled in the host or
+   the target, depending on the TYPE argument."
+  (unless (member type '(:host :target))
+    (error "TYPE must be one of :HOST or :TARGET, not ~S" type))
+  `(dolist (,name (get-files *source* ,type '(:relative "src")))
+     ,@body))
+
+(defun source-pathname (filename &key (directory '(:relative "src")) (type nil) (defaults filename))
+  (merge-pathnames
+   (if type
+       (make-pathname :type type :directory directory :defaults defaults)
+       (make-pathname            :directory directory :defaults defaults))
+   *base-directory*))
 
 ;;; Compile jscl into the host
 (with-compilation-unit ()
-  (dolist (input *source*)
-    (when (member (cadr input) '(:host :both))
-      (let ((fname (source-pathname (car input))))
-        (multiple-value-bind (fasl warn fail) (compile-file fname)
-          (declare (ignore fasl warn))
-          (when fail
-            (error "Compilation of ~A failed." fname)))))))
+  (do-source input :host
+    (multiple-value-bind (fasl warn fail) (compile-file input)
+      (declare (ignore fasl warn))
+      (when fail
+        (error "Compilation of ~A failed." input)))))
 
 ;;; Load jscl into the host
-(dolist (input *source*)
-  (when (member (cadr input) '(:host :both))
-    (load (source-pathname (car input)))))
+(do-source input :host
+  (load input))
 
 (defun read-whole-file (filename)
   (with-open-file (in filename)
@@ -68,23 +114,24 @@
       (read-sequence seq in)
       seq)))
 
-(defun ls-compile-file (filename out &key print)
+(defun !compile-file (filename out &key print)
   (let ((*compiling-file* t)
         (*compile-print-toplevels* print))
     (let* ((source (read-whole-file filename))
            (in (make-string-stream source)))
-      (format t "Compiling ~a...~%" filename)
+      (format t "Compiling ~a...~%" (enough-namestring filename))
       (loop
          with eof-mark = (gensym)
          for x = (ls-read in nil eof-mark)
          until (eq x eof-mark)
-         do (let ((compilation (ls-compile-toplevel x)))
+         do (let ((compilation (compile-toplevel x)))
               (when (plusp (length compilation))
                 (write-string compilation out)))))))
 
 (defun dump-global-environment (stream)
   (flet ((late-compile (form)
-           (write-string (ls-compile-toplevel form) stream)))
+           (let ((*standard-output* stream))
+             (write-string (compile-toplevel form)))))
     ;; We assume that environments have a friendly list representation
     ;; for the compiler and it can be dumped.
     (dolist (b (lexenv-function *environment*))
@@ -95,8 +142,8 @@
     ;; not collide with the compiler itself.
     (late-compile
      `(progn
-        ,@(mapcar (lambda (s) `(%intern-symbol (%js-vref ,(cdr s))))
-                  (remove-if-not #'symbolp *literal-table* :key #'car))
+        (progn ,@(mapcar (lambda (s) `(%intern-symbol (%js-vref ,(string (cdr s)))))
+                         (remove-if-not #'symbolp *literal-table* :key #'car)))
         (setq *literal-table* ',*literal-table*)
         (setq *variable-counter* ,*variable-counter*)
         (setq *gensym-counter* ,*gensym-counter*)))
@@ -111,18 +158,17 @@
     (setq *variable-counter* 0
           *gensym-counter* 0
           *literal-counter* 0)
-    (with-open-file (out "jscl.js" :direction :output :if-exists :supersede)
+    (with-open-file (out (merge-pathnames "jscl.js" *base-directory*) :direction :output :if-exists :supersede)
       (write-string (read-whole-file (source-pathname "prelude.js")) out)
-      (dolist (input *source*)
-        (when (member (cadr input) '(:target :both))
-          (ls-compile-file (source-pathname (car input) :type "lisp") out)))
+      (do-source input :target
+        (!compile-file input out))
       (dump-global-environment out))
     ;; Tests
-    (with-open-file (out "tests.js" :direction :output :if-exists :supersede)
+    (with-open-file (out (merge-pathnames "tests.js" *base-directory*) :direction :output :if-exists :supersede)
       (dolist (input (append (directory "tests.lisp")
                              (directory "tests/*.lisp")
                              (directory "tests-report.lisp")))
-        (ls-compile-file input out)))))
+        (!compile-file input out)))))
 
 
 ;;; Run the tests in the host Lisp implementation. It is a quick way

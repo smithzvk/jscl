@@ -22,13 +22,15 @@
 ;;; Lisp world from scratch. This code has to define enough language
 ;;; to the compiler to be able to run.
 
-(eval-when-compile
+(/debug "loading boot.lisp!")
+
+(eval-when (:compile-toplevel)
   (let ((defmacro-macroexpander
          '#'(lambda (form)
               (destructuring-bind (name args &body body)
                   form
                 (let ((whole (gensym)))
-                  `(eval-when-compile
+                  `(eval-when (:compile-toplevel :execute)
                      (%compile-defmacro ',name
                                         '#'(lambda (,whole)
                                              (destructuring-bind ,args ,whole
@@ -36,7 +38,7 @@
     (%compile-defmacro 'defmacro defmacro-macroexpander)))
 
 (defmacro declaim (&rest decls)
-  `(eval-when-compile
+  `(eval-when (:compile-toplevel :execute)
      ,@(mapcar (lambda (decl) `(!proclaim ',decl)) decls)))
 
 (defmacro defconstant (name value &optional docstring)
@@ -44,7 +46,7 @@
      (declaim (special ,name))
      (declaim (constant ,name))
      (setq ,name ,value)
-     ,@(when (stringp docstring) `((oset ',name "vardoc" ,docstring)))
+     ,@(when (stringp docstring) `((oset ,docstring ',name "vardoc")))
      ',name))
 
 (defconstant t 't)
@@ -64,13 +66,13 @@
   `(progn
      (declaim (special ,name))
      ,@(when value-p `((unless (boundp ',name) (setq ,name ,value))))
-     ,@(when (stringp docstring) `((oset ',name "vardoc" ,docstring)))
+     ,@(when (stringp docstring) `((oset ,docstring ',name "vardoc")))
      ',name))
 
 (defmacro defparameter (name value &optional docstring)
   `(progn
      (setq ,name ,value)
-     ,@(when (stringp docstring) `((oset ',name "vardoc" ,docstring)))
+     ,@(when (stringp docstring) `((oset ,docstring ',name "vardoc")))
      ',name))
 
 (defmacro defun (name args &rest body)
@@ -87,7 +89,7 @@
 (defvar *gensym-counter* 0)
 (defun gensym (&optional (prefix "G"))
   (setq *gensym-counter* (+ *gensym-counter* 1))
-  (make-symbol (concat-two prefix (integer-to-string *gensym-counter*))))
+  (make-symbol (concat prefix (integer-to-string *gensym-counter*))))
 
 (defun boundp (x)
   (boundp x))
@@ -100,51 +102,13 @@
 
 (defun not (x) (if x nil t))
 
+(defun funcall (function &rest args)
+  (apply function args))
+
+(defun apply (function arg &rest args)
+  (apply function (apply #'list* arg args)))
+
 ;; Basic macros
-(defmacro incf (place &optional (delta 1))
-  (multiple-value-bind (dummies vals newval setter getter)
-      (get-setf-expansion place)
-    (let ((d (gensym)))
-      `(let* (,@(mapcar #'list dummies vals)
-              (,d ,delta)
-                (,(car newval) (+ ,getter ,d))
-                ,@(cdr newval))
-         ,setter))))
-
-(defmacro decf (place &optional (delta 1))
-  (multiple-value-bind (dummies vals newval setter getter)
-      (get-setf-expansion place)
-    (let ((d (gensym)))
-      `(let* (,@(mapcar #'list dummies vals)
-              (,d ,delta)
-              (,(car newval) (- ,getter ,d))
-              ,@(cdr newval))
-         ,setter))))
-
-(defmacro push (x place)
-  (multiple-value-bind (dummies vals newval setter getter)
-      (get-setf-expansion place)
-    (let ((g (gensym)))
-      `(let* ((,g ,x)
-              ,@(mapcar #'list dummies vals)
-              (,(car newval) (cons ,g ,getter))
-              ,@(cdr newval))
-         ,setter))))
-
-(defmacro pushnew (x place &rest keys &key key test test-not)
-  (declare (ignore key test test-not))
-  (multiple-value-bind (dummies vals newval setter getter)
-      (get-setf-expansion place)
-    (let ((g (gensym))
-          (v (gensym)))
-      `(let* ((,g ,x)
-              ,@(mapcar #'list dummies vals)
-              ,@(cdr newval)
-              (,v ,getter))
-         (if (member ,g ,v ,@keys)
-             ,v
-             (let ((,(car newval) (cons ,g ,getter)))
-               ,setter))))))
 
 (defmacro dolist ((var list &optional result) &body body)
   (let ((g!list (gensym)))
@@ -248,28 +212,6 @@
          ,@decls
          (tagbody ,@forms)))))
 
-
-;;; Go on growing the Lisp language in Ecmalisp, with more high level
-;;; utilities as well as correct versions of other constructions.
-
-(defun append-two (list1 list2)
-  (if (null list1)
-      list2
-      (cons (car list1)
-            (append (cdr list1) list2))))
-
-(defun append (&rest lists)
-  (!reduce #'append-two lists nil))
-
-(defun revappend (list1 list2)
-  (while list1
-    (push (car list1) list2)
-    (setq list1 (cdr list1)))
-  list2)
-
-(defun reverse (list)
-  (revappend list '()))
-
 (defmacro psetq (&rest pairs)
   (let (;; For each pair, we store here a list of the form
         ;; (VARIABLE GENSYM VALUE).
@@ -291,7 +233,9 @@
 
 (defmacro do (varlist endlist &body body)
   `(block nil
-     (let ,(mapcar (lambda (x) (list (first x) (second x))) varlist)
+     (let ,(mapcar (lambda (x) (if (symbolp x)
+                                   (list x nil)
+                                 (list (first x) (second x)))) varlist)
        (while t
          (when ,(car endlist)
            (return (progn ,@(cdr endlist))))
@@ -299,13 +243,16 @@
          (psetq
           ,@(apply #'append
                    (mapcar (lambda (v)
-                             (and (consp (cddr v))
+                             (and (listp v)
+                                  (consp (cddr v))
                                   (list (first v) (third v))))
                            varlist)))))))
 
 (defmacro do* (varlist endlist &body body)
   `(block nil
-     (let* ,(mapcar (lambda (x) (list (first x) (second x))) varlist)
+     (let* ,(mapcar (lambda (x1) (if (symbolp x1)
+                                     (list x1 nil)
+                                   (list (first x1) (second x1)))) varlist)
        (while t
          (when ,(car endlist)
            (return (progn ,@(cdr endlist))))
@@ -313,28 +260,10 @@
          (setq
           ,@(apply #'append
                    (mapcar (lambda (v)
-                             (and (consp (cddr v))
+                             (and (listp v)
+                                  (consp (cddr v))
                                   (list (first v) (third v))))
                            varlist)))))))
-
-(defun list-length (list)
-  (let ((l 0))
-    (while (not (null list))
-      (incf l)
-      (setq list (cdr list)))
-    l))
-
-(defun length (seq)
-  (cond
-    ((stringp seq)
-     (string-length seq))
-    ((arrayp seq)
-     (oget seq "length"))
-    ((listp seq)
-     (list-length seq))))
-
-(defun concat-two (s1 s2)
-  (concat-two s1 s2))
 
 (defmacro with-collect (&body body)
   (let ((head (gensym))
@@ -414,17 +343,6 @@
   (write-line (lambda-code (fdefinition function)))
   nil)
 
-(defun documentation (x type)
-  "Return the documentation of X. TYPE must be the symbol VARIABLE or FUNCTION."
-  (ecase type
-    (function
-     (let ((func (fdefinition x)))
-       (oget func "docstring")))
-    (variable
-     (unless (symbolp x)
-       (error "The type of documentation `~S' is not a symbol." type))
-     (oget x "vardoc"))))
-
 (defmacro multiple-value-bind (variables value-from &body body)
   `(multiple-value-call (lambda (&optional ,@variables &rest ,(gensym))
                           ,@body)
@@ -436,29 +354,31 @@
 
 ;;; Generalized references (SETF)
 
-(defvar *setf-expanders* nil)
-
-(defun get-setf-expansion (place)
-  (if (symbolp place)
-      (let ((value (gensym)))
-        (values nil
-                nil
-                `(,value)
-                `(setq ,place ,value)
-                place))
-      (let ((place (!macroexpand-1 place)))
-        (let* ((access-fn (car place))
-               (expander (cdr (assoc access-fn *setf-expanders*))))
-          (when (null expander)
-            (error "Unknown generalized reference."))
-          (apply expander (cdr place))))))
+(eval-when(:compile-toplevel :load-toplevel :execute)
+  (defvar *setf-expanders* nil)
+  (defun !get-setf-expansion (place)
+    (if (symbolp place)
+        (let ((value (gensym)))
+          (values nil
+                  nil
+                  `(,value)
+                  `(setq ,place ,value)
+                  place))
+        (let ((place (!macroexpand-1 place)))
+          (let* ((access-fn (car place))
+                 (expander (cdr (assoc access-fn *setf-expanders*))))
+            (when (null expander)
+              (error "Unknown generalized reference."))
+            (apply expander (cdr place)))))))
+(fset 'get-setf-expansion (fdefinition '!get-setf-expansion))
 
 (defmacro define-setf-expander (access-fn lambda-list &body body)
   (unless (symbolp access-fn)
     (error "ACCESS-FN `~S' must be a symbol." access-fn))
-  `(progn (push (cons ',access-fn (lambda ,lambda-list ,@body))
-                *setf-expanders*)
-          ',access-fn))
+  `(eval-when (:compile-toplevel :load-toplevel :execute)
+     (push (cons ',access-fn (lambda ,lambda-list ,@body))
+           *setf-expanders*)
+     ',access-fn))
 
 (defmacro setf (&rest pairs)
   (cond
@@ -469,14 +389,15 @@
     ((null (cddr pairs))
      (let ((place (!macroexpand-1 (first pairs)))
            (value (second pairs)))
-       (multiple-value-bind (vars vals store-vars writer-form)
-           (get-setf-expansion place)
+       (multiple-value-bind (vars vals store-vars writer-form reader-form)
+           (!get-setf-expansion place)
          ;; TODO: Optimize the expansion a little bit to avoid let*
          ;; or multiple-value-bind when unnecesary.
          `(let* ,(mapcar #'list vars vals)
             (multiple-value-bind ,store-vars
                 ,value
-              ,writer-form)))))
+              ,writer-form
+              ,reader-form)))))
     (t
      `(progn
         ,@(do ((pairs pairs (cddr pairs))
@@ -484,22 +405,87 @@
               ((null pairs)
                (reverse result)))))))
 
+(defmacro incf (place &optional (delta 1))
+  (multiple-value-bind (dummies vals newval setter getter)
+      (!get-setf-expansion place)
+    (let ((d (gensym)))
+      `(let* (,@(mapcar #'list dummies vals)
+              (,d ,delta)
+                (,(car newval) (+ ,getter ,d))
+                ,@(cdr newval))
+         ,setter))))
+
+(defmacro decf (place &optional (delta 1))
+  (multiple-value-bind (dummies vals newval setter getter)
+      (!get-setf-expansion place)
+    (let ((d (gensym)))
+      `(let* (,@(mapcar #'list dummies vals)
+              (,d ,delta)
+              (,(car newval) (- ,getter ,d))
+              ,@(cdr newval))
+         ,setter))))
+
+(defmacro push (x place)
+  (multiple-value-bind (dummies vals newval setter getter)
+      (!get-setf-expansion place)
+    (let ((g (gensym)))
+      `(let* ((,g ,x)
+              ,@(mapcar #'list dummies vals)
+              (,(car newval) (cons ,g ,getter))
+              ,@(cdr newval))
+         ,setter))))
+
+(defmacro pop (place)
+  (multiple-value-bind (dummies vals newval setter getter)
+    (!get-setf-expansion place)
+    (let ((head (gensym)))
+      `(let* (,@(mapcar #'list dummies vals)
+              (,head ,getter)
+              (,(car newval) (cdr ,head))
+              ,@(cdr newval))
+         ,setter
+         (car ,head)))))
+
+(defmacro pushnew (x place &rest keys &key key test test-not)
+  (declare (ignore key test test-not))
+  (multiple-value-bind (dummies vals newval setter getter)
+      (!get-setf-expansion place)
+    (let ((g (gensym))
+          (v (gensym)))
+      `(let* ((,g ,x)
+              ,@(mapcar #'list dummies vals)
+              ,@(cdr newval)
+              (,v ,getter))
+         (if (member ,g ,v ,@keys)
+             ,v
+             (let ((,(car newval) (cons ,g ,getter)))
+               ,setter))))))
+
+
+
 ;; Incorrect typecase, but used in NCONC.
 (defmacro typecase (x &rest clausules)
   (let ((value (gensym)))
     `(let ((,value ,x))
        (cond
          ,@(mapcar (lambda (c)
-                     (if (eq (car c) t)
-                         `((t ,@(rest c)))
+                     (if (find (car c) '(t otherwise))
+                         `(t ,@(rest c))
                          `((,(ecase (car c)
                                     (integer 'integerp)
                                     (cons 'consp)
+                                    (list 'listp)
+                                    (vector 'vectorp)
+                                    (character 'characterp)
+                                    (sequence 'sequencep)
                                     (symbol 'symbolp)
+                                    (function 'functionp)
+                                    (float 'floatp)
                                     (array 'arrayp)
                                     (string 'stringp)
                                     (atom 'atom)
-                                    (null 'null))
+                                    (null 'null)
+                                    (package 'packagep))
                              ,value)
                            ,@(or (rest c)
                                  (list nil)))))
@@ -510,12 +496,12 @@
     `(let ((,g!x ,x))
        (typecase ,g!x
          ,@clausules
-         (t (error "~X fell through etypeacase expression." ,g!x))))))
+         (t (error "~S fell through etypecase expression." ,g!x))))))
 
 (defun notany (fn seq)
   (not (some fn seq)))
 
-(defconstant internal-time-units-per-second 1000) 
+(defconstant internal-time-units-per-second 1000)
 
 (defun get-internal-real-time ()
   (get-internal-real-time))
@@ -526,9 +512,6 @@
 (defun get-universal-time ()
   (+ (get-unix-time) 2208988800))
 
-(defun concat (&rest strs)
-  (!reduce #'concat-two strs ""))
-
 (defun values-list (list)
   (values-array (list-to-vector list)))
 
@@ -537,3 +520,8 @@
 
 (defun error (fmt &rest args)
   (%throw (apply #'format nil fmt args)))
+
+(defmacro nth-value (n form)
+  `(multiple-value-call (lambda (&rest values)
+                          (nth ,n values))
+     ,form))
