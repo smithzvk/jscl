@@ -1,12786 +1,4405 @@
-var l1313 = (new Symbol(make_lisp_string("*TOTAL-TESTS*")));
-(function(){
-    ((l1313).value = 0);
-    return l1313;
-})();
-var l1314 = (new Symbol(make_lisp_string("*PASSED-TESTS*")));
-(function(){
-    ((l1314).value = 0);
-    return l1314;
-})();
-var l1315 = (new Symbol(make_lisp_string("*FAILED-TESTS*")));
-(function(){
-    ((l1315).value = 0);
-    return l1315;
-})();
-var l1316 = (new Symbol(make_lisp_string("*EXPECTED-FAILURES*")));
-(function(){
-    ((l1316).value = 0);
-    return l1316;
-})();
-var l1317 = (new Symbol(make_lisp_string("*UNEXPECTED-PASSES*")));
-(function(){
-    ((l1317).value = 0);
-    return l1317;
-})();
-var l1318 = (new Symbol(make_lisp_string("*USE-HTML-OUTPUT-P*")));
-(function(){
-    (((l1318.value !== undefined)?l4.value: l5.value) !== l5.value ? l5.value : ((l1318).value = l4.value));
-    return l1318;
-})();
-var l1319 = (new Symbol(make_lisp_string("*TIMESTAMP*")));
-(function(){
-    (((l1319.value !== undefined)?l4.value: l5.value) !== l5.value ? l5.value : ((l1319).value = l5.value));
-    return l1319;
-})();
-var l1320 = (new Symbol(make_lisp_string("TEST")));
-l1320;
-var l1321 = (new Symbol(make_lisp_string("EXPECTED-FAILURE")));
-l1321;
-var l1322 = (new Symbol(make_lisp_string("TEST-EQUAL")));
-l1322;
-var l1323 = make_lisp_string("Running tests...~%~%");
-l112.fvalue(pv, 2, l4.value, l1323);
-((l1319).value = (new Date()).getTime());
-var l1324 = make_lisp_string("Test `~S' passed~%");
-var l1325 = QIList(l27,QIList(l37,l5,1,l5),l5,l5);
-var l1326 = make_lisp_string("<font color='red'>Test `~S' failed.</font>~%");
-var l1327 = make_lisp_string("Test `~S' failed.~%");
-(function(){
-    (l27.fvalue(pv, 2, (l5.value !== l5.value ? 1 : l5.value), l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1325);
-        return (function(){
-            var v2926 = 1;
-            var v2927 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2926;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2927);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1325) : l112.fvalue(pv, 3, l4.value, l1327, l1325));
-        return (function(){
-            var v2928 = 1;
-            var v2929 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2928;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2929);
-        })();
-    })());
-    return (function(){
-        var v2930 = 1;
-        var v2931 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2930;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2931);
-    })();
-})();
-var l1328 = QIList(l20,QIList(l37,1,2,l5),2,l5);
-(function(){
-    ((function(){
-        var x1 = (1 !== l5.value ? 2 : l5.value);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==2?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1328);
-        return (function(){
-            var v2932 = 1;
-            var v2933 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2932;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2933);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1328) : l112.fvalue(pv, 3, l4.value, l1327, l1328));
-        return (function(){
-            var v2934 = 1;
-            var v2935 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2934;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2935);
-        })();
-    })());
-    return (function(){
-        var v2936 = 1;
-        var v2937 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2936;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2937);
-    })();
-})();
-var l1329 = QIList(l20,QIList(l38,l5,1,l5),1,l5);
-(function(){
-    ((function(){
-        var x1 = (function(v2938){
-            return (v2938 !== l5.value ? v2938 : 1);
-        })(l5.value);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1329);
-        return (function(){
-            var v2939 = 1;
-            var v2940 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2939;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2940);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1329) : l112.fvalue(pv, 3, l4.value, l1327, l1329));
-        return (function(){
-            var v2941 = 1;
-            var v2942 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2941;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2942);
-        })();
-    })());
-    return (function(){
-        var v2943 = 1;
-        var v2944 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2943;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2944);
-    })();
-})();
-var l1330 = QIList(l20,QIList(l38,1,2,l5),1,l5);
-(function(){
-    ((function(){
-        var x1 = (function(v2945){
-            return (v2945 !== l5.value ? v2945 : 2);
-        })(1);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1330);
-        return (function(){
-            var v2946 = 1;
-            var v2947 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2946;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2947);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1330) : l112.fvalue(pv, 3, l4.value, l1327, l1330));
-        return (function(){
-            var v2948 = 1;
-            var v2949 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2948;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2949);
-        })();
-    })());
-    return (function(){
-        var v2950 = 1;
-        var v2951 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2950;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2951);
-    })();
-})();
-var l1331 = QIList(l27,l5,QIList(l34,l5),l5);
-(function(){
-    (l27.fvalue(pv, 2, l5.value, l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1331);
-        return (function(){
-            var v2952 = 1;
-            var v2953 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2952;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2953);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1331) : l112.fvalue(pv, 3, l4.value, l1327, l1331));
-        return (function(){
-            var v2954 = 1;
-            var v2955 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2954;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2955);
-        })();
-    })());
-    return (function(){
-        var v2956 = 1;
-        var v2957 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2956;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2957);
-    })();
-})();
-var l1332 = QIList(l20,1,QIList(l34,QIList(1,l5),l5),l5);
-(function(){
-    ((function(){
-        var x1 = (function(v2958){
-            return (v2958 !== l5.value ? v2958 : l5.value);
-        })(1);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (1==x1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1332);
-        return (function(){
-            var v2959 = 1;
-            var v2960 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2959;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2960);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1332) : l112.fvalue(pv, 3, l4.value, l1327, l1332));
-        return (function(){
-            var v2961 = 1;
-            var v2962 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2961;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2962);
-        })();
-    })());
-    return (function(){
-        var v2963 = 1;
-        var v2964 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2963;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2964);
-    })();
-})();
-var l1333 = QIList(l20,1,QIList(l725,QIList(QIList(l1245,0,l5),l5),QIList(l34,QIList(QIList(l29,l1245,l5),l5),l5),l5),l5);
-(function(){
-    ((function(){
-        var x1 = (function(v2965){
-            return (function(v2968){
-                return (v2968 !== l5.value ? v2968 : l5.value);
-            })((function(){
-                var v2966 = 1;
-                var v2967 = (function(){
-                    var x1 = v2965;
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v2966;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return (v2965 = v2967);
-            })());
-        })(0);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (1==x1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1333);
-        return (function(){
-            var v2969 = 1;
-            var v2970 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2969;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2970);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1333) : l112.fvalue(pv, 3, l4.value, l1327, l1333));
-        return (function(){
-            var v2971 = 1;
-            var v2972 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2971;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2972);
-        })();
-    })());
-    return (function(){
-        var v2973 = 1;
-        var v2974 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2973;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2974);
-    })();
-})();
-var l1334 = QIList(l20,2,QIList(l34,QIList(1,2,l5),l5),l5);
-(function(){
-    ((function(){
-        var x1 = (1 !== l5.value ? 2 : l5.value);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (2==x1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1334);
-        return (function(){
-            var v2975 = 1;
-            var v2976 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2975;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2976);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1334) : l112.fvalue(pv, 3, l4.value, l1327, l1334));
-        return (function(){
-            var v2977 = 1;
-            var v2978 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2977;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2978);
-        })();
-    })());
-    return (function(){
-        var v2979 = 1;
-        var v2980 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2979;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2980);
-    })();
-})();
-var l1335 = QIList(l20,3,QIList(l34,QIList(l5,1,l5),QIList(2,3,l5),l5),l5);
-(function(){
-    ((function(){
-        var x1 = (l5.value !== l5.value ? 1 : (2 !== l5.value ? 3 : l5.value));
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (3==x1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1335);
-        return (function(){
-            var v2981 = 1;
-            var v2982 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2981;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2982);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1335) : l112.fvalue(pv, 3, l4.value, l1327, l1335));
-        return (function(){
-            var v2983 = 1;
-            var v2984 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2983;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2984);
-        })();
-    })());
-    return (function(){
-        var v2985 = 1;
-        var v2986 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2985;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2986);
-    })();
-})();
-var l1336 = QIList(l27,l5,QIList(l34,QIList(l5,1,l5),QIList(l5,2,l5),l5),l5);
-(function(){
-    (l27.fvalue(pv, 2, l5.value, (l5.value !== l5.value ? 1 : (l5.value !== l5.value ? 2 : l5.value))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1336);
-        return (function(){
-            var v2987 = 1;
-            var v2988 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2987;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2988);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1336) : l112.fvalue(pv, 3, l4.value, l1327, l1336));
-        return (function(){
-            var v2989 = 1;
-            var v2990 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2989;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2990);
-        })();
-    })());
-    return (function(){
-        var v2991 = 1;
-        var v2992 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2991;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2992);
-    })();
-})();
-var l1337 = QIList(l20,QIList(l35,1,QIList(2,3,l5),QIList(l1242,42,l5),l5),42,l5);
-(function(){
-    ((function(){
-        var x1 = (function(v2993){
-            return (l27.fvalue(pv, 2, v2993, 2) !== l5.value ? (function(){
-                l5.value;
-                return 3;
-            })() : (function(){
-                l5.value;
-                return 42;
-            })());
-        })(1);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==42?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1337);
-        return (function(){
-            var v2994 = 1;
-            var v2995 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2994;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v2995);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1337) : l112.fvalue(pv, 3, l4.value, l1327, l1337));
-        return (function(){
-            var v2996 = 1;
-            var v2997 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v2996;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v2997);
-        })();
-    })());
-    return (function(){
-        var v2998 = 1;
-        var v2999 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v2998;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v2999);
-    })();
-})();
-var l1338 = QIList(l20,QIList(l35,1,QIList(2,3,l5),QIList(l4,42,l5),l5),42,l5);
-(function(){
-    ((function(){
-        var x1 = (function(v3000){
-            return (l27.fvalue(pv, 2, v3000, 2) !== l5.value ? (function(){
-                l5.value;
-                return 3;
-            })() : (function(){
-                l5.value;
-                return 42;
-            })());
-        })(1);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==42?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1338);
-        return (function(){
-            var v3001 = 1;
-            var v3002 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3001;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3002);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1338) : l112.fvalue(pv, 3, l4.value, l1327, l1338));
-        return (function(){
-            var v3003 = 1;
-            var v3004 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3003;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3004);
-        })();
-    })());
-    return (function(){
-        var v3005 = 1;
-        var v3006 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3005;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3006);
-    })();
-})();
-var l1339 = QIList(l20,QIList(l35,1,QIList(2,3,l5),QIList(1,42,l5),l5),42,l5);
-(function(){
-    ((function(){
-        var x1 = (function(v3007){
-            return (l27.fvalue(pv, 2, v3007, 2) !== l5.value ? (function(){
-                l5.value;
-                return 3;
-            })() : (l27.fvalue(pv, 2, v3007, 1) !== l5.value ? (function(){
-                l5.value;
-                return 42;
-            })() : l5.value));
-        })(1);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==42?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1339);
-        return (function(){
-            var v3008 = 1;
-            var v3009 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3008;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3009);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1339) : l112.fvalue(pv, 3, l4.value, l1327, l1339));
-        return (function(){
-            var v3010 = 1;
-            var v3011 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3010;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3011);
-        })();
-    })());
-    return (function(){
-        var v3012 = 1;
-        var v3013 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3012;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3013);
-    })();
-})();
-var l1340 = QIList(l44,QIList(l35,1,QIList(2,3,l5),l5),l5);
-(function(){
-    (l44.fvalue(pv, 1, (function(v3014){
-        return (l27.fvalue(pv, 2, v3014, 2) !== l5.value ? (function(){
-            l5.value;
-            return 3;
-        })() : l5.value);
-    })(1)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1340);
-        return (function(){
-            var v3015 = 1;
-            var v3016 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3015;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3016);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1340) : l112.fvalue(pv, 3, l4.value, l1327, l1340));
-        return (function(){
-            var v3017 = 1;
-            var v3018 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3017;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3018);
-        })();
-    })());
-    return (function(){
-        var v3019 = 1;
-        var v3020 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3019;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3020);
-    })();
-})();
-var l1341 = (new Symbol(make_lisp_string("FOO")));
-(function(){
-    (l1341).fvalue = (function(){
-        var func = (function (values,nargs,v3021){
-            checkArgs(nargs, 1);
-            return (function(){
-                try {
-                var v3022 = [];
-                    (v3021 !== l5.value ? (function(){
-                        var f = v3021;
-                        return (typeof f === 'function'? f: f.fvalue)(pv, 0)
-                    })() : l5.value);
-                    l1341.fvalue(pv, 1, (function (values,nargs){
-                        checkArgsAtMost(nargs, 0);
-                        return (function(){
-                            var values = mv;
-                            throw ({type: 'block', id: v3022, values: 1, message: 'Return from unknown block FOO.'})
-                        })();
-                    }));
-                    return (function(){
-                        var values = mv;
-                        throw ({type: 'block', id: v3022, values: 2, message: 'Return from unknown block FOO.'})
-                    })();
-                }
-                catch (cf){
-                    if (cf.type == 'block' && cf.id == v3022)
-                        return values.apply(this, forcemv(cf.values));
-                    else
-                        throw cf;
-                }
-            })();
-        });
-        func.fname = 'FOO';
-        return func;
-    })();
-    return l1341;
-})();
-var l1342 = QIList(l20,QIList(l1341,l5,l5),1,l5);
-(function(){
-    ((function(){
-        var x1 = l1341.fvalue(pv, 1, l5.value);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1342);
-        return (function(){
-            var v3023 = 1;
-            var v3024 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3023;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3024);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1342) : l112.fvalue(pv, 3, l4.value, l1327, l1342));
-        return (function(){
-            var v3025 = 1;
-            var v3026 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3025;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3026);
-        })();
-    })());
-    return (function(){
-        var v3027 = 1;
-        var v3028 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3027;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3028);
-    })();
-})();
-var l1343 = (new Symbol(make_lisp_string("FOO-2")));
-(function(){
-    (l1343).fvalue = (function(){
-        var func = (function (values,nargs,v3029){
-            checkArgs(nargs, 1);
-            return (function(){
-                return (function(v3031){
-                    (function(){
-                        var v3032 = 1;
-                        var v3033 = [];
-                        tbloop:
-                        while (true) {
-                            try {
-                                switch(v3032){
-                                case 1:
-                                    (v3029 !== l5.value ? (function(){
-                                        var f = v3029;
-                                        return (typeof f === 'function'? f: f.fvalue)(pv, 0)
-                                    })() : l5.value);
-                                    l1343.fvalue(pv, 1, (function (values,nargs){
-                                        checkArgsAtMost(nargs, 0);
-                                        return (function(){
-                                            throw ({type: 'tagbody', id: v3033, label: 2, message: 'Attempt to GO to non-existing tag EXIT-2'})
-                                        })();
-                                    }));
-                                    (function(){
-                                        throw ({type: 'tagbody', id: v3033, label: 3, message: 'Attempt to GO to non-existing tag END'})
-                                    })();
-                                case 2:
-                                    (v3031 = l4.value);
-                                case 3:
-                                default:
-                                    break tbloop;
-                                }
-                            }
-                            catch (jump) {
-                                if (jump.type == 'tagbody' && jump.id == v3033)
-                                    v3032 = jump.label;
-                                else
-                                    throw(jump);
-                            }
-                        }
-                        return l5.value;
-                    })();
-                    return v3031;
-                })(l5.value);
-            })();
-        });
-        func.fname = 'FOO-2';
-        return func;
-    })();
-    return l1343;
-})();
-var l1344 = QIList(l1343,l5,l5);
-(function(){
-    (l1343.fvalue(pv, 1, l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1344);
-        return (function(){
-            var v3034 = 1;
-            var v3035 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3034;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3035);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1344) : l112.fvalue(pv, 3, l4.value, l1327, l1344));
-        return (function(){
-            var v3036 = 1;
-            var v3037 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3036;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3037);
-        })();
-    })());
-    return (function(){
-        var v3038 = 1;
-        var v3039 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3038;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3039);
-    })();
-})();
-var l1345 = QIList(l74,QIList(l696,QIList(QIList(l1341,l5,QIList(l762,l1341,42,l5),l5),l5),QIList(l1341,l5),l5),42,l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(v3041){
-        return v3041(pv, 0);
-    })((function (values,nargs){
-        checkArgsAtMost(nargs, 0);
-        return (function(){
-            try {
-            var v3040 = [];
-                return (function(){
-                    var values = mv;
-                    throw ({type: 'block', id: v3040, values: 42, message: 'Return from unknown block FOO.'})
-                })();
-            }
-            catch (cf){
-                if (cf.type == 'block' && cf.id == v3040)
-                    return values.apply(this, forcemv(cf.values));
-                else
-                    throw cf;
-            }
-        })();
-    })), 42) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1345);
-        return (function(){
-            var v3042 = 1;
-            var v3043 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3042;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3043);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1345) : l112.fvalue(pv, 3, l4.value, l1327, l1345));
-        return (function(){
-            var v3044 = 1;
-            var v3045 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3044;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3045);
-        })();
-    })());
-    return (function(){
-        var v3046 = 1;
-        var v3047 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3046;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3047);
-    })();
-})();
-var l1346 = QIList(-5,-4,-3,999,1,2,3,4,5,l5);
-var l1347 = (new Symbol(make_lisp_string("OUT")));
-var l1348 = (new Symbol(make_lisp_string("ZFOO")));
-var l1349 = (new Symbol(make_lisp_string("N")));
-var l1350 = (new Symbol(make_lisp_string("RF")));
-var l1351 = (new Symbol(make_lisp_string("I")));
-var l1352 = QIList(l74,QIList(l725,QIList(QIList(l1347,QIList(l92,l5),l5),l5),QIList(l703,QIList(QIList(l1348,QIList(l1349,l1350,l1351,l5),QIList(l485,QIList(l954,l1349,0,l5),QIList(l196,QIList(l31,QIList(l6,l5,QIList(l762,l1348,l1349,l5),l5),l1350,l5),QIList(l31,l1349,l1347,l5),QIList(l1348,QIList(l24,l1349,l5),l1350,l1351,l5),QIList(l31,QIList(l43,l1349,l5),l1347,l5),l5),QIList(l196,QIList(l31,999,l1347,l5),QIList(l1087,QIList(l151,l1351,QIList(l49,l1350,l5),l5),l5),QIList(l31,-999,l1347,l5),l5),l5),l5),l5),QIList(l725,QIList(QIList(l1350,QIList(l92,l5),l5),l5),QIList(l1348,5,l1350,3,l5),l1347,l5),l5),l5),QIList(l389,l1346,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(v3048){
-        return (function(){
-            var v3049 = (function (values,nargs,v3050,v3051,v3052){
-                checkArgs(nargs, 3);
-                return (function(){
-                    try {
-                    var v3053 = [];
-                        return ((function(){
-                            var x1 = v3050;
-                            if (typeof x1 !== 'number') throw 'Not a number!';
-                            return (x1>0?l4.value: l5.value);
-                        })() !== l5.value ? (function(){
-                            (function(){
-                                var v3054 = (function (values,nargs){
-                                    checkArgsAtMost(nargs, 0);
-                                    return (function(){
-                                        var values = mv;
-                                        throw ({type: 'block', id: v3053, values: v3050, message: 'Return from unknown block ZFOO.'})
-                                    })();
-                                });
-                                var v3055 = ({car: v3054, cdr: v3051});
-                                return (v3051 = v3055);
-                            })();
-                            (function(){
-                                var v3056 = v3050;
-                                var v3057 = ({car: v3056, cdr: v3048});
-                                return (v3048 = v3057);
-                            })();
-                            v3049(pv, 3, l24.fvalue(pv, 1, v3050), v3051, v3052);
-                            return (function(){
-                                var v3058 = (function(){
-                                    var x1 = v3050;
-                                    if (typeof x1 !== 'number') throw 'Not a number!';
-                                    return -x1;
-                                })();
-                                var v3059 = ({car: v3058, cdr: v3048});
-                                return (v3048 = v3059);
-                            })();
-                        })() : (function(){
-                            (function(){
-                                var v3060 = 999;
-                                var v3061 = ({car: v3060, cdr: v3048});
-                                return (v3048 = v3061);
-                            })();
-                            (function(){
-                                var f = l151.fvalue(pv, 2, v3052, l49.fvalue(pv, 1, v3051));
-                                return (typeof f === 'function'? f: f.fvalue)(pv, 0)
-                            })();
-                            return (function(){
-                                var v3062 = -999;
-                                var v3063 = ({car: v3062, cdr: v3048});
-                                return (v3048 = v3063);
-                            })();
-                        })());
-                    }
-                    catch (cf){
-                        if (cf.type == 'block' && cf.id == v3053)
-                            return values.apply(this, forcemv(cf.values));
-                        else
-                            throw cf;
-                    }
-                })();
-            });
-            return (function(v3064){
-                v3049(pv, 3, 5, v3064, 3);
-                return v3048;
-            })(l92.fvalue(pv, 0));
-        })();
-    })(l92.fvalue(pv, 0)), l1346) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1352);
-        return (function(){
-            var v3065 = 1;
-            var v3066 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3065;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3066);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1352) : l112.fvalue(pv, 3, l4.value, l1327, l1352));
-        return (function(){
-            var v3067 = 1;
-            var v3068 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3067;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3068);
-        })();
-    })());
-    return (function(){
-        var v3069 = 1;
-        var v3070 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3069;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3070);
-    })();
-})();
-var l1353 = QIList(1,2,l5);
-var l1354 = QIList(1,2,l5);
-var l1355 = QIList(l74,QIList(l389,l1353,l5),QIList(l389,l1354,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l1353, l1354) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1355);
-        return (function(){
-            var v3071 = 1;
-            var v3072 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3071;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3072);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1355) : l112.fvalue(pv, 3, l4.value, l1327, l1355));
-        return (function(){
-            var v3073 = 1;
-            var v3074 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3073;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3074);
-        })();
-    })());
-    return (function(){
-        var v3075 = 1;
-        var v3076 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3075;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3076);
-    })();
-})();
-var l1356 = QIList(l74,1,1,l5);
-(function(){
-    (l74.fvalue(pv, 2, 1, 1) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1356);
-        return (function(){
-            var v3077 = 1;
-            var v3078 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3077;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3078);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1356) : l112.fvalue(pv, 3, l4.value, l1327, l1356));
-        return (function(){
-            var v3079 = 1;
-            var v3080 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3079;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3080);
-        })();
-    })());
-    return (function(){
-        var v3081 = 1;
-        var v3082 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3081;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3082);
-    })();
-})();
-var l1357 = make_lisp_string("abc");
-var l1358 = make_lisp_string("abc");
-var l1359 = QIList(l74,l1357,l1358,l5);
-(function(){
-    (l74.fvalue(pv, 2, l1357, l1358) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1359);
-        return (function(){
-            var v3083 = 1;
-            var v3084 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3083;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3084);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1359) : l112.fvalue(pv, 3, l4.value, l1327, l1359));
-        return (function(){
-            var v3085 = 1;
-            var v3086 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3085;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3086);
-        })();
-    })());
-    return (function(){
-        var v3087 = 1;
-        var v3088 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3087;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3088);
-    })();
-})();
-var l1360 = make_lisp_string("abc");
-var l1361 = make_lisp_string("def");
-var l1362 = QIList(l28,QIList(l74,l1360,l1361,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l74.fvalue(pv, 2, l1360, l1361)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1362);
-        return (function(){
-            var v3089 = 1;
-            var v3090 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3089;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3090);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1362) : l112.fvalue(pv, 3, l4.value, l1327, l1362));
-        return (function(){
-            var v3091 = 1;
-            var v3092 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3091;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3092);
-        })();
-    })());
-    return (function(){
-        var v3093 = 1;
-        var v3094 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3093;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3094);
-    })();
-})();
-var l1363 = make_lisp_string("Abc");
-var l1364 = make_lisp_string("abc");
-var l1365 = QIList(l28,QIList(l74,l1363,l1364,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l74.fvalue(pv, 2, l1363, l1364)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1365);
-        return (function(){
-            var v3095 = 1;
-            var v3096 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3095;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3096);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1365) : l112.fvalue(pv, 3, l4.value, l1327, l1365));
-        return (function(){
-            var v3097 = 1;
-            var v3098 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3097;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3098);
-        })();
-    })());
-    return (function(){
-        var v3099 = 1;
-        var v3100 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3099;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3100);
-    })();
-})();
-var l1366 = QIList(l42,1,2,l5);
-var l1367 = QIList(l20,QIList(l322,QIList(l389,l1366,l5),l5),3,l5);
-(function(){
-    ((function(){
-        var x1 = l322.fvalue(pv, 1, l1366);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==3?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1367);
-        return (function(){
-            var v3101 = 1;
-            var v3102 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3101;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3102);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1367) : l112.fvalue(pv, 3, l4.value, l1327, l1367));
-        return (function(){
-            var v3103 = 1;
-            var v3104 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3103;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3104);
-        })();
-    })());
-    return (function(){
-        var v3105 = 1;
-        var v3106 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3105;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3106);
-    })();
-})();
-var l1368 = make_lisp_string("a");
-var l1369 = make_lisp_string("a");
-var l1370 = QIList(l75,l1368,QIList(l112,l5,l1369,l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1368, l112.fvalue(pv, 2, l5.value, l1369)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1370);
-        return (function(){
-            var v3107 = 1;
-            var v3108 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3107;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3108);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1370) : l112.fvalue(pv, 3, l4.value, l1327, l1370));
-        return (function(){
-            var v3109 = 1;
-            var v3110 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3109;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3110);
-        })();
-    })());
-    return (function(){
-        var v3111 = 1;
-        var v3112 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3111;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3112);
-    })();
-})();
-var l1371 = make_lisp_string("~");
-var l1372 = make_lisp_string("~~");
-var l1373 = QIList(l75,l1371,QIList(l112,l5,l1372,l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1371, l112.fvalue(pv, 2, l5.value, l1372)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1373);
-        return (function(){
-            var v3113 = 1;
-            var v3114 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3113;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3114);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1373) : l112.fvalue(pv, 3, l4.value, l1327, l1373));
-        return (function(){
-            var v3115 = 1;
-            var v3116 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3115;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3116);
-        })();
-    })());
-    return (function(){
-        var v3117 = 1;
-        var v3118 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3117;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3118);
-    })();
-})();
-var l1374 = make_lisp_string("a~a");
-var l1375 = make_lisp_string("a~~a");
-var l1376 = QIList(l75,l1374,QIList(l112,l5,l1375,l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1374, l112.fvalue(pv, 2, l5.value, l1375)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1376);
-        return (function(){
-            var v3119 = 1;
-            var v3120 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3119;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3120);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1376) : l112.fvalue(pv, 3, l4.value, l1327, l1376));
-        return (function(){
-            var v3121 = 1;
-            var v3122 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3121;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3122);
-        })();
-    })());
-    return (function(){
-        var v3123 = 1;
-        var v3124 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3123;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3124);
-    })();
-})();
-var l1377 = make_lisp_string("a\na");
-var l1378 = make_lisp_string("a~%a");
-var l1379 = QIList(l75,l1377,QIList(l112,l5,l1378,l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1377, l112.fvalue(pv, 2, l5.value, l1378)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1379);
-        return (function(){
-            var v3125 = 1;
-            var v3126 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3125;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3126);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1379) : l112.fvalue(pv, 3, l4.value, l1327, l1379));
-        return (function(){
-            var v3127 = 1;
-            var v3128 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3127;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3128);
-        })();
-    })());
-    return (function(){
-        var v3129 = 1;
-        var v3130 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3129;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3130);
-    })();
-})();
-var l1380 = make_lisp_string("this is foo");
-var l1381 = make_lisp_string("this is ~a");
-var l1382 = make_lisp_string("foo");
-var l1383 = QIList(l75,l1380,QIList(l112,l5,l1381,l1382,l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1380, l112.fvalue(pv, 3, l5.value, l1381, l1382)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1383);
-        return (function(){
-            var v3131 = 1;
-            var v3132 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3131;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3132);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1383) : l112.fvalue(pv, 3, l4.value, l1327, l1383));
-        return (function(){
-            var v3133 = 1;
-            var v3134 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3133;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3134);
-        })();
-    })());
-    return (function(){
-        var v3135 = 1;
-        var v3136 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3135;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3136);
-    })();
-})();
-var l1384 = make_lisp_string("this is \"foo\"");
-var l1385 = make_lisp_string("this is ~S");
-var l1386 = make_lisp_string("foo");
-var l1387 = QIList(l75,l1384,QIList(l112,l5,l1385,l1386,l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1384, l112.fvalue(pv, 3, l5.value, l1385, l1386)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1387);
-        return (function(){
-            var v3137 = 1;
-            var v3138 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3137;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3138);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1387) : l112.fvalue(pv, 3, l4.value, l1327, l1387));
-        return (function(){
-            var v3139 = 1;
-            var v3140 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3139;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3140);
-        })();
-    })());
-    return (function(){
-        var v3141 = 1;
-        var v3142 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3141;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3142);
-    })();
-})();
-var l1388 = (new Symbol(make_lisp_string("TOTAL")));
-var l1389 = QIList(l725,QIList(QIList(l1388,0,l5),l5),QIList(l33,QIList(l1349,6,l5),QIList(l29,l1388,l1349,l5),l5),QIList(l20,l1388,15,l5),l5);
-(function(){
-    ((function(v3143){
-        (function(){
-            return (function(v3145,v3146){
-                (function(){
-                    while((function(){
-                        var x1 = v3145;
-                        if (typeof x1 !== 'number') throw 'Not a number!';
-                        var x2 = v3146;
-                        if (typeof x2 !== 'number') throw 'Not a number!';
-                        return (x1<x2?l4.value: l5.value);
-                    })() !== l5.value){
-                        (function(){
-                            (function(){
-                                var v3147 = v3145;
-                                var v3148 = (function(){
-                                    var x1 = v3143;
-                                    if (typeof x1 !== 'number') throw 'Not a number!';
-                                    var x2 = v3147;
-                                    if (typeof x2 !== 'number') throw 'Not a number!';
-                                    return x1+x2;
-                                })();
-                                return (v3143 = v3148);
-                            })();
-                            return l5.value;
-                        })();
-                        (function(){
-                            var v3149 = 1;
-                            var v3150 = (function(){
-                                var x1 = v3145;
-                                if (typeof x1 !== 'number') throw 'Not a number!';
-                                var x2 = v3149;
-                                if (typeof x2 !== 'number') throw 'Not a number!';
-                                return x1+x2;
-                            })();
-                            return (v3145 = v3150);
-                        })();
-                    }return l5.value;
-                })();
-                return l5.value;
-            })(0,6);
-        })();
-        return (function(){
-            var x1 = v3143;
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==15?l4.value: l5.value);
-        })();
-    })(0) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1389);
-        return (function(){
-            var v3151 = 1;
-            var v3152 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3151;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3152);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1389) : l112.fvalue(pv, 3, l4.value, l1327, l1389));
-        return (function(){
-            var v3153 = 1;
-            var v3154 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3153;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3154);
-        })();
-    })());
-    return (function(){
-        var v3155 = 1;
-        var v3156 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3155;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3156);
-    })();
-})();
-var l1390 = QIList(1,2,3,4,5,l5);
-var l1391 = QIList(l725,QIList(QIList(l1388,0,l5),l5),QIList(l32,QIList(l1349,QIList(l389,l1390,l5),l5),QIList(l29,l1388,l1349,l5),l5),QIList(l20,l1388,15,l5),l5);
-(function(){
-    ((function(v3157){
-        (function(){
-            return (function(v3159,v3160){
-                (function(){
-                    while(v3159 !== l5.value){
-                        (v3160 = (function(){
-                            var tmp = v3159;
-                            return tmp === l5.value? l5.value: tmp.car;
-                        })());
-                        (function(){
-                            (function(){
-                                var v3161 = v3160;
-                                var v3162 = (function(){
-                                    var x1 = v3157;
-                                    if (typeof x1 !== 'number') throw 'Not a number!';
-                                    var x2 = v3161;
-                                    if (typeof x2 !== 'number') throw 'Not a number!';
-                                    return x1+x2;
-                                })();
-                                return (v3157 = v3162);
-                            })();
-                            return l5.value;
-                        })();
-                        (v3159 = (function(){
-                            var tmp = v3159;
-                            return tmp === l5.value? l5.value: tmp.cdr;
-                        })());
-                    }return l5.value;
-                })();
-                return l5.value;
-            })(l1390,l5.value);
-        })();
-        return (function(){
-            var x1 = v3157;
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==15?l4.value: l5.value);
-        })();
-    })(0) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1391);
-        return (function(){
-            var v3163 = 1;
-            var v3164 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3163;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3164);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1391) : l112.fvalue(pv, 3, l4.value, l1327, l1391));
-        return (function(){
-            var v3165 = 1;
-            var v3166 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3165;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3166);
-        })();
-    })());
-    return (function(){
-        var v3167 = 1;
-        var v3168 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3167;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3168);
-    })();
-})();
-var l1392 = (new Symbol(make_lisp_string("A")));
-var l1393 = (new Symbol(make_lisp_string("B")));
-var l1394 = QIList(l51,QIList(QIList(l1392,0,l1393,l5),QIList(l1393,1,QIList(l42,l1392,l1393,l5),l5),QIList(l1349,0,QIList(l23,l1349,l5),l5),l5),QIList(QIList(l20,l1349,10,l5),QIList(l20,l1392,55,l5),l5),l5);
-(function(){
-    ((function(){
-        return (function(v3170,v3171,v3172){
-            return (function(){
-                try {
-                var v3173 = [];
-                    return (function(){
-                        while(l4.value !== l5.value){
-                            ((function(){
-                                var x1 = v3172;
-                                if (typeof x1 !== 'number') throw 'Not a number!';
-                                return (x1==10?l4.value: l5.value);
-                            })() !== l5.value ? (function(){
-                                throw ({type: 'block', id: v3173, values: (function(){
-                                    var x1 = v3170;
-                                    if (typeof x1 !== 'number') throw 'Not a number!';
-                                    return (x1==55?l4.value: l5.value);
-                                })(), message: 'Return from unknown block NIL.'})
-                            })() : l5.value);
-                            l5.value;
-                            (function(v3174,v3175,v3176){
-                                return (v3170 = v3174, v3171 = v3175, v3172 = v3176);
-                            })(v3171,(function(){
-                                var x1 = v3170;
-                                if (typeof x1 !== 'number') throw 'Not a number!';
-                                var x2 = v3171;
-                                if (typeof x2 !== 'number') throw 'Not a number!';
-                                return x1+x2;
-                            })(),l23.fvalue(pv, 1, v3172));
-                        }return l5.value;
-                    })();
-                }
-                catch (cf){
-                    if (cf.type == 'block' && cf.id == v3173)
-                        return cf.values;
-                    else
-                        throw cf;
-                }
-            })();
-        })(0,1,0);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1394);
-        return (function(){
-            var v3177 = 1;
-            var v3178 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3177;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3178);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1394) : l112.fvalue(pv, 3, l4.value, l1327, l1394));
-        return (function(){
-            var v3179 = 1;
-            var v3180 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3179;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3180);
-        })();
-    })());
-    return (function(){
-        var v3181 = 1;
-        var v3182 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3181;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3182);
-    })();
-})();
-var l1395 = QIList(l52,QIList(QIList(l1392,0,l1393,l5),QIList(l1393,1,QIList(l42,l1392,l1393,l5),l5),QIList(l1349,0,QIList(l23,l1349,l5),l5),l5),QIList(QIList(l20,l1349,10,l5),QIList(l20,l1392,512,l5),l5),l5);
-(function(){
-    ((function(){
-        return (function(){
-            var v3184 = 0;
-            var v3185 = 1;
-            var v3186 = 0;
-            return (function(){
-                try {
-                var v3187 = [];
-                    return (function(){
-                        while(l4.value !== l5.value){
-                            ((function(){
-                                var x1 = v3186;
-                                if (typeof x1 !== 'number') throw 'Not a number!';
-                                return (x1==10?l4.value: l5.value);
-                            })() !== l5.value ? (function(){
-                                throw ({type: 'block', id: v3187, values: (function(){
-                                    var x1 = v3184;
-                                    if (typeof x1 !== 'number') throw 'Not a number!';
-                                    return (x1==512?l4.value: l5.value);
-                                })(), message: 'Return from unknown block NIL.'})
-                            })() : l5.value);
-                            l5.value;
-                            (v3184 = v3185, v3185 = (function(){
-                                var x1 = v3184;
-                                if (typeof x1 !== 'number') throw 'Not a number!';
-                                var x2 = v3185;
-                                if (typeof x2 !== 'number') throw 'Not a number!';
-                                return x1+x2;
-                            })(), v3186 = l23.fvalue(pv, 1, v3186));
-                        }return l5.value;
-                    })();
-                }
-                catch (cf){
-                    if (cf.type == 'block' && cf.id == v3187)
-                        return cf.values;
-                    else
-                        throw cf;
-                }
-            })();
-        })();
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1395);
-        return (function(){
-            var v3188 = 1;
-            var v3189 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3188;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3189);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1395) : l112.fvalue(pv, 3, l4.value, l1327, l1395));
-        return (function(){
-            var v3190 = 1;
-            var v3191 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3190;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3191);
-        })();
-    })());
-    return (function(){
-        var v3192 = 1;
-        var v3193 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3192;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3193);
-    })();
-})();
-var l1396 = QIList(1,2);
-var l1397 = QIList(l74,QIList(l127,1,2,l5),QIList(l389,l1396,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: 1, cdr: 2}), l1396) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1397);
-        return (function(){
-            var v3194 = 1;
-            var v3195 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3194;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3195);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1397) : l112.fvalue(pv, 3, l4.value, l1327, l1397));
-        return (function(){
-            var v3196 = 1;
-            var v3197 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3196;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3197);
-        })();
-    })());
-    return (function(){
-        var v3198 = 1;
-        var v3199 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3198;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3199);
-    })();
-})();
-var l1398 = QIList(1,l5);
-var l1399 = QIList(l74,QIList(l127,1,l5,l5),QIList(l389,l1398,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: 1, cdr: l5.value}), l1398) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1399);
-        return (function(){
-            var v3200 = 1;
-            var v3201 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3200;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3201);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1399) : l112.fvalue(pv, 3, l4.value, l1327, l1399));
-        return (function(){
-            var v3202 = 1;
-            var v3203 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3202;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3203);
-        })();
-    })());
-    return (function(){
-        var v3204 = 1;
-        var v3205 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3204;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3205);
-    })();
-})();
-var l1400 = QIList(l5,2);
-var l1401 = QIList(l74,QIList(l127,l5,2,l5),QIList(l389,l1400,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: l5.value, cdr: 2}), l1400) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1401);
-        return (function(){
-            var v3206 = 1;
-            var v3207 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3206;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3207);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1401) : l112.fvalue(pv, 3, l4.value, l1327, l1401));
-        return (function(){
-            var v3208 = 1;
-            var v3209 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3208;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3209);
-        })();
-    })());
-    return (function(){
-        var v3210 = 1;
-        var v3211 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3210;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3211);
-    })();
-})();
-var l1402 = QIList(l5,l5);
-var l1403 = QIList(l74,QIList(l127,l5,l5,l5),QIList(l389,l1402,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: l5.value, cdr: l5.value}), l1402) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1403);
-        return (function(){
-            var v3212 = 1;
-            var v3213 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3212;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3213);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1403) : l112.fvalue(pv, 3, l4.value, l1327, l1403));
-        return (function(){
-            var v3214 = 1;
-            var v3215 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3214;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3215);
-        })();
-    })());
-    return (function(){
-        var v3216 = 1;
-        var v3217 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3216;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3217);
-    })();
-})();
-var l1404 = QIList(1,2,3,4,l5);
-var l1405 = QIList(l74,QIList(l127,1,QIList(l127,2,QIList(l127,3,QIList(l127,4,l5,l5),l5),l5),l5),QIList(l389,l1404,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: 1, cdr: ({car: 2, cdr: ({car: 3, cdr: ({car: 4, cdr: l5.value})})})}), l1404) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1405);
-        return (function(){
-            var v3218 = 1;
-            var v3219 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3218;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3219);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1405) : l112.fvalue(pv, 3, l4.value, l1327, l1405));
-        return (function(){
-            var v3220 = 1;
-            var v3221 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3220;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3221);
-        })();
-    })());
-    return (function(){
-        var v3222 = 1;
-        var v3223 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3222;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3223);
-    })();
-})();
-var l1406 = QIList(l1392,l1393);
-var l1407 = QIList(l74,QIList(l127,QIList(l389,l1392,l5),QIList(l389,l1393,l5),l5),QIList(l389,l1406,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: l1392, cdr: l1393}), l1406) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1407);
-        return (function(){
-            var v3224 = 1;
-            var v3225 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3224;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3225);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1407) : l112.fvalue(pv, 3, l4.value, l1327, l1407));
-        return (function(){
-            var v3226 = 1;
-            var v3227 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3226;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3227);
-        })();
-    })());
-    return (function(){
-        var v3228 = 1;
-        var v3229 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3228;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3229);
-    })();
-})();
-var l1408 = (new Symbol(make_lisp_string("C")));
-var l1409 = QIList(l1392,l1393,l1408,l5);
-var l1410 = QIList(l74,QIList(l127,QIList(l389,l1392,l5),QIList(l127,QIList(l389,l1393,l5),QIList(l127,QIList(l389,l1408,l5),QIList(l389,l5,l5),l5),l5),l5),QIList(l389,l1409,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: l1392, cdr: ({car: l1393, cdr: ({car: l1408, cdr: l5})})}), l1409) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1410);
-        return (function(){
-            var v3230 = 1;
-            var v3231 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3230;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3231);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1410) : l112.fvalue(pv, 3, l4.value, l1327, l1410));
-        return (function(){
-            var v3232 = 1;
-            var v3233 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3232;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3233);
-        })();
-    })());
-    return (function(){
-        var v3234 = 1;
-        var v3235 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3234;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3235);
-    })();
-})();
-var l1411 = (new Symbol(make_lisp_string("D")));
-var l1412 = QIList(l1393,l1408,l1411,l5);
-var l1413 = QIList(l1392,l1393,l1408,l1411,l5);
-var l1414 = QIList(l74,QIList(l127,QIList(l389,l1392,l5),QIList(l389,l1412,l5),l5),QIList(l389,l1413,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, ({car: l1392, cdr: l1412}), l1413) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1414);
-        return (function(){
-            var v3236 = 1;
-            var v3237 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3236;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3237);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1414) : l112.fvalue(pv, 3, l4.value, l1327, l1414));
-        return (function(){
-            var v3238 = 1;
-            var v3239 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3238;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3239);
-        })();
-    })());
-    return (function(){
-        var v3240 = 1;
-        var v3241 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3240;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3241);
-    })();
-})();
-var l1415 = QIList(l28,QIList(l128,QIList(l389,l5,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, ((function(){
-        var tmp = l5;
-        return (typeof tmp == 'object' && 'car' in tmp);
-    })()?l4.value: l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1415);
-        return (function(){
-            var v3242 = 1;
-            var v3243 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3242;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3243);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1415) : l112.fvalue(pv, 3, l4.value, l1327, l1415));
-        return (function(){
-            var v3244 = 1;
-            var v3245 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3244;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3245);
-        })();
-    })());
-    return (function(){
-        var v3246 = 1;
-        var v3247 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3246;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3247);
-    })();
-})();
-var l1416 = QIList(l28,QIList(l128,l5,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, ((function(){
-        var tmp = l5.value;
-        return (typeof tmp == 'object' && 'car' in tmp);
-    })()?l4.value: l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1416);
-        return (function(){
-            var v3248 = 1;
-            var v3249 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3248;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3249);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1416) : l112.fvalue(pv, 3, l4.value, l1327, l1416));
-        return (function(){
-            var v3250 = 1;
-            var v3251 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3250;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3251);
-        })();
-    })());
-    return (function(){
-        var v3252 = 1;
-        var v3253 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3252;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3253);
-    })();
-})();
-var l1417 = QIList(l28,QIList(l128,l5,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, ((function(){
-        var tmp = l5.value;
-        return (typeof tmp == 'object' && 'car' in tmp);
-    })()?l4.value: l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1417);
-        return (function(){
-            var v3254 = 1;
-            var v3255 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3254;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3255);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1417) : l112.fvalue(pv, 3, l4.value, l1327, l1417));
-        return (function(){
-            var v3256 = 1;
-            var v3257 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3256;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3257);
-        })();
-    })());
-    return (function(){
-        var v3258 = 1;
-        var v3259 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3258;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3259);
-    })();
-})();
-var l1418 = QIList(l28,QIList(l128,QIList(l389,l5,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, ((function(){
-        var tmp = l5;
-        return (typeof tmp == 'object' && 'car' in tmp);
-    })()?l4.value: l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1418);
-        return (function(){
-            var v3260 = 1;
-            var v3261 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3260;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3261);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1418) : l112.fvalue(pv, 3, l4.value, l1327, l1418));
-        return (function(){
-            var v3262 = 1;
-            var v3263 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3262;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3263);
-        })();
-    })());
-    return (function(){
-        var v3264 = 1;
-        var v3265 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3264;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3265);
-    })();
-})();
-var l1419 = QIList(l128,QIList(l127,1,2,l5),l5);
-(function(){
-    (((function(){
-        var tmp = ({car: 1, cdr: 2});
-        return (typeof tmp == 'object' && 'car' in tmp);
-    })()?l4.value: l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1419);
-        return (function(){
-            var v3266 = 1;
-            var v3267 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3266;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3267);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1419) : l112.fvalue(pv, 3, l4.value, l1327, l1419));
-        return (function(){
-            var v3268 = 1;
-            var v3269 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3268;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3269);
-        })();
-    })());
-    return (function(){
-        var v3270 = 1;
-        var v3271 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3270;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3271);
-    })();
-})();
-var l1420 = (new Symbol(make_lisp_string("SSS")));
-var l1421 = QIList(l69,QIList(l389,l1420,l5),l5);
-(function(){
-    (l69.fvalue(pv, 1, l1420) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1421);
-        return (function(){
-            var v3272 = 1;
-            var v3273 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3272;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3273);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1421) : l112.fvalue(pv, 3, l4.value, l1327, l1421));
-        return (function(){
-            var v3274 = 1;
-            var v3275 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3274;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3275);
-        })();
-    })());
-    return (function(){
-        var v3276 = 1;
-        var v3277 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3276;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3277);
-    })();
-})();
-var l1422 = QIList(l28,QIList(l69,QIList(l127,1,2,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l69.fvalue(pv, 1, ({car: 1, cdr: 2}))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1422);
-        return (function(){
-            var v3278 = 1;
-            var v3279 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3278;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3279);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1422) : l112.fvalue(pv, 3, l4.value, l1327, l1422));
-        return (function(){
-            var v3280 = 1;
-            var v3281 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3280;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3281);
-        })();
-    })());
-    return (function(){
-        var v3282 = 1;
-        var v3283 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3282;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3283);
-    })();
-})();
-var l1423 = QIList(l69,l5,l5);
-(function(){
-    (l69.fvalue(pv, 1, l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1423);
-        return (function(){
-            var v3284 = 1;
-            var v3285 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3284;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3285);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1423) : l112.fvalue(pv, 3, l4.value, l1327, l1423));
-        return (function(){
-            var v3286 = 1;
-            var v3287 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3286;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3287);
-        })();
-    })());
-    return (function(){
-        var v3288 = 1;
-        var v3289 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3288;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3289);
-    })();
-})();
-var l1424 = QIList(l69,QIList(l389,l5,l5),l5);
-(function(){
-    (l69.fvalue(pv, 1, l5) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1424);
-        return (function(){
-            var v3290 = 1;
-            var v3291 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3290;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3291);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1424) : l112.fvalue(pv, 3, l4.value, l1327, l1424));
-        return (function(){
-            var v3292 = 1;
-            var v3293 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3292;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3293);
-        })();
-    })());
-    return (function(){
-        var v3294 = 1;
-        var v3295 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3294;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3295);
-    })();
-})();
-var l1425 = QIList(l69,3,l5);
-(function(){
-    (l69.fvalue(pv, 1, 3) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1425);
-        return (function(){
-            var v3296 = 1;
-            var v3297 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3296;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3297);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1425) : l112.fvalue(pv, 3, l4.value, l1327, l1425));
-        return (function(){
-            var v3298 = 1;
-            var v3299 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3298;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3299);
-        })();
-    })());
-    return (function(){
-        var v3300 = 1;
-        var v3301 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3300;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3301);
-    })();
-})();
-var l1426 = (new Symbol(make_lisp_string("ONE")));
-var l1427 = (new Symbol(make_lisp_string("TWO")));
-var l1428 = (new Symbol(make_lisp_string("THREE")));
-var l1429 = (new Symbol(make_lisp_string("FOUR")));
-var l1430 = (new Symbol(make_lisp_string("UNO")));
-var l1431 = QIList(l1430,l1427,l1428,l1429);
-var l1432 = (new Symbol(make_lisp_string("SOME-LIST")));
-var l1433 = QIList(l74,QIList(l197,l1432,QIList(l389,l1430,l5),l5),QIList(l389,l1431,l5),l5);
-var l1434 = QIList(l1430,l1427,l1428,l1429);
-var l1435 = QIList(l74,l1432,QIList(l389,l1434,l5),l5);
-(function(v3302){
-    (function(){
-        (l74.fvalue(pv, 2, (function(){
-            var x = v3302;
-            if (typeof x != 'object')
-                throw 'The value ' + x + ' is not a type object.';
-            return (x.car = l1430, x);
-        })(), l1431) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1433);
-            return (function(){
-                var v3303 = 1;
-                var v3304 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3303;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3304);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1433) : l112.fvalue(pv, 3, l4.value, l1327, l1433));
-            return (function(){
-                var v3305 = 1;
-                var v3306 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3305;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3306);
-            })();
-        })());
-        return (function(){
-            var v3307 = 1;
-            var v3308 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3307;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3308);
-        })();
-    })();
-    return (function(){
-        (l74.fvalue(pv, 2, v3302, l1434) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1435);
-            return (function(){
-                var v3309 = 1;
-                var v3310 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3309;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3310);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1435) : l112.fvalue(pv, 3, l4.value, l1327, l1435));
-            return (function(){
-                var v3311 = 1;
-                var v3312 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3311;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3312);
-            })();
-        })());
-        return (function(){
-            var v3313 = 1;
-            var v3314 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3313;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3314);
-        })();
-    })();
-})(l148.fvalue(pv, 4, l1426, l1427, l1428, l1429));
-var l1436 = (new Symbol(make_lisp_string("IV")));
-var l1437 = QIList(l1428,l1436,l5);
-var l1438 = QIList(l74,QIList(l198,QIList(l189,l1432,l5),QIList(l92,QIList(l389,l1436,l5),l5),l5),QIList(l389,l1437,l5),l5);
-var l1439 = QIList(l1426,l1427,l1428,l1436,l5);
-var l1440 = QIList(l74,l1432,QIList(l389,l1439,l5),l5);
-(function(v3315){
-    (function(){
-        (l74.fvalue(pv, 2, (function(){
-            var x = l189.fvalue(pv, 1, v3315);
-            if (typeof x != 'object')
-                throw 'The value ' + x + ' is not a type object.';
-            return (x.cdr = l92.fvalue(pv, 1, l1436), x);
-        })(), l1437) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1438);
-            return (function(){
-                var v3316 = 1;
-                var v3317 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3316;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3317);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1438) : l112.fvalue(pv, 3, l4.value, l1327, l1438));
-            return (function(){
-                var v3318 = 1;
-                var v3319 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3318;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3319);
-            })();
-        })());
-        return (function(){
-            var v3320 = 1;
-            var v3321 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3320;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3321);
-        })();
-    })();
-    return (function(){
-        (l74.fvalue(pv, 2, v3315, l1439) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1440);
-            return (function(){
-                var v3322 = 1;
-                var v3323 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3322;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3323);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1440) : l112.fvalue(pv, 3, l4.value, l1327, l1440));
-            return (function(){
-                var v3324 = 1;
-                var v3325 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3324;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3325);
-            })();
-        })());
-        return (function(){
-            var v3326 = 1;
-            var v3327 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3326;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3327);
-        })();
-    })();
-})(l148.fvalue(pv, 4, l1426, l1427, l1428, l1429));
-var l1441 = QIList(l74,QIList(l131,l5,l5),l5,l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(){
-        var tmp = l5.value;
-        return tmp === l5.value? l5.value: tmp.car;
-    })(), l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1441);
-        return (function(){
-            var v3328 = 1;
-            var v3329 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3328;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3329);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1441) : l112.fvalue(pv, 3, l4.value, l1327, l1441));
-        return (function(){
-            var v3330 = 1;
-            var v3331 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3330;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3331);
-        })();
-    })());
-    return (function(){
-        var v3332 = 1;
-        var v3333 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3332;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3333);
-    })();
-})();
-var l1442 = QIList(1,2);
-var l1443 = QIList(l74,QIList(l132,QIList(l389,l1442,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(){
-        var tmp = l1442;
-        return tmp === l5.value? l5.value: tmp.cdr;
-    })(), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1443);
-        return (function(){
-            var v3334 = 1;
-            var v3335 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3334;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3335);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1443) : l112.fvalue(pv, 3, l4.value, l1327, l1443));
-        return (function(){
-            var v3336 = 1;
-            var v3337 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3336;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3337);
-        })();
-    })());
-    return (function(){
-        var v3338 = 1;
-        var v3339 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3338;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3339);
-    })();
-})();
-var l1444 = QIList(1,2,l5);
-var l1445 = QIList(2,l5);
-var l1446 = QIList(l74,QIList(l132,QIList(l389,l1444,l5),l5),QIList(l389,l1445,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(){
-        var tmp = l1444;
-        return tmp === l5.value? l5.value: tmp.cdr;
-    })(), l1445) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1446);
-        return (function(){
-            var v3340 = 1;
-            var v3341 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3340;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3341);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1446) : l112.fvalue(pv, 3, l4.value, l1327, l1446));
-        return (function(){
-            var v3342 = 1;
-            var v3343 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3342;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3343);
-        })();
-    })());
-    return (function(){
-        var v3344 = 1;
-        var v3345 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3344;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3345);
-    })();
-})();
-var l1447 = QIList(1,2,l5);
-var l1448 = QIList(l74,QIList(l135,QIList(l389,l1447,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l135.fvalue(pv, 1, l1447), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1448);
-        return (function(){
-            var v3346 = 1;
-            var v3347 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3346;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3347);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1448) : l112.fvalue(pv, 3, l4.value, l1327, l1448));
-        return (function(){
-            var v3348 = 1;
-            var v3349 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3348;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3349);
-        })();
-    })());
-    return (function(){
-        var v3350 = 1;
-        var v3351 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3350;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3351);
-    })();
-})();
-var l1449 = QIList(l1392,l1393,l1408,l5);
-var l1450 = QIList(l74,QIList(l131,QIList(l389,l1449,l5),l5),QIList(l389,l1392,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(){
-        var tmp = l1449;
-        return tmp === l5.value? l5.value: tmp.car;
-    })(), l1392) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1450);
-        return (function(){
-            var v3352 = 1;
-            var v3353 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3352;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3353);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1450) : l112.fvalue(pv, 3, l4.value, l1327, l1450));
-        return (function(){
-            var v3354 = 1;
-            var v3355 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3354;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3355);
-        })();
-    })());
-    return (function(){
-        var v3356 = 1;
-        var v3357 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3356;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3357);
-    })();
-})();
-var l1451 = QIList(l1392,l1393,l1408,l5);
-var l1452 = QIList(l1393,l1408,l5);
-var l1453 = QIList(l74,QIList(l132,QIList(l389,l1451,l5),l5),QIList(l389,l1452,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, (function(){
-        var tmp = l1451;
-        return tmp === l5.value? l5.value: tmp.cdr;
-    })(), l1452) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1453);
-        return (function(){
-            var v3358 = 1;
-            var v3359 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3358;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3359);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1453) : l112.fvalue(pv, 3, l4.value, l1327, l1453));
-        return (function(){
-            var v3360 = 1;
-            var v3361 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3360;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3361);
-        })();
-    })());
-    return (function(){
-        var v3362 = 1;
-        var v3363 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3362;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3363);
-    })();
-})();
-var l1454 = QIList(QIList(1,2,l5),3,l5);
-var l1455 = QIList(l74,QIList(l152,QIList(l389,l1454,l5),l5),1,l5);
-(function(){
-    (l74.fvalue(pv, 2, l152.fvalue(pv, 1, l1454), 1) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1455);
-        return (function(){
-            var v3364 = 1;
-            var v3365 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3364;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3365);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1455) : l112.fvalue(pv, 3, l4.value, l1327, l1455));
-        return (function(){
-            var v3366 = 1;
-            var v3367 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3366;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3367);
-        })();
-    })());
-    return (function(){
-        var v3368 = 1;
-        var v3369 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3368;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3369);
-    })();
-})();
-var l1456 = QIList(1,2,3,l5);
-var l1457 = QIList(l74,QIList(l135,QIList(l389,l1456,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l135.fvalue(pv, 1, l1456), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1457);
-        return (function(){
-            var v3370 = 1;
-            var v3371 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3370;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3371);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1457) : l112.fvalue(pv, 3, l4.value, l1327, l1457));
-        return (function(){
-            var v3372 = 1;
-            var v3373 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3372;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3373);
-        })();
-    })());
-    return (function(){
-        var v3374 = 1;
-        var v3375 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3374;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3375);
-    })();
-})();
-var l1458 = QIList(QIList(1,2,l5),3,l5);
-var l1459 = QIList(2,l5);
-var l1460 = QIList(l74,QIList(l153,QIList(l389,l1458,l5),l5),QIList(l389,l1459,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l153.fvalue(pv, 1, l1458), l1459) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1460);
-        return (function(){
-            var v3376 = 1;
-            var v3377 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3376;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3377);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1460) : l112.fvalue(pv, 3, l4.value, l1327, l1460));
-        return (function(){
-            var v3378 = 1;
-            var v3379 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3378;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3379);
-        })();
-    })());
-    return (function(){
-        var v3380 = 1;
-        var v3381 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3380;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3381);
-    })();
-})();
-var l1461 = QIList(1,2,3,l5);
-var l1462 = QIList(3,l5);
-var l1463 = QIList(l74,QIList(l149,QIList(l389,l1461,l5),l5),QIList(l389,l1462,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l149.fvalue(pv, 1, l1461), l1462) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1463);
-        return (function(){
-            var v3382 = 1;
-            var v3383 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3382;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3383);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1463) : l112.fvalue(pv, 3, l4.value, l1327, l1463));
-        return (function(){
-            var v3384 = 1;
-            var v3385 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3384;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3385);
-        })();
-    })());
-    return (function(){
-        var v3386 = 1;
-        var v3387 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3386;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3387);
-    })();
-})();
-var l1464 = QIList(QIList(QIList(1,l5),l5),l5);
-var l1465 = QIList(l74,QIList(l154,QIList(l389,l1464,l5),l5),1,l5);
-(function(){
-    (l74.fvalue(pv, 2, l154.fvalue(pv, 1, l1464), 1) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1465);
-        return (function(){
-            var v3388 = 1;
-            var v3389 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3388;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3389);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1465) : l112.fvalue(pv, 3, l4.value, l1327, l1465));
-        return (function(){
-            var v3390 = 1;
-            var v3391 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3390;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3391);
-        })();
-    })());
-    return (function(){
-        var v3392 = 1;
-        var v3393 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3392;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3393);
-    })();
-})();
-var l1466 = QIList(1,QIList(2,l5),l5);
-var l1467 = QIList(l74,QIList(l155,QIList(l389,l1466,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l155.fvalue(pv, 1, l1466), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1467);
-        return (function(){
-            var v3394 = 1;
-            var v3395 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3394;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3395);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1467) : l112.fvalue(pv, 3, l4.value, l1327, l1467));
-        return (function(){
-            var v3396 = 1;
-            var v3397 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3396;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3397);
-        })();
-    })());
-    return (function(){
-        var v3398 = 1;
-        var v3399 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3398;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3399);
-    })();
-})();
-var l1468 = QIList(QIList(1,2,l5),l5);
-var l1469 = QIList(l74,QIList(l156,QIList(l389,l1468,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l156.fvalue(pv, 1, l1468), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1469);
-        return (function(){
-            var v3400 = 1;
-            var v3401 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3400;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3401);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1469) : l112.fvalue(pv, 3, l4.value, l1327, l1469));
-        return (function(){
-            var v3402 = 1;
-            var v3403 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3402;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3403);
-        })();
-    })());
-    return (function(){
-        var v3404 = 1;
-        var v3405 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3404;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3405);
-    })();
-})();
-var l1470 = QIList(1,2,3,l5);
-var l1471 = QIList(l74,QIList(l137,QIList(l389,l1470,l5),l5),3,l5);
-(function(){
-    (l74.fvalue(pv, 2, l137.fvalue(pv, 1, l1470), 3) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1471);
-        return (function(){
-            var v3406 = 1;
-            var v3407 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3406;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3407);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1471) : l112.fvalue(pv, 3, l4.value, l1327, l1471));
-        return (function(){
-            var v3408 = 1;
-            var v3409 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3408;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3409);
-        })();
-    })());
-    return (function(){
-        var v3410 = 1;
-        var v3411 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3410;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3411);
-    })();
-})();
-var l1472 = QIList(QIList(QIList(1,2,l5),l5),l5);
-var l1473 = QIList(2,l5);
-var l1474 = QIList(l74,QIList(l157,QIList(l389,l1472,l5),l5),QIList(l389,l1473,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l157.fvalue(pv, 1, l1472), l1473) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1474);
-        return (function(){
-            var v3412 = 1;
-            var v3413 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3412;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3413);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1474) : l112.fvalue(pv, 3, l4.value, l1327, l1474));
-        return (function(){
-            var v3414 = 1;
-            var v3415 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3414;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3415);
-        })();
-    })());
-    return (function(){
-        var v3416 = 1;
-        var v3417 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3416;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3417);
-    })();
-})();
-var l1475 = QIList(1,QIList(2,3,l5),l5);
-var l1476 = QIList(3,l5);
-var l1477 = QIList(l74,QIList(l158,QIList(l389,l1475,l5),l5),QIList(l389,l1476,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l158.fvalue(pv, 1, l1475), l1476) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1477);
-        return (function(){
-            var v3418 = 1;
-            var v3419 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3418;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3419);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1477) : l112.fvalue(pv, 3, l4.value, l1327, l1477));
-        return (function(){
-            var v3420 = 1;
-            var v3421 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3420;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3421);
-        })();
-    })());
-    return (function(){
-        var v3422 = 1;
-        var v3423 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3422;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3423);
-    })();
-})();
-var l1478 = QIList(QIList(1,2,3,l5),l5);
-var l1479 = QIList(3,l5);
-var l1480 = QIList(l74,QIList(l159,QIList(l389,l1478,l5),l5),QIList(l389,l1479,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l159.fvalue(pv, 1, l1478), l1479) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1480);
-        return (function(){
-            var v3424 = 1;
-            var v3425 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3424;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3425);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1480) : l112.fvalue(pv, 3, l4.value, l1327, l1480));
-        return (function(){
-            var v3426 = 1;
-            var v3427 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3426;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3427);
-        })();
-    })());
-    return (function(){
-        var v3428 = 1;
-        var v3429 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3428;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3429);
-    })();
-})();
-var l1481 = QIList(1,2,3,4,l5);
-var l1482 = QIList(4,l5);
-var l1483 = QIList(l74,QIList(l160,QIList(l389,l1481,l5),l5),QIList(l389,l1482,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l160.fvalue(pv, 1, l1481), l1482) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1483);
-        return (function(){
-            var v3430 = 1;
-            var v3431 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3430;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3431);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1483) : l112.fvalue(pv, 3, l4.value, l1327, l1483));
-        return (function(){
-            var v3432 = 1;
-            var v3433 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3432;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3433);
-        })();
-    })());
-    return (function(){
-        var v3434 = 1;
-        var v3435 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3434;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3435);
-    })();
-})();
-var l1484 = QIList(QIList(QIList(QIList(1,l5),l5),l5),l5);
-var l1485 = QIList(l74,QIList(l161,QIList(l389,l1484,l5),l5),1,l5);
-(function(){
-    (l74.fvalue(pv, 2, l161.fvalue(pv, 1, l1484), 1) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1485);
-        return (function(){
-            var v3436 = 1;
-            var v3437 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3436;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3437);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1485) : l112.fvalue(pv, 3, l4.value, l1327, l1485));
-        return (function(){
-            var v3438 = 1;
-            var v3439 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3438;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3439);
-        })();
-    })());
-    return (function(){
-        var v3440 = 1;
-        var v3441 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3440;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3441);
-    })();
-})();
-var l1486 = QIList(1,QIList(QIList(2,l5),l5),l5);
-var l1487 = QIList(l74,QIList(l162,QIList(l389,l1486,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l162.fvalue(pv, 1, l1486), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1487);
-        return (function(){
-            var v3442 = 1;
-            var v3443 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3442;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3443);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1487) : l112.fvalue(pv, 3, l4.value, l1327, l1487));
-        return (function(){
-            var v3444 = 1;
-            var v3445 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3444;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3445);
-        })();
-    })());
-    return (function(){
-        var v3446 = 1;
-        var v3447 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3446;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3447);
-    })();
-})();
-var l1488 = QIList(QIList(1,QIList(2,l5),l5),l5);
-var l1489 = QIList(l74,QIList(l163,QIList(l389,l1488,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l163.fvalue(pv, 1, l1488), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1489);
-        return (function(){
-            var v3448 = 1;
-            var v3449 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3448;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3449);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1489) : l112.fvalue(pv, 3, l4.value, l1327, l1489));
-        return (function(){
-            var v3450 = 1;
-            var v3451 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3450;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3451);
-        })();
-    })());
-    return (function(){
-        var v3452 = 1;
-        var v3453 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3452;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3453);
-    })();
-})();
-var l1490 = QIList(1,2,QIList(3,l5),l5);
-var l1491 = QIList(l74,QIList(l164,QIList(l389,l1490,l5),l5),3,l5);
-(function(){
-    (l74.fvalue(pv, 2, l164.fvalue(pv, 1, l1490), 3) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1491);
-        return (function(){
-            var v3454 = 1;
-            var v3455 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3454;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3455);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1491) : l112.fvalue(pv, 3, l4.value, l1327, l1491));
-        return (function(){
-            var v3456 = 1;
-            var v3457 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3456;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3457);
-        })();
-    })());
-    return (function(){
-        var v3458 = 1;
-        var v3459 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3458;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3459);
-    })();
-})();
-var l1492 = QIList(QIList(QIList(1,2,l5),l5),l5);
-var l1493 = QIList(l74,QIList(l165,QIList(l389,l1492,l5),l5),2,l5);
-(function(){
-    (l74.fvalue(pv, 2, l165.fvalue(pv, 1, l1492), 2) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1493);
-        return (function(){
-            var v3460 = 1;
-            var v3461 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3460;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3461);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1493) : l112.fvalue(pv, 3, l4.value, l1327, l1493));
-        return (function(){
-            var v3462 = 1;
-            var v3463 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3462;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3463);
-        })();
-    })());
-    return (function(){
-        var v3464 = 1;
-        var v3465 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3464;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3465);
-    })();
-})();
-var l1494 = QIList(1,QIList(2,3,l5),l5);
-var l1495 = QIList(l74,QIList(l166,QIList(l389,l1494,l5),l5),3,l5);
-(function(){
-    (l74.fvalue(pv, 2, l166.fvalue(pv, 1, l1494), 3) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1495);
-        return (function(){
-            var v3466 = 1;
-            var v3467 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3466;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3467);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1495) : l112.fvalue(pv, 3, l4.value, l1327, l1495));
-        return (function(){
-            var v3468 = 1;
-            var v3469 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3468;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3469);
-        })();
-    })());
-    return (function(){
-        var v3470 = 1;
-        var v3471 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3470;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3471);
-    })();
-})();
-var l1496 = QIList(QIList(1,2,3,l5),l5);
-var l1497 = QIList(l74,QIList(l167,QIList(l389,l1496,l5),l5),3,l5);
-(function(){
-    (l74.fvalue(pv, 2, l167.fvalue(pv, 1, l1496), 3) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1497);
-        return (function(){
-            var v3472 = 1;
-            var v3473 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3472;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3473);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1497) : l112.fvalue(pv, 3, l4.value, l1327, l1497));
-        return (function(){
-            var v3474 = 1;
-            var v3475 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3474;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3475);
-        })();
-    })());
-    return (function(){
-        var v3476 = 1;
-        var v3477 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3476;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3477);
-    })();
-})();
-var l1498 = QIList(1,2,3,4,l5);
-var l1499 = QIList(l74,QIList(l139,QIList(l389,l1498,l5),l5),4,l5);
-(function(){
-    (l74.fvalue(pv, 2, l139.fvalue(pv, 1, l1498), 4) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1499);
-        return (function(){
-            var v3478 = 1;
-            var v3479 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3478;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3479);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1499) : l112.fvalue(pv, 3, l4.value, l1327, l1499));
-        return (function(){
-            var v3480 = 1;
-            var v3481 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3480;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3481);
-        })();
-    })());
-    return (function(){
-        var v3482 = 1;
-        var v3483 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3482;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3483);
-    })();
-})();
-var l1500 = QIList(QIList(QIList(QIList(1,2,l5),l5),l5),l5);
-var l1501 = QIList(2,l5);
-var l1502 = QIList(l74,QIList(l168,QIList(l389,l1500,l5),l5),QIList(l389,l1501,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l168.fvalue(pv, 1, l1500), l1501) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1502);
-        return (function(){
-            var v3484 = 1;
-            var v3485 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3484;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3485);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1502) : l112.fvalue(pv, 3, l4.value, l1327, l1502));
-        return (function(){
-            var v3486 = 1;
-            var v3487 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3486;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3487);
-        })();
-    })());
-    return (function(){
-        var v3488 = 1;
-        var v3489 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3488;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3489);
-    })();
-})();
-var l1503 = QIList(1,QIList(QIList(2,3,l5),l5),l5);
-var l1504 = QIList(3,l5);
-var l1505 = QIList(l74,QIList(l169,QIList(l389,l1503,l5),l5),QIList(l389,l1504,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l169.fvalue(pv, 1, l1503), l1504) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1505);
-        return (function(){
-            var v3490 = 1;
-            var v3491 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3490;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3491);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1505) : l112.fvalue(pv, 3, l4.value, l1327, l1505));
-        return (function(){
-            var v3492 = 1;
-            var v3493 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3492;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3493);
-        })();
-    })());
-    return (function(){
-        var v3494 = 1;
-        var v3495 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3494;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3495);
-    })();
-})();
-var l1506 = QIList(QIList(1,QIList(2,3,l5),l5),l5);
-var l1507 = QIList(3,l5);
-var l1508 = QIList(l74,QIList(l170,QIList(l389,l1506,l5),l5),QIList(l389,l1507,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l170.fvalue(pv, 1, l1506), l1507) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1508);
-        return (function(){
-            var v3496 = 1;
-            var v3497 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3496;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3497);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1508) : l112.fvalue(pv, 3, l4.value, l1327, l1508));
-        return (function(){
-            var v3498 = 1;
-            var v3499 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3498;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3499);
-        })();
-    })());
-    return (function(){
-        var v3500 = 1;
-        var v3501 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3500;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3501);
-    })();
-})();
-var l1509 = QIList(1,2,QIList(3,4,l5),l5);
-var l1510 = QIList(4,l5);
-var l1511 = QIList(l74,QIList(l171,QIList(l389,l1509,l5),l5),QIList(l389,l1510,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l171.fvalue(pv, 1, l1509), l1510) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1511);
-        return (function(){
-            var v3502 = 1;
-            var v3503 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3502;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3503);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1511) : l112.fvalue(pv, 3, l4.value, l1327, l1511));
-        return (function(){
-            var v3504 = 1;
-            var v3505 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3504;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3505);
-        })();
-    })());
-    return (function(){
-        var v3506 = 1;
-        var v3507 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3506;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3507);
-    })();
-})();
-var l1512 = QIList(QIList(QIList(1,2,3,l5),l5),l5);
-var l1513 = QIList(3,l5);
-var l1514 = QIList(l74,QIList(l172,QIList(l389,l1512,l5),l5),QIList(l389,l1513,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l172.fvalue(pv, 1, l1512), l1513) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1514);
-        return (function(){
-            var v3508 = 1;
-            var v3509 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3508;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3509);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1514) : l112.fvalue(pv, 3, l4.value, l1327, l1514));
-        return (function(){
-            var v3510 = 1;
-            var v3511 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3510;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3511);
-        })();
-    })());
-    return (function(){
-        var v3512 = 1;
-        var v3513 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3512;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3513);
-    })();
-})();
-var l1515 = QIList(1,QIList(2,3,4,l5),l5);
-var l1516 = QIList(4,l5);
-var l1517 = QIList(l74,QIList(l173,QIList(l389,l1515,l5),l5),QIList(l389,l1516,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l173.fvalue(pv, 1, l1515), l1516) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1517);
-        return (function(){
-            var v3514 = 1;
-            var v3515 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3514;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3515);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1517) : l112.fvalue(pv, 3, l4.value, l1327, l1517));
-        return (function(){
-            var v3516 = 1;
-            var v3517 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3516;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3517);
-        })();
-    })());
-    return (function(){
-        var v3518 = 1;
-        var v3519 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3518;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3519);
-    })();
-})();
-var l1518 = QIList(QIList(1,2,3,4,l5),l5);
-var l1519 = QIList(4,l5);
-var l1520 = QIList(l74,QIList(l174,QIList(l389,l1518,l5),l5),QIList(l389,l1519,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l174.fvalue(pv, 1, l1518), l1519) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1520);
-        return (function(){
-            var v3520 = 1;
-            var v3521 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3520;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3521);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1520) : l112.fvalue(pv, 3, l4.value, l1327, l1520));
-        return (function(){
-            var v3522 = 1;
-            var v3523 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3522;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3523);
-        })();
-    })());
-    return (function(){
-        var v3524 = 1;
-        var v3525 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3524;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3525);
-    })();
-})();
-var l1521 = QIList(1,2,3,4,5,l5);
-var l1522 = QIList(5,l5);
-var l1523 = QIList(l74,QIList(l141,QIList(l389,l1521,l5),l5),QIList(l389,l1522,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l141.fvalue(pv, 1, l1521), l1522) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1523);
-        return (function(){
-            var v3526 = 1;
-            var v3527 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3526;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3527);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1523) : l112.fvalue(pv, 3, l4.value, l1327, l1523));
-        return (function(){
-            var v3528 = 1;
-            var v3529 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3528;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3529);
-        })();
-    })());
-    return (function(){
-        var v3530 = 1;
-        var v3531 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3530;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3531);
-    })();
-})();
-var l1524 = (new Symbol(make_lisp_string("Z")));
-var l1525 = (new Symbol(make_lisp_string("ZPRIME")));
-var l1526 = QIList(QIList(l1245,100),QIList(l1524,l1525),l5);
-var l1527 = (new Symbol(make_lisp_string("PLUS")));
-var l1528 = (new Symbol(make_lisp_string("MINUS")));
-var l1529 = (new Symbol(make_lisp_string("G")));
-var l1530 = (new Symbol(make_lisp_string("P")));
-var l1531 = QIList(l1527,l1245,QIList(l1528,l1529,l1524,l1245,l1530,l5),4,l1245);
-var l1532 = QIList(l1527,100,QIList(l1528,l1529,l1525,100,l1530,l5),4,100);
-var l1533 = QIList(l74,QIList(l175,QIList(l389,l1526,l5),QIList(l389,l1531,l5),l5),QIList(l389,l1532,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l175.fvalue(pv, 2, l1526, l1531), l1532) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1533);
-        return (function(){
-            var v3532 = 1;
-            var v3533 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3532;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3533);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1533) : l112.fvalue(pv, 3, l4.value, l1327, l1533));
-        return (function(){
-            var v3534 = 1;
-            var v3535 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3534;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3535);
-        })();
-    })());
-    return (function(){
-        var v3536 = 1;
-        var v3537 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3536;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3537);
-    })();
-})();
-var l1534 = (new Symbol(make_lisp_string("Y")));
-var l1535 = QIList(QIList(QIList(l42,l1245,l1534,l5),l43,l1245,l1534,l5),QIList(QIList(l43,l1245,l1534,l5),l42,l1245,l1534,l5),l5);
-var l1536 = QIList(l21,QIList(l22,QIList(l42,l1245,l1534,l5),QIList(l42,l1245,l1530,l5),l5),QIList(l43,l1245,l1534,l5),l5);
-var l1537 = QIList(l21,QIList(l22,QIList(l43,l1245,l1534,l5),QIList(l42,l1245,l1530,l5),l5),QIList(l42,l1245,l1534,l5),l5);
-var l1538 = QIList(l74,QIList(l175,QIList(l389,l1535,l5),QIList(l389,l1536,l5),l177,QIList(l82,l74,l5),l5),QIList(l389,l1537,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l175.fvalue(pv, 4, l1535, l1536, l177.value, (function(){
-        var symbol = l74;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })()), l1537) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1538);
-        return (function(){
-            var v3538 = 1;
-            var v3539 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3538;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3539);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1538) : l112.fvalue(pv, 3, l4.value, l1327, l1538));
-        return (function(){
-            var v3540 = 1;
-            var v3541 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3540;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3541);
-        })();
-    })());
-    return (function(){
-        var v3542 = 1;
-        var v3543 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3542;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3543);
-    })();
-})();
-var l1539 = QIList(1,QIList(1,2,l5),QIList(QIList(1,2,3,l5),l5),QIList(QIList(QIList(1,2,3,4,l5),l5),l5),l5);
-var l1540 = QIList(QIList(3,make_lisp_string("three")),l5);
-var l1541 = QIList(1,QIList(1,2,l5),QIList(QIList(1,2,make_lisp_string("three"),l5),l5),QIList(QIList(QIList(1,2,make_lisp_string("three"),4,l5),l5),l5),l5);
-var l1542 = (new Symbol(make_lisp_string("TREE1")));
-var l1543 = QIList(l74,QIList(l175,QIList(l389,l1540,l5),l1542,l5),QIList(l389,l1541,l5),l5);
-var l1544 = QIList(QIList(l4,make_lisp_string("string")),l5);
-var l1545 = QIList(QIList(1,l108),QIList(4,44),l5);
-var l1546 = QIList(make_lisp_string("string"),QIList(make_lisp_string("string"),2,l5),QIList(QIList(make_lisp_string("string"),2,3,l5),l5),QIList(QIList(QIList(make_lisp_string("string"),2,3,44,l5),l5),l5),l5);
-var l1547 = QIList(l74,QIList(l175,QIList(l389,l1544,l5),QIList(l175,QIList(l389,l1545,l5),l1542,l5),l176,QIList(l82,l204,l5),l5),QIList(l389,l1546,l5),l5);
-var l1548 = QIList(1,QIList(1,2,l5),QIList(QIList(1,2,3,l5),l5),QIList(QIList(QIList(1,2,3,4,l5),l5),l5),l5);
-var l1549 = QIList(l74,l1542,QIList(l389,l1548,l5),l5);
-(function(v3544){
-    (function(){
-        (l74.fvalue(pv, 2, l175.fvalue(pv, 2, l1540, v3544), l1541) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1543);
-            return (function(){
-                var v3545 = 1;
-                var v3546 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3545;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3546);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1543) : l112.fvalue(pv, 3, l4.value, l1327, l1543));
-            return (function(){
-                var v3547 = 1;
-                var v3548 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3547;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3548);
-            })();
-        })());
-        return (function(){
-            var v3549 = 1;
-            var v3550 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3549;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3550);
-        })();
-    })();
-    (function(){
-        (l74.fvalue(pv, 2, l175.fvalue(pv, 4, l1544, l175.fvalue(pv, 2, l1545, v3544), l176.value, (function(){
-            var symbol = l204;
-            var func = symbol.fvalue;
-            if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-            return func;
-        })()), l1546) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1547);
-            return (function(){
-                var v3551 = 1;
-                var v3552 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3551;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3552);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1547) : l112.fvalue(pv, 3, l4.value, l1327, l1547));
-            return (function(){
-                var v3553 = 1;
-                var v3554 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3553;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3554);
-            })();
-        })());
-        return (function(){
-            var v3555 = 1;
-            var v3556 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3555;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3556);
-        })();
-    })();
-    return (function(){
-        (l74.fvalue(pv, 2, v3544, l1548) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1549);
-            return (function(){
-                var v3557 = 1;
-                var v3558 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3557;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3558);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1549) : l112.fvalue(pv, 3, l4.value, l1327, l1549));
-            return (function(){
-                var v3559 = 1;
-                var v3560 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3559;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3560);
-            })();
-        })());
-        return (function(){
-            var v3561 = 1;
-            var v3562 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3561;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3562);
-        })();
-    })();
-})(l1539);
-var l1550 = QIList(make_lisp_string("one"),QIList(make_lisp_string("one"),make_lisp_string("two"),l5),QIList(QIList(make_lisp_string("one"),make_lisp_string("Two"),make_lisp_string("three"),l5),l5),l5);
-var l1551 = QIList(QIList(make_lisp_string("two"),2),l5);
-var l1552 = QIList(make_lisp_string("one"),QIList(make_lisp_string("one"),make_lisp_string("two"),l5),QIList(QIList(make_lisp_string("one"),make_lisp_string("Two"),make_lisp_string("three"),l5),l5),l5);
-var l1553 = (new Symbol(make_lisp_string("TREE2")));
-var l1554 = QIList(l74,QIList(l175,QIList(l389,l1551,l5),l1553,l5),QIList(l389,l1552,l5),l5);
-var l1555 = QIList(make_lisp_string("one"),QIList(make_lisp_string("one"),make_lisp_string("two"),l5),QIList(QIList(make_lisp_string("one"),make_lisp_string("Two"),make_lisp_string("three"),l5),l5),l5);
-var l1556 = QIList(l74,l1553,QIList(l389,l1555,l5),l5);
-var l1557 = QIList(QIList(make_lisp_string("two"),2),l5);
-var l1558 = QIList(make_lisp_string("one"),QIList(make_lisp_string("one"),2,l5),QIList(QIList(make_lisp_string("one"),make_lisp_string("Two"),make_lisp_string("three"),l5),l5),l5);
-var l1559 = QIList(l74,QIList(l175,QIList(l389,l1557,l5),l1553,l177,QIList(l389,l74,l5),l5),QIList(l389,l1558,l5),l5);
-(function(v3563){
-    (function(){
-        (l74.fvalue(pv, 2, l175.fvalue(pv, 2, l1551, v3563), l1552) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1554);
-            return (function(){
-                var v3564 = 1;
-                var v3565 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3564;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3565);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1554) : l112.fvalue(pv, 3, l4.value, l1327, l1554));
-            return (function(){
-                var v3566 = 1;
-                var v3567 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3566;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3567);
-            })();
-        })());
-        return (function(){
-            var v3568 = 1;
-            var v3569 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3568;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3569);
-        })();
-    })();
-    (function(){
-        (l74.fvalue(pv, 2, v3563, l1555) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1556);
-            return (function(){
-                var v3570 = 1;
-                var v3571 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3570;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3571);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1556) : l112.fvalue(pv, 3, l4.value, l1327, l1556));
-            return (function(){
-                var v3572 = 1;
-                var v3573 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3572;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3573);
-            })();
-        })());
-        return (function(){
-            var v3574 = 1;
-            var v3575 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3574;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3575);
-        })();
-    })();
-    return (function(){
-        (l74.fvalue(pv, 2, l175.fvalue(pv, 4, l1557, v3563, l177.value, l74), l1558) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1559);
-            return (function(){
-                var v3576 = 1;
-                var v3577 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3576;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3577);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1559) : l112.fvalue(pv, 3, l4.value, l1327, l1559));
-            return (function(){
-                var v3578 = 1;
-                var v3579 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3578;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3579);
-            })();
-        })());
-        return (function(){
-            var v3580 = 1;
-            var v3581 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3580;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3581);
-        })();
-    })();
-})(l1550);
-var l1560 = QIList(1,2,l5);
-var l1561 = QIList(3,4,l5);
-var l1562 = (new Symbol(make_lisp_string("BAR")));
-var l1563 = QIList(l486,QIList(QIList(l1341,QIList(l92,QIList(l389,l1560,l5),QIList(l389,l1561,l5),l5),l5),QIList(l1562,QIList(l181,l1341,l5),l5),l5),QIList(l197,QIList(l131,l1341,l5),0,l5),QIList(l28,QIList(l20,QIList(l131,QIList(l131,l1341,l5),l5),QIList(l131,QIList(l131,l1562,l5),l5),l5),l5),l5);
-(function(){
-    ((function(){
-        var v3582 = l92.fvalue(pv, 2, l1560, l1561);
-        var v3583 = l181.fvalue(pv, 1, v3582);
-        (function(){
-            var x = (function(){
-                var tmp = v3582;
-                return tmp === l5.value? l5.value: tmp.car;
-            })();
-            if (typeof x != 'object')
-                throw 'The value ' + x + ' is not a type object.';
-            return (x.car = 0, x);
-        })();
-        return l28.fvalue(pv, 1, (function(){
-            var x1 = (function(){
-                var tmp = (function(){
-                    var tmp = v3582;
-                    return tmp === l5.value? l5.value: tmp.car;
-                })();
-                return tmp === l5.value? l5.value: tmp.car;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = (function(){
-                var tmp = (function(){
-                    var tmp = v3583;
-                    return tmp === l5.value? l5.value: tmp.car;
-                })();
-                return tmp === l5.value? l5.value: tmp.car;
-            })();
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return (x1==x2?l4.value: l5.value);
-        })());
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1563);
-        return (function(){
-            var v3584 = 1;
-            var v3585 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3584;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3585);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1563) : l112.fvalue(pv, 3, l4.value, l1327, l1563));
-        return (function(){
-            var v3586 = 1;
-            var v3587 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3586;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3587);
-        })();
-    })());
-    return (function(){
-        var v3588 = 1;
-        var v3589 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3588;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3589);
-    })();
-})();
-var l1564 = QIList(1,2,3,l5);
-var l1565 = QIList(1,2,3,l5);
-var l1566 = QIList(l182,QIList(l389,l1564,l5),QIList(l389,l1565,l5),l5);
-(function(){
-    (l182.fvalue(pv, 2, l1564, l1565) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1566);
-        return (function(){
-            var v3590 = 1;
-            var v3591 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3590;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3591);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1566) : l112.fvalue(pv, 3, l4.value, l1327, l1566));
-        return (function(){
-            var v3592 = 1;
-            var v3593 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3592;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3593);
-        })();
-    })());
-    return (function(){
-        var v3594 = 1;
-        var v3595 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3594;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3595);
-    })();
-})();
-var l1567 = QIList(1,QIList(2,QIList(3,4,l5),5,l5),6,l5);
-var l1568 = QIList(1,QIList(2,QIList(3,4,l5),5,l5),6,l5);
-var l1569 = QIList(l182,QIList(l389,l1567,l5),QIList(l389,l1568,l5),l5);
-(function(){
-    (l182.fvalue(pv, 2, l1567, l1568) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1569);
-        return (function(){
-            var v3596 = 1;
-            var v3597 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3596;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3597);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1569) : l112.fvalue(pv, 3, l4.value, l1327, l1569));
-        return (function(){
-            var v3598 = 1;
-            var v3599 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3598;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3599);
-        })();
-    })());
-    return (function(){
-        var v3600 = 1;
-        var v3601 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3600;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3601);
-    })();
-})();
-var l1570 = QIList(l182,QIList(l127,1,2,l5),QIList(l127,2,3,l5),l177,QIList(l6,QIList(l1392,l1393,l5),QIList(l28,QIList(l20,l1392,l1393,l5),l5),l5),l5);
-(function(){
-    (l182.fvalue(pv, 4, ({car: 1, cdr: 2}), ({car: 2, cdr: 3}), l177.value, (function (values,nargs,v3602,v3603){
-        checkArgs(nargs, 2);
-        return l28.fvalue(values, 1, (function(){
-            var x1 = v3602;
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3603;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return (x1==x2?l4.value: l5.value);
-        })());
-    })) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1570);
-        return (function(){
-            var v3604 = 1;
-            var v3605 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3604;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3605);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1570) : l112.fvalue(pv, 3, l4.value, l1327, l1570));
-        return (function(){
-            var v3606 = 1;
-            var v3607 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3606;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3607);
-        })();
-    })());
-    return (function(){
-        var v3608 = 1;
-        var v3609 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3608;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3609);
-    })();
-})();
-var l1571 = QIList(1,2,3,4,5,6,7,8,9,10,l5);
-var l1572 = (new Symbol(make_lisp_string("NUMS")));
-var l1573 = QIList(l20,QIList(l133,l1572,l5),1,l5);
-var l1574 = QIList(l20,QIList(l134,l1572,l5),2,l5);
-var l1575 = QIList(l20,QIList(l136,l1572,l5),3,l5);
-var l1576 = QIList(l20,QIList(l138,l1572,l5),4,l5);
-var l1577 = QIList(l20,QIList(l140,l1572,l5),5,l5);
-var l1578 = QIList(l20,QIList(l142,l1572,l5),6,l5);
-var l1579 = QIList(l20,QIList(l143,l1572,l5),7,l5);
-var l1580 = QIList(l20,QIList(l144,l1572,l5),8,l5);
-var l1581 = QIList(l20,QIList(l145,l1572,l5),9,l5);
-var l1582 = QIList(l20,QIList(l146,l1572,l5),10,l5);
-(function(v3610){
-    (function(){
-        ((function(){
-            var x1 = l133.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==1?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1573);
-            return (function(){
-                var v3611 = 1;
-                var v3612 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3611;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3612);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1573) : l112.fvalue(pv, 3, l4.value, l1327, l1573));
-            return (function(){
-                var v3613 = 1;
-                var v3614 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3613;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3614);
-            })();
-        })());
-        return (function(){
-            var v3615 = 1;
-            var v3616 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3615;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3616);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l134.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==2?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1574);
-            return (function(){
-                var v3617 = 1;
-                var v3618 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3617;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3618);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1574) : l112.fvalue(pv, 3, l4.value, l1327, l1574));
-            return (function(){
-                var v3619 = 1;
-                var v3620 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3619;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3620);
-            })();
-        })());
-        return (function(){
-            var v3621 = 1;
-            var v3622 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3621;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3622);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l136.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==3?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1575);
-            return (function(){
-                var v3623 = 1;
-                var v3624 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3623;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3624);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1575) : l112.fvalue(pv, 3, l4.value, l1327, l1575));
-            return (function(){
-                var v3625 = 1;
-                var v3626 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3625;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3626);
-            })();
-        })());
-        return (function(){
-            var v3627 = 1;
-            var v3628 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3627;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3628);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l138.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==4?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1576);
-            return (function(){
-                var v3629 = 1;
-                var v3630 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3629;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3630);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1576) : l112.fvalue(pv, 3, l4.value, l1327, l1576));
-            return (function(){
-                var v3631 = 1;
-                var v3632 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3631;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3632);
-            })();
-        })());
-        return (function(){
-            var v3633 = 1;
-            var v3634 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3633;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3634);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l140.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==5?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1577);
-            return (function(){
-                var v3635 = 1;
-                var v3636 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3635;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3636);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1577) : l112.fvalue(pv, 3, l4.value, l1327, l1577));
-            return (function(){
-                var v3637 = 1;
-                var v3638 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3637;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3638);
-            })();
-        })());
-        return (function(){
-            var v3639 = 1;
-            var v3640 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3639;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3640);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l142.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==6?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1578);
-            return (function(){
-                var v3641 = 1;
-                var v3642 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3641;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3642);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1578) : l112.fvalue(pv, 3, l4.value, l1327, l1578));
-            return (function(){
-                var v3643 = 1;
-                var v3644 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3643;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3644);
-            })();
-        })());
-        return (function(){
-            var v3645 = 1;
-            var v3646 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3645;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3646);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l143.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==7?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1579);
-            return (function(){
-                var v3647 = 1;
-                var v3648 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3647;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3648);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1579) : l112.fvalue(pv, 3, l4.value, l1327, l1579));
-            return (function(){
-                var v3649 = 1;
-                var v3650 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3649;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3650);
-            })();
-        })());
-        return (function(){
-            var v3651 = 1;
-            var v3652 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3651;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3652);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l144.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==8?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1580);
-            return (function(){
-                var v3653 = 1;
-                var v3654 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3653;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3654);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1580) : l112.fvalue(pv, 3, l4.value, l1327, l1580));
-            return (function(){
-                var v3655 = 1;
-                var v3656 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3655;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3656);
-            })();
-        })());
-        return (function(){
-            var v3657 = 1;
-            var v3658 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3657;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3658);
-        })();
-    })();
-    (function(){
-        ((function(){
-            var x1 = l145.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==9?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1581);
-            return (function(){
-                var v3659 = 1;
-                var v3660 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3659;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3660);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1581) : l112.fvalue(pv, 3, l4.value, l1327, l1581));
-            return (function(){
-                var v3661 = 1;
-                var v3662 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3661;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3662);
-            })();
-        })());
-        return (function(){
-            var v3663 = 1;
-            var v3664 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3663;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3664);
-        })();
-    })();
-    return (function(){
-        ((function(){
-            var x1 = l146.fvalue(pv, 1, v3610);
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==10?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1582);
-            return (function(){
-                var v3665 = 1;
-                var v3666 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3665;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3666);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1582) : l112.fvalue(pv, 3, l4.value, l1327, l1582));
-            return (function(){
-                var v3667 = 1;
-                var v3668 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3667;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3668);
-            })();
-        })());
-        return (function(){
-            var v3669 = 1;
-            var v3670 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3669;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3670);
-        })();
-    })();
-})(l1571);
-var l1583 = QIList(l183,l1393,l1392,l5);
-var l1584 = QIList(l183,l1392,l1392,l5);
-(function(){
-    var v3671 = l92.fvalue(pv, 3, 1, 2, 3);
-    var v3672 = (function(){
-        var tmp = v3671;
-        return tmp === l5.value? l5.value: tmp.cdr;
-    })();
-    (function(){
-        (l183.fvalue(pv, 2, v3672, v3671) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1583);
-            return (function(){
-                var v3673 = 1;
-                var v3674 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3673;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3674);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1583) : l112.fvalue(pv, 3, l4.value, l1327, l1583));
-            return (function(){
-                var v3675 = 1;
-                var v3676 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3675;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3676);
-            })();
-        })());
-        return (function(){
-            var v3677 = 1;
-            var v3678 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3677;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3678);
-        })();
-    })();
-    return (function(){
-        (l183.fvalue(pv, 2, v3671, v3671) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1584);
-            return (function(){
-                var v3679 = 1;
-                var v3680 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3679;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3680);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1584) : l112.fvalue(pv, 3, l4.value, l1327, l1584));
-            return (function(){
-                var v3681 = 1;
-                var v3682 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3681;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3682);
-            })();
-        })());
-        return (function(){
-            var v3683 = 1;
-            var v3684 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3683;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3684);
-        })();
-    })();
-})();
-var l1585 = QIList(l183,QIList(l389,l1392,l5),QIList(l127,QIList(l389,l1393,l5),QIList(l389,l1392,l5),l5),l5);
-(function(){
-    (l183.fvalue(pv, 2, l1392, ({car: l1393, cdr: l1392})) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1585);
-        return (function(){
-            var v3685 = 1;
-            var v3686 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3685;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3686);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1585) : l112.fvalue(pv, 3, l4.value, l1327, l1585));
-        return (function(){
-            var v3687 = 1;
-            var v3688 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3687;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3688);
-        })();
-    })());
-    return (function(){
-        var v3689 = 1;
-        var v3690 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3689;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3690);
-    })();
-})();
-var l1586 = QIList(QIList(1,2),QIList(3,4),l5);
-var l1587 = QIList(QIList(3,4),l5);
-var l1588 = QIList(l74,QIList(l389,l1586,l5),QIList(l193,1,2,QIList(l389,l1587,l5),l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l1586, l193.fvalue(pv, 3, 1, 2, l1587)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1588);
-        return (function(){
-            var v3691 = 1;
-            var v3692 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3691;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3692);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1588) : l112.fvalue(pv, 3, l4.value, l1327, l1588));
-        return (function(){
-            var v3693 = 1;
-            var v3694 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3693;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3694);
-        })();
-    })());
-    return (function(){
-        var v3695 = 1;
-        var v3696 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3695;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3696);
-    })();
-})();
-var l1589 = QIList(QIList(1,2),l5);
-var l1590 = QIList(l74,QIList(l389,l1589,l5),QIList(l193,1,2,l5,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l1589, l193.fvalue(pv, 3, 1, 2, l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1590);
-        return (function(){
-            var v3697 = 1;
-            var v3698 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3697;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3698);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1590) : l112.fvalue(pv, 3, l4.value, l1327, l1590));
-        return (function(){
-            var v3699 = 1;
-            var v3700 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3699;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3700);
-        })();
-    })());
-    return (function(){
-        var v3701 = 1;
-        var v3702 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3701;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3702);
-    })();
-})();
-var l1591 = QIList(QIList(1,3),QIList(0,2),l5);
-var l1592 = QIList(0,1,l5);
-var l1593 = QIList(2,3,l5);
-var l1594 = QIList(l74,QIList(l389,l1591,l5),QIList(l194,QIList(l389,l1592,l5),QIList(l389,l1593,l5),l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l1591, l194.fvalue(pv, 2, l1592, l1593)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1594);
-        return (function(){
-            var v3703 = 1;
-            var v3704 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3703;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3704);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1594) : l112.fvalue(pv, 3, l4.value, l1327, l1594));
-        return (function(){
-            var v3705 = 1;
-            var v3706 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3705;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3706);
-        })();
-    })());
-    return (function(){
-        var v3707 = 1;
-        var v3708 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3707;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3708);
-    })();
-})();
-var l1595 = QIList(QIList(1,2),QIList(l1392,l1393),l5);
-var l1596 = QIList(1,l5);
-var l1597 = QIList(2,l5);
-var l1598 = QIList(QIList(l1392,l1393),l5);
-var l1599 = QIList(l74,QIList(l389,l1595,l5),QIList(l194,QIList(l389,l1596,l5),QIList(l389,l1597,l5),QIList(l389,l1598,l5),l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l1595, l194.fvalue(pv, 3, l1596, l1597, l1598)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1599);
-        return (function(){
-            var v3709 = 1;
-            var v3710 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3709;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3710);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1599) : l112.fvalue(pv, 3, l4.value, l1327, l1599));
-        return (function(){
-            var v3711 = 1;
-            var v3712 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3711;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3712);
-        })();
-    })());
-    return (function(){
-        var v3713 = 1;
-        var v3714 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3713;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3714);
-    })();
-})();
-var l1600 = QIList(QIList(1,2),QIList(3,4),l5);
-var l1601 = (new Symbol(make_lisp_string("ALIST")));
-var l1602 = (new Symbol(make_lisp_string("COPY")));
-var l1603 = QIList(l28,QIList(l27,l1601,l1602,l5),l5);
-var l1604 = QIList(l28,QIList(l27,QIList(l131,l1601,l5),QIList(l131,l1602,l5),l5),l5);
-var l1605 = QIList(l74,l1601,l1602,l5);
-(function(){
-    var v3715 = l1600;
-    var v3716 = l195.fvalue(pv, 1, v3715);
-    (function(){
-        (l28.fvalue(pv, 1, l27.fvalue(pv, 2, v3715, v3716)) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1603);
-            return (function(){
-                var v3717 = 1;
-                var v3718 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3717;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3718);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1603) : l112.fvalue(pv, 3, l4.value, l1327, l1603));
-            return (function(){
-                var v3719 = 1;
-                var v3720 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3719;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3720);
-            })();
-        })());
-        return (function(){
-            var v3721 = 1;
-            var v3722 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3721;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3722);
-        })();
-    })();
-    (function(){
-        (l28.fvalue(pv, 1, l27.fvalue(pv, 2, (function(){
-            var tmp = v3715;
-            return tmp === l5.value? l5.value: tmp.car;
-        })(), (function(){
-            var tmp = v3716;
-            return tmp === l5.value? l5.value: tmp.car;
-        })())) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1604);
-            return (function(){
-                var v3723 = 1;
-                var v3724 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3723;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3724);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1604) : l112.fvalue(pv, 3, l4.value, l1327, l1604));
-            return (function(){
-                var v3725 = 1;
-                var v3726 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3725;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3726);
-            })();
-        })());
-        return (function(){
-            var v3727 = 1;
-            var v3728 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3727;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3728);
-        })();
-    })();
-    return (function(){
-        (l74.fvalue(pv, 2, v3715, v3716) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1605);
-            return (function(){
-                var v3729 = 1;
-                var v3730 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3729;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3730);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1605) : l112.fvalue(pv, 3, l4.value, l1327, l1605));
-            return (function(){
-                var v3731 = 1;
-                var v3732 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3731;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3732);
-            })();
-        })());
-        return (function(){
-            var v3733 = 1;
-            var v3734 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3733;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3734);
-        })();
-    })();
-})();
-var l1606 = QIList(QIList(1,2),QIList(3,4),l5);
-var l1607 = QIList(1,2);
-var l1608 = QIList(l74,QIList(l95,1,l1601,l5),QIList(l389,l1607,l5),l5);
-var l1609 = QIList(1,2);
-var l1610 = QIList(l74,QIList(l192,2,l1601,l5),QIList(l389,l1609,l5),l5);
-var l1611 = QIList(l28,QIList(l95,2,l1601,l5),l5);
-var l1612 = QIList(l28,QIList(l192,1,l1601,l5),l5);
-(function(v3735){
-    (function(){
-        (l74.fvalue(pv, 2, l95.fvalue(pv, 2, 1, v3735), l1607) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1608);
-            return (function(){
-                var v3736 = 1;
-                var v3737 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3736;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3737);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1608) : l112.fvalue(pv, 3, l4.value, l1327, l1608));
-            return (function(){
-                var v3738 = 1;
-                var v3739 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3738;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3739);
-            })();
-        })());
-        return (function(){
-            var v3740 = 1;
-            var v3741 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3740;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3741);
-        })();
-    })();
-    (function(){
-        (l74.fvalue(pv, 2, l192.fvalue(pv, 2, 2, v3735), l1609) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1610);
-            return (function(){
-                var v3742 = 1;
-                var v3743 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3742;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3743);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1610) : l112.fvalue(pv, 3, l4.value, l1327, l1610));
-            return (function(){
-                var v3744 = 1;
-                var v3745 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3744;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3745);
-            })();
-        })());
-        return (function(){
-            var v3746 = 1;
-            var v3747 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3746;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3747);
-        })();
-    })();
-    (function(){
-        (l28.fvalue(pv, 1, l95.fvalue(pv, 2, 2, v3735)) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1611);
-            return (function(){
-                var v3748 = 1;
-                var v3749 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3748;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3749);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1611) : l112.fvalue(pv, 3, l4.value, l1327, l1611));
-            return (function(){
-                var v3750 = 1;
-                var v3751 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3750;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3751);
-            })();
-        })());
-        return (function(){
-            var v3752 = 1;
-            var v3753 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3752;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3753);
-        })();
-    })();
-    return (function(){
-        (l28.fvalue(pv, 1, l192.fvalue(pv, 2, 1, v3735)) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1612);
-            return (function(){
-                var v3754 = 1;
-                var v3755 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3754;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3755);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1612) : l112.fvalue(pv, 3, l4.value, l1327, l1612));
-            return (function(){
-                var v3756 = 1;
-                var v3757 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3756;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3757);
-            })();
-        })());
-        return (function(){
-            var v3758 = 1;
-            var v3759 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3758;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3759);
-        })();
-    })();
-})(l1606);
-var l1613 = QIList(1,2,3,l5);
-var l1614 = QIList(2,3,l5);
-var l1615 = QIList(l74,QIList(l191,2,QIList(l389,l1613,l5),l5),QIList(l389,l1614,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l191.fvalue(pv, 2, 2, l1613), l1614) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1615);
-        return (function(){
-            var v3760 = 1;
-            var v3761 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3760;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3761);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1615) : l112.fvalue(pv, 3, l4.value, l1327, l1615));
-        return (function(){
-            var v3762 = 1;
-            var v3763 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3762;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3763);
-        })();
-    })());
-    return (function(){
-        var v3764 = 1;
-        var v3765 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3764;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3765);
-    })();
-})();
-var l1616 = QIList(1,2,3,l5);
-var l1617 = QIList(l28,QIList(l191,4,QIList(l389,l1616,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l191.fvalue(pv, 2, 4, l1616)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1617);
-        return (function(){
-            var v3766 = 1;
-            var v3767 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3766;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3767);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1617) : l112.fvalue(pv, 3, l4.value, l1327, l1617));
-        return (function(){
-            var v3768 = 1;
-            var v3769 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3768;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3769);
-        })();
-    })());
-    return (function(){
-        var v3770 = 1;
-        var v3771 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3770;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3771);
-    })();
-})();
-var l1618 = QIList(QIList(1,2),QIList(3,4),l5);
-var l1619 = QIList(QIList(3,4),l5);
-var l1620 = QIList(l74,QIList(l191,4,QIList(l389,l1618,l5),l176,QIList(l82,l132,l5),l5),QIList(l389,l1619,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l191.fvalue(pv, 4, 4, l1618, l176.value, (function(){
-        var symbol = l132;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })()), l1619) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1620);
-        return (function(){
-            var v3772 = 1;
-            var v3773 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3772;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3773);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1620) : l112.fvalue(pv, 3, l4.value, l1327, l1620));
-        return (function(){
-            var v3774 = 1;
-            var v3775 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3774;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3775);
-        })();
-    })());
-    return (function(){
-        var v3776 = 1;
-        var v3777 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3776;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3777);
-    })();
-})();
-var l1621 = QIList(2,l5);
-var l1622 = QIList(QIList(1,l5),QIList(2,l5),QIList(3,l5),l5);
-var l1623 = QIList(l191,QIList(l389,l1621,l5),QIList(l389,l1622,l5),l177,QIList(l82,l74,l5),l5);
-(function(){
-    (l191.fvalue(pv, 4, l1621, l1622, l177.value, (function(){
-        var symbol = l74;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })()) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1623);
-        return (function(){
-            var v3778 = 1;
-            var v3779 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3778;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3779);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1623) : l112.fvalue(pv, 3, l4.value, l1327, l1623));
-        return (function(){
-            var v3780 = 1;
-            var v3781 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3780;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3781);
-        })();
-    })());
-    return (function(){
-        var v3782 = 1;
-        var v3783 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3782;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3783);
-    })();
-})();
-var l1624 = QIList(2,3,l5);
-var l1625 = QIList(1,2,3,l5);
-var l1626 = QIList(l74,QIList(l202,1,QIList(l389,l1624,l5),l5),QIList(l389,l1625,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l202.fvalue(pv, 2, 1, l1624), l1625) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1626);
-        return (function(){
-            var v3784 = 1;
-            var v3785 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3784;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3785);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1626) : l112.fvalue(pv, 3, l4.value, l1327, l1626));
-        return (function(){
-            var v3786 = 1;
-            var v3787 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3786;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3787);
-        })();
-    })());
-    return (function(){
-        var v3788 = 1;
-        var v3789 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3788;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3789);
-    })();
-})();
-var l1627 = QIList(1,2,3,l5);
-var l1628 = QIList(1,2,3,l5);
-var l1629 = QIList(l74,QIList(l202,1,QIList(l389,l1627,l5),l5),QIList(l389,l1628,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l202.fvalue(pv, 2, 1, l1627), l1628) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1629);
-        return (function(){
-            var v3790 = 1;
-            var v3791 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3790;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3791);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1629) : l112.fvalue(pv, 3, l4.value, l1327, l1629));
-        return (function(){
-            var v3792 = 1;
-            var v3793 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3792;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3793);
-        })();
-    })());
-    return (function(){
-        var v3794 = 1;
-        var v3795 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3794;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3795);
-    })();
-})();
-var l1630 = QIList(1,l5);
-var l1631 = QIList(QIList(1,l5),QIList(2,l5),l5);
-var l1632 = QIList(QIList(1,l5),QIList(2,l5),l5);
-var l1633 = QIList(l74,QIList(l202,QIList(l389,l1630,l5),QIList(l389,l1631,l5),l177,QIList(l82,l74,l5),l5),QIList(l389,l1632,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l202.fvalue(pv, 4, l1630, l1631, l177.value, (function(){
-        var symbol = l74;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })()), l1632) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1633);
-        return (function(){
-            var v3796 = 1;
-            var v3797 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3796;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3797);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1633) : l112.fvalue(pv, 3, l4.value, l1327, l1633));
-        return (function(){
-            var v3798 = 1;
-            var v3799 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3798;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3799);
-        })();
-    })());
-    return (function(){
-        var v3800 = 1;
-        var v3801 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3800;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3801);
-    })();
-})();
-var l1634 = QIList(1,2,l5);
-var l1635 = QIList(2,3,l5);
-var l1636 = QIList(2,l5);
-var l1637 = QIList(l74,QIList(l203,QIList(l389,l1634,l5),QIList(l389,l1635,l5),l5),QIList(l389,l1636,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l203.fvalue(pv, 2, l1634, l1635), l1636) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1637);
-        return (function(){
-            var v3802 = 1;
-            var v3803 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3802;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3803);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1637) : l112.fvalue(pv, 3, l4.value, l1327, l1637));
-        return (function(){
-            var v3804 = 1;
-            var v3805 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3804;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3805);
-        })();
-    })());
-    return (function(){
-        var v3806 = 1;
-        var v3807 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3806;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3807);
-    })();
-})();
-var l1638 = QIList(1,2,3,l5);
-var l1639 = QIList(4,5,6,l5);
-var l1640 = QIList(l28,QIList(l203,QIList(l389,l1638,l5),QIList(l389,l1639,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l203.fvalue(pv, 2, l1638, l1639)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1640);
-        return (function(){
-            var v3808 = 1;
-            var v3809 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3808;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3809);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1640) : l112.fvalue(pv, 3, l4.value, l1327, l1640));
-        return (function(){
-            var v3810 = 1;
-            var v3811 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3810;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3811);
-        })();
-    })());
-    return (function(){
-        var v3812 = 1;
-        var v3813 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3812;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3813);
-    })();
-})();
-var l1641 = QIList(QIList(1,l5),QIList(2,l5),l5);
-var l1642 = QIList(QIList(2,l5),QIList(3,l5),l5);
-var l1643 = QIList(QIList(2,l5),l5);
-var l1644 = QIList(l74,QIList(l203,QIList(l389,l1641,l5),QIList(l389,l1642,l5),l177,QIList(l82,l74,l5),l5),QIList(l389,l1643,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l203.fvalue(pv, 4, l1641, l1642, l177.value, (function(){
-        var symbol = l74;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })()), l1643) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1644);
-        return (function(){
-            var v3814 = 1;
-            var v3815 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3814;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3815);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1644) : l112.fvalue(pv, 3, l4.value, l1327, l1644));
-        return (function(){
-            var v3816 = 1;
-            var v3817 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3816;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3817);
-        })();
-    })());
-    return (function(){
-        var v3818 = 1;
-        var v3819 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3818;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3819);
-    })();
-})();
-var l1645 = QIList(1,2,3,l5);
-var l1646 = QIList(l486,QIList(QIList(l1341,QIList(l389,l1645,l5),l5),QIList(l1562,QIList(l185,l1341,l5),l5),l5),QIList(l37,QIList(l20,l1562,1,l5),QIList(l20,QIList(l131,l1341,l5),2,l5),l5),l5);
-(function(){
-    ((function(){
-        var v3820 = l1645;
-        var v3821 = (function(){
-            var v3822 = v3820;
-            var v3823 = (function(){
-                var tmp = v3822;
-                return tmp === l5.value? l5.value: tmp.cdr;
-            })();
-            (v3820 = v3823);
-            return (function(){
-                var tmp = v3822;
-                return tmp === l5.value? l5.value: tmp.car;
-            })();
-        })();
-        return ((function(){
-            var x1 = v3821;
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==1?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            var x1 = (function(){
-                var tmp = v3820;
-                return tmp === l5.value? l5.value: tmp.car;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==2?l4.value: l5.value);
-        })() : l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1646);
-        return (function(){
-            var v3824 = 1;
-            var v3825 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3824;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3825);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1646) : l112.fvalue(pv, 3, l4.value, l1327, l1646));
-        return (function(){
-            var v3826 = 1;
-            var v3827 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3826;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3827);
-        })();
-    })());
-    return (function(){
-        var v3828 = 1;
-        var v3829 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3828;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3829);
-    })();
-})();
-var l1647 = QIList(1,2,l5);
-var l1648 = QIList(3,l5);
-var l1649 = QIList(4,5,6,l5);
-var l1650 = QIList(8,l5);
-var l1651 = QIList(l74,QIList(l120,QIList(l82,l42,l5),QIList(l389,l1647,l5),QIList(l389,l1648,l5),QIList(l389,l1649,l5),l5),QIList(l389,l1650,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l120.fvalue(pv, 4, (function(){
-        var symbol = l42;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })(), l1647, l1648, l1649), l1650) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1651);
-        return (function(){
-            var v3830 = 1;
-            var v3831 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3830;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3831);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1651) : l112.fvalue(pv, 3, l4.value, l1327, l1651));
-        return (function(){
-            var v3832 = 1;
-            var v3833 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3832;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3833);
-        })();
-    })());
-    return (function(){
-        var v3834 = 1;
-        var v3835 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3834;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3835);
-    })();
-})();
-var l1652 = QIList(1,2,l5);
-var l1653 = QIList(3,l5);
-var l1654 = QIList(4,5,6,l5);
-var l1655 = QIList(1,2,l5);
-var l1656 = QIList(l74,QIList(l188,QIList(l82,l42,l5),QIList(l389,l1652,l5),QIList(l389,l1653,l5),QIList(l389,l1654,l5),l5),QIList(l389,l1655,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l188.fvalue(pv, 4, (function(){
-        var symbol = l42;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })(), l1652, l1653, l1654), l1655) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1656);
-        return (function(){
-            var v3836 = 1;
-            var v3837 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3836;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3837);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1656) : l112.fvalue(pv, 3, l4.value, l1327, l1656));
-        return (function(){
-            var v3838 = 1;
-            var v3839 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3838;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3839);
-        })();
-    })());
-    return (function(){
-        var v3840 = 1;
-        var v3841 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3840;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3841);
-    })();
-})();
-var l1657 = QIList(1,2,l5);
-var l1658 = QIList(3,l5);
-var l1659 = QIList(4,5,6,l5);
-var l1660 = QIList(8,l5);
-var l1661 = QIList(l725,QIList(l1341,l5),QIList(l188,QIList(l6,QIList(l1245,l1534,l1524,l5),QIList(l31,QIList(l42,l1245,l1534,l1524,l5),l1341,l5),l5),QIList(l389,l1657,l5),QIList(l389,l1658,l5),QIList(l389,l1659,l5),l5),QIList(l74,l1341,QIList(l389,l1660,l5),l5),l5);
-(function(){
-    ((function(v3842){
-        l188.fvalue(pv, 4, (function (values,nargs,v3843,v3844,v3845){
-            checkArgs(nargs, 3);
-            return (function(){
-                var v3846 = (function(){
-                    var x1 = v3843;
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3844;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    var x3 = v3845;
-                    if (typeof x3 !== 'number') throw 'Not a number!';
-                    return x1+x2+x3;
-                })();
-                var v3847 = ({car: v3846, cdr: v3842});
-                return (v3842 = v3847);
-            })();
-        }), l1657, l1658, l1659);
-        return l74.fvalue(pv, 2, v3842, l1660);
-    })(l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1661);
-        return (function(){
-            var v3848 = 1;
-            var v3849 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3848;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3849);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1661) : l112.fvalue(pv, 3, l4.value, l1327, l1661));
-        return (function(){
-            var v3850 = 1;
-            var v3851 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3850;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3851);
-        })();
-    })());
-    return (function(){
-        var v3852 = 1;
-        var v3853 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3852;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3853);
-    })();
-})();
-var l1662 = make_lisp_string("FOO");
-var l1663 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1341,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1662,l5),l5),l5);
-(function(){
-    ((function(v3854){
-        return (((v3854 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3854).name, l1662) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1341))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1663);
-        return (function(){
-            var v3855 = 1;
-            var v3856 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3855;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3856);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1663) : l112.fvalue(pv, 3, l4.value, l1327, l1663));
-        return (function(){
-            var v3857 = 1;
-            var v3858 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3857;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3858);
-        })();
-    })());
-    return (function(){
-        var v3859 = 1;
-        var v3860 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3859;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3860);
-    })();
-})();
-var l1664 = (new Symbol(make_lisp_string("FOo")));
-var l1665 = make_lisp_string("FOo");
-var l1666 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1664,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1665,l5),l5),l5);
-(function(){
-    ((function(v3861){
-        return (((v3861 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3861).name, l1665) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1664))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1666);
-        return (function(){
-            var v3862 = 1;
-            var v3863 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3862;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3863);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1666) : l112.fvalue(pv, 3, l4.value, l1327, l1666));
-        return (function(){
-            var v3864 = 1;
-            var v3865 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3864;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3865);
-        })();
-    })());
-    return (function(){
-        var v3866 = 1;
-        var v3867 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3866;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3867);
-    })();
-})();
-var l1667 = (new Symbol(make_lisp_string("1..2")));
-var l1668 = make_lisp_string("1..2");
-var l1669 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1667,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1668,l5),l5),l5);
-(function(){
-    ((function(v3868){
-        return (((v3868 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3868).name, l1668) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1667))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1669);
-        return (function(){
-            var v3869 = 1;
-            var v3870 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3869;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3870);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1669) : l112.fvalue(pv, 3, l4.value, l1327, l1669));
-        return (function(){
-            var v3871 = 1;
-            var v3872 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3871;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3872);
-        })();
-    })());
-    return (function(){
-        var v3873 = 1;
-        var v3874 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3873;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3874);
-    })();
-})();
-var l1670 = (new Symbol(make_lisp_string("1")));
-var l1671 = make_lisp_string("1");
-var l1672 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1670,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1671,l5),l5),l5);
-(function(){
-    ((function(v3875){
-        return (((v3875 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3875).name, l1671) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1670))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1672);
-        return (function(){
-            var v3876 = 1;
-            var v3877 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3876;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3877);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1672) : l112.fvalue(pv, 3, l4.value, l1327, l1672));
-        return (function(){
-            var v3878 = 1;
-            var v3879 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3878;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3879);
-        })();
-    })());
-    return (function(){
-        var v3880 = 1;
-        var v3881 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3880;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3881);
-    })();
-})();
-var l1673 = (new Symbol(make_lisp_string("-10")));
-var l1674 = make_lisp_string("-10");
-var l1675 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1673,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1674,l5),l5),l5);
-(function(){
-    ((function(v3882){
-        return (((v3882 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3882).name, l1674) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1673))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1675);
-        return (function(){
-            var v3883 = 1;
-            var v3884 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3883;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3884);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1675) : l112.fvalue(pv, 3, l4.value, l1327, l1675));
-        return (function(){
-            var v3885 = 1;
-            var v3886 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3885;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3886);
-        })();
-    })());
-    return (function(){
-        var v3887 = 1;
-        var v3888 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3887;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3888);
-    })();
-})();
-var l1676 = (new Symbol(make_lisp_string("...")));
-var l1677 = make_lisp_string("...");
-var l1678 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1676,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1677,l5),l5),l5);
-(function(){
-    ((function(v3889){
-        return (((v3889 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3889).name, l1677) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1676))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1678);
-        return (function(){
-            var v3890 = 1;
-            var v3891 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3890;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3891);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1678) : l112.fvalue(pv, 3, l4.value, l1327, l1678));
-        return (function(){
-            var v3892 = 1;
-            var v3893 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3892;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3893);
-        })();
-    })());
-    return (function(){
-        var v3894 = 1;
-        var v3895 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3894;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3895);
-    })();
-})();
-var l1679 = (new Symbol(make_lisp_string("1E")));
-var l1680 = make_lisp_string("1E");
-var l1681 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1679,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1680,l5),l5),l5);
-(function(){
-    ((function(v3896){
-        return (((v3896 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3896).name, l1680) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1679))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1681);
-        return (function(){
-            var v3897 = 1;
-            var v3898 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3897;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3898);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1681) : l112.fvalue(pv, 3, l4.value, l1327, l1681));
-        return (function(){
-            var v3899 = 1;
-            var v3900 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3899;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3900);
-        })();
-    })());
-    return (function(){
-        var v3901 = 1;
-        var v3902 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3901;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3902);
-    })();
-})();
-var l1682 = (new Symbol(make_lisp_string("1E+2")));
-var l1683 = make_lisp_string("1E+2");
-var l1684 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1682,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1683,l5),l5),l5);
-(function(){
-    ((function(v3903){
-        return (((v3903 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3903).name, l1683) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1682))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1684);
-        return (function(){
-            var v3904 = 1;
-            var v3905 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3904;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3905);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1684) : l112.fvalue(pv, 3, l4.value, l1327, l1684));
-        return (function(){
-            var v3906 = 1;
-            var v3907 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3906;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3907);
-        })();
-    })());
-    return (function(){
-        var v3908 = 1;
-        var v3909 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3908;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3909);
-    })();
-})();
-var l1685 = (new Symbol(make_lisp_string("1E+")));
-var l1686 = make_lisp_string("1E+");
-var l1687 = QIList(l725,QIList(QIList(l1245,QIList(l394,QIList(l271,QIList(l389,l1685,l5),l5),l5),l5),l5),QIList(l37,QIList(l1003,l1245,l5),QIList(l74,QIList(l1009,l1245,l5),l1686,l5),l5),l5);
-(function(){
-    ((function(v3910){
-        return (((v3910 instanceof Symbol)?l4.value: l5.value) !== l5.value ? l74.fvalue(pv, 2, (v3910).name, l1686) : l5.value);
-    })(l394.fvalue(pv, 1, l271.fvalue(pv, 1, l1685))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1687);
-        return (function(){
-            var v3911 = 1;
-            var v3912 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3911;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3912);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1687) : l112.fvalue(pv, 3, l4.value, l1327, l1687));
-        return (function(){
-            var v3913 = 1;
-            var v3914 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3913;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3914);
-        })();
-    })());
-    return (function(){
-        var v3915 = 1;
-        var v3916 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3915;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3916);
-    })();
-})();
-var l1688 = make_lisp_string("(a b c)");
-var l1689 = QIList(QIList(l1392,l1393,l1408,l5),7,l5);
-var l1690 = make_lisp_string("<font color='orange'>Test `~S' passed unexpectedly!</font>~%");
-var l1691 = QIList(l74,QIList(l89,QIList(l394,l1688,l5),l5),QIList(l389,l1689,l5),l5);
-var l1692 = make_lisp_string("Test `~S' passed unexpectedly!~%");
-var l1693 = make_lisp_string("Test `~S' failed failed expectedly.~%");
-(function(){
-    (l74.fvalue(pv, 2, (function(){
-        var func = (function(){
-            var symbol = l92;
-            var func = symbol.fvalue;
-            if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-            return func;
-        })();
-        var args = [pv, 0];
-        return (function(){
-            var values = mv;
-            var vs;
-            vs = l394.fvalue(values, 1, l1688);
-            if (typeof vs === 'object' && 'multiple-value' in vs)
-                args = args.concat(vs);
-            else
-                args.push(vs);
-            args[1] = args.length-2;
-            return func.apply(window, args);
-        })();
-    })(), l1689) !== l5.value ? (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1690, l1691) : l112.fvalue(pv, 3, l4.value, l1692, l1691));
-        return (function(){
-            var v3917 = 1;
-            var v3918 = (function(){
-                var x1 = (function(){
-                    var symbol = l1317;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3917;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1317).value = v3918);
-        })();
-    })() : (function(){
-        l112.fvalue(pv, 3, l4.value, l1693, l1691);
-        return (function(){
-            var v3919 = 1;
-            var v3920 = (function(){
-                var x1 = (function(){
-                    var symbol = l1316;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3919;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1316).value = v3920);
-        })();
-    })());
-    return (function(){
-        var v3921 = 1;
-        var v3922 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3921;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3922);
-    })();
-})();
-var l1694 = make_lisp_string("cl:cond");
-var l1695 = make_lisp_string("COND");
-var l1696 = QIList(l74,QIList(l1009,QIList(l394,l1694,l5),l5),l1695,l5);
-(function(){
-    (l74.fvalue(pv, 2, (l394.fvalue(pv, 1, l1694)).name, l1695) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1696);
-        return (function(){
-            var v3923 = 1;
-            var v3924 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3923;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3924);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1696) : l112.fvalue(pv, 3, l4.value, l1327, l1696));
-        return (function(){
-            var v3925 = 1;
-            var v3926 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3925;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3926);
-        })();
-    })());
-    return (function(){
-        var v3927 = 1;
-        var v3928 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3927;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3928);
-    })();
-})();
-var l1697 = make_lisp_string("co|N|d");
-var l1698 = make_lisp_string("COND");
-var l1699 = QIList(l74,QIList(l1009,QIList(l394,l1697,l5),l5),l1698,l5);
-(function(){
-    (l74.fvalue(pv, 2, (l394.fvalue(pv, 1, l1697)).name, l1698) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1699);
-        return (function(){
-            var v3929 = 1;
-            var v3930 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3929;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3930);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1699) : l112.fvalue(pv, 3, l4.value, l1327, l1699));
-        return (function(){
-            var v3931 = 1;
-            var v3932 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3931;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3932);
-        })();
-    })());
-    return (function(){
-        var v3933 = 1;
-        var v3934 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3933;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3934);
-    })();
-})();
-var l1700 = make_lisp_string("abc\\def");
-var l1701 = make_lisp_string("ABCdEF");
-var l1702 = QIList(l74,QIList(l1009,QIList(l394,l1700,l5),l5),l1701,l5);
-(function(){
-    (l74.fvalue(pv, 2, (l394.fvalue(pv, 1, l1700)).name, l1701) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1702);
-        return (function(){
-            var v3935 = 1;
-            var v3936 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3935;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3936);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1702) : l112.fvalue(pv, 3, l4.value, l1327, l1702));
-        return (function(){
-            var v3937 = 1;
-            var v3938 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3937;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3938);
-        })();
-    })());
-    return (function(){
-        var v3939 = 1;
-        var v3940 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3939;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3940);
-    })();
-})();
-var l1703 = make_lisp_string("|.|");
-var l1704 = make_lisp_string(".");
-var l1705 = QIList(l74,QIList(l1009,QIList(l394,l1703,l5),l5),l1704,l5);
-(function(){
-    (l74.fvalue(pv, 2, (l394.fvalue(pv, 1, l1703)).name, l1704) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1705);
-        return (function(){
-            var v3941 = 1;
-            var v3942 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3941;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3942);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1705) : l112.fvalue(pv, 3, l4.value, l1327, l1705));
-        return (function(){
-            var v3943 = 1;
-            var v3944 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3943;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3944);
-        })();
-    })());
-    return (function(){
-        var v3945 = 1;
-        var v3946 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3945;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3946);
-    })();
-})();
-var l1706 = make_lisp_string("(1 .25)");
-var l1707 = QIList(1,0.25,l5);
-var l1708 = QIList(l74,QIList(l394,l1706,l5),QIList(l389,l1707,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l394.fvalue(pv, 1, l1706), l1707) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1708);
-        return (function(){
-            var v3947 = 1;
-            var v3948 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3947;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3948);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1708) : l112.fvalue(pv, 3, l4.value, l1327, l1708));
-        return (function(){
-            var v3949 = 1;
-            var v3950 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3949;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3950);
-        })();
-    })());
-    return (function(){
-        var v3951 = 1;
-        var v3952 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3951;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3952);
-    })();
-})();
-var l1709 = make_lisp_string(".25");
-var l1710 = QIList(l74,QIList(l394,l1709,l5),0.25,l5);
-(function(){
-    (l74.fvalue(pv, 2, l394.fvalue(pv, 1, l1709), 0.25) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1710);
-        return (function(){
-            var v3953 = 1;
-            var v3954 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3953;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3954);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1710) : l112.fvalue(pv, 3, l4.value, l1327, l1710));
-        return (function(){
-            var v3955 = 1;
-            var v3956 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3955;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3956);
-        })();
-    })());
-    return (function(){
-        var v3957 = 1;
-        var v3958 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3957;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3958);
-    })();
-})();
-var l1711 = make_lisp_string("(1 . 25)");
-var l1712 = QIList(1,25);
-var l1713 = QIList(l74,QIList(l394,l1711,l5),QIList(l389,l1712,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l394.fvalue(pv, 1, l1711), l1712) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1713);
-        return (function(){
-            var v3959 = 1;
-            var v3960 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3959;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3960);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1713) : l112.fvalue(pv, 3, l4.value, l1327, l1713));
-        return (function(){
-            var v3961 = 1;
-            var v3962 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3961;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3962);
-        })();
-    })());
-    return (function(){
-        var v3963 = 1;
-        var v3964 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3963;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3964);
-    })();
-})();
-var l1714 = make_lisp_string("(#1=99 2 3 #1#)");
-var l1715 = QIList(99,2,3,99,l5);
-var l1716 = QIList(l74,QIList(l394,l1714,l5),QIList(l389,l1715,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l394.fvalue(pv, 1, l1714), l1715) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1716);
-        return (function(){
-            var v3965 = 1;
-            var v3966 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3965;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3966);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1716) : l112.fvalue(pv, 3, l4.value, l1327, l1716));
-        return (function(){
-            var v3967 = 1;
-            var v3968 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3967;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3968);
-        })();
-    })());
-    return (function(){
-        var v3969 = 1;
-        var v3970 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3969;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3970);
-    })();
-})();
-var l1717 = make_lisp_string("#(#1=99 2 3 #1#)");
-var l1718 = (new Symbol(make_lisp_string("V")));
-var l1719 = QIList(l37,QIList(l27,QIList(l1167,l1718,0,l5),99,l5),QIList(l27,QIList(l1167,l1718,1,l5),2,l5),QIList(l27,QIList(l1167,l1718,2,l5),3,l5),QIList(l27,QIList(l1167,l1718,3,l5),99,l5),l5);
-(function(v3971){
-    return (function(){
-        ((l27.fvalue(pv, 2, (function(){
-            var x = (v3971)[0];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 99) !== l5.value ? (l27.fvalue(pv, 2, (function(){
-            var x = (v3971)[1];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 2) !== l5.value ? (l27.fvalue(pv, 2, (function(){
-            var x = (v3971)[2];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 3) !== l5.value ? l27.fvalue(pv, 2, (function(){
-            var x = (v3971)[3];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 99) : l5.value) : l5.value) : l5.value) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1719);
-            return (function(){
-                var v3972 = 1;
-                var v3973 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3972;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v3973);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1719) : l112.fvalue(pv, 3, l4.value, l1327, l1719));
-            return (function(){
-                var v3974 = 1;
-                var v3975 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v3974;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v3975);
-            })();
-        })());
-        return (function(){
-            var v3976 = 1;
-            var v3977 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3976;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v3977);
-        })();
-    })();
-})(l394.fvalue(pv, 1, l1717));
-var l1720 = make_lisp_string("#1=(42 . #1#)");
-var l1721 = QIList(l725,QIList(QIList(l1245,QIList(l394,l1720,l5),l5),l5),QIList(l37,QIList(l27,QIList(l151,99,l1245,l5),42,l5),QIList(l196,QIList(l197,l1245,13,l5),QIList(l27,QIList(l151,99,l1245,l5),13,l5),l5),QIList(l1039,l1245,QIList(l132,l1245,l5),l5),l5),l5);
-(function(){
-    ((function(v3978){
-        return (l27.fvalue(pv, 2, l151.fvalue(pv, 2, 99, v3978), 42) !== l5.value ? ((function(){
-            (function(){
-                var x = v3978;
-                if (typeof x != 'object')
-                    throw 'The value ' + x + ' is not a type object.';
-                return (x.car = 13, x);
-            })();
-            return l27.fvalue(pv, 2, l151.fvalue(pv, 2, 99, v3978), 13);
-        })() !== l5.value ? ((v3978 === (function(){
-            var tmp = v3978;
-            return tmp === l5.value? l5.value: tmp.cdr;
-        })())?l4.value: l5.value) : l5.value) : l5.value);
-    })(l394.fvalue(pv, 1, l1720)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1721);
-        return (function(){
-            var v3979 = 1;
-            var v3980 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3979;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3980);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1721) : l112.fvalue(pv, 3, l4.value, l1327, l1721));
-        return (function(){
-            var v3981 = 1;
-            var v3982 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3981;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3982);
-        })();
-    })());
-    return (function(){
-        var v3983 = 1;
-        var v3984 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3983;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3984);
-    })();
-})();
-var l1722 = make_lisp_string("#1=#(1 #2=99 #1# #2#)");
-var l1723 = QIList(l725,QIList(QIList(l1245,QIList(l394,l1722,l5),l5),l5),QIList(l37,QIList(l27,QIList(l1167,l1245,0,l5),1,l5),QIList(l27,QIList(l1167,l1245,1,l5),99,l5),QIList(l1039,QIList(l1167,l1245,2,l5),l1245,l5),QIList(l27,QIList(l1167,l1245,3,l5),99,l5),l5),l5);
-(function(){
-    ((function(v3985){
-        return (l27.fvalue(pv, 2, (function(){
-            var x = (v3985)[0];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 1) !== l5.value ? (l27.fvalue(pv, 2, (function(){
-            var x = (v3985)[1];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 99) !== l5.value ? ((((function(){
-            var x = (v3985)[2];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })() === v3985)?l4.value: l5.value) !== l5.value ? l27.fvalue(pv, 2, (function(){
-            var x = (v3985)[3];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 99) : l5.value) : l5.value) : l5.value);
-    })(l394.fvalue(pv, 1, l1722)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1723);
-        return (function(){
-            var v3986 = 1;
-            var v3987 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3986;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3987);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1723) : l112.fvalue(pv, 3, l4.value, l1327, l1723));
-        return (function(){
-            var v3988 = 1;
-            var v3989 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3988;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3989);
-        })();
-    })());
-    return (function(){
-        var v3990 = 1;
-        var v3991 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3990;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3991);
-    })();
-})();
-var l1724 = make_lisp_string("#1=(1 2 #2=#(3 4 #1#) 5 #2#)");
-var l1725 = QIList(l725,QIList(QIList(l1245,QIList(l394,l1724,l5),l5),l5),QIList(l37,QIList(l27,QIList(l151,0,l1245,l5),1,l5),QIList(l27,QIList(l151,1,l1245,l5),2,l5),QIList(l27,QIList(l1167,QIList(l151,2,l1245,l5),0,l5),3,l5),QIList(l27,QIList(l1167,QIList(l151,2,l1245,l5),1,l5),4,l5),QIList(l1039,QIList(l1167,QIList(l151,2,l1245,l5),2,l5),l1245,l5),QIList(l27,QIList(l151,3,l1245,l5),5,l5),QIList(l1039,QIList(l151,4,l1245,l5),QIList(l151,2,l1245,l5),l5),l5),l5);
-(function(){
-    ((function(v3992){
-        return (l27.fvalue(pv, 2, l151.fvalue(pv, 2, 0, v3992), 1) !== l5.value ? (l27.fvalue(pv, 2, l151.fvalue(pv, 2, 1, v3992), 2) !== l5.value ? (l27.fvalue(pv, 2, (function(){
-            var x = (l151.fvalue(pv, 2, 2, v3992))[0];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 3) !== l5.value ? (l27.fvalue(pv, 2, (function(){
-            var x = (l151.fvalue(pv, 2, 2, v3992))[1];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })(), 4) !== l5.value ? ((((function(){
-            var x = (l151.fvalue(pv, 2, 2, v3992))[2];
-            if (x === undefined) throw 'Out of range';
-            return x;
-        })() === v3992)?l4.value: l5.value) !== l5.value ? (l27.fvalue(pv, 2, l151.fvalue(pv, 2, 3, v3992), 5) !== l5.value ? ((l151.fvalue(pv, 2, 4, v3992) === l151.fvalue(pv, 2, 2, v3992))?l4.value: l5.value) : l5.value) : l5.value) : l5.value) : l5.value) : l5.value) : l5.value);
-    })(l394.fvalue(pv, 1, l1724)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1725);
-        return (function(){
-            var v3993 = 1;
-            var v3994 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3993;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v3994);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1725) : l112.fvalue(pv, 3, l4.value, l1327, l1725));
-        return (function(){
-            var v3995 = 1;
-            var v3996 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3995;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v3996);
-        })();
-    })());
-    return (function(){
-        var v3997 = 1;
-        var v3998 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v3997;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v3998);
-    })();
-})();
-var l1726 = [2, 1, 3];
-var l1727 = QIList(l210,1,l1726,l5);
-(function(){
-    (l210.fvalue(pv, 2, 1, l1726) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1727);
-        return (function(){
-            var v3999 = 1;
-            var v4000 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v3999;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4000);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1727) : l112.fvalue(pv, 3, l4.value, l1327, l1727));
-        return (function(){
-            var v4001 = 1;
-            var v4002 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4001;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4002);
-        })();
-    })());
-    return (function(){
-        var v4003 = 1;
-        var v4004 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4003;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4004);
-    })();
-})();
-var l1728 = [2, 2, 2];
-var l1729 = QIList(l28,QIList(l210,1,l1728,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l210.fvalue(pv, 2, 1, l1728)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1729);
-        return (function(){
-            var v4005 = 1;
-            var v4006 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4005;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4006);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1729) : l112.fvalue(pv, 3, l4.value, l1327, l1729));
-        return (function(){
-            var v4007 = 1;
-            var v4008 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4007;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4008);
-        })();
-    })());
-    return (function(){
-        var v4009 = 1;
-        var v4010 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4009;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4010);
-    })();
-})();
-var l1730 = [1, 2, 3, 1];
-var l1731 = QIList(l28,QIList(l210,1,QIList(l214,1,l1730,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l210.fvalue(pv, 2, 1, l214.fvalue(pv, 2, 1, l1730))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1731);
-        return (function(){
-            var v4011 = 1;
-            var v4012 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4011;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4012);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1731) : l112.fvalue(pv, 3, l4.value, l1327, l1731));
-        return (function(){
-            var v4013 = 1;
-            var v4014 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4013;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4014);
-        })();
-    })());
-    return (function(){
-        var v4015 = 1;
-        var v4016 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4015;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4016);
-    })();
-})();
-var l1732 = QIList(l210,1,QIList(l92,2,1,3,l5),l5);
-(function(){
-    (l210.fvalue(pv, 2, 1, l92.fvalue(pv, 3, 2, 1, 3)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1732);
-        return (function(){
-            var v4017 = 1;
-            var v4018 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4017;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4018);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1732) : l112.fvalue(pv, 3, l4.value, l1327, l1732));
-        return (function(){
-            var v4019 = 1;
-            var v4020 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4019;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4020);
-        })();
-    })());
-    return (function(){
-        var v4021 = 1;
-        var v4022 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4021;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4022);
-    })();
-})();
-var l1733 = QIList(l28,QIList(l210,1,QIList(l92,2,2,2,l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l210.fvalue(pv, 2, 1, l92.fvalue(pv, 3, 2, 2, 2))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1733);
-        return (function(){
-            var v4023 = 1;
-            var v4024 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4023;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4024);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1733) : l112.fvalue(pv, 3, l4.value, l1327, l1733));
-        return (function(){
-            var v4025 = 1;
-            var v4026 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4025;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4026);
-        })();
-    })());
-    return (function(){
-        var v4027 = 1;
-        var v4028 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4027;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4028);
-    })();
-})();
-var l1734 = QIList(l28,QIList(l210,1,QIList(l214,1,QIList(l92,1,2,3,1,l5),l5),l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l210.fvalue(pv, 2, 1, l214.fvalue(pv, 2, 1, l92.fvalue(pv, 4, 1, 2, 3, 1)))) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1734);
-        return (function(){
-            var v4029 = 1;
-            var v4030 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4029;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4030);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1734) : l112.fvalue(pv, 3, l4.value, l1327, l1734));
-        return (function(){
-            var v4031 = 1;
-            var v4032 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4031;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4032);
-        })();
-    })());
-    return (function(){
-        var v4033 = 1;
-        var v4034 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4033;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4034);
-    })();
-})();
-var l1735 = QIList(1,0,2,0,3,l5);
-var l1736 = QIList(1,2,3,l5);
-var l1737 = QIList(l74,QIList(l216,QIList(l82,l25,l5),QIList(l389,l1735,l5),l5),QIList(l389,l1736,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l216.fvalue(pv, 2, (function(){
-        var symbol = l25;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })(), l1735), l1736) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1737);
-        return (function(){
-            var v4035 = 1;
-            var v4036 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4035;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4036);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1737) : l112.fvalue(pv, 3, l4.value, l1327, l1737));
-        return (function(){
-            var v4037 = 1;
-            var v4038 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4037;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4038);
-        })();
-    })());
-    return (function(){
-        var v4039 = 1;
-        var v4040 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4039;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4040);
-    })();
-})();
-var l1738 = QIList(1,0,2,0,3,l5);
-var l1739 = QIList(0,0,l5);
-var l1740 = QIList(l74,QIList(l219,QIList(l82,l25,l5),QIList(l389,l1738,l5),l5),QIList(l389,l1739,l5),l5);
-(function(){
-    (l74.fvalue(pv, 2, l219.fvalue(pv, 2, (function(){
-        var symbol = l25;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })(), l1738), l1739) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1740);
-        return (function(){
-            var v4041 = 1;
-            var v4042 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4041;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4042);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1740) : l112.fvalue(pv, 3, l4.value, l1327, l1740));
-        return (function(){
-            var v4043 = 1;
-            var v4044 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4043;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4044);
-        })();
-    })());
-    return (function(){
-        var v4045 = 1;
-        var v4046 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4045;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4046);
-    })();
-})();
-var l1741 = [1, 0, 2, 0, 3];
-var l1742 = (new Symbol(make_lisp_string("V1")));
-var l1743 = QIList(l37,QIList(l20,QIList(l1167,l1742,0,l5),1,l5),QIList(l20,QIList(l1167,l1742,1,l5),2,l5),QIList(l20,QIList(l1167,l1742,2,l5),3,l5),l5);
-(function(v4047){
-    return (function(){
-        (((function(){
-            var x1 = (function(){
-                var x = (v4047)[0];
-                if (x === undefined) throw 'Out of range';
-                return x;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==1?l4.value: l5.value);
-        })() !== l5.value ? ((function(){
-            var x1 = (function(){
-                var x = (v4047)[1];
-                if (x === undefined) throw 'Out of range';
-                return x;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==2?l4.value: l5.value);
-        })() !== l5.value ? (function(){
-            var x1 = (function(){
-                var x = (v4047)[2];
-                if (x === undefined) throw 'Out of range';
-                return x;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            return (x1==3?l4.value: l5.value);
-        })() : l5.value) : l5.value) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1743);
-            return (function(){
-                var v4048 = 1;
-                var v4049 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4048;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v4049);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1743) : l112.fvalue(pv, 3, l4.value, l1327, l1743));
-            return (function(){
-                var v4050 = 1;
-                var v4051 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4050;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v4051);
-            })();
-        })());
-        return (function(){
-            var v4052 = 1;
-            var v4053 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4052;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v4053);
-        })();
-    })();
-})(l216.fvalue(pv, 2, (function(){
-    var symbol = l25;
-    var func = symbol.fvalue;
-    if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-    return func;
-})(), l1741));
-var l1744 = [1, 0, 2, 0, 3];
-var l1745 = QIList(l215,QIList(l82,l25,l5),QIList(l219,QIList(l82,l25,l5),l1744,l5),l5);
-(function(){
-    (l215.fvalue(pv, 2, (function(){
-        var symbol = l25;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })(), l219.fvalue(pv, 2, (function(){
-        var symbol = l25;
-        var func = symbol.fvalue;
-        if (func === undefined) throw "Function `" + xstring(symbol.name) + "' is undefined.";
-        return func;
-    })(), l1744)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1745);
-        return (function(){
-            var v4054 = 1;
-            var v4055 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4054;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4055);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1745) : l112.fvalue(pv, 3, l4.value, l1327, l1745));
-        return (function(){
-            var v4056 = 1;
-            var v4057 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4056;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4057);
-        })();
-    })());
-    return (function(){
-        var v4058 = 1;
-        var v4059 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4058;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4059);
-    })();
-})();
-var l1746 = QIList(1,2,3,4,5,l5);
-var l1747 = QIList(4,5,l5);
-var l1748 = QIList(l74,QIList(l220,l1572,3,l5),QIList(l389,l1747,l5),l5);
-var l1749 = QIList(3,4,l5);
-var l1750 = QIList(l74,QIList(l220,l1572,2,4,l5),QIList(l389,l1749,l5),l5);
-var l1751 = QIList(1,2,3,4,5,l5);
-var l1752 = QIList(l74,l1572,QIList(l389,l1751,l5),l5);
-(function(v4060){
-    (function(){
-        (l74.fvalue(pv, 2, l220.fvalue(pv, 2, v4060, 3), l1747) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1748);
-            return (function(){
-                var v4061 = 1;
-                var v4062 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4061;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v4062);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1748) : l112.fvalue(pv, 3, l4.value, l1327, l1748));
-            return (function(){
-                var v4063 = 1;
-                var v4064 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4063;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v4064);
-            })();
-        })());
-        return (function(){
-            var v4065 = 1;
-            var v4066 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4065;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v4066);
-        })();
-    })();
-    (function(){
-        (l74.fvalue(pv, 2, l220.fvalue(pv, 3, v4060, 2, 4), l1749) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1750);
-            return (function(){
-                var v4067 = 1;
-                var v4068 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4067;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v4068);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1750) : l112.fvalue(pv, 3, l4.value, l1327, l1750));
-            return (function(){
-                var v4069 = 1;
-                var v4070 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4069;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v4070);
-            })();
-        })());
-        return (function(){
-            var v4071 = 1;
-            var v4072 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4071;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v4072);
-        })();
-    })();
-    return (function(){
-        (l74.fvalue(pv, 2, v4060, l1751) !== l5.value ? (function(){
-            l112.fvalue(pv, 3, l4.value, l1324, l1752);
-            return (function(){
-                var v4073 = 1;
-                var v4074 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1314;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4073;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1314).value = v4074);
-            })();
-        })() : (function(){
-            ((function(){
-                var symbol = l1318;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1752) : l112.fvalue(pv, 3, l4.value, l1327, l1752));
-            return (function(){
-                var v4075 = 1;
-                var v4076 = (function(){
-                    var x1 = (function(){
-                        var symbol = l1315;
-                        var value = symbol.value;
-                        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                        return value;
-                    })();
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4075;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return ((l1315).value = v4076);
-            })();
-        })());
-        return (function(){
-            var v4077 = 1;
-            var v4078 = (function(){
-                var x1 = (function(){
-                    var symbol = l1313;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4077;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1313).value = v4078);
-        })();
-    })();
-})(l1746);
-var l1753 = QIList(l20,2,QIList(l725,QIList(QIList(l1245,0,l5),l5),QIList(l29,l1245,QIList(l98,l1245,1,l5),l5),l1245,l5),l5);
-(function(){
-    ((function(){
-        var x1 = (function(v4079){
-            (function(){
-                var v4080 = (function(){
-                    return (function(){
-                        var func = (function (values,nargs,v4082){
-                            switch(nargs){
-                            case 0:
-                                v4082=l5.value;
-                            default: break;
-                            }
-                            var v4081= l5.value;
-                            for (var i = nargs-1; i>=1; i--)
-                                v4081 = {car: arguments[i+2], cdr: v4081};
-                            return (v4079 = v4082);
-                        });
-                        var args = [pv, 0];
-                        return (function(){
-                            var values = mv;
-                            var vs;
-                            vs = 1;
-                            if (typeof vs === 'object' && 'multiple-value' in vs)
-                                args = args.concat(vs);
-                            else
-                                args.push(vs);
-                            args[1] = args.length-2;
-                            return func.apply(window, args);
-                        })();
-                    })();
-                })();
-                var v4083 = (function(){
-                    var x1 = v4079;
-                    if (typeof x1 !== 'number') throw 'Not a number!';
-                    var x2 = v4080;
-                    if (typeof x2 !== 'number') throw 'Not a number!';
-                    return x1+x2;
-                })();
-                return (v4079 = v4083);
-            })();
-            return v4079;
-        })(0);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (2==x1?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1753);
-        return (function(){
-            var v4084 = 1;
-            var v4085 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4084;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4085);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1753) : l112.fvalue(pv, 3, l4.value, l1327, l1753));
-        return (function(){
-            var v4086 = 1;
-            var v4087 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4086;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4087);
-        })();
-    })());
-    return (function(){
-        var v4088 = 1;
-        var v4089 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4088;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4089);
-    })();
-})();
-var l1754 = (new Symbol(make_lisp_string("*STR*")));
-var l1755 = make_lisp_string("hello world");
-(function(){
-    (((l1754.value !== undefined)?l4.value: l5.value) !== l5.value ? l5.value : ((l1754).value = l1755));
-    return l1754;
-})();
-var l1756 = (new Symbol(make_lisp_string("*STR2*")));
-var l1757 = make_lisp_string("h");
-(function(){
-    (((l1756.value !== undefined)?l4.value: l5.value) !== l5.value ? l5.value : ((l1756).value = l1757));
-    return l1756;
-})();
-var l1758 = QIList(l204,l1754,l5);
-(function(){
-    (((function(){
-        var x = (function(){
-            var symbol = l1754;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })();
-        return typeof(x) == 'object' && 'length' in x && x.type == 'character';
-    })()?l4.value: l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1758);
-        return (function(){
-            var v4090 = 1;
-            var v4091 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4090;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4091);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1758) : l112.fvalue(pv, 3, l4.value, l1327, l1758));
-        return (function(){
-            var v4092 = 1;
-            var v4093 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4092;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4093);
-        })();
-    })());
-    return (function(){
-        var v4094 = 1;
-        var v4095 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4094;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4095);
-    })();
-})();
-var l1759 = QIList(l28,QIList(l1049,l1754,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, ((function(){
-        var x = (function(){
-            var symbol = l1754;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })();
-        return (typeof((function(){
-            var symbol = l1754;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })()) == "string") && x.length == 1;
-    })()?l4.value: l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1759);
-        return (function(){
-            var v4096 = 1;
-            var v4097 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4096;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4097);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1759) : l112.fvalue(pv, 3, l4.value, l1327, l1759));
-        return (function(){
-            var v4098 = 1;
-            var v4099 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4098;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4099);
-        })();
-    })());
-    return (function(){
-        var v4100 = 1;
-        var v4101 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4100;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4101);
-    })();
-})();
-var l1760 = QIList(l28,QIList(l65,l1754,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l65.fvalue(pv, 1, (function(){
-        var symbol = l1754;
-        var value = symbol.value;
-        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-        return value;
-    })())) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1760);
-        return (function(){
-            var v4102 = 1;
-            var v4103 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4102;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4103);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1760) : l112.fvalue(pv, 3, l4.value, l1327, l1760));
-        return (function(){
-            var v4104 = 1;
-            var v4105 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4104;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4105);
-        })();
-    })());
-    return (function(){
-        var v4106 = 1;
-        var v4107 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4106;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4107);
-    })();
-})();
-var l1761 = QIList(l204,l1756,l5);
-(function(){
-    (((function(){
-        var x = (function(){
-            var symbol = l1756;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })();
-        return typeof(x) == 'object' && 'length' in x && x.type == 'character';
-    })()?l4.value: l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1761);
-        return (function(){
-            var v4108 = 1;
-            var v4109 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4108;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4109);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1761) : l112.fvalue(pv, 3, l4.value, l1327, l1761));
-        return (function(){
-            var v4110 = 1;
-            var v4111 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4110;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4111);
-        })();
-    })());
-    return (function(){
-        var v4112 = 1;
-        var v4113 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4112;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4113);
-    })();
-})();
-var l1762 = QIList(l28,QIList(l1049,l1756,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, ((function(){
-        var x = (function(){
-            var symbol = l1756;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })();
-        return (typeof((function(){
-            var symbol = l1756;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })()) == "string") && x.length == 1;
-    })()?l4.value: l5.value)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1762);
-        return (function(){
-            var v4114 = 1;
-            var v4115 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4114;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4115);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1762) : l112.fvalue(pv, 3, l4.value, l1327, l1762));
-        return (function(){
-            var v4116 = 1;
-            var v4117 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4116;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4117);
-        })();
-    })());
-    return (function(){
-        var v4118 = 1;
-        var v4119 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4118;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4119);
-    })();
-})();
-var l1763 = QIList(l28,QIList(l65,l1756,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l65.fvalue(pv, 1, (function(){
-        var symbol = l1756;
-        var value = symbol.value;
-        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-        return value;
-    })())) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1763);
-        return (function(){
-            var v4120 = 1;
-            var v4121 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4120;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4121);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1763) : l112.fvalue(pv, 3, l4.value, l1327, l1763));
-        return (function(){
-            var v4122 = 1;
-            var v4123 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4122;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4123);
-        })();
-    })());
-    return (function(){
-        var v4124 = 1;
-        var v4125 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4124;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4125);
-    })();
-})();
-var l1764 = make_lisp_string("hello world");
-var l1765 = QIList(l20,QIList(l54,l1764,l5),11,l5);
-(function(){
-    ((function(){
-        var x1 = l54.fvalue(pv, 1, l1764);
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        return (x1==11?l4.value: l5.value);
-    })() !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1765);
-        return (function(){
-            var v4126 = 1;
-            var v4127 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4126;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4127);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1765) : l112.fvalue(pv, 3, l4.value, l1327, l1765));
-        return (function(){
-            var v4128 = 1;
-            var v4129 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4128;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4129);
-        })();
-    })());
-    return (function(){
-        var v4130 = 1;
-        var v4131 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4130;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4131);
-    })();
-})();
-var l1766 = make_lisp_string("hello world");
-var l1767 = QIList(l1163,l1766,l5);
-(function(){
-    (((function(){
-        var x = l1766;
-        return typeof x === 'object' && 'length' in x;
-    })()?l4.value: l5.value) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1767);
-        return (function(){
-            var v4132 = 1;
-            var v4133 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4132;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4133);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1767) : l112.fvalue(pv, 3, l4.value, l1327, l1767));
-        return (function(){
-            var v4134 = 1;
-            var v4135 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4134;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4135);
-        })();
-    })());
-    return (function(){
-        var v4136 = 1;
-        var v4137 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4136;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4137);
-    })();
-})();
-var l1768 = make_lisp_string("h");
-var l1769 = QIList(l75,l1768,QIList(l125,"h",l5),l5);
-(function(){
-    (l75.fvalue(pv, 2, l1768, l125.fvalue(pv, 1, "h")) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1769);
-        return (function(){
-            var v4138 = 1;
-            var v4139 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4138;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4139);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1769) : l112.fvalue(pv, 3, l4.value, l1327, l1769));
-        return (function(){
-            var v4140 = 1;
-            var v4141 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4140;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4141);
-        })();
-    })());
-    return (function(){
-        var v4142 = 1;
-        var v4143 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4142;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4143);
-    })();
-})();
-var l1770 = make_lisp_string("foo");
-var l1771 = make_lisp_string("foo");
-var l1772 = QIList(l75,l1770,l1771,l5);
-(function(){
-    (l75.fvalue(pv, 2, l1770, l1771) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1772);
-        return (function(){
-            var v4144 = 1;
-            var v4145 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4144;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4145);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1772) : l112.fvalue(pv, 3, l4.value, l1327, l1772));
-        return (function(){
-            var v4146 = 1;
-            var v4147 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4146;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4147);
-        })();
-    })());
-    return (function(){
-        var v4148 = 1;
-        var v4149 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4148;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4149);
-    })();
-})();
-var l1773 = make_lisp_string("Foo");
-var l1774 = make_lisp_string("foo");
-var l1775 = QIList(l28,QIList(l75,l1773,l1774,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l75.fvalue(pv, 2, l1773, l1774)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1775);
-        return (function(){
-            var v4150 = 1;
-            var v4151 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4150;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4151);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1775) : l112.fvalue(pv, 3, l4.value, l1327, l1775));
-        return (function(){
-            var v4152 = 1;
-            var v4153 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4152;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4153);
-        })();
-    })());
-    return (function(){
-        var v4154 = 1;
-        var v4155 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4154;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4155);
-    })();
-})();
-var l1776 = make_lisp_string("foo");
-var l1777 = make_lisp_string("foox");
-var l1778 = QIList(l28,QIList(l75,l1776,l1777,l5),l5);
-(function(){
-    (l28.fvalue(pv, 1, l75.fvalue(pv, 2, l1776, l1777)) !== l5.value ? (function(){
-        l112.fvalue(pv, 3, l4.value, l1324, l1778);
-        return (function(){
-            var v4156 = 1;
-            var v4157 = (function(){
-                var x1 = (function(){
-                    var symbol = l1314;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4156;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1314).value = v4157);
-        })();
-    })() : (function(){
-        ((function(){
-            var symbol = l1318;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1326, l1778) : l112.fvalue(pv, 3, l4.value, l1327, l1778));
-        return (function(){
-            var v4158 = 1;
-            var v4159 = (function(){
-                var x1 = (function(){
-                    var symbol = l1315;
-                    var value = symbol.value;
-                    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                    return value;
-                })();
-                if (typeof x1 !== 'number') throw 'Not a number!';
-                var x2 = v4158;
-                if (typeof x2 !== 'number') throw 'Not a number!';
-                return x1+x2;
-            })();
-            return ((l1315).value = v4159);
-        })();
-    })());
-    return (function(){
-        var v4160 = 1;
-        var v4161 = (function(){
-            var x1 = (function(){
-                var symbol = l1313;
-                var value = symbol.value;
-                if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-                return value;
-            })();
-            if (typeof x1 !== 'number') throw 'Not a number!';
-            var x2 = v4160;
-            if (typeof x2 !== 'number') throw 'Not a number!';
-            return x1+x2;
-        })();
-        return ((l1313).value = v4161);
-    })();
-})();
-var l1779 = make_lisp_string("~%Finished. The execution took ~a seconds.~%");
-l112.fvalue(pv, 3, l4.value, l1779, (function(){
-    var x1 = (function(){
-        var x1 = (new Date()).getTime();
-        if (typeof x1 !== 'number') throw 'Not a number!';
-        var x2 = (function(){
-            var symbol = l1319;
-            var value = symbol.value;
-            if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-            return value;
-        })();
-        if (typeof x2 !== 'number') throw 'Not a number!';
-        return x1-x2;
-    })();
-    if (typeof x1 !== 'number') throw 'Not a number!';
-    var x2 = l103.value;
-    if (typeof x2 !== 'number') throw 'Not a number!';
-    return x1/x2/1.0;
+var l4362=new Symbol(make_lisp_string('*TOTAL-TESTS*'));
+l4362.value=0;
+l4362;
+var l4363=new Symbol(make_lisp_string('*PASSED-TESTS*'));
+l4363.value=0;
+l4363;
+var l4364=new Symbol(make_lisp_string('*FAILED-TESTS*'));
+l4364.value=0;
+l4364;
+var l4365=new Symbol(make_lisp_string('*EXPECTED-FAILURES*'));
+l4365.value=0;
+l4365;
+var l4366=new Symbol(make_lisp_string('*UNEXPECTED-PASSES*'));
+l4366.value=0;
+l4366;
+var l4367=new Symbol(make_lisp_string('*USE-HTML-OUTPUT-P*'));
+if ((l4367.value!==undefined?l5.value:l6.value)!==l6.value) l6.value;
+ else l4367.value=l5.value;
+l4367;
+var l4368=new Symbol(make_lisp_string('*TIMESTAMP*'));
+if ((l4368.value!==undefined?l5.value:l6.value)!==l6.value) l6.value;
+ else l4368.value=l6.value;
+l4368;
+var l4369=new Symbol(make_lisp_string('TEST-FN'));
+var l4370=make_lisp_string("Test `~S' passed~%");
+var l4371=make_lisp_string("<font color='red'>Test `~S' failed.</font>~%");
+var l4372=make_lisp_string("Test `~S' failed.~%");
+l4369.fvalue=(function(){var FUNC=(function(values,nargs,v4445,v4446){checkArgs(nargs,2);
+return (function(){if (v4445!==l6.value) {l93.fvalue(pv,3,l5.value,l4370,v4446);
+(function(){var v4448=1;
+var v4449=(function(){var x1=(function(){var SYMBOL=l4363,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4448;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return l4363.value=v4449;
+})();
+} else {if ((function(){var SYMBOL=l4367,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})()!==l6.value) l93.fvalue(pv,3,l5.value,l4371,v4446);
+ else l93.fvalue(pv,3,l5.value,l4372,v4446);
+(function(){var v4450=1;
+var v4451=(function(){var x1=(function(){var SYMBOL=l4364,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4450;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return l4364.value=v4451;
+})();
+}return (function(){var v4452=1;
+var v4453=(function(){var x1=(function(){var SYMBOL=l4362,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4452;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return l4362.value=v4453;
+})();
+})();
+});
+FUNC.fname='TEST-FN';
+return FUNC;
+})();
+l4369;
+var l4373=new Symbol(make_lisp_string('EXPECTED-FAILURE-FN'));
+var l4374=make_lisp_string("<font color='orange'>Test `~S' passed unexpectedly!</font>~%");
+var l4375=make_lisp_string("Test `~S' passed unexpectedly!~%");
+var l4376=make_lisp_string("Test `~S' failed expectedly.~%");
+l4373.fvalue=(function(){var FUNC=(function(values,nargs,v4454,v4455){checkArgs(nargs,2);
+return (function(){if (v4454!==l6.value) {if ((function(){var SYMBOL=l4367,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})()!==l6.value) l93.fvalue(pv,3,l5.value,l4374,v4455);
+ else l93.fvalue(pv,3,l5.value,l4375,v4455);
+(function(){var v4457=1;
+var v4458=(function(){var x1=(function(){var SYMBOL=l4366,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4457;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return l4366.value=v4458;
+})();
+} else {l93.fvalue(pv,3,l5.value,l4376,v4455);
+(function(){var v4459=1;
+var v4460=(function(){var x1=(function(){var SYMBOL=l4365,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4459;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return l4365.value=v4460;
+})();
+}return (function(){var v4461=1;
+var v4462=(function(){var x1=(function(){var SYMBOL=l4362,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4461;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return l4362.value=v4462;
+})();
+})();
+});
+FUNC.fname='EXPECTED-FAILURE-FN';
+return FUNC;
+})();
+l4373;
+var l4377=new Symbol(make_lisp_string('TEST'));
+l4377;
+var l4378=new Symbol(make_lisp_string('EXPECTED-FAILURE'));
+l4378;
+var l4379=new Symbol(make_lisp_string('TEST-EQUAL'));
+l4379;
+var l4380=make_lisp_string('Running tests...~%~%');
+l93.fvalue(pv,2,l5.value,l4380);
+l4368.value=(new Date()).getTime();
+var l4381=QIList(1,2,3,l6);
+var l4382=QIList(l56,QIList(l25,QIList(l571,l67,l6),1,2,3,l6),QIList(l747,l4381,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var F=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+return (typeof F==='function'?F:F.fvalue)(pv,3,1,2,3);
+})(),l4381),l4382);
+var l4383=QIList(4,5,6,l6);
+var l4384=QIList(1,2,3,4,5,6,l6);
+var l4385=QIList(l56,QIList(l26,QIList(l571,l67,l6),1,2,3,QIList(l747,l4383,l6),l6),QIList(l747,l4384,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var F=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,3,1,2,3];
+var TAIL=l4383;
+while (TAIL!=l6.value){ARGS.push(TAIL.car);
+ARGS[1]++;
+TAIL=TAIL.cdr;
+}return (typeof F==='function'?F:F.fvalue).apply(this,ARGS);
+})(),l4384),l4385);
+var l4386=QIList(1,2,3,l6);
+var l4387=QIList(l56,QIList(l25,QIList(l571,l25,l6),QIList(l571,l67,l6),1,2,3,l6),QIList(l747,l4386,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var F=(function(){var SYMBOL=l25,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+return (typeof F==='function'?F:F.fvalue)(pv,4,(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),1,2,3);
+})(),l4386),l4387);
+var l4388=QIList(4,5,6,l6);
+var l4389=QIList(1,2,3,4,5,6,l6);
+var l4390=QIList(l56,QIList(l25,QIList(l571,l26,l6),QIList(l571,l67,l6),1,2,3,QIList(l747,l4388,l6),l6),QIList(l747,l4389,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var F=(function(){var SYMBOL=l26,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+return (typeof F==='function'?F:F.fvalue)(pv,5,(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),1,2,3,l4388);
+})(),l4389),l4390);
+var l4391=QIList(4,5,6,l6);
+var l4392=QIList(1,2,3,4,5,6,l6);
+var l4393=QIList(l56,QIList(l26,QIList(l571,l25,l6),QIList(l571,l67,l6),1,2,3,QIList(l747,l4391,l6),l6),QIList(l747,l4392,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var F=(function(){var SYMBOL=l25,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,4,(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),1,2,3];
+var TAIL=l4391;
+while (TAIL!=l6.value){ARGS.push(TAIL.car);
+ARGS[1]++;
+TAIL=TAIL.cdr;
+}return (typeof F==='function'?F:F.fvalue).apply(this,ARGS);
+})(),l4392),l4393);
+var l4394=QIList(4,5,QIList(6,l6),l6);
+var l4395=QIList(1,2,3,4,5,6,l6);
+var l4396=QIList(l56,QIList(l26,QIList(l571,l26,l6),QIList(l571,l67,l6),1,2,3,QIList(l747,l4394,l6),l6),QIList(l747,l4395,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var F=(function(){var SYMBOL=l26,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,4,(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),1,2,3];
+var TAIL=l4394;
+while (TAIL!=l6.value){ARGS.push(TAIL.car);
+ARGS[1]++;
+TAIL=TAIL.cdr;
+}return (typeof F==='function'?F:F.fvalue).apply(this,ARGS);
+})(),l4395),l4396);
+var l4397=[1,2,3,4];
+var l4398=QIList(l420,l4397,l6);
+l4369.fvalue(pv,2,l420.fvalue(pv,1,l4397),l4398);
+var l4399=[1,2,3,4];
+var l4400=QIList(l433,l4399,l6);
+l4369.fvalue(pv,2,l433.fvalue(pv,1,l4399),l4400);
+var l4401=QIList(3,3,l6);
+var l4402=QIList(l24,QIList(l433,QIList(l109,QIList(l747,l4401,l6),l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l433.fvalue(pv,1,l109.fvalue(pv,1,l4401))),l4402);
+var l4403=QIList(l48,QIList(l46,127744,l6),QIList(l46,127744,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,char_from_codepoint(127744),char_from_codepoint(127744)),l4403);
+var l4404=QIList(l48,'d','d',l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'d','d'),l4404);
+var l4405=QIList(l24,QIList(l48,'A','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l48.fvalue(pv,2,'A','a')),l4405);
+var l4406=QIList(l24,QIList(l48,'d','x',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l48.fvalue(pv,2,'d','x')),l4406);
+var l4407=QIList(l24,QIList(l48,'d','D',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l48.fvalue(pv,2,'d','D')),l4407);
+var l4408=QIList(l24,QIList(l161,'d','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l161.fvalue(pv,2,'d','d')),l4408);
+var l4409=QIList(l161,'d','x',l6);
+l4369.fvalue(pv,2,l161.fvalue(pv,2,'d','x'),l4409);
+var l4410=QIList(l161,'d','D',l6);
+l4369.fvalue(pv,2,l161.fvalue(pv,2,'d','D'),l4410);
+var l4411=QIList(l48,'d','d','d','d',l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,4,'d','d','d','d'),l4411);
+var l4412=QIList(l24,QIList(l161,'d','d','d','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l161.fvalue(pv,4,'d','d','d','d')),l4412);
+var l4413=QIList(l24,QIList(l48,'d','d','x','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l48.fvalue(pv,4,'d','d','x','d')),l4413);
+var l4414=QIList(l24,QIList(l161,'d','d','x','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l161.fvalue(pv,4,'d','d','x','d')),l4414);
+var l4415=QIList(l24,QIList(l48,'d','y','x','c',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l48.fvalue(pv,4,'d','y','x','c')),l4415);
+var l4416=QIList(l161,'d','y','x','c',l6);
+l4369.fvalue(pv,2,l161.fvalue(pv,4,'d','y','x','c'),l4416);
+var l4417=QIList(l24,QIList(l48,'d','c','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l48.fvalue(pv,3,'d','c','d')),l4417);
+var l4418=QIList(l24,QIList(l161,'d','c','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l161.fvalue(pv,3,'d','c','d')),l4418);
+var l4419=QIList(l49,'d','x',l6);
+l4369.fvalue(pv,2,l49.fvalue(pv,2,'d','x'),l4419);
+var l4420=QIList(l164,'d','x',l6);
+l4369.fvalue(pv,2,l164.fvalue(pv,2,'d','x'),l4420);
+var l4421=QIList(l24,QIList(l49,'d','d',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l49.fvalue(pv,2,'d','d')),l4421);
+var l4422=QIList(l164,'d','d',l6);
+l4369.fvalue(pv,2,l164.fvalue(pv,2,'d','d'),l4422);
+var l4423=QIList(l49,'a','e','y','z',l6);
+l4369.fvalue(pv,2,l49.fvalue(pv,4,'a','e','y','z'),l4423);
+var l4424=QIList(l164,'a','e','y','z',l6);
+l4369.fvalue(pv,2,l164.fvalue(pv,4,'a','e','y','z'),l4424);
+var l4425=QIList(l24,QIList(l49,'a','e','e','y',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l49.fvalue(pv,4,'a','e','e','y')),l4425);
+var l4426=QIList(l164,'a','e','e','y',l6);
+l4369.fvalue(pv,2,l164.fvalue(pv,4,'a','e','e','y'),l4426);
+var l4427=QIList(l163,'e','d',l6);
+l4369.fvalue(pv,2,l163.fvalue(pv,2,'e','d'),l4427);
+var l4428=QIList(l165,'e','d',l6);
+l4369.fvalue(pv,2,l165.fvalue(pv,2,'e','d'),l4428);
+var l4429=QIList(l163,'d','c','b','a',l6);
+l4369.fvalue(pv,2,l163.fvalue(pv,4,'d','c','b','a'),l4429);
+var l4430=QIList(l165,'d','c','b','a',l6);
+l4369.fvalue(pv,2,l165.fvalue(pv,4,'d','c','b','a'),l4430);
+var l4431=QIList(l24,QIList(l163,'d','d','c','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l163.fvalue(pv,4,'d','d','c','a')),l4431);
+var l4432=QIList(l165,'d','d','c','a',l6);
+l4369.fvalue(pv,2,l165.fvalue(pv,4,'d','d','c','a'),l4432);
+var l4433=QIList(l24,QIList(l163,'e','d','b','c','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l163.fvalue(pv,5,'e','d','b','c','a')),l4433);
+var l4434=QIList(l24,QIList(l165,'e','d','b','c','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l165.fvalue(pv,5,'e','d','b','c','a')),l4434);
+var l4435=QIList(l168,'A','a',l6);
+l4369.fvalue(pv,2,l168.fvalue(pv,2,'A','a'),l4435);
+var l4436=QIList(l56,'a',QIList(l178,'a',l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,'a',l178.fvalue(pv,1,'a')),l4436);
+var l4437=make_lisp_string('a');
+var l4438=QIList(l56,'a',QIList(l178,l4437,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,'a',l178.fvalue(pv,1,l4437)),l4438);
+var l4439=QIList(l1386,'a',l6);
+l4369.fvalue(pv,2,(function(){var X='a';
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})(),l4439);
+var l4440=QIList(l1386,QIList(l46,65,l6),l6);
+l4369.fvalue(pv,2,(function(){var X=char_from_codepoint(65);
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})(),l4440);
+var l4441=QIList(l48,'A',QIList(l46,65,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'A',char_from_codepoint(65)),l4441);
+var l4442=QIList(l24,QIList(l1386,10,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=10;
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l4442);
+var l4443=make_lisp_string('a');
+var l4444=QIList(l24,QIList(l1386,l4443,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=l4443;
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l4444);
+var l4445=make_lisp_string('ab');
+var l4446=QIList(l24,QIList(l1386,l4445,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=l4445;
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l4446);
+var l4447=QIList(l1386,QIList(l46,127744,l6),l6);
+l4369.fvalue(pv,2,(function(){var X=char_from_codepoint(127744);
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})(),l4447);
+var l4448=QIList(l1386,'a',l6);
+l4369.fvalue(pv,2,(function(){var X='a';
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})(),l4448);
+var l4449=new Symbol(make_lisp_string('A'));
+var l4450=QIList(l24,QIList(l1386,QIList(l747,l4449,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=l4449;
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l4450);
+var l4451=make_lisp_string('a');
+var l4452=QIList(l24,QIList(l1386,l4451,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=l4451;
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l4452);
+var l4453=QIList(l24,QIList(l1386,65,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=65;
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l4453);
+var l4454=QIList(l51,'a',l6);
+l4369.fvalue(pv,2,l51.fvalue(pv,1,'a'),l4454);
+var l4455=QIList(l24,QIList(l51,'5',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l51.fvalue(pv,1,'5')),l4455);
+var l4456=QIList(l184,'Z',l6);
+l4369.fvalue(pv,2,l184.fvalue(pv,1,'Z'),l4456);
+var l4457=QIList(l184,'9',l6);
+l4369.fvalue(pv,2,l184.fvalue(pv,1,'9'),l4457);
+var l4458=QIList(l24,QIList(l184,'#',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l184.fvalue(pv,1,'#')),l4458);
+var l4459=QIList(l48,'0',QIList(l53,0,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'0',l53.fvalue(pv,1,0)),l4459);
+var l4460=QIList(l48,'A',QIList(l53,10,11,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'A',l53.fvalue(pv,2,10,11)),l4460);
+var l4461=QIList(l71,QIList(l53,10,10,l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l53.fvalue(pv,2,10,10)),l4461);
+var l4462=QIList(l48,'7',QIList(l53,7,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'7',l53.fvalue(pv,1,7)),l4462);
+var l4463=QIList(l71,QIList(l53,12,l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l53.fvalue(pv,1,12)),l4463);
+var l4464=QIList(l48,'C',QIList(l53,12,16,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'C',l53.fvalue(pv,2,12,16)),l4464);
+var l4465=QIList(l71,QIList(l53,6,2,l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l53.fvalue(pv,2,6,2)),l4465);
+var l4466=QIList(l48,'1',QIList(l53,1,2,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'1',l53.fvalue(pv,2,1,2)),l4466);
+var l4467=QIList(l141,5,QIList(l52,'5',l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l52.fvalue(pv,1,'5');
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4467);
+var l4468=QIList(l71,QIList(l52,'5',2,l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l52.fvalue(pv,2,'5',2)),l4468);
+var l4469=QIList(l71,QIList(l52,'A',l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l52.fvalue(pv,1,'A')),l4469);
+var l4470=QIList(l71,QIList(l52,'a',l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l52.fvalue(pv,1,'a')),l4470);
+var l4471=QIList(l141,10,QIList(l52,'A',11,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l52.fvalue(pv,2,'A',11);
+if (typeof x1!='number') throw 'Not a number!';
+return 10==x1?l5.value:l6.value;
+})(),l4471);
+var l4472=QIList(l141,10,QIList(l52,'a',11,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l52.fvalue(pv,2,'a',11);
+if (typeof x1!='number') throw 'Not a number!';
+return 10==x1?l5.value:l6.value;
+})(),l4472);
+var l4473=QIList(l189,'G',l6);
+l4369.fvalue(pv,2,l189.fvalue(pv,1,'G'),l4473);
+var l4474=QIList(l189,'#',l6);
+l4369.fvalue(pv,2,l189.fvalue(pv,1,'#'),l4474);
+var l4475=QIList(l190,'~',l6);
+l4369.fvalue(pv,2,l190.fvalue(pv,1,'~'),l4475);
+var l4476=QIList(l48,'A',QIList(l1389,'a',l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'A',safe_char_upcase('a')),l4476);
+var l4477=QIList(l48,'A',QIList(l1389,'A',l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'A',safe_char_upcase('A')),l4477);
+var l4478=QIList(l48,QIList(l46,223,l6),QIList(l1389,QIList(l46,223,l6),l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,char_from_codepoint(223),safe_char_upcase(char_from_codepoint(223))),l4478);
+var l4479=QIList(l48,QIList(l46,127744,l6),QIList(l1389,QIList(l46,127744,l6),l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,char_from_codepoint(127744),safe_char_upcase(char_from_codepoint(127744))),l4479);
+var l4480=QIList(l48,'a',QIList(l1391,'a',l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'a',safe_char_downcase('a')),l4480);
+var l4481=QIList(l48,'a',QIList(l1391,'A',l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'a',safe_char_downcase('A')),l4481);
+var l4482=QIList(l48,QIList(l46,223,l6),QIList(l1391,QIList(l46,223,l6),l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,char_from_codepoint(223),safe_char_downcase(char_from_codepoint(223))),l4482);
+var l4483=QIList(l48,QIList(l46,127744,l6),QIList(l1391,QIList(l46,127744,l6),l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,char_from_codepoint(127744),safe_char_downcase(char_from_codepoint(127744))),l4483);
+var l4484=QIList(l191,'A',l6);
+l4369.fvalue(pv,2,l191.fvalue(pv,1,'A'),l4484);
+var l4485=QIList(l24,QIList(l191,'a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l191.fvalue(pv,1,'a')),l4485);
+var l4486=QIList(l193,'a',l6);
+l4369.fvalue(pv,2,l193.fvalue(pv,1,'a'),l4486);
+var l4487=QIList(l24,QIList(l193,'5',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l193.fvalue(pv,1,'5')),l4487);
+var l4488=QIList(l24,QIList(l192,'5',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l192.fvalue(pv,1,'5')),l4488);
+var l4489=QIList(l24,QIList(l191,'5',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l191.fvalue(pv,1,'5')),l4489);
+var l4490=QIList(l24,QIList(l191,QIList(l46,127744,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l191.fvalue(pv,1,char_from_codepoint(127744))),l4490);
+var l4491=QIList(l48,'A',QIList(l46,65,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,'A',char_from_codepoint(65)),l4491);
+var l4492=QIList(l141,65,QIList(l47,'A',l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=char_to_codepoint('A');
+if (typeof x1!='number') throw 'Not a number!';
+return 65==x1?l5.value:l6.value;
+})(),l4492);
+var l4493=QIList(l141,127744,QIList(l47,QIList(l46,127744,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=char_to_codepoint(char_from_codepoint(127744));
+if (typeof x1!='number') throw 'Not a number!';
+return 127744==x1?l5.value:l6.value;
+})(),l4493);
+var l4494=QIList(l141,QIList(l162,'A',l6),QIList(l162,'A',l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l162.fvalue(pv,1,'A');
+if (typeof x1!='number') throw 'Not a number!';
+var x2=l162.fvalue(pv,1,'A');
+if (typeof x2!='number') throw 'Not a number!';
+return x1==x2?l5.value:l6.value;
+})(),l4494);
+var l4495=QIList(l141,1,QIList(l106,QIList(l116,QIList(l46,127744,l6),l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l106.fvalue(pv,1,l116.fvalue(pv,1,char_from_codepoint(127744)));
+if (typeof x1!='number') throw 'Not a number!';
+return 1==x1?l5.value:l6.value;
+})(),l4495);
+var l4496=QIList(l142,95,l194,10000000,l6);
+l4369.fvalue(pv,2,(function(){var x1=l194.value;
+if (typeof x1!='number') throw 'Not a number!';
+return 95<x1&&x1<10000000?l5.value:l6.value;
+})(),l4496);
+var l4497=make_lisp_string('Space');
+var l4498=QIList(l57,l4497,QIList(l326,' ',l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4497,l326.fvalue(pv,1,' ')),l4498);
+var l4499=make_lisp_string('Page');
+var l4500=QIList(l57,l4499,QIList(l326,QIList(l46,12,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4499,l326.fvalue(pv,1,char_from_codepoint(12))),l4500);
+var l4501=make_lisp_string('LATIN_SMALL_LETTER_A');
+var l4502=QIList(l57,l4501,QIList(l326,'a',l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4501,l326.fvalue(pv,1,'a')),l4502);
+var l4503=make_lisp_string('LATIN_CAPITAL_LETTER_A');
+var l4504=QIList(l57,l4503,QIList(l326,'A',l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4503,l326.fvalue(pv,1,'A')),l4504);
+var l4505=QIList(l48,' ',QIList(l327,QIList(l747,l2015,l6),l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,' ',l327.fvalue(pv,1,l2015)),l4505);
+var l4506=make_lisp_string('space');
+var l4507=QIList(l48,' ',QIList(l327,l4506,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,' ',l327.fvalue(pv,1,l4506)),l4507);
+var l4508=make_lisp_string('Space');
+var l4509=QIList(l48,' ',QIList(l327,l4508,l6),l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,' ',l327.fvalue(pv,1,l4508)),l4509);
+var l4510=QIList(l410,QIList(QIList(l1387,QIList(l326,'a',l6),l6),l6),QIList(l34,QIList(l24,l1387,l6),QIList(l23,QIList(l327,l1387,l6),'a',l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4463){return (function(v4464){return v4464!==l6.value?v4464:l23.fvalue(pv,2,l327.fvalue(pv,1,v4463),'a');
+})(l24.fvalue(pv,1,v4463));
+})(l326.fvalue(pv,1,'a')),l4510);
+var l4511=QIList(l23,QIList(l33,l6,1,l6),l6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l6.value!==l6.value?1:l6.value,l6.value),l4511);
+var l4512=QIList(l141,QIList(l33,1,2,l6),2,l6);
+l4369.fvalue(pv,2,(function(){var x1=1!==l6.value?2:l6.value;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})(),l4512);
+var l4513=QIList(l141,QIList(l34,l6,1,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4465){return v4465!==l6.value?v4465:1;
+})(l6.value);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4513);
+var l4514=QIList(l141,QIList(l34,1,2,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4466){return v4466!==l6.value?v4466:2;
+})(1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4514);
+var l4515=QIList(l23,l6,QIList(l30,l6),l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l6.value,l6.value),l4515);
+var l4516=QIList(l141,1,QIList(l30,QIList(1,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4467){return v4467!==l6.value?v4467:l6.value;
+})(1);
+if (typeof x1!='number') throw 'Not a number!';
+return 1==x1?l5.value:l6.value;
+})(),l4516);
+var l4517=QIList(l141,1,QIList(l410,QIList(QIList(l1387,0,l6),l6),QIList(l30,QIList(QIList(l76,l1387,l6),l6),l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4468){return (function(v4471){return v4471!==l6.value?v4471:l6.value;
+})((function(){var v4469=1;
+var v4470=(function(){var x1=v4468;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4469;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return v4468=v4470;
 })());
-var l1780 = make_lisp_string("All the tests (~a) passed successfully.~%");
-var l1781 = make_lisp_string("~a/~a test(s) passed successfully.~%");
-((function(){
-    var x1 = (function(){
-        var symbol = l1314;
-        var value = symbol.value;
-        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-        return value;
-    })();
-    if (typeof x1 !== 'number') throw 'Not a number!';
-    var x2 = (function(){
-        var symbol = l1313;
-        var value = symbol.value;
-        if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-        return value;
-    })();
-    if (typeof x2 !== 'number') throw 'Not a number!';
-    return (x1==x2?l4.value: l5.value);
-})() !== l5.value ? l112.fvalue(pv, 3, l4.value, l1780, (function(){
-    var symbol = l1313;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
-})()) : l112.fvalue(pv, 4, l4.value, l1781, (function(){
-    var symbol = l1314;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
-})(), (function(){
-    var symbol = l1313;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
+})(0);
+if (typeof x1!='number') throw 'Not a number!';
+return 1==x1?l5.value:l6.value;
+})(),l4517);
+var l4518=QIList(l141,2,QIList(l30,QIList(1,2,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=1!==l6.value?2:l6.value;
+if (typeof x1!='number') throw 'Not a number!';
+return 2==x1?l5.value:l6.value;
+})(),l4518);
+var l4519=QIList(l141,3,QIList(l30,QIList(l6,1,l6),QIList(2,3,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l6.value!==l6.value?1:2!==l6.value?3:l6.value;
+if (typeof x1!='number') throw 'Not a number!';
+return 3==x1?l5.value:l6.value;
+})(),l4519);
+var l4520=QIList(l23,l6,QIList(l30,QIList(l6,1,l6),QIList(l6,2,l6),l6),l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l6.value,l6.value!==l6.value?1:l6.value!==l6.value?2:l6.value),l4520);
+var l4521=QIList(l141,QIList(l31,1,QIList(2,3,l6),QIList(l1876,42,l6),l6),42,l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4472){return l23.fvalue(pv,2,v4472,2)!==l6.value?(l6.value,3):(l6.value,42);
+})(1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==42?l5.value:l6.value;
+})(),l4521);
+var l4522=QIList(l141,QIList(l31,1,QIList(2,3,l6),QIList(l5,42,l6),l6),42,l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4473){return l23.fvalue(pv,2,v4473,2)!==l6.value?(l6.value,3):(l6.value,42);
+})(1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==42?l5.value:l6.value;
+})(),l4522);
+var l4523=QIList(l141,QIList(l31,1,QIList(2,3,l6),QIList(1,42,l6),l6),42,l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4474){return l23.fvalue(pv,2,v4474,2)!==l6.value?(l6.value,3):l23.fvalue(pv,2,v4474,1)!==l6.value?(l6.value,42):l6.value;
+})(1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==42?l5.value:l6.value;
+})(),l4523);
+var l4524=QIList(l71,QIList(l31,1,QIList(2,3,l6),l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,(function(v4475){return l23.fvalue(pv,2,v4475,2)!==l6.value?(l6.value,3):l6.value;
+})(1)),l4524);
+var l4525=new Symbol(make_lisp_string('FOO'));
+l4525.fvalue=(function(){var FUNC=(function(values,nargs,v4476){checkArgs(nargs,1);
+return (function(){try{var v4477=[];
+if (v4476!==l6.value) (function(){var F=v4476;
+return (typeof F==='function'?F:F.fvalue)(pv,0);
+})();
+ else l6.value;
+l4525.fvalue(pv,1,(function(values,nargs){checkArgsAtMost(nargs,0);
+return (function(){var values=mv;
+throw {type: 'block',id: v4477,values: 1,message: "Return from unknown block 'FOO'."};
+})();
+}));
+return (function(){var values=mv;
+throw {type: 'block',id: v4477,values: 2,message: "Return from unknown block 'FOO'."};
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4477) return values.apply(this,forcemv(CF.values));
+ else throw CF;
+}})();
+});
+FUNC.fname='FOO';
+return FUNC;
+})();
+l4525;
+var l4526=QIList(l141,QIList(l4525,l6,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l4525.fvalue(pv,1,l6.value);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4526);
+var l4527=new Symbol(make_lisp_string('FOO-2'));
+l4527.fvalue=(function(){var FUNC=(function(values,nargs,v4478){checkArgs(nargs,1);
+return (function(){return (function(v4480){(function(){var v4481=1;
+var v4482=[];
+TBLOOP:while (true){try{switch(v4481){case 1:if (v4478!==l6.value) (function(){var F=v4478;
+return (typeof F==='function'?F:F.fvalue)(pv,0);
+})();
+ else l6.value;
+l4527.fvalue(pv,1,(function(values,nargs){checkArgsAtMost(nargs,0);
+return (function(){throw {type: 'tagbody',id: v4482,label: 2,message: 'Attempt to GO to non-existing tag EXIT-2'};
+})();
+}));
+(function(){throw {type: 'tagbody',id: v4482,label: 3,message: 'Attempt to GO to non-existing tag END'};
+})();
+case 2:v4480=l5.value;
+case 3:default:break TBLOOP;
+}}catch (JUMP){if (JUMP.type=='tagbody'&&JUMP.id==v4482) v4481=JUMP.label;
+ else throw JUMP;
+}}return l6.value;
+})();
+return v4480;
+})(l6.value);
+})();
+});
+FUNC.fname='FOO-2';
+return FUNC;
+})();
+l4527;
+var l4528=QIList(l4527,l6,l6);
+l4369.fvalue(pv,2,l4527.fvalue(pv,1,l6.value),l4528);
+var l4529=QIList(l56,QIList(l1238,QIList(QIList(l4525,l6,QIList(l1272,l4525,42,l6),l6),l6),QIList(l4525,l6),l6),42,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(v4484){return v4484(pv,0);
+})((function(values,nargs){checkArgsAtMost(nargs,0);
+return (function(){try{var v4483=[];
+return (function(){var values=mv;
+throw {type: 'block',id: v4483,values: 42,message: "Return from unknown block 'FOO'."};
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4483) return values.apply(this,forcemv(CF.values));
+ else throw CF;
+}})();
+})),42),l4529);
+var l4530=QIList( -5, -4, -3,999,1,2,3,4,5,l6);
+var l4531=new Symbol(make_lisp_string('OUT'));
+var l4532=new Symbol(make_lisp_string('ZFOO'));
+var l4533=new Symbol(make_lisp_string('N'));
+var l4534=new Symbol(make_lisp_string('RF'));
+var l4535=QIList(l56,QIList(l410,QIList(QIList(l4531,QIList(l67,l6),l6),l6),QIList(l1239,QIList(QIList(l4532,QIList(l4533,l4534,l1186,l6),QIList(l842,QIList(l139,l4533,0,l6),QIList(l398,QIList(l78,QIList(l7,l6,QIList(l1272,l4532,l4533,l6),l6),l4534,l6),QIList(l78,l4533,l4531,l6),QIList(l4532,QIList(l133,l4533,l6),l4534,l1186,l6),QIList(l78,QIList(l130,l4533,l6),l4531,l6),l6),QIList(l398,QIList(l78,999,l4531,l6),QIList(l25,QIList(l352,l1186,QIList(l108,l4534,l6),l6),l6),QIList(l78, -999,l4531,l6),l6),l6),l6),l6),QIList(l410,QIList(QIList(l4534,QIList(l67,l6),l6),l6),QIList(l4532,5,l4534,3,l6),l4531,l6),l6),l6),QIList(l747,l4530,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(v4485){return (function(){var v4486=(function(values,nargs,v4487,v4488,v4489){checkArgs(nargs,3);
+return (function(){try{var v4490=[];
+return (function(){var x1=v4487;
+if (typeof x1!='number') throw 'Not a number!';
+return x1>0?l5.value:l6.value;
+})()!==l6.value?((function(){var v4491=(function(values,nargs){checkArgsAtMost(nargs,0);
+return (function(){var values=mv;
+throw {type: 'block',id: v4490,values: v4487,message: "Return from unknown block 'ZFOO'."};
+})();
+});
+var v4492={car: v4491,cdr: v4488};
+return v4488=v4492;
+})(),(function(){var v4493=v4487;
+var v4494={car: v4493,cdr: v4485};
+return v4485=v4494;
+})(),v4486(pv,3,l133.fvalue(pv,1,v4487),v4488,v4489),(function(){var v4495=(function(){var x1=v4487;
+if (typeof x1!='number') throw 'Not a number!';
+return  -x1;
+})();
+var v4496={car: v4495,cdr: v4485};
+return v4485=v4496;
+})()):((function(){var v4497=999;
+var v4498={car: v4497,cdr: v4485};
+return v4485=v4498;
+})(),(function(){var F=l352.fvalue(pv,2,v4489,l108.fvalue(pv,1,v4488));
+return (typeof F==='function'?F:F.fvalue)(pv,0);
+})(),(function(){var v4499= -999;
+var v4500={car: v4499,cdr: v4485};
+return v4485=v4500;
+})());
+}catch (CF){if (CF.type=='block'&&CF.id==v4490) return values.apply(this,forcemv(CF.values));
+ else throw CF;
+}})();
+});
+return (function(v4501){v4486(pv,3,5,v4501,3);
+return v4485;
+})(l67.fvalue(pv,0));
+})();
+})(l67.fvalue(pv,0)),l4530),l4535);
+var l4536=QIList(l25,QIList(l44,QIList(l571,l112,l6),l6),1,l6);
+l4369.fvalue(pv,2,(function(){var F=l44.fvalue(pv,1,(function(){var SYMBOL=l112,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+return (typeof F==='function'?F:F.fvalue)(pv,1,1);
+})(),l4536);
+var l4537=new Symbol(make_lisp_string('B'));
+var l4538=new Symbol(make_lisp_string('C'));
+var l4539=QIList(l4449,l4537,l4538,l6);
+var l4540=QIList(l24,QIList(l25,QIList(l44,QIList(l571,l393,l6),l6),QIList(l747,l4449,l6),QIList(l747,l4539,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var F=l44.fvalue(pv,1,(function(){var SYMBOL=l393,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+return (typeof F==='function'?F:F.fvalue)(pv,2,l4449,l4539);
+})()),l4540);
+var l4541=new Symbol(make_lisp_string('D'));
+var l4542=QIList(l4449,l4537,l4538,l6);
+var l4543=QIList(l25,QIList(l44,QIList(l571,l393,l6),l6),QIList(l747,l4541,l6),QIList(l747,l4542,l6),l6);
+l4369.fvalue(pv,2,(function(){var F=l44.fvalue(pv,1,(function(){var SYMBOL=l393,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+return (typeof F==='function'?F:F.fvalue)(pv,2,l4541,l4542);
+})(),l4543);
+var l4544=QIList(l23,QIList(l12,l4525,l6,make_lisp_string("foo's"),l6,l6),QIList(l747,l4525,l6),l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,((l4525.fvalue=(function(){var FUNC=(function(values,nargs){checkArgsAtMost(nargs,0);
+return (function(){return l6.value;
+})();
+});
+FUNC.fname='FOO';
+FUNC.docstring="foo's";
+return FUNC;
+})()),l4525),l4525),l4544);
+var l4545=QIList(1,2,l6);
+var l4546=QIList(1,2,l6);
+var l4547=QIList(l56,QIList(l747,l4545,l6),QIList(l747,l4546,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4545,l4546),l4547);
+var l4548=QIList(l56,1,1,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,1,1),l4548);
+var l4549=make_lisp_string('abc');
+var l4550=make_lisp_string('abc');
+var l4551=QIList(l56,l4549,l4550,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4549,l4550),l4551);
+var l4552=make_lisp_string('abc');
+var l4553=make_lisp_string('def');
+var l4554=QIList(l24,QIList(l56,l4552,l4553,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l56.fvalue(pv,2,l4552,l4553)),l4554);
+var l4555=make_lisp_string('Abc');
+var l4556=make_lisp_string('abc');
+var l4557=QIList(l24,QIList(l56,l4555,l4556,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l56.fvalue(pv,2,l4555,l4556)),l4557);
+var l4558=QIList(l128,1,2,l6);
+var l4559=QIList(l141,QIList(l1243,QIList(l747,l4558,l6),l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l1243.fvalue(pv,1,l4558);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4559);
+var l4560=make_lisp_string('a');
+var l4561=make_lisp_string('a');
+var l4562=QIList(l57,l4560,QIList(l93,l6,l4561,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4560,l93.fvalue(pv,2,l6.value,l4561)),l4562);
+var l4563=make_lisp_string('~');
+var l4564=make_lisp_string('~~');
+var l4565=QIList(l57,l4563,QIList(l93,l6,l4564,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4563,l93.fvalue(pv,2,l6.value,l4564)),l4565);
+var l4566=make_lisp_string('a~a');
+var l4567=make_lisp_string('a~~a');
+var l4568=QIList(l57,l4566,QIList(l93,l6,l4567,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4566,l93.fvalue(pv,2,l6.value,l4567)),l4568);
+var l4569=make_lisp_string('a\na');
+var l4570=make_lisp_string('a~%a');
+var l4571=QIList(l57,l4569,QIList(l93,l6,l4570,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4569,l93.fvalue(pv,2,l6.value,l4570)),l4571);
+var l4572=make_lisp_string('this is foo');
+var l4573=make_lisp_string('this is ~a');
+var l4574=make_lisp_string('foo');
+var l4575=QIList(l57,l4572,QIList(l93,l6,l4573,l4574,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4572,l93.fvalue(pv,3,l6.value,l4573,l4574)),l4575);
+var l4576=make_lisp_string('this is foo');
+var l4577=make_lisp_string('this is ~A');
+var l4578=make_lisp_string('foo');
+var l4579=QIList(l57,l4576,QIList(l93,l6,l4577,l4578,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4576,l93.fvalue(pv,3,l6.value,l4577,l4578)),l4579);
+var l4580=make_lisp_string('this is "foo"');
+var l4581=make_lisp_string('this is ~s');
+var l4582=make_lisp_string('foo');
+var l4583=QIList(l57,l4580,QIList(l93,l6,l4581,l4582,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4580,l93.fvalue(pv,3,l6.value,l4581,l4582)),l4583);
+var l4584=make_lisp_string('this is "foo"');
+var l4585=make_lisp_string('this is ~S');
+var l4586=make_lisp_string('foo');
+var l4587=QIList(l57,l4584,QIList(l93,l6,l4585,l4586,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4584,l93.fvalue(pv,3,l6.value,l4585,l4586)),l4587);
+var l4588=make_lisp_string('this is 2');
+var l4589=make_lisp_string('this is ~*~A');
+var l4590=QIList(l57,l4588,QIList(l93,l6,l4589,1,2,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l4588,l93.fvalue(pv,4,l6.value,l4589,1,2)),l4590);
+var l4591=new Symbol(make_lisp_string('TOTAL'));
+var l4592=QIList(l410,QIList(QIList(l4591,0,l6),l6),QIList(l29,QIList(l4533,6,l6),QIList(l76,l4591,l4533,l6),l6),QIList(l141,l4591,15,l6),l6);
+l4369.fvalue(pv,2,(function(v4503){(function(){return (function(v4505,v4506){(function(){while ((function(){var x1=v4505;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4506;
+if (typeof x2!='number') throw 'Not a number!';
+return x1<x2?l5.value:l6.value;
+})()!==l6.value){(function(){var v4507=v4505;
+var v4508=(function(){var x1=v4503;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4507;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return v4503=v4508;
+})();
+l6.value;
+(function(){var v4509=1;
+var v4510=(function(){var x1=v4505;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4509;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return v4505=v4510;
+})();
+}return l6.value;
+})();
+return l6.value;
+})(0,6);
+})();
+return (function(){var x1=v4503;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==15?l5.value:l6.value;
+})();
+})(0),l4592);
+var l4593=QIList(1,2,3,4,5,l6);
+var l4594=QIList(l410,QIList(QIList(l4591,0,l6),l6),QIList(l28,QIList(l4533,QIList(l747,l4593,l6),l6),QIList(l76,l4591,l4533,l6),l6),QIList(l141,l4591,15,l6),l6);
+l4369.fvalue(pv,2,(function(v4511){(function(){return (function(v4513,v4514){(function(){while (v4513!==l6.value){v4514=(function(){var TMP=v4513;
+return TMP===l6.value?l6.value:TMP.car;
+})();
+(function(){var v4515=v4514;
+var v4516=(function(){var x1=v4511;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4515;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return v4511=v4516;
+})();
+l6.value;
+v4513=(function(){var TMP=v4513;
+return TMP===l6.value?l6.value:TMP.cdr;
+})();
+}return l6.value;
+})();
+return l6.value;
+})(l4593,l6.value);
+})();
+return (function(){var x1=v4511;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==15?l5.value:l6.value;
+})();
+})(0),l4594);
+var l4595=QIList(l39,QIList(QIList(l4449,0,l4537,l6),QIList(l4537,1,QIList(l128,l4449,l4537,l6),l6),QIList(l4533,0,QIList(l132,l4533,l6),l6),l6),QIList(QIList(l141,l4533,10,l6),QIList(l141,l4449,55,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){return (function(v4518,v4519,v4520){return (function(){try{var v4521=[];
+return (function(){while (l5.value!==l6.value){if ((function(){var x1=v4520;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==10?l5.value:l6.value;
+})()!==l6.value) (function(){throw {type: 'block',id: v4521,values: (function(){var x1=v4518;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==55?l5.value:l6.value;
+})(),message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+(function(v4522,v4523,v4524){return (v4518=v4522),(v4519=v4523),v4520=v4524;
+})(v4519,(function(){var x1=v4518;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4519;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})(),l132.fvalue(pv,1,v4520));
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4521) return CF.values;
+ else throw CF;
+}})();
+})(0,1,0);
+})(),l4595);
+var l4596=QIList(l141,5,QIList(l39,QIList(l1387,l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(v4526){return (function(){try{var v4527=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4527,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+(function(){return l6.value;
+})();
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4527) return CF.values;
+ else throw CF;
+}})();
+})(l6.value);
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4596);
+var l4597=QIList(l141,5,QIList(l39,QIList(QIList(l1387,l6),l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(v4529){return (function(){try{var v4530=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4530,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+(function(){return l6.value;
+})();
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4530) return CF.values;
+ else throw CF;
+}})();
+})(l6.value);
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4597);
+var l4598=QIList(l141,5,QIList(l39,QIList(QIList(l1387,l6,l6),l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(v4532){return (function(){try{var v4533=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4533,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+(function(){return l6.value;
+})();
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4533) return CF.values;
+ else throw CF;
+}})();
+})(l6.value);
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4598);
+var l4599=QIList(l141,5,QIList(l39,QIList(QIList(l1387,l6,l6,l6),l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(v4535){return (function(){try{var v4536=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4536,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+(function(v4537){return v4535=v4537;
+})(l6.value);
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4536) return CF.values;
+ else throw CF;
+}})();
+})(l6.value);
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4599);
+var l4600=QIList(l40,QIList(QIList(l4449,0,l4537,l6),QIList(l4537,1,QIList(l128,l4449,l4537,l6),l6),QIList(l4533,0,QIList(l132,l4533,l6),l6),l6),QIList(QIList(l141,l4533,10,l6),QIList(l141,l4449,512,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){return (function(){var v4539=0;
+var v4540=1;
+var v4541=0;
+return (function(){try{var v4542=[];
+return (function(){while (l5.value!==l6.value){if ((function(){var x1=v4541;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==10?l5.value:l6.value;
+})()!==l6.value) (function(){throw {type: 'block',id: v4542,values: (function(){var x1=v4539;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==512?l5.value:l6.value;
+})(),message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+v4539=v4540;
+v4540=(function(){var x1=v4539;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4540;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+v4541=l132.fvalue(pv,1,v4541);
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4542) return CF.values;
+ else throw CF;
+}})();
+})();
+})(),l4600);
+var l4601=QIList(l141,5,QIList(l40,QIList(l1387,l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(){var v4544=l6.value;
+return (function(){try{var v4545=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4545,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+l6.value;
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4545) return CF.values;
+ else throw CF;
+}})();
+})();
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4601);
+var l4602=QIList(l141,5,QIList(l40,QIList(QIList(l1387,l6),l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(){var v4547=l6.value;
+return (function(){try{var v4548=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4548,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+l6.value;
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4548) return CF.values;
+ else throw CF;
+}})();
+})();
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4602);
+var l4603=QIList(l141,5,QIList(l40,QIList(QIList(l1387,l6,l6),l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(){var v4550=l6.value;
+return (function(){try{var v4551=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4551,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+l6.value;
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4551) return CF.values;
+ else throw CF;
+}})();
+})();
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4603);
+var l4604=QIList(l141,5,QIList(l40,QIList(QIList(l1387,l6,l6,l6),l6),QIList(l5,5,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(){return (function(){var v4553=l6.value;
+return (function(){try{var v4554=[];
+return (function(){while (l5.value!==l6.value){if (l5.value!==l6.value) (function(){throw {type: 'block',id: v4554,values: 5,message: "Return from unknown block 'NIL'."};
+})();
+ else l6.value;
+l6.value;
+v4553=l6.value;
+}return l6.value;
+})();
+}catch (CF){if (CF.type=='block'&&CF.id==v4554) return CF.values;
+ else throw CF;
+}})();
+})();
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l4604);
+var l4605=QIList(1,2);
+var l4606=QIList(l56,QIList(l330,1,2,l6),QIList(l747,l4605,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: 1,cdr: 2},l4605),l4606);
+var l4607=QIList(1,l6);
+var l4608=QIList(l56,QIList(l330,1,l6,l6),QIList(l747,l4607,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: 1,cdr: l6.value},l4607),l4608);
+var l4609=QIList(l6,2);
+var l4610=QIList(l56,QIList(l330,l6,2,l6),QIList(l747,l4609,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: l6.value,cdr: 2},l4609),l4610);
+var l4611=QIList(l6,l6);
+var l4612=QIList(l56,QIList(l330,l6,l6,l6),QIList(l747,l4611,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: l6.value,cdr: l6.value},l4611),l4612);
+var l4613=QIList(1,2,3,4,l6);
+var l4614=QIList(l56,QIList(l330,1,QIList(l330,2,QIList(l330,3,QIList(l330,4,l6,l6),l6),l6),l6),QIList(l747,l4613,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: 1,cdr: {car: 2,cdr: {car: 3,cdr: {car: 4,cdr: l6.value}}}},l4613),l4614);
+var l4615=QIList(l4449,l4537);
+var l4616=QIList(l56,QIList(l330,QIList(l747,l4449,l6),QIList(l747,l4537,l6),l6),QIList(l747,l4615,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: l4449,cdr: l4537},l4615),l4616);
+var l4617=QIList(l4449,l4537,l4538,l6);
+var l4618=QIList(l56,QIList(l330,QIList(l747,l4449,l6),QIList(l330,QIList(l747,l4537,l6),QIList(l330,QIList(l747,l4538,l6),QIList(l747,l6,l6),l6),l6),l6),QIList(l747,l4617,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: l4449,cdr: {car: l4537,cdr: {car: l4538,cdr: l6}}},l4617),l4618);
+var l4619=QIList(l4537,l4538,l4541,l6);
+var l4620=QIList(l4449,l4537,l4538,l4541,l6);
+var l4621=QIList(l56,QIList(l330,QIList(l747,l4449,l6),QIList(l747,l4619,l6),l6),QIList(l747,l4620,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,{car: l4449,cdr: l4619},l4620),l4621);
+var l4622=QIList(l24,QIList(l331,QIList(l747,l6,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var TMP=l6;
+return typeof TMP=='object'&&'car' in TMP?l5.value:l6.value;
+})()),l4622);
+var l4623=QIList(l24,QIList(l331,l6,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var TMP=l6.value;
+return typeof TMP=='object'&&'car' in TMP?l5.value:l6.value;
+})()),l4623);
+var l4624=QIList(l24,QIList(l331,l6,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var TMP=l6.value;
+return typeof TMP=='object'&&'car' in TMP?l5.value:l6.value;
+})()),l4624);
+var l4625=QIList(l24,QIList(l331,QIList(l747,l6,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var TMP=l6;
+return typeof TMP=='object'&&'car' in TMP?l5.value:l6.value;
+})()),l4625);
+var l4626=QIList(l331,QIList(l330,1,2,l6),l6);
+l4369.fvalue(pv,2,(function(){var TMP={car: 1,cdr: 2};
+return typeof TMP=='object'&&'car' in TMP?l5.value:l6.value;
+})(),l4626);
+var l4627=new Symbol(make_lisp_string('SSS'));
+var l4628=QIList(l50,QIList(l747,l4627,l6),l6);
+l4369.fvalue(pv,2,l50.fvalue(pv,1,l4627),l4628);
+var l4629=QIList(l24,QIList(l50,QIList(l330,1,2,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l50.fvalue(pv,1,{car: 1,cdr: 2})),l4629);
+var l4630=QIList(l50,l6,l6);
+l4369.fvalue(pv,2,l50.fvalue(pv,1,l6.value),l4630);
+var l4631=QIList(l50,QIList(l747,l6,l6),l6);
+l4369.fvalue(pv,2,l50.fvalue(pv,1,l6),l4631);
+var l4632=QIList(l50,3,l6);
+l4369.fvalue(pv,2,l50.fvalue(pv,1,3),l4632);
+var l4633=new Symbol(make_lisp_string('ONE'));
+var l4634=new Symbol(make_lisp_string('TWO'));
+var l4635=new Symbol(make_lisp_string('THREE'));
+var l4636=new Symbol(make_lisp_string('FOUR'));
+var l4637=new Symbol(make_lisp_string('UNO'));
+var l4638=QIList(l4637,l4634,l4635,l4636);
+var l4639=new Symbol(make_lisp_string('SOME-LIST'));
+var l4640=QIList(l56,QIList(l336,l4639,QIList(l747,l4637,l6),l6),QIList(l747,l4638,l6),l6);
+var l4641=QIList(l4637,l4634,l4635,l4636);
+var l4642=QIList(l56,l4639,QIList(l747,l4641,l6),l6);
+(function(v4555){l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=v4555;
+TMP.car=l4637;
+return TMP;
+})(),l4638),l4640);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,v4555,l4641),l4642);
+})(l27.fvalue(pv,4,l4633,l4634,l4635,l4636));
+var l4643=new Symbol(make_lisp_string('IV'));
+var l4644=QIList(l4635,l4643,l6);
+var l4645=QIList(l56,QIList(l337,QIList(l391,l4639,l6),QIList(l67,QIList(l747,l4643,l6),l6),l6),QIList(l747,l4644,l6),l6);
+var l4646=QIList(l4633,l4634,l4635,l4643,l6);
+var l4647=QIList(l56,l4639,QIList(l747,l4646,l6),l6);
+(function(v4556){l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=l391.fvalue(pv,1,v4556);
+TMP.cdr=l67.fvalue(pv,1,l4643);
+return TMP;
+})(),l4644),l4645);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,v4556,l4646),l4647);
+})(l27.fvalue(pv,4,l4633,l4634,l4635,l4636));
+var l4648=QIList(l56,QIList(l334,l6,l6),l6,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=l6.value;
+return TMP===l6.value?l6.value:TMP.car;
+})(),l6.value),l4648);
+var l4649=QIList(1,2);
+var l4650=QIList(l56,QIList(l335,QIList(l747,l4649,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=l4649;
+return TMP===l6.value?l6.value:TMP.cdr;
+})(),2),l4650);
+var l4651=QIList(1,2,l6);
+var l4652=QIList(2,l6);
+var l4653=QIList(l56,QIList(l335,QIList(l747,l4651,l6),l6),QIList(l747,l4652,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=l4651;
+return TMP===l6.value?l6.value:TMP.cdr;
+})(),l4652),l4653);
+var l4654=QIList(1,2,l6);
+var l4655=QIList(l56,QIList(l338,QIList(l747,l4654,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l338.fvalue(pv,1,l4654),2),l4655);
+var l4656=QIList(l4449,l4537,l4538,l6);
+var l4657=QIList(l56,QIList(l334,QIList(l747,l4656,l6),l6),QIList(l747,l4449,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=l4656;
+return TMP===l6.value?l6.value:TMP.car;
+})(),l4449),l4657);
+var l4658=QIList(l4449,l4537,l4538,l6);
+var l4659=QIList(l4537,l4538,l6);
+var l4660=QIList(l56,QIList(l335,QIList(l747,l4658,l6),l6),QIList(l747,l4659,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var TMP=l4658;
+return TMP===l6.value?l6.value:TMP.cdr;
+})(),l4659),l4660);
+var l4661=QIList(QIList(1,2,l6),3,l6);
+var l4662=QIList(l56,QIList(l353,QIList(l747,l4661,l6),l6),1,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l353.fvalue(pv,1,l4661),1),l4662);
+var l4663=QIList(1,2,3,l6);
+var l4664=QIList(l56,QIList(l338,QIList(l747,l4663,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l338.fvalue(pv,1,l4663),2),l4664);
+var l4665=QIList(QIList(1,2,l6),3,l6);
+var l4666=QIList(2,l6);
+var l4667=QIList(l56,QIList(l354,QIList(l747,l4665,l6),l6),QIList(l747,l4666,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l354.fvalue(pv,1,l4665),l4666),l4667);
+var l4668=QIList(1,2,3,l6);
+var l4669=QIList(3,l6);
+var l4670=QIList(l56,QIList(l155,QIList(l747,l4668,l6),l6),QIList(l747,l4669,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l155.fvalue(pv,1,l4668),l4669),l4670);
+var l4671=QIList(QIList(QIList(1,l6),l6),l6);
+var l4672=QIList(l56,QIList(l355,QIList(l747,l4671,l6),l6),1,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l355.fvalue(pv,1,l4671),1),l4672);
+var l4673=QIList(1,QIList(2,l6),l6);
+var l4674=QIList(l56,QIList(l356,QIList(l747,l4673,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l356.fvalue(pv,1,l4673),2),l4674);
+var l4675=QIList(QIList(1,2,l6),l6);
+var l4676=QIList(l56,QIList(l357,QIList(l747,l4675,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l357.fvalue(pv,1,l4675),2),l4676);
+var l4677=QIList(1,2,3,l6);
+var l4678=QIList(l56,QIList(l340,QIList(l747,l4677,l6),l6),3,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l340.fvalue(pv,1,l4677),3),l4678);
+var l4679=QIList(QIList(QIList(1,2,l6),l6),l6);
+var l4680=QIList(2,l6);
+var l4681=QIList(l56,QIList(l358,QIList(l747,l4679,l6),l6),QIList(l747,l4680,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l358.fvalue(pv,1,l4679),l4680),l4681);
+var l4682=QIList(1,QIList(2,3,l6),l6);
+var l4683=QIList(3,l6);
+var l4684=QIList(l56,QIList(l359,QIList(l747,l4682,l6),l6),QIList(l747,l4683,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l359.fvalue(pv,1,l4682),l4683),l4684);
+var l4685=QIList(QIList(1,2,3,l6),l6);
+var l4686=QIList(3,l6);
+var l4687=QIList(l56,QIList(l360,QIList(l747,l4685,l6),l6),QIList(l747,l4686,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l360.fvalue(pv,1,l4685),l4686),l4687);
+var l4688=QIList(1,2,3,4,l6);
+var l4689=QIList(4,l6);
+var l4690=QIList(l56,QIList(l361,QIList(l747,l4688,l6),l6),QIList(l747,l4689,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l361.fvalue(pv,1,l4688),l4689),l4690);
+var l4691=QIList(QIList(QIList(QIList(1,l6),l6),l6),l6);
+var l4692=QIList(l56,QIList(l362,QIList(l747,l4691,l6),l6),1,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l362.fvalue(pv,1,l4691),1),l4692);
+var l4693=QIList(1,QIList(QIList(2,l6),l6),l6);
+var l4694=QIList(l56,QIList(l363,QIList(l747,l4693,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l363.fvalue(pv,1,l4693),2),l4694);
+var l4695=QIList(QIList(1,QIList(2,l6),l6),l6);
+var l4696=QIList(l56,QIList(l364,QIList(l747,l4695,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l364.fvalue(pv,1,l4695),2),l4696);
+var l4697=QIList(1,2,QIList(3,l6),l6);
+var l4698=QIList(l56,QIList(l365,QIList(l747,l4697,l6),l6),3,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l365.fvalue(pv,1,l4697),3),l4698);
+var l4699=QIList(QIList(QIList(1,2,l6),l6),l6);
+var l4700=QIList(l56,QIList(l366,QIList(l747,l4699,l6),l6),2,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l366.fvalue(pv,1,l4699),2),l4700);
+var l4701=QIList(1,QIList(2,3,l6),l6);
+var l4702=QIList(l56,QIList(l367,QIList(l747,l4701,l6),l6),3,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l367.fvalue(pv,1,l4701),3),l4702);
+var l4703=QIList(QIList(1,2,3,l6),l6);
+var l4704=QIList(l56,QIList(l368,QIList(l747,l4703,l6),l6),3,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l368.fvalue(pv,1,l4703),3),l4704);
+var l4705=QIList(1,2,3,4,l6);
+var l4706=QIList(l56,QIList(l342,QIList(l747,l4705,l6),l6),4,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l342.fvalue(pv,1,l4705),4),l4706);
+var l4707=QIList(QIList(QIList(QIList(1,2,l6),l6),l6),l6);
+var l4708=QIList(2,l6);
+var l4709=QIList(l56,QIList(l369,QIList(l747,l4707,l6),l6),QIList(l747,l4708,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l369.fvalue(pv,1,l4707),l4708),l4709);
+var l4710=QIList(1,QIList(QIList(2,3,l6),l6),l6);
+var l4711=QIList(3,l6);
+var l4712=QIList(l56,QIList(l370,QIList(l747,l4710,l6),l6),QIList(l747,l4711,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l370.fvalue(pv,1,l4710),l4711),l4712);
+var l4713=QIList(QIList(1,QIList(2,3,l6),l6),l6);
+var l4714=QIList(3,l6);
+var l4715=QIList(l56,QIList(l371,QIList(l747,l4713,l6),l6),QIList(l747,l4714,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l371.fvalue(pv,1,l4713),l4714),l4715);
+var l4716=QIList(1,2,QIList(3,4,l6),l6);
+var l4717=QIList(4,l6);
+var l4718=QIList(l56,QIList(l372,QIList(l747,l4716,l6),l6),QIList(l747,l4717,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l372.fvalue(pv,1,l4716),l4717),l4718);
+var l4719=QIList(QIList(QIList(1,2,3,l6),l6),l6);
+var l4720=QIList(3,l6);
+var l4721=QIList(l56,QIList(l373,QIList(l747,l4719,l6),l6),QIList(l747,l4720,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l373.fvalue(pv,1,l4719),l4720),l4721);
+var l4722=QIList(1,QIList(2,3,4,l6),l6);
+var l4723=QIList(4,l6);
+var l4724=QIList(l56,QIList(l374,QIList(l747,l4722,l6),l6),QIList(l747,l4723,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l374.fvalue(pv,1,l4722),l4723),l4724);
+var l4725=QIList(QIList(1,2,3,4,l6),l6);
+var l4726=QIList(4,l6);
+var l4727=QIList(l56,QIList(l375,QIList(l747,l4725,l6),l6),QIList(l747,l4726,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l375.fvalue(pv,1,l4725),l4726),l4727);
+var l4728=QIList(1,2,3,4,5,l6);
+var l4729=QIList(5,l6);
+var l4730=QIList(l56,QIList(l344,QIList(l747,l4728,l6),l6),QIList(l747,l4729,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l344.fvalue(pv,1,l4728),l4729),l4730);
+var l4731=new Symbol(make_lisp_string('Z'));
+var l4732=new Symbol(make_lisp_string('ZPRIME'));
+var l4733=QIList(QIList(l1387,100),QIList(l4731,l4732),l6);
+var l4734=new Symbol(make_lisp_string('PLUS'));
+var l4735=new Symbol(make_lisp_string('MINUS'));
+var l4736=new Symbol(make_lisp_string('P'));
+var l4737=QIList(l4734,l1387,QIList(l4735,l1452,l4731,l1387,l4736,l6),4,l1387);
+var l4738=QIList(l4734,100,QIList(l4735,l1452,l4732,100,l4736,l6),4,100);
+var l4739=QIList(l56,QIList(l379,QIList(l747,l4733,l6),QIList(l747,l4737,l6),l6),QIList(l747,l4738,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l379.fvalue(pv,2,l4733,l4737),l4738),l4739);
+var l4740=new Symbol(make_lisp_string('Y'));
+var l4741=QIList(QIList(QIList(l128,l1387,l4740,l6),l130,l1387,l4740,l6),QIList(QIList(l130,l1387,l4740,l6),l128,l1387,l4740,l6),l6);
+var l4742=QIList(l129,QIList(l131,QIList(l128,l1387,l4740,l6),QIList(l128,l1387,l4736,l6),l6),QIList(l130,l1387,l4740,l6),l6);
+var l4743=QIList(l129,QIList(l131,QIList(l130,l1387,l4740,l6),QIList(l128,l1387,l4736,l6),l6),QIList(l128,l1387,l4740,l6),l6);
+var l4744=QIList(l56,QIList(l379,QIList(l747,l4741,l6),QIList(l747,l4742,l6),l120,QIList(l571,l56,l6),l6),QIList(l747,l4743,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l379.fvalue(pv,4,l4741,l4742,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4743),l4744);
+var l4745=QIList(1,QIList(1,2,l6),QIList(QIList(1,2,3,l6),l6),QIList(QIList(QIList(1,2,3,4,l6),l6),l6),l6);
+var l4746=QIList(QIList(3,make_lisp_string('three')),l6);
+var l4747=QIList(1,QIList(1,2,l6),QIList(QIList(1,2,make_lisp_string('three'),l6),l6),QIList(QIList(QIList(1,2,make_lisp_string('three'),4,l6),l6),l6),l6);
+var l4748=new Symbol(make_lisp_string('TREE1'));
+var l4749=QIList(l56,QIList(l379,QIList(l747,l4746,l6),l4748,l6),QIList(l747,l4747,l6),l6);
+var l4750=QIList(QIList(l5,make_lisp_string('string')),l6);
+var l4751=QIList(QIList(1,l101),QIList(4,44),l6);
+var l4752=QIList(make_lisp_string('string'),QIList(make_lisp_string('string'),2,l6),QIList(QIList(make_lisp_string('string'),2,3,l6),l6),QIList(QIList(QIList(make_lisp_string('string'),2,3,44,l6),l6),l6),l6);
+var l4753=QIList(l56,QIList(l379,QIList(l747,l4750,l6),QIList(l379,QIList(l747,l4751,l6),l4748,l6),l119,QIList(l571,l438,l6),l6),QIList(l747,l4752,l6),l6);
+var l4754=QIList(1,QIList(1,2,l6),QIList(QIList(1,2,3,l6),l6),QIList(QIList(QIList(1,2,3,4,l6),l6),l6),l6);
+var l4755=QIList(l56,l4748,QIList(l747,l4754,l6),l6);
+(function(v4557){l4369.fvalue(pv,2,l56.fvalue(pv,2,l379.fvalue(pv,2,l4746,v4557),l4747),l4749);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l379.fvalue(pv,4,l4750,l379.fvalue(pv,2,l4751,v4557),l119.value,(function(){var SYMBOL=l438,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4752),l4753);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,v4557,l4754),l4755);
+})(l4745);
+var l4756=QIList(make_lisp_string('one'),QIList(make_lisp_string('one'),make_lisp_string('two'),l6),QIList(QIList(make_lisp_string('one'),make_lisp_string('Two'),make_lisp_string('three'),l6),l6),l6);
+var l4757=QIList(QIList(make_lisp_string('two'),2),l6);
+var l4758=QIList(make_lisp_string('one'),QIList(make_lisp_string('one'),make_lisp_string('two'),l6),QIList(QIList(make_lisp_string('one'),make_lisp_string('Two'),make_lisp_string('three'),l6),l6),l6);
+var l4759=new Symbol(make_lisp_string('TREE2'));
+var l4760=QIList(l56,QIList(l379,QIList(l747,l4757,l6),l4759,l6),QIList(l747,l4758,l6),l6);
+var l4761=QIList(make_lisp_string('one'),QIList(make_lisp_string('one'),make_lisp_string('two'),l6),QIList(QIList(make_lisp_string('one'),make_lisp_string('Two'),make_lisp_string('three'),l6),l6),l6);
+var l4762=QIList(l56,l4759,QIList(l747,l4761,l6),l6);
+var l4763=QIList(QIList(make_lisp_string('two'),2),l6);
+var l4764=QIList(make_lisp_string('one'),QIList(make_lisp_string('one'),2,l6),QIList(QIList(make_lisp_string('one'),make_lisp_string('Two'),make_lisp_string('three'),l6),l6),l6);
+var l4765=QIList(l56,QIList(l379,QIList(l747,l4763,l6),l4759,l120,QIList(l747,l56,l6),l6),QIList(l747,l4764,l6),l6);
+(function(v4558){l4369.fvalue(pv,2,l56.fvalue(pv,2,l379.fvalue(pv,2,l4757,v4558),l4758),l4760);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,v4558,l4761),l4762);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,l379.fvalue(pv,4,l4763,v4558,l120.value,l56),l4764),l4765);
+})(l4756);
+var l4766=QIList(1,QIList(1,2,l6),QIList(1,2,3,l6),QIList(1,2,3,4,l6),l6);
+var l4767=make_lisp_string('two');
+var l4768=QIList(1,QIList(1,make_lisp_string('two'),l6),QIList(1,make_lisp_string('two'),3,l6),QIList(1,make_lisp_string('two'),3,4,l6),l6);
+var l4769=QIList(l56,QIList(l381,l4767,2,l4748,l6),QIList(l747,l4768,l6),l6);
+var l4770=make_lisp_string('five');
+var l4771=QIList(1,QIList(1,2,l6),QIList(1,2,3,l6),QIList(1,2,3,4,l6),l6);
+var l4772=QIList(l56,QIList(l381,l4770,5,l4748,l6),QIList(l747,l4771,l6),l6);
+var l4773=make_lisp_string('five');
+var l4774=QIList(l22,l4748,QIList(l381,l4773,5,l4748,l6),l6);
+var l4775=QIList(1,QIList(1,2,l6),QIList(1,2,3,l6),QIList(1,2,3,4,l6),l6);
+var l4776=QIList(l56,l4748,QIList(l747,l4775,l6),l6);
+(function(v4559){l4369.fvalue(pv,2,l56.fvalue(pv,2,l381.fvalue(pv,3,l4767,2,v4559),l4768),l4769);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l381.fvalue(pv,3,l4770,5,v4559),l4771),l4772);
+l4369.fvalue(pv,2,v4559===l381.fvalue(pv,3,l4773,5,v4559)?l5.value:l6.value,l4774);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,v4559,l4775),l4776);
+})(l4766);
+var l4777=new Symbol(make_lisp_string('TEMPEST'));
+var l4778=new Symbol(make_lisp_string('HURRICANE'));
+var l4779=new Symbol(make_lisp_string('SHAKESPEARE'));
+var l4780=new Symbol(make_lisp_string('WROTE'));
+var l4781=QIList(l4779,l4780,QIList(l2051,l4778,l6),l6);
+var l4782=QIList(l4779,l4780,QIList(l2051,l4777,l6),l6);
+var l4783=QIList(l56,QIList(l381,QIList(l747,l4777,l6),QIList(l747,l4778,l6),QIList(l747,l4781,l6),l6),QIList(l747,l4782,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l381.fvalue(pv,3,l4777,l4778,l4781),l4782),l4783);
+var l4784=new Symbol(make_lisp_string('TWELFTH'));
+var l4785=new Symbol(make_lisp_string('NIGHT'));
+var l4786=QIList(l4779,l4780,QIList(l4784,l4785,l6),l6);
+var l4787=QIList(l4779,l4780,QIList(l4784,l4785,l4525),l4525);
+var l4788=QIList(l56,QIList(l381,QIList(l747,l4525,l6),QIList(l747,l6,l6),QIList(l747,l4786,l6),l6),QIList(l747,l4787,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l381.fvalue(pv,3,l4525,l6,l4786),l4787),l4788);
+var l4789=QIList(l4449,l330);
+var l4790=new Symbol(make_lisp_string('OLD'));
+var l4791=new Symbol(make_lisp_string('PAIR'));
+var l4792=QIList(l4790,l4791);
+var l4793=new Symbol(make_lisp_string('SPICE'));
+var l4794=new Symbol(make_lisp_string('SHOES'));
+var l4795=QIList(QIList(l4790,l4793),QIList(QIList(l4790,l4794),l4790,l4791),QIList(l4790,l4791),l6);
+var l4796=QIList(QIList(l4790,l4793),QIList(QIList(l4790,l4794),l4449,l330),QIList(l4449,l330),l6);
+var l4797=QIList(l56,QIList(l381,QIList(l747,l4789,l6),QIList(l747,l4792,l6),QIList(l747,l4795,l6),l120,QIList(l571,l56,l6),l6),QIList(l747,l4796,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l381.fvalue(pv,5,l4789,l4792,l4795,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4796),l4797);
+var l4798=QIList(1,2,l6);
+var l4799=QIList(3,4,l6);
+var l4800=new Symbol(make_lisp_string('BAR'));
+var l4801=QIList(l843,QIList(QIList(l4525,QIList(l67,QIList(l747,l4798,l6),QIList(l747,l4799,l6),l6),l6),QIList(l4800,QIList(l383,l4525,l6),l6),l6),QIList(l336,QIList(l334,l4525,l6),0,l6),QIList(l24,QIList(l141,QIList(l334,QIList(l334,l4525,l6),l6),QIList(l334,QIList(l334,l4800,l6),l6),l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4560=l67.fvalue(pv,2,l4798,l4799);
+var v4561=l383.fvalue(pv,1,v4560);
+(function(){var TMP=(function(){var TMP=v4560;
+return TMP===l6.value?l6.value:TMP.car;
+})();
+TMP.car=0;
+return TMP;
+})();
+return l24.fvalue(pv,1,(function(){var x1=(function(){var TMP=(function(){var TMP=v4560;
+return TMP===l6.value?l6.value:TMP.car;
+})();
+return TMP===l6.value?l6.value:TMP.car;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=(function(){var TMP=(function(){var TMP=v4561;
+return TMP===l6.value?l6.value:TMP.car;
+})();
+return TMP===l6.value?l6.value:TMP.car;
+})();
+if (typeof x2!='number') throw 'Not a number!';
+return x1==x2?l5.value:l6.value;
+})());
+})(),l4801);
+var l4802=QIList(1,2,3,l6);
+var l4803=QIList(1,2,3,l6);
+var l4804=QIList(l384,QIList(l747,l4802,l6),QIList(l747,l4803,l6),l6);
+l4369.fvalue(pv,2,l384.fvalue(pv,2,l4802,l4803),l4804);
+var l4805=QIList(1,2,3,l6);
+var l4806=QIList(3,2,1,l6);
+var l4807=QIList(l24,QIList(l384,QIList(l747,l4805,l6),QIList(l747,l4806,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l384.fvalue(pv,2,l4805,l4806)),l4807);
+var l4808=QIList(1,QIList(2,QIList(3,4,l6),5,l6),6,l6);
+var l4809=QIList(1,QIList(2,QIList(3,4,l6),5,l6),6,l6);
+var l4810=QIList(l384,QIList(l747,l4808,l6),QIList(l747,l4809,l6),l6);
+l4369.fvalue(pv,2,l384.fvalue(pv,2,l4808,l4809),l4810);
+var l4811=QIList(l384,QIList(l330,1,2,l6),QIList(l330,2,3,l6),l120,QIList(l7,QIList(l4449,l4537,l6),QIList(l24,QIList(l141,l4449,l4537,l6),l6),l6),l6);
+l4369.fvalue(pv,2,l384.fvalue(pv,4,{car: 1,cdr: 2},{car: 2,cdr: 3},l120.value,(function(values,nargs,v4562,v4563){checkArgs(nargs,2);
+return l24.fvalue(values,1,(function(){var x1=v4562;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4563;
+if (typeof x2!='number') throw 'Not a number!';
+return x1==x2?l5.value:l6.value;
+})());
+})),l4811);
+var l4812=QIList(1,2);
+var l4813=QIList(2,1);
+var l4814=QIList(l384,QIList(l747,l4812,l6),QIList(l747,l4813,l6),l122,QIList(l571,l23,l6),l6);
+l4369.fvalue(pv,2,l384.fvalue(pv,4,l4812,l4813,l122.value,(function(){var SYMBOL=l23,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4814);
+var l4815=QIList(1,2);
+var l4816=QIList(1,2);
+var l4817=QIList(l24,QIList(l384,QIList(l747,l4815,l6),QIList(l747,l4816,l6),l122,QIList(l571,l23,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l384.fvalue(pv,4,l4815,l4816,l122.value,(function(){var SYMBOL=l23,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l4817);
+var l4818=QIList(1,2,3,4,5,6,7,8,9,10,l6);
+var l4819=new Symbol(make_lisp_string('NUMS'));
+var l4820=QIList(l141,QIList(l154,l4819,l6),1,l6);
+var l4821=QIList(l141,QIList(l156,l4819,l6),2,l6);
+var l4822=QIList(l141,QIList(l339,l4819,l6),3,l6);
+var l4823=QIList(l141,QIList(l341,l4819,l6),4,l6);
+var l4824=QIList(l141,QIList(l343,l4819,l6),5,l6);
+var l4825=QIList(l141,QIList(l345,l4819,l6),6,l6);
+var l4826=QIList(l141,QIList(l346,l4819,l6),7,l6);
+var l4827=QIList(l141,QIList(l347,l4819,l6),8,l6);
+var l4828=QIList(l141,QIList(l348,l4819,l6),9,l6);
+var l4829=QIList(l141,QIList(l349,l4819,l6),10,l6);
+(function(v4564){l4369.fvalue(pv,2,(function(){var x1=l154.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4820);
+l4369.fvalue(pv,2,(function(){var x1=l156.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})(),l4821);
+l4369.fvalue(pv,2,(function(){var x1=l339.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4822);
+l4369.fvalue(pv,2,(function(){var x1=l341.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==4?l5.value:l6.value;
+})(),l4823);
+l4369.fvalue(pv,2,(function(){var x1=l343.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==5?l5.value:l6.value;
+})(),l4824);
+l4369.fvalue(pv,2,(function(){var x1=l345.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==6?l5.value:l6.value;
+})(),l4825);
+l4369.fvalue(pv,2,(function(){var x1=l346.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==7?l5.value:l6.value;
+})(),l4826);
+l4369.fvalue(pv,2,(function(){var x1=l347.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==8?l5.value:l6.value;
+})(),l4827);
+l4369.fvalue(pv,2,(function(){var x1=l348.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==9?l5.value:l6.value;
+})(),l4828);
+return l4369.fvalue(pv,2,(function(){var x1=l349.fvalue(pv,1,v4564);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==10?l5.value:l6.value;
+})(),l4829);
+})(l4818);
+var l4830=QIList(l386,l4537,l4449,l6);
+var l4831=QIList(l386,l4449,l4449,l6);
+(function(){var v4565=l67.fvalue(pv,3,1,2,3);
+var v4566=(function(){var TMP=v4565;
+return TMP===l6.value?l6.value:TMP.cdr;
+})();
+l4369.fvalue(pv,2,l386.fvalue(pv,2,v4566,v4565),l4830);
+return l4369.fvalue(pv,2,l386.fvalue(pv,2,v4565,v4565),l4831);
+})();
+var l4832=QIList(l386,QIList(l747,l4449,l6),QIList(l330,QIList(l747,l4537,l6),QIList(l747,l4449,l6),l6),l6);
+l4369.fvalue(pv,2,l386.fvalue(pv,2,l4449,{car: l4537,cdr: l4449}),l4832);
+var l4833=QIList(QIList(1,2),QIList(3,4),l6);
+var l4834=QIList(QIList(3,4),l6);
+var l4835=QIList(l56,QIList(l747,l4833,l6),QIList(l395,1,2,QIList(l747,l4834,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4833,l395.fvalue(pv,3,1,2,l4834)),l4835);
+var l4836=QIList(QIList(1,2),l6);
+var l4837=QIList(l56,QIList(l747,l4836,l6),QIList(l395,1,2,l6,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4836,l395.fvalue(pv,3,1,2,l6.value)),l4837);
+var l4838=QIList(QIList(1,3),QIList(0,2),l6);
+var l4839=QIList(0,1,l6);
+var l4840=QIList(2,3,l6);
+var l4841=QIList(l56,QIList(l747,l4838,l6),QIList(l396,QIList(l747,l4839,l6),QIList(l747,l4840,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4838,l396.fvalue(pv,2,l4839,l4840)),l4841);
+var l4842=QIList(QIList(1,2),QIList(l4449,l4537),l6);
+var l4843=QIList(1,l6);
+var l4844=QIList(2,l6);
+var l4845=QIList(QIList(l4449,l4537),l6);
+var l4846=QIList(l56,QIList(l747,l4842,l6),QIList(l396,QIList(l747,l4843,l6),QIList(l747,l4844,l6),QIList(l747,l4845,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4842,l396.fvalue(pv,3,l4843,l4844,l4845)),l4846);
+var l4847=QIList(QIList(1,2),QIList(3,4),l6);
+var l4848=new Symbol(make_lisp_string('ALIST'));
+var l4849=new Symbol(make_lisp_string('COPY'));
+var l4850=QIList(l24,QIList(l23,l4848,l4849,l6),l6);
+var l4851=QIList(l24,QIList(l23,QIList(l334,l4848,l6),QIList(l334,l4849,l6),l6),l6);
+var l4852=QIList(l56,l4848,l4849,l6);
+(function(){var v4567=l4847;
+var v4568=l397.fvalue(pv,1,v4567);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l23.fvalue(pv,2,v4567,v4568)),l4850);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l23.fvalue(pv,2,(function(){var TMP=v4567;
+return TMP===l6.value?l6.value:TMP.car;
+})(),(function(){var TMP=v4568;
+return TMP===l6.value?l6.value:TMP.car;
+})())),l4851);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,v4567,v4568),l4852);
+})();
+var l4853=QIList(QIList(1,2),QIList(3,4),l6);
+var l4854=QIList(1,2);
+var l4855=QIList(l56,QIList(l70,1,l4848,l6),QIList(l747,l4854,l6),l6);
+var l4856=QIList(1,2);
+var l4857=QIList(l56,QIList(l394,2,l4848,l6),QIList(l747,l4856,l6),l6);
+var l4858=QIList(l24,QIList(l70,2,l4848,l6),l6);
+var l4859=QIList(l24,QIList(l394,1,l4848,l6),l6);
+var l4860=QIList(1,2);
+var l4861=QIList(l56,QIList(l70,3,l4848,l122,QIList(l571,l141,l6),l6),QIList(l747,l4860,l6),l6);
+var l4862=QIList(1,2);
+var l4863=QIList(l56,QIList(l394,4,l4848,l122,QIList(l571,l141,l6),l6),QIList(l747,l4862,l6),l6);
+var l4864=QIList(3,4);
+var l4865=QIList(l56,QIList(l70,1,l4848,l119,QIList(l7,QIList(l1387,l6),QIList(l131,l1387,3,l6),l6),l6),QIList(l747,l4864,l6),l6);
+var l4866=QIList(3,4);
+var l4867=QIList(l56,QIList(l394,2,l4848,l119,QIList(l7,QIList(l1387,l6),QIList(l131,l1387,2,l6),l6),l6),QIList(l747,l4866,l6),l6);
+(function(v4569){l4369.fvalue(pv,2,l56.fvalue(pv,2,l70.fvalue(pv,2,1,v4569),l4854),l4855);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l394.fvalue(pv,2,2,v4569),l4856),l4857);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l70.fvalue(pv,2,2,v4569)),l4858);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l394.fvalue(pv,2,1,v4569)),l4859);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l70.fvalue(pv,4,3,v4569,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4860),l4861);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l394.fvalue(pv,4,4,v4569,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4862),l4863);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l70.fvalue(pv,4,1,v4569,l119.value,(function(values,nargs,v4570){checkArgs(nargs,1);
+return (function(){var x1=v4570;
+if (typeof x1!='number') throw 'Not a number!';
+return x1/3;
+})();
+})),l4864),l4865);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,l394.fvalue(pv,4,2,v4569,l119.value,(function(values,nargs,v4571){checkArgs(nargs,1);
+return (function(){var x1=v4571;
+if (typeof x1!='number') throw 'Not a number!';
+return x1/2;
+})();
+})),l4866),l4867);
+})(l4853);
+var l4868=QIList(1,2,3,l6);
+var l4869=QIList(2,3,l6);
+var l4870=QIList(l56,QIList(l393,2,QIList(l747,l4868,l6),l6),QIList(l747,l4869,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l393.fvalue(pv,2,2,l4868),l4869),l4870);
+var l4871=QIList(1,2,3,l6);
+var l4872=QIList(l24,QIList(l393,4,QIList(l747,l4871,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l393.fvalue(pv,2,4,l4871)),l4872);
+var l4873=QIList(QIList(1,2),QIList(3,4),l6);
+var l4874=QIList(QIList(3,4),l6);
+var l4875=QIList(l56,QIList(l393,4,QIList(l747,l4873,l6),l119,QIList(l571,l335,l6),l6),QIList(l747,l4874,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l393.fvalue(pv,4,4,l4873,l119.value,(function(){var SYMBOL=l335,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4874),l4875);
+var l4876=QIList(2,l6);
+var l4877=QIList(QIList(1,l6),QIList(2,l6),QIList(3,l6),l6);
+var l4878=QIList(l393,QIList(l747,l4876,l6),QIList(l747,l4877,l6),l120,QIList(l571,l56,l6),l6);
+l4369.fvalue(pv,2,l393.fvalue(pv,4,l4876,l4877,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4878);
+var l4879=QIList(1,2,3,l6);
+var l4880=QIList(l393,1,QIList(l747,l4879,l6),l122,QIList(l571,l23,l6),l6);
+l4369.fvalue(pv,2,l393.fvalue(pv,4,1,l4879,l122.value,(function(){var SYMBOL=l23,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4880);
+var l4881=QIList(2,3,l6);
+var l4882=QIList(1,2,3,l6);
+var l4883=QIList(l56,QIList(l402,1,QIList(l747,l4881,l6),l6),QIList(l747,l4882,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l402.fvalue(pv,2,1,l4881),l4882),l4883);
+var l4884=QIList(1,2,3,l6);
+var l4885=QIList(1,2,3,l6);
+var l4886=QIList(l56,QIList(l402,1,QIList(l747,l4884,l6),l6),QIList(l747,l4885,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l402.fvalue(pv,2,1,l4884),l4885),l4886);
+var l4887=QIList(1,l6);
+var l4888=QIList(QIList(1,l6),QIList(2,l6),l6);
+var l4889=QIList(QIList(1,l6),QIList(2,l6),l6);
+var l4890=QIList(l56,QIList(l402,QIList(l747,l4887,l6),QIList(l747,l4888,l6),l120,QIList(l571,l56,l6),l6),QIList(l747,l4889,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l402.fvalue(pv,4,l4887,l4888,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4889),l4890);
+var l4891=QIList(1,2,l6);
+var l4892=QIList(2,3,l6);
+var l4893=QIList(2,l6);
+var l4894=QIList(l56,QIList(l403,QIList(l747,l4891,l6),QIList(l747,l4892,l6),l6),QIList(l747,l4893,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l403.fvalue(pv,2,l4891,l4892),l4893),l4894);
+var l4895=QIList(1,2,3,l6);
+var l4896=QIList(4,5,6,l6);
+var l4897=QIList(l24,QIList(l403,QIList(l747,l4895,l6),QIList(l747,l4896,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l403.fvalue(pv,2,l4895,l4896)),l4897);
+var l4898=QIList(QIList(1,l6),QIList(2,l6),l6);
+var l4899=QIList(QIList(2,l6),QIList(3,l6),l6);
+var l4900=QIList(QIList(2,l6),l6);
+var l4901=QIList(l56,QIList(l403,QIList(l747,l4898,l6),QIList(l747,l4899,l6),l120,QIList(l571,l56,l6),l6),QIList(l747,l4900,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l403.fvalue(pv,4,l4898,l4899,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),l4900),l4901);
+var l4902=QIList(QIList(1,2),l6);
+var l4903=QIList(QIList(1,2),QIList(2,3),l6);
+var l4904=QIList(QIList(9,2),QIList(9,4),l6);
+var l4905=QIList(l56,QIList(l747,l4902,l6),QIList(l403,QIList(l747,l4903,l6),QIList(l747,l4904,l6),l120,QIList(l571,l56,l6),l119,QIList(l571,l335,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4902,l403.fvalue(pv,6,l4903,l4904,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l119.value,(function(){var SYMBOL=l335,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l4905);
+var l4906=QIList(1,2,3,l6);
+var l4907=QIList(l843,QIList(QIList(l4525,QIList(l747,l4906,l6),l6),QIList(l4800,QIList(l79,l4525,l6),l6),l6),QIList(l33,QIList(l141,l4800,1,l6),QIList(l141,QIList(l334,l4525,l6),2,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4572=l4906;
+var v4573=(function(){var v4574=v4572;
+var v4575=(function(){var TMP=v4574;
+return TMP===l6.value?l6.value:TMP.cdr;
+})();
+v4572=v4575;
+return (function(){var TMP=v4574;
+return TMP===l6.value?l6.value:TMP.car;
+})();
+})();
+return (function(){var x1=v4573;
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})()!==l6.value?(function(){var x1=(function(){var TMP=v4572;
+return TMP===l6.value?l6.value:TMP.car;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})():l6.value;
+})(),l4907);
+var l4908=QIList(1,2,l6);
+var l4909=QIList(3,l6);
+var l4910=QIList(4,5,6,l6);
+var l4911=QIList(8,l6);
+var l4912=QIList(l56,QIList(l104,QIList(l571,l128,l6),QIList(l747,l4908,l6),QIList(l747,l4909,l6),QIList(l747,l4910,l6),l6),QIList(l747,l4911,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l4908,l4909,l4910),l4911),l4912);
+var l4913=QIList(QIList(1,2,3,4,1,2,1,2,3,l6),QIList(2,3,4,2,2,3,l6),l6);
+var l4914=QIList(1,2,3,4,l6);
+var l4915=QIList(1,2,l6);
+var l4916=QIList(1,2,3,l6);
+var l4917=QIList(l56,QIList(l747,l4913,l6),QIList(l389,QIList(l571,l377,l6),QIList(l747,l4914,l6),QIList(l747,l4915,l6),QIList(l747,l4916,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4913,l389.fvalue(pv,4,(function(){var SYMBOL=l377,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l4914,l4915,l4916)),l4917);
+var l4918=QIList(QIList(l4525,l4449,l4537,l4538,l4541,l6),QIList(l4525,l4537,l4538,l4541,l6),QIList(l4525,l4538,l4541,l6),QIList(l4525,l4541,l6),l6);
+var l4919=QIList(l4449,l4537,l4538,l4541,l6);
+var l4920=QIList(l56,QIList(l747,l4918,l6),QIList(l389,QIList(l571,QIList(l7,QIList(l1387,l6),QIList(l330,QIList(l747,l4525,l6),l1387,l6),l6),l6),QIList(l747,l4919,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4918,l389.fvalue(pv,2,(function(values,nargs,v4576){checkArgs(nargs,1);
+return {car: l4525,cdr: v4576};
+}),l4919)),l4920);
+var l4921=QIList(0,0,1,0,1,1,1,l6);
+var l4922=QIList(l4449,l4537,l4449,l4538,l4541,l4537,l4538,l6);
+var l4923=QIList(l56,QIList(l747,l4921,l6),QIList(l389,QIList(l571,QIList(l7,QIList(l1387,l6),QIList(l842,QIList(l393,QIList(l334,l1387,l6),QIList(l335,l1387,l6),l6),0,1,l6),l6),l6),QIList(l747,l4922,l6),l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l4921,l389.fvalue(pv,2,(function(values,nargs,v4577){checkArgs(nargs,1);
+return l393.fvalue(pv,2,(function(){var TMP=v4577;
+return TMP===l6.value?l6.value:TMP.car;
+})(),(function(){var TMP=v4577;
+return TMP===l6.value?l6.value:TMP.cdr;
+})())!==l6.value?0:1;
+}),l4922)),l4923);
+var l4924=QIList(1,2,l6);
+var l4925=QIList(3,l6);
+var l4926=QIList(4,5,6,l6);
+var l4927=QIList(1,2,l6);
+var l4928=QIList(l56,QIList(l390,QIList(l571,l128,l6),QIList(l747,l4924,l6),QIList(l747,l4925,l6),QIList(l747,l4926,l6),l6),QIList(l747,l4927,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l390.fvalue(pv,4,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l4924,l4925,l4926),l4927),l4928);
+var l4929=QIList(1,2,l6);
+var l4930=QIList(3,l6);
+var l4931=QIList(4,5,6,l6);
+var l4932=QIList(8,l6);
+var l4933=QIList(l410,QIList(l4525,l6),QIList(l390,QIList(l7,QIList(l1387,l4740,l4731,l6),QIList(l78,QIList(l128,l1387,l4740,l4731,l6),l4525,l6),l6),QIList(l747,l4929,l6),QIList(l747,l4930,l6),QIList(l747,l4931,l6),l6),QIList(l56,l4525,QIList(l747,l4932,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4578){l390.fvalue(pv,4,(function(values,nargs,v4579,v4580,v4581){checkArgs(nargs,3);
+return (function(){var v4582=(function(){var x1=v4579;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4580;
+if (typeof x2!='number') throw 'Not a number!';
+var x3=v4581;
+if (typeof x3!='number') throw 'Not a number!';
+return x1+x2+x3;
+})();
+var v4583={car: v4582,cdr: v4578};
+return v4578=v4583;
+})();
+}),l4929,l4930,l4931);
+return l56.fvalue(pv,2,v4578,l4932);
+})(l6.value),l4933);
+var l4934=QIList(l4449,l4537,l4538,l4541,l6);
+var l4935=QIList(l22,QIList(l406,QIList(l747,l4934,l6),QIList(l747,l4449,l6),l6),QIList(l747,l4537,l6),l6);
+l4369.fvalue(pv,2,l406.fvalue(pv,2,l4934,l4449)===l4537?l5.value:l6.value,l4935);
+var l4936=QIList(l4449,l4537,l4538,l4541,l6);
+var l4937=new Symbol(make_lisp_string('E'));
+var l4938=QIList(l71,QIList(l406,QIList(l747,l4936,l6),QIList(l747,l4937,l6),l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l406.fvalue(pv,2,l4936,l4937)),l4938);
+var l4939=QIList(l4449,3,l6);
+var l4940=QIList(l56,QIList(l410,QIList(QIList(l1387,QIList(l67,QIList(l747,l4449,l6),1,l6),l6),l6),QIList(l75,QIList(l406,l1387,QIList(l747,l4449,l6),l6),3,l6),l1387,l6),QIList(l747,l4939,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(v4584){(function(){var v4585=l4449;
+return (function(){var FUNC=(function(values,nargs,v4587){switch(nargs){case 0:v4587=l6.value;
+;
+default:break;
+}var v4586=l6.value;
+var I;
+for (I=nargs-1;I>=1;I--)v4586={car: arguments[I+2],cdr: v4586};
+(function(v4588){v4584=v4588;
+return v4587;
+})(l408.fvalue(pv,3,v4584,v4585,v4587));
+return l406.fvalue(values,2,v4584,v4585);
+});
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=3;
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})();
+})();
+return v4584;
+})(l67.fvalue(pv,2,l4449,1)),l4939),l4940);
+var l4941=QIList(l4449,2,l6);
+var l4942=QIList(l56,QIList(l410,QIList(QIList(l1387,QIList(l67,QIList(l747,l4449,l6),1,l6),l6),l6),QIList(l76,QIList(l406,l1387,QIList(l747,l4449,l6),l6),l6),l1387,l6),QIList(l747,l4941,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(v4589){(function(){var v4590=l4449;
+var v4591=1;
+var v4592=(function(){var x1=l406.fvalue(pv,2,v4589,v4590);
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4591;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return (function(v4593){v4589=v4593;
+return v4592;
+})(l408.fvalue(pv,3,v4589,v4590,v4592));
+})();
+return v4589;
+})(l67.fvalue(pv,2,l4449,1)),l4941),l4942);
+var l4943=QIList(l4449,l4537,l4538,l4541,l6);
+var l4944=QIList(l4537,l4541,l4937,l6);
+var l4945=QIList(l6,l6,l6,l6);
+var l4946=QIList(l56,QIList(l64,QIList(l404,QIList(l747,l4943,l6),QIList(l747,l4944,l6),l6),l6),QIList(l747,l4945,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var FUNC=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=l404.fvalue(values,2,l4943,l4944);
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})(),l4945),l4946);
+var l4947=QIList(l4449,l4537,l4538,l4541,l6);
+var l4948=QIList(l4537,l4449,l4538,l6);
+var l4949=QIList(l4449,l4537,QIList(l4449,l4537,l4538,l4541,l6),l6);
+var l4950=QIList(l56,QIList(l64,QIList(l404,QIList(l747,l4947,l6),QIList(l747,l4948,l6),l6),l6),QIList(l747,l4949,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var FUNC=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=l404.fvalue(values,2,l4947,l4948);
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})(),l4949),l4950);
+var l4951=QIList(l4449,l4537,l4538,l4541,l6);
+var l4952=QIList(l4537,l4538,l4449,l6);
+var l4953=QIList(l4449,l4537,QIList(l4449,l4537,l4538,l4541,l6),l6);
+var l4954=QIList(l56,QIList(l64,QIList(l404,QIList(l747,l4951,l6),QIList(l747,l4952,l6),l6),l6),QIList(l747,l4953,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var FUNC=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=l404.fvalue(values,2,l4951,l4952);
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})(),l4953),l4954);
+var l4955=QIList(l141,QIList(l138,3,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l138.fvalue(pv,1,3);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4955);
+var l4956=QIList(l141,QIList(l138, -3,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l138.fvalue(pv,1, -3);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4956);
+var l4957=QIList(l141,QIList(l148,1,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l148.fvalue(pv,1,1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4957);
+var l4958=QIList(l141,QIList(l148,1,2,3,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l148.fvalue(pv,3,1,2,3);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4958);
+var l4959=QIList(l141,QIList(l148,3,2,1,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l148.fvalue(pv,3,3,2,1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4959);
+var l4960=QIList(l141,QIList(l148,1,2,3,4,5,l6),5,l6);
+l4369.fvalue(pv,2,(function(){var x1=l148.fvalue(pv,5,1,2,3,4,5);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==5?l5.value:l6.value;
+})(),l4960);
+var l4961=QIList(l141,QIList(l149,1,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l149.fvalue(pv,1,1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4961);
+var l4962=QIList(l141,QIList(l149,1,2,3,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l149.fvalue(pv,3,1,2,3);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4962);
+var l4963=QIList(l141,QIList(l149,3,2,1,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l149.fvalue(pv,3,3,2,1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l4963);
+var l4964=QIList(l141,QIList(l149,9,3,8,7,6,3,3,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l149.fvalue(pv,7,9,3,8,7,6,3,3);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l4964);
+var l4965=QIList(l146,2,l6);
+l4369.fvalue(pv,2,l146.fvalue(pv,1,2),l4965);
+var l4966=QIList(l146, -2,l6);
+l4369.fvalue(pv,2,l146.fvalue(pv,1, -2),l4966);
+var l4967=QIList(l24,QIList(l146,1,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l146.fvalue(pv,1,1)),l4967);
+var l4968=QIList(l146,0,l6);
+l4369.fvalue(pv,2,l146.fvalue(pv,1,0),l4968);
+var l4969=QIList(l147,3,l6);
+l4369.fvalue(pv,2,l147.fvalue(pv,1,3),l4969);
+var l4970=QIList(l147, -3,l6);
+l4369.fvalue(pv,2,l147.fvalue(pv,1, -3),l4970);
+var l4971=QIList(l24,QIList(l147,2,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l147.fvalue(pv,1,2)),l4971);
+var l4972=QIList(l24,QIList(l147,0,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l147.fvalue(pv,1,0)),l4972);
+var l4973=QIList(1,2,l6);
+var l4974=QIList(3,6,l6);
+var l4975=QIList(l56,QIList(l104,QIList(l571,l128,l6),l4449,l4537,l4538,l6),QIList(l747,l4974,l6),l6);
+var l4976=QIList( -1, -2,l6);
+var l4977=QIList(l56,QIList(l104,QIList(l571,l130,l6),l4449,l4537,l4538,l6),QIList(l747,l4976,l6),l6);
+var l4978=QIList(1,8,l6);
+var l4979=QIList(l56,QIList(l104,QIList(l571,l129,l6),l4449,l4537,l4538,l6),QIList(l747,l4978,l6),l6);
+var l4980=QIList(1,0.5,l6);
+var l4981=QIList(l56,QIList(l104,QIList(l571,l131,l6),l4449,l4537,l4538,l6),QIList(l747,l4980,l6),l6);
+(function(){var v4594=l4973;
+var v4595=v4594;
+var v4596=v4594;
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4594,v4595,v4596),l4974),l4975);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l130,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4594,v4595,v4596),l4976),l4977);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l129,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4594,v4595,v4596),l4978),l4979);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l131,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4594,v4595,v4596),l4980),l4981);
+})();
+var l4982=QIList(1,3,1,2,1,l6);
+var l4983=QIList(2,2,2,2,1,l6);
+var l4984=QIList(3,1,2,1,1,l6);
+var l4985=QIList(l6,l5,l6,l6,l6,l6);
+var l4986=QIList(l56,QIList(l104,QIList(l571,l139,l6),l4449,l4537,l4538,l6),QIList(l747,l4985,l6),l6);
+var l4987=QIList(l6,l5,l6,l5,l5,l6);
+var l4988=QIList(l56,QIList(l104,QIList(l571,l140,l6),l4449,l4537,l4538,l6),QIList(l747,l4987,l6),l6);
+var l4989=QIList(l6,l6,l6,l6,l5,l6);
+var l4990=QIList(l56,QIList(l104,QIList(l571,l141,l6),l4449,l4537,l4538,l6),QIList(l747,l4989,l6),l6);
+var l4991=QIList(l5,l6,l6,l6,l6,l6);
+var l4992=QIList(l56,QIList(l104,QIList(l571,l142,l6),l4449,l4537,l4538,l6),QIList(l747,l4991,l6),l6);
+var l4993=QIList(l5,l6,l5,l6,l5,l6);
+var l4994=QIList(l56,QIList(l104,QIList(l571,l143,l6),l4449,l4537,l4538,l6),QIList(l747,l4993,l6),l6);
+var l4995=QIList(l5,l5,l6,l6,l6,l6);
+var l4996=QIList(l56,QIList(l104,QIList(l571,l144,l6),l4449,l4537,l4538,l6),QIList(l747,l4995,l6),l6);
+(function(v4597,v4598,v4599){l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l139,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4597,v4598,v4599),l4985),l4986);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l140,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4597,v4598,v4599),l4987),l4988);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4597,v4598,v4599),l4989),l4990);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l142,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4597,v4598,v4599),l4991),l4992);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l143,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4597,v4598,v4599),l4993),l4994);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,l104.fvalue(pv,4,(function(){var SYMBOL=l144,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),v4597,v4598,v4599),l4995),l4996);
+})(l4982,l4983,l4984);
+var l4997=QIList(l134,1,l6);
+l4369.fvalue(pv,2,l134.fvalue(pv,1,1),l4997);
+var l4998=QIList(l134, -1,l6);
+l4369.fvalue(pv,2,l134.fvalue(pv,1, -1),l4998);
+var l4999=QIList(l134,0,l6);
+l4369.fvalue(pv,2,l134.fvalue(pv,1,0),l4999);
+var l5000=QIList(l135,1.0,l6);
+l4373.fvalue(pv,2,l135.fvalue(pv,1,1.0),l5000);
+var l5001=QIList(l135,1.1,l6);
+l4369.fvalue(pv,2,l135.fvalue(pv,1,1.1),l5001);
+var l5002=QIList(l135,l145,l6);
+l4369.fvalue(pv,2,l135.fvalue(pv,1,l145.value),l5002);
+var l5003=QIList(l135,QIList(l130,l145,l6),l6);
+l4369.fvalue(pv,2,l135.fvalue(pv,1,(function(){var x1=l145.value;
+if (typeof x1!='number') throw 'Not a number!';
+return  -x1;
+})()),l5003);
+var l5004=QIList(l24,QIList(l135,1,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l135.fvalue(pv,1,1)),l5004);
+var l5005=QIList(l141,0,QIList(l153,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,0);
+if (typeof x1!='number') throw 'Not a number!';
+return 0==x1?l5.value:l6.value;
+})(),l5005);
+var l5006=QIList(l141,6,QIList(l153,60,42,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,2,60,42);
+if (typeof x1!='number') throw 'Not a number!';
+return 6==x1?l5.value:l6.value;
+})(),l5006);
+var l5007=QIList(l141,1,QIList(l153,3333, -33,101,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,3,3333, -33,101);
+if (typeof x1!='number') throw 'Not a number!';
+return 1==x1?l5.value:l6.value;
+})(),l5007);
+var l5008=QIList(l141,11,QIList(l153,3333, -33,1002001,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,3,3333, -33,1002001);
+if (typeof x1!='number') throw 'Not a number!';
+return 11==x1?l5.value:l6.value;
+})(),l5008);
+var l5009=QIList(l141,7,QIList(l153,91, -49,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,2,91, -49);
+if (typeof x1!='number') throw 'Not a number!';
+return 7==x1?l5.value:l6.value;
+})(),l5009);
+var l5010=QIList(l141,7,QIList(l153,63, -42,35,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,3,63, -42,35);
+if (typeof x1!='number') throw 'Not a number!';
+return 7==x1?l5.value:l6.value;
+})(),l5010);
+var l5011=QIList(l141,5,QIList(l153,5,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,1,5);
+if (typeof x1!='number') throw 'Not a number!';
+return 5==x1?l5.value:l6.value;
+})(),l5011);
+var l5012=QIList(l141,4,QIList(l153, -4,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l153.fvalue(pv,1, -4);
+if (typeof x1!='number') throw 'Not a number!';
+return 4==x1?l5.value:l6.value;
+})(),l5012);
+var l5013=QIList(l141,10,QIList(l159,10,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l159.fvalue(pv,1,10);
+if (typeof x1!='number') throw 'Not a number!';
+return 10==x1?l5.value:l6.value;
+})(),l5013);
+var l5014=QIList(l141,150,QIList(l159,25,30,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l159.fvalue(pv,2,25,30);
+if (typeof x1!='number') throw 'Not a number!';
+return 150==x1?l5.value:l6.value;
+})(),l5014);
+var l5015=QIList(l141,360,QIList(l159, -24,18,10,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l159.fvalue(pv,3, -24,18,10);
+if (typeof x1!='number') throw 'Not a number!';
+return 360==x1?l5.value:l6.value;
+})(),l5015);
+var l5016=QIList(l141,70,QIList(l159,14,35,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l159.fvalue(pv,2,14,35);
+if (typeof x1!='number') throw 'Not a number!';
+return 70==x1?l5.value:l6.value;
+})(),l5016);
+var l5017=QIList(l141,0,QIList(l159,0,5,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l159.fvalue(pv,2,0,5);
+if (typeof x1!='number') throw 'Not a number!';
+return 0==x1?l5.value:l6.value;
+})(),l5017);
+var l5018=QIList(l141,60,QIList(l159,1,2,3,4,5,6,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l159.fvalue(pv,6,1,2,3,4,5,6);
+if (typeof x1!='number') throw 'Not a number!';
+return 60==x1?l5.value:l6.value;
+})(),l5018);
+var l5019=QIList(l24,QIList(l22,QIList(l632,l6),QIList(l632,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l632.fvalue(pv,0)===l632.fvalue(pv,0)?l5.value:l6.value),l5019);
+var l5020=QIList(1,2,l6);
+var l5021=QIList(l56,QIList(l64,QIList(l579,QIList(l577,l660,QIList(l92,1,2,l6),l6),l6),l6),QIList(l747,l5020,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,(function(){var FUNC=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=(function(){l681.fvalue(pv,2,(function(values,nargs,v4601){checkArgs(nargs,1);
+return l6.value;
+}),l542.fvalue(pv,1,(function(){var SYMBOL=l660,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
 })()));
-var l1782 = make_lisp_string("~a test(s) failed expectedly.~%");
-(l25.fvalue(pv, 1, (function(){
-    var symbol = l1316;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
-})()) !== l5.value ? l5.value : l112.fvalue(pv, 3, l4.value, l1782, (function(){
-    var symbol = l1316;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
-})()));
-var l1783 = make_lisp_string("~a test(s) passed unexpectedly.~%");
-(l25.fvalue(pv, 1, (function(){
-    var symbol = l1317;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
-})()) !== l5.value ? l5.value : l112.fvalue(pv, 3, l4.value, l1783, (function(){
-    var symbol = l1317;
-    var value = symbol.value;
-    if (value === undefined) throw "Variable `" + xstring(symbol.name) + "' is unbound.";
-    return value;
-})()));
+return values(1,2);
+})();
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})(),l5020),l5021);
+var l5022=new Symbol(make_lisp_string('CL'));
+var l5023=QIList(l5022,l6);
+var l5024=new Symbol(make_lisp_string('FOO-SYMBOLS'));
+var l5025=new Symbol(make_lisp_string('CL-SYMBOLS'));
+var l5026=QIList(l410,QIList(QIList(l1878,QIList(l642,QIList(l747,l4525,l6),l643,QIList(l747,l5023,l6),l6),l6),l5024,l5025,l6),QIList(l579,QIList(l577,l1878,l6),QIList(l78,l577,l5024,l6),l6),QIList(l578,QIList(l577,QIList(l747,l5022,l6),l6),QIList(l78,l577,l5025,l6),l6),QIList(l33,QIList(l24,QIList(l71,l5024,l6),l6),QIList(l56,l5024,l5025,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4602,v4603,v4604){(function(){l681.fvalue(pv,2,(function(values,nargs,v4606){checkArgs(nargs,1);
+return (function(){var v4607=v4606;
+var v4608={car: v4607,cdr: v4603};
+return v4603=v4608;
+})();
+}),l542.fvalue(pv,1,v4602));
+return l6.value;
+})();
+(function(){l680.fvalue(pv,2,(function(values,nargs,v4610){checkArgs(nargs,1);
+return (function(){var v4611=v4610;
+var v4612={car: v4611,cdr: v4604};
+return v4604=v4612;
+})();
+}),l542.fvalue(pv,1,l5022));
+return l6.value;
+})();
+return l24.fvalue(pv,1,l71.fvalue(pv,1,v4603))!==l6.value?l56.fvalue(pv,2,v4603,v4604):l6.value;
+})(l642.fvalue(pv,3,l4525,l643.value,l5023),l6.value,l6.value),l5026);
+var l5027=new Symbol(make_lisp_string('BAZ'));
+var l5028=new Symbol(make_lisp_string('SYMBOLS'));
+var l5029=QIList(l843,QIList(QIList(l1878,QIList(l642,QIList(l747,l4800,l6),l6),l6),QIList(l5027,QIList(l674,QIList(l116,QIList(l747,l5027,l6),l6),l1878,l6),l6),l6),QIList(l410,QIList(l5028,l6),QIList(l581,QIList(l577,l6),QIList(l78,l577,l5028,l6),l6),QIList(l33,QIList(l393,QIList(l747,l334,l6),l5028,l6),QIList(l393,l5027,l5028,l6),l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4613=l642.fvalue(pv,1,l4800);
+var v4614=l674.fvalue(pv,2,l116.fvalue(pv,1,l5027),v4613);
+return (function(v4615){(function(){l682.fvalue(pv,1,(function(values,nargs,v4617){checkArgs(nargs,1);
+return (function(){var v4618=v4617;
+var v4619={car: v4618,cdr: v4615};
+return v4615=v4619;
+})();
+}));
+return l6.value;
+})();
+return l393.fvalue(pv,2,l334,v4615)!==l6.value?l393.fvalue(pv,2,v4614,v4615):l6.value;
+})(l6.value);
+})(),l5029);
+var l5030=QIList(l393,QIList(l747,l334,l6),QIList(l684,QIList(l116,QIList(l747,l334,l6),l6),l6),l6);
+l4369.fvalue(pv,2,l393.fvalue(pv,2,l334,l684.fvalue(pv,1,l116.fvalue(pv,1,l334))),l5030);
+var l5031=make_lisp_string('FOO');
+var l5032=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l4525,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5031,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4620){return (v4620 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4620.name,l5031):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l4525))),l5032);
+var l5033=new Symbol(make_lisp_string('FOo'));
+var l5034=make_lisp_string('FOo');
+var l5035=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5033,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5034,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4621){return (v4621 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4621.name,l5034):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5033))),l5035);
+var l5036=new Symbol(make_lisp_string('1..2'));
+var l5037=make_lisp_string('1..2');
+var l5038=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5036,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5037,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4622){return (v4622 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4622.name,l5037):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5036))),l5038);
+var l5039=new Symbol(make_lisp_string('1'));
+var l5040=make_lisp_string('1');
+var l5041=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5039,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5040,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4623){return (v4623 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4623.name,l5040):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5039))),l5041);
+var l5042=new Symbol(make_lisp_string('-10'));
+var l5043=make_lisp_string('-10');
+var l5044=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5042,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5043,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4624){return (v4624 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4624.name,l5043):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5042))),l5044);
+var l5045=new Symbol(make_lisp_string('...'));
+var l5046=make_lisp_string('...');
+var l5047=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5045,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5046,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4625){return (v4625 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4625.name,l5046):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5045))),l5047);
+var l5048=new Symbol(make_lisp_string('1E'));
+var l5049=make_lisp_string('1E');
+var l5050=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5048,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5049,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4626){return (v4626 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4626.name,l5049):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5048))),l5050);
+var l5051=new Symbol(make_lisp_string('1E+2'));
+var l5052=make_lisp_string('1E+2');
+var l5053=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5051,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5052,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4627){return (v4627 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4627.name,l5052):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5051))),l5053);
+var l5054=new Symbol(make_lisp_string('1E+'));
+var l5055=make_lisp_string('1E+');
+var l5056=QIList(l410,QIList(QIList(l1387,QIList(l752,QIList(l560,QIList(l747,l5054,l6),l6),l6),l6),l6),QIList(l33,QIList(l1362,l1387,l6),QIList(l56,QIList(l1365,l1387,l6),l5055,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4628){return (v4628 instanceof Symbol?l5.value:l6.value)!==l6.value?l56.fvalue(pv,2,v4628.name,l5055):l6.value;
+})(l752.fvalue(pv,1,l560.fvalue(pv,1,l5054))),l5056);
+var l5057=make_lisp_string('"foobar"');
+var l5058=make_lisp_string('foobar');
+var l5059=QIList(l57,l5057,QIList(l559,l5058,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5057,l559.fvalue(pv,1,l5058)),l5059);
+var l5060=make_lisp_string('"foo\\"bar"');
+var l5061=make_lisp_string('foo"bar');
+var l5062=QIList(l57,l5060,QIList(l559,l5061,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5060,l559.fvalue(pv,1,l5061)),l5062);
+var l5063=make_lisp_string('#()');
+var l5064=[];
+var l5065=QIList(l57,l5063,QIList(l559,l5064,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5063,l559.fvalue(pv,1,l5064)),l5065);
+var l5066=make_lisp_string('#(1)');
+var l5067=[1];
+var l5068=QIList(l57,l5066,QIList(l559,l5067,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5066,l559.fvalue(pv,1,l5067)),l5068);
+var l5069=make_lisp_string('#(1 2 3)');
+var l5070=[1,2,3];
+var l5071=QIList(l57,l5069,QIList(l559,l5070,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5069,l559.fvalue(pv,1,l5070)),l5071);
+var l5072=make_lisp_string('NIL');
+var l5073=QIList(l57,l5072,QIList(l559,QIList(l747,l6,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5072,l559.fvalue(pv,1,l6)),l5073);
+var l5074=make_lisp_string('(1)');
+var l5075=QIList(1,l6);
+var l5076=QIList(l57,l5074,QIList(l559,QIList(l747,l5075,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5074,l559.fvalue(pv,1,l5075)),l5076);
+var l5077=make_lisp_string('(1 2 3)');
+var l5078=QIList(1,2,3,l6);
+var l5079=QIList(l57,l5077,QIList(l559,QIList(l747,l5078,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5077,l559.fvalue(pv,1,l5078)),l5079);
+var l5080=make_lisp_string('(1 2 . 3)');
+var l5081=QIList(1,2,3);
+var l5082=QIList(l57,l5080,QIList(l559,QIList(l747,l5081,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5080,l559.fvalue(pv,1,l5081)),l5082);
+var l5083=make_lisp_string('(1 2 3)');
+var l5084=QIList(1,2,3,l6);
+var l5085=QIList(l57,l5083,QIList(l559,QIList(l747,l5084,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5083,l559.fvalue(pv,1,l5084)),l5085);
+var l5086=make_lisp_string('((1 . 2) 3)');
+var l5087=QIList(QIList(1,2),3,l6);
+var l5088=QIList(l57,l5086,QIList(l559,QIList(l747,l5087,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5086,l559.fvalue(pv,1,l5087)),l5088);
+var l5089=make_lisp_string('((1) 3)');
+var l5090=QIList(QIList(1,l6),3,l6);
+var l5091=QIList(l57,l5089,QIList(l559,QIList(l747,l5090,l6),l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5089,l559.fvalue(pv,1,l5090)),l5091);
+var l5092=[1,2,l6];
+var l5093=make_lisp_string('#1=#(1 2 #1#)');
+var l5094=QIList(l57,l5093,QIList(l410,QIList(QIList(l529,l5,l6),l6),QIList(l559,l434,l6),l6),l6);
+(function(v4629){(function(){var v4630=v4629;
+var v4631=2;
+return (function(){var FUNC=(function(values,nargs,v4633){switch(nargs){case 0:v4633=l6.value;
+;
+default:break;
+}var v4632=l6.value;
+var I;
+for (I=nargs-1;I>=1;I--)v4632={car: arguments[I+2],cdr: v4632};
+l110.fvalue(pv,3,v4630,v4631,v4633);
+return l107.fvalue(values,2,v4630,v4631);
+});
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=v4629;
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})();
+})();
+return l4369.fvalue(pv,2,l57.fvalue(pv,2,l5093,(function(v4634){try{var TMP;
+TMP=l529.value;
+l529.value=v4634;
+v4634=TMP;
+return l559.fvalue(pv,1,v4629);
+}finally{l529.value=v4634;
+}})(l5.value)),l5094);
+})(l5092);
+var l5095=QIList(1,l6);
+var l5096=make_lisp_string('#1=(1 . #1#)');
+var l5097=QIList(l57,l5096,QIList(l410,QIList(QIList(l529,l5,l6),l6),QIList(l559,l67,l6),l6),l6);
+(function(v4635){(function(){var v4636=v4635;
+return (function(){var FUNC=(function(values,nargs,v4638){switch(nargs){case 0:v4638=l6.value;
+;
+default:break;
+}var v4637=l6.value;
+var I;
+for (I=nargs-1;I>=1;I--)v4637={car: arguments[I+2],cdr: v4637};
+(function(){var TMP=v4636;
+TMP.cdr=v4638;
+return TMP;
+})();
+v4638;
+return (function(){var TMP=v4636;
+return TMP===l6.value?l6.value:TMP.cdr;
+})();
+});
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=v4635;
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})();
+})();
+return l4369.fvalue(pv,2,l57.fvalue(pv,2,l5096,(function(v4639){try{var TMP;
+TMP=l529.value;
+l529.value=v4639;
+v4639=TMP;
+return l559.fvalue(pv,1,v4635);
+}finally{l529.value=v4639;
+}})(l5.value)),l5097);
+})(l5095);
+var l5098=make_lisp_string('(a b c)');
+var l5099=QIList(QIList(l4449,l4537,l4538,l6),7,l6);
+var l5100=QIList(l56,QIList(l64,QIList(l752,l5098,l6),l6),QIList(l747,l5099,l6),l6);
+l4373.fvalue(pv,2,l56.fvalue(pv,2,(function(){var FUNC=(function(){var SYMBOL=l67,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})();
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=l752.fvalue(values,1,l5098);
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})(),l5099),l5100);
+var l5101=make_lisp_string('cl:cond');
+var l5102=make_lisp_string('COND');
+var l5103=QIList(l56,QIList(l1365,QIList(l752,l5101,l6),l6),l5102,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5101).name,l5102),l5103);
+var l5104=make_lisp_string('co|N|d');
+var l5105=make_lisp_string('COND');
+var l5106=QIList(l56,QIList(l1365,QIList(l752,l5104,l6),l6),l5105,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5104).name,l5105),l5106);
+var l5107=make_lisp_string('abc\\def');
+var l5108=make_lisp_string('ABCdEF');
+var l5109=QIList(l56,QIList(l1365,QIList(l752,l5107,l6),l6),l5108,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5107).name,l5108),l5109);
+var l5110=make_lisp_string('|.|');
+var l5111=make_lisp_string('.');
+var l5112=QIList(l56,QIList(l1365,QIList(l752,l5110,l6),l6),l5111,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5110).name,l5111),l5112);
+var l5113=make_lisp_string('(1 .25)');
+var l5114=QIList(1,0.25,l6);
+var l5115=QIList(l56,QIList(l752,l5113,l6),QIList(l747,l5114,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5113),l5114),l5115);
+var l5116=make_lisp_string('.25');
+var l5117=QIList(l56,QIList(l752,l5116,l6),0.25,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5116),0.25),l5117);
+var l5118=make_lisp_string('(1 . 25)');
+var l5119=QIList(1,25);
+var l5120=QIList(l56,QIList(l752,l5118,l6),QIList(l747,l5119,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5118),l5119),l5120);
+var l5121=make_lisp_string('(#1=99 2 3 #1#)');
+var l5122=QIList(99,2,3,99,l6);
+var l5123=QIList(l56,QIList(l752,l5121,l6),QIList(l747,l5122,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l752.fvalue(pv,1,l5121),l5122),l5123);
+var l5124=make_lisp_string('#(#1=99 2 3 #1#)');
+var l5125=QIList(l33,QIList(l23,QIList(l107,l1400,0,l6),99,l6),QIList(l23,QIList(l107,l1400,1,l6),2,l6),QIList(l23,QIList(l107,l1400,2,l6),3,l6),QIList(l23,QIList(l107,l1400,3,l6),99,l6),l6);
+(function(v4640){return l4369.fvalue(pv,2,l23.fvalue(pv,2,l107.fvalue(pv,2,v4640,0),99)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,v4640,1),2)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,v4640,2),3)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,v4640,3),99):l6.value:l6.value:l6.value,l5125);
+})(l752.fvalue(pv,1,l5124));
+var l5126=make_lisp_string('#1=(42 . #1#)');
+var l5127=QIList(l410,QIList(QIList(l1387,QIList(l752,l5126,l6),l6),l6),QIList(l33,QIList(l23,QIList(l352,99,l1387,l6),42,l6),QIList(l398,QIList(l336,l1387,13,l6),QIList(l23,QIList(l352,99,l1387,l6),13,l6),l6),QIList(l22,l1387,QIList(l335,l1387,l6),l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4641){return l23.fvalue(pv,2,l352.fvalue(pv,2,99,v4641),42)!==l6.value?((function(){var TMP=v4641;
+TMP.car=13;
+return TMP;
+})(),l23.fvalue(values,2,l352.fvalue(pv,2,99,v4641),13))!==l6.value?v4641===(function(){var TMP=v4641;
+return TMP===l6.value?l6.value:TMP.cdr;
+})()?l5.value:l6.value:l6.value:l6.value;
+})(l752.fvalue(pv,1,l5126)),l5127);
+var l5128=make_lisp_string('#1=#(1 #2=99 #1# #2#)');
+var l5129=QIList(l410,QIList(QIList(l1387,QIList(l752,l5128,l6),l6),l6),QIList(l33,QIList(l23,QIList(l107,l1387,0,l6),1,l6),QIList(l23,QIList(l107,l1387,1,l6),99,l6),QIList(l22,QIList(l107,l1387,2,l6),l1387,l6),QIList(l23,QIList(l107,l1387,3,l6),99,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4642){return l23.fvalue(pv,2,l107.fvalue(pv,2,v4642,0),1)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,v4642,1),99)!==l6.value?(l107.fvalue(pv,2,v4642,2)===v4642?l5.value:l6.value)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,v4642,3),99):l6.value:l6.value:l6.value;
+})(l752.fvalue(pv,1,l5128)),l5129);
+var l5130=make_lisp_string('#1=(1 2 #2=#(3 4 #1#) 5 #2#)');
+var l5131=QIList(l410,QIList(QIList(l1387,QIList(l752,l5130,l6),l6),l6),QIList(l33,QIList(l23,QIList(l352,0,l1387,l6),1,l6),QIList(l23,QIList(l352,1,l1387,l6),2,l6),QIList(l23,QIList(l107,QIList(l352,2,l1387,l6),0,l6),3,l6),QIList(l23,QIList(l107,QIList(l352,2,l1387,l6),1,l6),4,l6),QIList(l22,QIList(l107,QIList(l352,2,l1387,l6),2,l6),l1387,l6),QIList(l23,QIList(l352,3,l1387,l6),5,l6),QIList(l22,QIList(l352,4,l1387,l6),QIList(l352,2,l1387,l6),l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4643){return l23.fvalue(pv,2,l352.fvalue(pv,2,0,v4643),1)!==l6.value?l23.fvalue(pv,2,l352.fvalue(pv,2,1,v4643),2)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,l352.fvalue(pv,2,2,v4643),0),3)!==l6.value?l23.fvalue(pv,2,l107.fvalue(pv,2,l352.fvalue(pv,2,2,v4643),1),4)!==l6.value?(l107.fvalue(pv,2,l352.fvalue(pv,2,2,v4643),2)===v4643?l5.value:l6.value)!==l6.value?l23.fvalue(pv,2,l352.fvalue(pv,2,3,v4643),5)!==l6.value?l352.fvalue(pv,2,4,v4643)===l352.fvalue(pv,2,2,v4643)?l5.value:l6.value:l6.value:l6.value:l6.value:l6.value:l6.value:l6.value;
+})(l752.fvalue(pv,1,l5130)),l5131);
+var l5132=new Symbol(make_lisp_string('HALVE'));
+if ((l5132.value!==undefined?l5.value:l6.value)!==l6.value) l6.value;
+ else l5132.value=(function(values,nargs,v4644){checkArgs(nargs,1);
+return (function(){var x1=v4644;
+if (typeof x1!='number') throw 'Not a number!';
+return x1/2;
+})();
+});
+l5132;
+var l5133=new Symbol(make_lisp_string('DOUBLE'));
+if ((l5133.value!==undefined?l5.value:l6.value)!==l6.value) l6.value;
+ else l5133.value=(function(values,nargs,v4645){checkArgs(nargs,1);
+return (function(){var x1=v4645;
+if (typeof x1!='number') throw 'Not a number!';
+return x1*2;
+})();
+});
+l5133;
+var l5134=[2,1,3];
+var l5135=QIList(l468,1,l5134,l6);
+l4369.fvalue(pv,2,l468.fvalue(pv,2,1,l5134),l5135);
+var l5136=QIList(2,1,3,l6);
+var l5137=QIList(l468,1,QIList(l747,l5136,l6),l6);
+l4369.fvalue(pv,2,l468.fvalue(pv,2,1,l5136),l5137);
+var l5138=[2,2,2];
+var l5139=QIList(l24,QIList(l468,1,l5138,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,2,1,l5138)),l5139);
+var l5140=QIList(2,2,2,l6);
+var l5141=QIList(l24,QIList(l468,1,QIList(l747,l5140,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,2,1,l5140)),l5141);
+var l5142=[1,1,1];
+var l5143=QIList(l24,QIList(l468,1,l5142,l122,QIList(l571,l141,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,4,1,l5142,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l5143);
+var l5144=QIList(1,1,1,l6);
+var l5145=QIList(l24,QIList(l468,1,QIList(l747,l5144,l6),l122,QIList(l571,l141,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,4,1,l5144,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l5145);
+var l5146=[1,2,3];
+var l5147=QIList(l24,QIList(l468,1,l5146,l119,l5133,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,4,1,l5146,l119.value,(function(){var SYMBOL=l5133,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})())),l5147);
+var l5148=QIList(1,2,3,l6);
+var l5149=QIList(l24,QIList(l468,1,QIList(l747,l5148,l6),l119,l5133,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,4,1,l5148,l119.value,(function(){var SYMBOL=l5133,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})())),l5149);
+var l5150=[1,2,3,1];
+var l5151=QIList(l24,QIList(l468,1,QIList(l480,1,l5150,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,2,1,l480.fvalue(pv,2,1,l5150))),l5151);
+var l5152=QIList(1,2,3,1,l6);
+var l5153=QIList(l24,QIList(l468,1,QIList(l480,1,QIList(l747,l5152,l6),l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,2,1,l480.fvalue(pv,2,1,l5152))),l5153);
+var l5154=[1,2,3,1];
+var l5155=QIList(l24,QIList(l468,2,QIList(l480,1,l5154,l119,l5132,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,2,2,l480.fvalue(pv,4,1,l5154,l119.value,(function(){var SYMBOL=l5132,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})()))),l5155);
+var l5156=QIList(1,2,3,1,l6);
+var l5157=QIList(l24,QIList(l468,2,QIList(l480,1,QIList(l747,l5156,l6),l119,l5132,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l468.fvalue(pv,2,2,l480.fvalue(pv,4,1,l5156,l119.value,(function(){var SYMBOL=l5132,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})()))),l5157);
+var l5158=QIList(1,2,l6);
+var l5159=QIList(1,2,l6);
+var l5160=QIList(1,2,l6);
+var l5161=[l5159,l5160];
+var l5162=QIList(l56,QIList(l106,QIList(l480,QIList(l747,l5158,l6),l5161,l120,QIList(l571,l56,l6),l6),l6),0,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l106.fvalue(pv,1,l480.fvalue(pv,4,l5158,l5161,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),0),l5162);
+var l5163=QIList(1,2,l6);
+var l5164=QIList(QIList(1,2,l6),QIList(1,2,l6),l6);
+var l5165=QIList(l71,QIList(l480,QIList(l747,l5163,l6),QIList(l747,l5164,l6),l120,QIList(l571,l56,l6),l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l480.fvalue(pv,4,l5163,l5164,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l5165);
+var l5166=[1,2,3];
+var l5167=QIList(l468,2,QIList(l480,2,l5166,l122,QIList(l571,l141,l6),l6),l6);
+l4369.fvalue(pv,2,l468.fvalue(pv,2,2,l480.fvalue(pv,4,2,l5166,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l5167);
+var l5168=QIList(1,2,3,l6);
+var l5169=QIList(l468,2,QIList(l480,2,QIList(l747,l5168,l6),l122,QIList(l571,l141,l6),l6),l6);
+l4369.fvalue(pv,2,l468.fvalue(pv,2,2,l480.fvalue(pv,4,2,l5168,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})())),l5169);
+var l5170=[1,2,3];
+var l5171=QIList(l141,QIList(l478,1,l5170,l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,2,1,l5170);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5171);
+var l5172=QIList(1,2,3,l6);
+var l5173=QIList(l141,QIList(l478,1,QIList(l747,l5172,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,2,1,l5172);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5173);
+var l5174=[1,2,3,1];
+var l5175=QIList(l141,QIList(l478,1,l5174,l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,2,1,l5174);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5175);
+var l5176=QIList(1,2,3,1,l6);
+var l5177=QIList(l141,QIList(l478,1,QIList(l747,l5176,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,2,1,l5176);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5177);
+var l5178=[2,3,4];
+var l5179=QIList(l24,QIList(l478,1,l5178,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l478.fvalue(pv,2,1,l5178)),l5179);
+var l5180=QIList(2,3,4,l6);
+var l5181=QIList(l24,QIList(l478,1,QIList(l747,l5180,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l478.fvalue(pv,2,1,l5180)),l5181);
+var l5182=QIList(1,2,3,l6);
+var l5183=QIList(l141,QIList(l478,1,QIList(l747,l5182,l6),l119,l5132,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,4,1,l5182,l119.value,(function(){var SYMBOL=l5132,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l5183);
+var l5184=[1,2,3];
+var l5185=QIList(l141,QIList(l478,1,l5184,l119,l5132,l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,4,1,l5184,l119.value,(function(){var SYMBOL=l5132,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l5185);
+var l5186=QIList(1,2,l6);
+var l5187=QIList(QIList(1,2,l6),QIList(3,4,l6),l6);
+var l5188=QIList(l141,QIList(l478,QIList(l747,l5186,l6),QIList(l747,l5187,l6),l120,QIList(l571,l56,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,4,l5186,l5187,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5188);
+var l5189=QIList(1,2,l6);
+var l5190=QIList(1,2,l6);
+var l5191=QIList(3,4,l6);
+var l5192=[l5190,l5191];
+var l5193=QIList(l141,QIList(l478,QIList(l747,l5189,l6),l5192,l120,QIList(l571,l56,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,4,l5189,l5192,l120.value,(function(){var SYMBOL=l56,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5193);
+var l5194=[1,1,3];
+var l5195=QIList(l141,QIList(l478,1,l5194,l122,QIList(l571,l141,l6),l6),2,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,4,1,l5194,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})(),l5195);
+var l5196=QIList(1,1,3,l6);
+var l5197=QIList(l141,QIList(l478,1,QIList(l747,l5196,l6),l122,QIList(l571,l141,l6),l6),2,l6);
+l4369.fvalue(pv,2,(function(){var x1=l478.fvalue(pv,4,1,l5196,l122.value,(function(){var SYMBOL=l141,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})(),l5197);
+var l5198=QIList(QIList(1,l6),QIList(2,l6),QIList(3,l6),QIList(4,l6),l6);
+var l5199=QIList(l141,2,QIList(l479,QIList(l571,l147,l6),QIList(l747,l5198,l6),l456,1,l119,QIList(l571,l334,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l479.fvalue(pv,6,(function(){var SYMBOL=l147,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5198,l456.value,1,l119.value,(function(){var SYMBOL=l334,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})());
+if (typeof x1!='number') throw 'Not a number!';
+return 2==x1?l5.value:l6.value;
+})(),l5199);
+var l5200=QIList(1,2,3,4,l1387,l6);
+var l5201=QIList(l141,4,QIList(l469,QIList(l571,l134,l6),QIList(l747,l5200,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=l469.fvalue(pv,2,(function(){var SYMBOL=l134,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5200);
+if (typeof x1!='number') throw 'Not a number!';
+return 4==x1?l5.value:l6.value;
+})(),l5201);
+var l5202=QIList(1,0,2,0,3,l6);
+var l5203=QIList(1,2,3,l6);
+var l5204=QIList(l56,QIList(l482,QIList(l571,l112,l6),QIList(l747,l5202,l6),l6),QIList(l747,l5203,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l482.fvalue(pv,2,(function(){var SYMBOL=l112,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5202),l5203),l5204);
+var l5205=QIList(1,0,2,0,3,l6);
+var l5206=QIList(0,0,l6);
+var l5207=QIList(l56,QIList(l485,QIList(l571,l112,l6),QIList(l747,l5205,l6),l6),QIList(l747,l5206,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l485.fvalue(pv,2,(function(){var SYMBOL=l112,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5205),l5206),l5207);
+var l5208=[1,0,2,0,3];
+var l5209=new Symbol(make_lisp_string('V1'));
+var l5210=QIList(l33,QIList(l141,QIList(l107,l5209,0,l6),1,l6),QIList(l141,QIList(l107,l5209,1,l6),2,l6),QIList(l141,QIList(l107,l5209,2,l6),3,l6),l6);
+(function(v4646){return l4369.fvalue(pv,2,(function(){var x1=l107.fvalue(pv,2,v4646,0);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})()!==l6.value?(function(){var x1=l107.fvalue(pv,2,v4646,1);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})()!==l6.value?(function(){var x1=l107.fvalue(pv,2,v4646,2);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})():l6.value:l6.value,l5210);
+})(l482.fvalue(pv,2,(function(){var SYMBOL=l112,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5208));
+var l5211=[1,0,2,0,3];
+var l5212=QIList(l481,QIList(l571,l112,l6),QIList(l485,QIList(l571,l112,l6),l5211,l6),l6);
+l4369.fvalue(pv,2,l481.fvalue(pv,2,(function(){var SYMBOL=l112,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l485.fvalue(pv,2,(function(){var SYMBOL=l112,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5211)),l5212);
+var l5213=QIList(1,2,3,4,5,l6);
+var l5214=QIList(4,5,l6);
+var l5215=QIList(l56,QIList(l470,l4819,3,l6),QIList(l747,l5214,l6),l6);
+var l5216=QIList(3,4,l6);
+var l5217=QIList(l56,QIList(l470,l4819,2,4,l6),QIList(l747,l5216,l6),l6);
+var l5218=QIList(1,2,3,4,5,l6);
+var l5219=QIList(l56,l4819,QIList(l747,l5218,l6),l6);
+(function(v4647){l4369.fvalue(pv,2,l56.fvalue(pv,2,l470.fvalue(pv,2,v4647,3),l5214),l5215);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l470.fvalue(pv,3,v4647,2,4),l5216),l5217);
+return l4369.fvalue(pv,2,l56.fvalue(pv,2,v4647,l5218),l5219);
+})(l5213);
+var l5220=QIList(1,2,3,4,l6);
+var l5221=QIList(l128,QIList(l128,QIList(l128,1,2,l6),3,l6),4,l6);
+var l5222=QIList(l56,QIList(l489,QIList(l7,QIList(l1387,l4740,l6),QIList(l748,QIList(l128,QIList(l750,l1387,l6),QIList(l750,l4740,l6),l6),l6),l6),QIList(l747,l5220,l6),l6),QIList(l747,l5221,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,2,(function(values,nargs,v4648,v4649){checkArgs(nargs,2);
+return l67.fvalue(values,3,l128,v4648,v4649);
+}),l5220),l5221),l5222);
+var l5223=QIList(1,2,3,4,l6);
+var l5224=QIList(l128,1,QIList(l128,2,QIList(l128,3,4,l6),l6),l6);
+var l5225=QIList(l56,QIList(l489,QIList(l7,QIList(l1387,l4740,l6),QIList(l748,QIList(l128,QIList(l750,l1387,l6),QIList(l750,l4740,l6),l6),l6),l6),QIList(l747,l5223,l6),l490,l5,l6),QIList(l747,l5224,l6),l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,4,(function(values,nargs,v4650,v4651){checkArgs(nargs,2);
+return l67.fvalue(values,3,l128,v4650,v4651);
+}),l5223,l490.value,l5.value),l5224),l5225);
+var l5226=QIList(l56,QIList(l489,QIList(l571,l128,l6),l6,l6),0,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,2,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l6.value),0),l5226);
+var l5227=QIList(1,l6);
+var l5228=QIList(l56,QIList(l489,QIList(l571,l128,l6),QIList(l747,l5227,l6),l6),1,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,2,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5227),1),l5228);
+var l5229=QIList(l56,QIList(l489,QIList(l571,l128,l6),l6,l491,1,l6),1,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,4,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l6.value,l491.value,1),1),l5229);
+var l5230=QIList(l56,QIList(l489,QIList(l571,l128,l6),QIList(l747,l6,l6),l119,QIList(l571,l132,l6),l491,100,l6),100,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,6,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l6,l119.value,(function(){var SYMBOL=l132,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l491.value,100),100),l5230);
+var l5231=QIList(100,l6);
+var l5232=QIList(l56,QIList(l489,QIList(l571,l128,l6),QIList(l747,l5231,l6),l119,QIList(l571,l132,l6),l6),101,l6);
+l4369.fvalue(pv,2,l56.fvalue(pv,2,l489.fvalue(pv,4,(function(){var SYMBOL=l128,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})(),l5231,l119.value,(function(){var SYMBOL=l132,FUNC=SYMBOL.fvalue;
+if (FUNC===undefined) throw 'Function `'+xstring(SYMBOL.name)+"' is undefined.";
+return FUNC;
+})()),101),l5232);
+var l5233=QIList(1,2,3,l6);
+var l5234=QIList(1,2,3,4,5,6,l6);
+var l5235=QIList(l141,QIList(l497,QIList(l747,l5233,l6),QIList(l747,l5234,l6),l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l497.fvalue(pv,2,l5233,l5234);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5235);
+var l5236=QIList(1,2,3,l6);
+var l5237=[1,2,3,4,5,6];
+var l5238=QIList(l141,QIList(l497,QIList(l747,l5236,l6),l5237,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l497.fvalue(pv,2,l5236,l5237);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5238);
+var l5239=[1,2,3];
+var l5240=QIList(1,2,3,4,5,6,l6);
+var l5241=QIList(l141,QIList(l497,l5239,QIList(l747,l5240,l6),l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l497.fvalue(pv,2,l5239,l5240);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5241);
+var l5242=[1,2,3];
+var l5243=[1,2,3,4,5,6];
+var l5244=QIList(l141,QIList(l497,l5242,l5243,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l497.fvalue(pv,2,l5242,l5243);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5244);
+var l5245=QIList(1,2,3,l6);
+var l5246=QIList(4,5,6,1,2,3,l6);
+var l5247=QIList(l141,QIList(l500,QIList(l747,l5245,l6),QIList(l747,l5246,l6),l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l500.fvalue(pv,2,l5245,l5246);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5247);
+var l5248=QIList(1,2,3,l6);
+var l5249=[4,5,6,1,2,3];
+var l5250=QIList(l141,QIList(l500,QIList(l747,l5248,l6),l5249,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l500.fvalue(pv,2,l5248,l5249);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5250);
+var l5251=[1,2,3];
+var l5252=QIList(4,5,6,1,2,3,l6);
+var l5253=QIList(l141,QIList(l500,l5251,QIList(l747,l5252,l6),l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l500.fvalue(pv,2,l5251,l5252);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5253);
+var l5254=[1,2,3];
+var l5255=[4,5,6,1,2,3];
+var l5256=QIList(l141,QIList(l500,l5254,l5255,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l500.fvalue(pv,2,l5254,l5255);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5256);
+var l5257=QIList(l4525,l6);
+var l5258=QIList(1,2,3,l6);
+var l5259=QIList(l24,QIList(l500,QIList(l747,l5257,l6),QIList(l747,l5258,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l500.fvalue(pv,2,l5257,l5258)),l5259);
+var l5260=QIList(1,l6);
+var l5261=QIList(4,5,6,1,2,3,l6);
+var l5262=QIList(l141,QIList(l500,QIList(l747,l5260,l6),QIList(l747,l5261,l6),l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l500.fvalue(pv,2,l5260,l5261);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5262);
+var l5263=[1];
+var l5264=[4,5,6,1,2,3];
+var l5265=QIList(l141,QIList(l500,l5263,l5264,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l500.fvalue(pv,2,l5263,l5264);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5265);
+var l5266=QIList(l141,2,QIList(l410,QIList(QIList(l1387,0,l6),l6),QIList(l76,l1387,QIList(l75,l1387,1,l6),l6),l1387,l6),l6);
+l4369.fvalue(pv,2,(function(){var x1=(function(v4652){(function(){var v4653=(function(){return (function(){var FUNC=(function(values,nargs,v4655){switch(nargs){case 0:v4655=l6.value;
+;
+default:break;
+}var v4654=l6.value;
+var I;
+for (I=nargs-1;I>=1;I--)v4654={car: arguments[I+2],cdr: v4654};
+v4652=v4655;
+return v4652;
+});
+var ARGS=[pv,0];
+return (function(){var values=mv;
+var VS;
+VS=1;
+if (typeof VS==='object'&&'multiple-value' in VS) ARGS=ARGS.concat(VS);
+ else ARGS.push(VS);
+ARGS[1]=ARGS['length']-2;
+return FUNC.apply(window,ARGS);
+})();
+})();
+})();
+var v4656=(function(){var x1=v4652;
+if (typeof x1!='number') throw 'Not a number!';
+var x2=v4653;
+if (typeof x2!='number') throw 'Not a number!';
+return x1+x2;
+})();
+return v4652=v4656;
+})();
+return v4652;
+})(0);
+if (typeof x1!='number') throw 'Not a number!';
+return 2==x1?l5.value:l6.value;
+})(),l5266);
+var l5267=new Symbol(make_lisp_string('*STR*'));
+var l5268=make_lisp_string('hello world');
+if ((l5267.value!==undefined?l5.value:l6.value)!==l6.value) l6.value;
+ else l5267.value=l5268;
+l5267;
+var l5269=new Symbol(make_lisp_string('*STR2*'));
+var l5270=make_lisp_string('h');
+if ((l5269.value!==undefined?l5.value:l6.value)!==l6.value) l6.value;
+ else l5269.value=l5270;
+l5269;
+var l5271=QIList(l438,l5267,l6);
+l4369.fvalue(pv,2,(function(){var X=(function(){var SYMBOL=l5267,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})(),l5271);
+var l5272=QIList(l24,QIList(l1386,l5267,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=(function(){var SYMBOL=l5267,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l5272);
+var l5273=QIList(l24,QIList(l134,l5267,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l134.fvalue(pv,1,(function(){var SYMBOL=l5267,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})())),l5273);
+var l5274=QIList(l438,l5269,l6);
+l4369.fvalue(pv,2,(function(){var X=(function(){var SYMBOL=l5269,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})(),l5274);
+var l5275=QIList(l24,QIList(l1386,l5269,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=(function(){var SYMBOL=l5269,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+return typeof X=='string'&&(X.length==1||X.length==2)?l5.value:l6.value;
+})()),l5275);
+var l5276=QIList(l24,QIList(l134,l5269,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l134.fvalue(pv,1,(function(){var SYMBOL=l5269,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})())),l5276);
+var l5277=make_lisp_string('hello world');
+var l5278=QIList(l141,QIList(l106,l5277,l6),11,l6);
+l4369.fvalue(pv,2,(function(){var x1=l106.fvalue(pv,1,l5277);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==11?l5.value:l6.value;
+})(),l5278);
+var l5279=make_lisp_string('hello world');
+var l5280=QIList(l420,l5279,l6);
+l4369.fvalue(pv,2,l420.fvalue(pv,1,l5279),l5280);
+var l5281=make_lisp_string('h');
+var l5282=QIList(l57,l5281,QIList(l116,'h',l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5281,l116.fvalue(pv,1,'h')),l5282);
+var l5283=make_lisp_string('foo');
+var l5284=make_lisp_string('foo');
+var l5285=QIList(l57,l5283,l5284,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5283,l5284),l5285);
+var l5286=make_lisp_string('Foo');
+var l5287=make_lisp_string('foo');
+var l5288=QIList(l24,QIList(l57,l5286,l5287,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5286,l5287)),l5288);
+var l5289=make_lisp_string('foo');
+var l5290=make_lisp_string('foox');
+var l5291=QIList(l24,QIList(l57,l5289,l5290,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5289,l5290)),l5291);
+var l5292=make_lisp_string('one');
+var l5293=make_lisp_string('two');
+var l5294=QIList(l141,QIList(l448,l5292,l5293,l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l448.fvalue(pv,2,l5292,l5293);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5294);
+var l5295=make_lisp_string('oob');
+var l5296=make_lisp_string('ooc');
+var l5297=QIList(l141,QIList(l448,l5295,l5296,l6),2,l6);
+l4369.fvalue(pv,2,(function(){var x1=l448.fvalue(pv,2,l5295,l5296);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==2?l5.value:l6.value;
+})(),l5297);
+var l5298=QIList(l71,QIList(l448,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l448.fvalue(pv,2,l101,l101)),l5298);
+var l5299=make_lisp_string('a');
+var l5300=QIList(l71,QIList(l448,l5299,l101,l6),l6);
+l4369.fvalue(pv,2,l71.fvalue(pv,1,l448.fvalue(pv,2,l5299,l101)),l5300);
+var l5301=make_lisp_string('a');
+var l5302=QIList(l141,QIList(l448,l101,l5301,l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l448.fvalue(pv,2,l101,l5301);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5302);
+var l5303=make_lisp_string('aaa');
+var l5304=make_lisp_string('aaaaa');
+var l5305=QIList(l141,QIList(l448,l5303,l5304,l6),3,l6);
+l4369.fvalue(pv,2,(function(){var x1=l448.fvalue(pv,2,l5303,l5304);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==3?l5.value:l6.value;
+})(),l5305);
+var l5306=make_lisp_string('abc');
+var l5307=QIList(l48,QIList(l55,l5306,0,l6),'a',l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,l55.fvalue(pv,2,l5306,0),'a'),l5307);
+var l5308=make_lisp_string('abc');
+var l5309=QIList(l48,QIList(l55,l5308,1,l6),'b',l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,l55.fvalue(pv,2,l5308,1),'b'),l5309);
+var l5310=make_lisp_string('abc');
+var l5311=QIList(l48,QIList(l55,l5310,2,l6),'c',l6);
+l4369.fvalue(pv,2,l48.fvalue(pv,2,l55.fvalue(pv,2,l5310,2),'c'),l5311);
+var l5312=QIList(l57,QIList(l116,l101,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l101),l101),l5312);
+var l5313=make_lisp_string('abc');
+var l5314=make_lisp_string('abc');
+var l5315=QIList(l57,QIList(l116,l5313,l6),l5314,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l5313),l5314),l5315);
+var l5316=make_lisp_string('a');
+var l5317=make_lisp_string('a');
+var l5318=QIList(l57,QIList(l116,l5316,l6),l5317,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l5316),l5317),l5318);
+var l5319=new Symbol(make_lisp_string('ABC'));
+var l5320=make_lisp_string('ABC');
+var l5321=QIList(l57,QIList(l116,QIList(l747,l5319,l6),l6),l5320,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l5319),l5320),l5321);
+var l5322=make_lisp_string('A');
+var l5323=QIList(l57,QIList(l116,QIList(l747,l4449,l6),l6),l5322,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l4449),l5322),l5323);
+var l5324=make_lisp_string('a');
+var l5325=QIList(l57,QIList(l116,'a',l6),l5324,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,'a'),l5324),l5325);
+var l5326=make_lisp_string('abcde');
+var l5327=make_lisp_string('ABCDE');
+var l5328=QIList(l57,QIList(l328,l5326,l6),l5327,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l328.fvalue(pv,1,l5326),l5327),l5328);
+var l5329=make_lisp_string('Dr. Livingston, I presume?');
+var l5330=make_lisp_string('DR. LIVINGSTON, I PRESUME?');
+var l5331=QIList(l57,QIList(l328,l5329,l6),l5330,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l328.fvalue(pv,1,l5329),l5330),l5331);
+var l5332=make_lisp_string('Dr. Livingston, I presume?');
+var l5333=make_lisp_string('Dr. LiVINGston, I presume?');
+var l5334=QIList(l57,QIList(l328,l5332,l456,6,l457,10,l6),l5333,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l328.fvalue(pv,5,l5332,l456.value,6,l457.value,10),l5333),l5334);
+var l5335=new Symbol(make_lisp_string('KLUDGY-HASH-SEARCH'));
+var l5336=make_lisp_string('KLUDGY-HASH-SEARCH');
+var l5337=QIList(l57,QIList(l328,QIList(l747,l5335,l6),l6),l5336,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l328.fvalue(pv,1,l5335),l5336),l5337);
+var l5338=make_lisp_string('abcde');
+var l5339=make_lisp_string('abCDE');
+var l5340=QIList(l57,QIList(l328,l5338,l456,2,l457,l6,l6),l5339,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l328.fvalue(pv,5,l5338,l456.value,2,l457.value,l6.value),l5339),l5340);
+var l5341=make_lisp_string('Dr. Livingston, I presume?');
+var l5342=make_lisp_string('dr. livingston, i presume?');
+var l5343=QIList(l57,QIList(l459,l5341,l6),l5342,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l459.fvalue(pv,1,l5341),l5342),l5343);
+var l5344=make_lisp_string('kludgy-hash-search');
+var l5345=QIList(l57,QIList(l459,QIList(l747,l5335,l6),l6),l5344,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l459.fvalue(pv,1,l5335),l5344),l5345);
+var l5346=make_lisp_string('A FOOL');
+var l5347=make_lisp_string('A fool');
+var l5348=QIList(l57,QIList(l459,l5346,l456,2,l457,l6,l6),l5347,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l459.fvalue(pv,5,l5346,l456.value,2,l457.value,l6.value),l5347),l5348);
+var l5349=make_lisp_string("elm 13c arthur;fig don't");
+var l5350=make_lisp_string("Elm 13c Arthur;Fig Don'T");
+var l5351=QIList(l57,QIList(l461,l5349,l6),l5350,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,1,l5349),l5350),l5351);
+var l5352=make_lisp_string(' hello ');
+var l5353=make_lisp_string(' Hello ');
+var l5354=QIList(l57,QIList(l461,l5352,l6),l5353,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,1,l5352),l5353),l5354);
+var l5355=make_lisp_string('occlUDeD cASEmenTs FOreSTAll iNADVertent DEFenestraTION');
+var l5356=make_lisp_string('Occluded Casements Forestall Inadvertent Defenestration');
+var l5357=QIList(l57,QIList(l461,l5355,l6),l5356,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,1,l5355),l5356),l5357);
+var l5358=make_lisp_string('Kludgy-Hash-Search');
+var l5359=QIList(l57,QIList(l461,QIList(l747,l5335,l6),l6),l5358,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,1,l5335),l5358),l5359);
+var l5360=make_lisp_string("DON'T!");
+var l5361=make_lisp_string("Don'T!");
+var l5362=QIList(l57,QIList(l461,l5360,l6),l5361,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,1,l5360),l5361),l5362);
+var l5363=make_lisp_string('pipe 13a, foo16c');
+var l5364=make_lisp_string('Pipe 13a, Foo16c');
+var l5365=QIList(l57,QIList(l461,l5363,l6),l5364,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,1,l5363),l5364),l5365);
+var l5366=make_lisp_string('a fool');
+var l5367=make_lisp_string('a Fool');
+var l5368=QIList(l57,QIList(l461,l5366,l456,2,l457,l6,l6),l5367,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l461.fvalue(pv,5,l5366,l456.value,2,l457.value,l6.value),l5367),l5368);
+var l5369=make_lisp_string('0123ABCD890a');
+var l5370=make_lisp_string('0123AbcD890a');
+var l5371=make_lisp_string('0123AbcD890a');
+var l5372=new Symbol(make_lisp_string('STR'));
+var l5373=QIList(l410,QIList(QIList(l5372,QIList(l488,l5369,l6),l6),l6),QIList(l33,QIList(l57,QIList(l460,l5372,l456,5,l457,7,l6),l5370,l6),QIList(l57,l5372,l5371,l6),l6),l6);
+l4369.fvalue(pv,2,(function(v4657){return l57.fvalue(pv,2,l460.fvalue(pv,5,v4657,l456.value,5,l457.value,7),l5370)!==l6.value?l57.fvalue(pv,2,v4657,l5371):l6.value;
+})(l488.fvalue(pv,1,l5369)),l5373);
+var l5374=make_lisp_string('abcde');
+var l5375=make_lisp_string('ABCDE');
+var l5376=new Symbol(make_lisp_string('STR0'));
+var l5377=QIList(l843,QIList(QIList(l5376,QIList(l488,l5374,l6),l6),QIList(l5372,QIList(l458,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5375,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4658=l488.fvalue(pv,1,l5374);
+var v4659=l458.fvalue(pv,1,v4658);
+return (v4658===v4659?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4659,l5375):l6.value;
+})(),l5377);
+var l5378=make_lisp_string('Dr. Livingston, I presume?');
+var l5379=make_lisp_string('DR. LIVINGSTON, I PRESUME?');
+var l5380=QIList(l843,QIList(QIList(l5376,QIList(l488,l5378,l6),l6),QIList(l5372,QIList(l458,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5379,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4660=l488.fvalue(pv,1,l5378);
+var v4661=l458.fvalue(pv,1,v4660);
+return (v4660===v4661?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4661,l5379):l6.value;
+})(),l5380);
+var l5381=make_lisp_string('Dr. Livingston, I presume?');
+var l5382=make_lisp_string('Dr. LiVINGston, I presume?');
+var l5383=QIList(l843,QIList(QIList(l5376,QIList(l488,l5381,l6),l6),QIList(l5372,QIList(l458,l5376,l456,6,l457,10,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5382,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4662=l488.fvalue(pv,1,l5381);
+var v4663=l458.fvalue(pv,5,v4662,l456.value,6,l457.value,10);
+return (v4662===v4663?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4663,l5382):l6.value;
+})(),l5383);
+var l5384=make_lisp_string('abcde');
+var l5385=make_lisp_string('abCDE');
+var l5386=QIList(l843,QIList(QIList(l5376,QIList(l488,l5384,l6),l6),QIList(l5372,QIList(l458,l5376,l456,2,l457,l6,l6),l6),l6),QIList(l57,l5372,l5385,l6),l6);
+l4369.fvalue(pv,2,(function(){var v4664=l488.fvalue(pv,1,l5384);
+var v4665=l458.fvalue(pv,5,v4664,l456.value,2,l457.value,l6.value);
+return l57.fvalue(pv,2,v4665,l5385);
+})(),l5386);
+var l5387=make_lisp_string('Dr. Livingston, I presume?');
+var l5388=make_lisp_string('dr. livingston, i presume?');
+var l5389=QIList(l843,QIList(QIList(l5376,QIList(l488,l5387,l6),l6),QIList(l5372,QIList(l460,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5388,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4666=l488.fvalue(pv,1,l5387);
+var v4667=l460.fvalue(pv,1,v4666);
+return (v4666===v4667?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4667,l5388):l6.value;
+})(),l5389);
+var l5390=make_lisp_string('ABCDE');
+var l5391=make_lisp_string('ABcde');
+var l5392=QIList(l843,QIList(QIList(l5376,QIList(l488,l5390,l6),l6),QIList(l5372,QIList(l460,l5376,l456,2,l457,l6,l6),l6),l6),QIList(l57,l5372,l5391,l6),l6);
+l4369.fvalue(pv,2,(function(){var v4668=l488.fvalue(pv,1,l5390);
+var v4669=l460.fvalue(pv,5,v4668,l456.value,2,l457.value,l6.value);
+return l57.fvalue(pv,2,v4669,l5391);
+})(),l5392);
+var l5393=make_lisp_string("elm 13c arthur;fig don't");
+var l5394=make_lisp_string("Elm 13c Arthur;Fig Don'T");
+var l5395=QIList(l843,QIList(QIList(l5376,QIList(l488,l5393,l6),l6),QIList(l5372,QIList(l462,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5394,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4670=l488.fvalue(pv,1,l5393);
+var v4671=l462.fvalue(pv,1,v4670);
+return (v4670===v4671?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4671,l5394):l6.value;
+})(),l5395);
+var l5396=make_lisp_string(' hello ');
+var l5397=make_lisp_string(' Hello ');
+var l5398=QIList(l843,QIList(QIList(l5376,QIList(l488,l5396,l6),l6),QIList(l5372,QIList(l462,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5397,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4672=l488.fvalue(pv,1,l5396);
+var v4673=l462.fvalue(pv,1,v4672);
+return (v4672===v4673?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4673,l5397):l6.value;
+})(),l5398);
+var l5399=make_lisp_string('occlUDeD cASEmenTs FOreSTAll iNADVertent DEFenestraTION');
+var l5400=make_lisp_string('Occluded Casements Forestall Inadvertent Defenestration');
+var l5401=QIList(l843,QIList(QIList(l5376,QIList(l488,l5399,l6),l6),QIList(l5372,QIList(l462,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5400,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4674=l488.fvalue(pv,1,l5399);
+var v4675=l462.fvalue(pv,1,v4674);
+return (v4674===v4675?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4675,l5400):l6.value;
+})(),l5401);
+var l5402=make_lisp_string("DON'T!");
+var l5403=make_lisp_string("Don'T!");
+var l5404=QIList(l843,QIList(QIList(l5376,QIList(l488,l5402,l6),l6),QIList(l5372,QIList(l462,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5403,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4676=l488.fvalue(pv,1,l5402);
+var v4677=l462.fvalue(pv,1,v4676);
+return (v4676===v4677?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4677,l5403):l6.value;
+})(),l5404);
+var l5405=make_lisp_string('pipe 13a, foo16c');
+var l5406=make_lisp_string('Pipe 13a, Foo16c');
+var l5407=QIList(l843,QIList(QIList(l5376,QIList(l488,l5405,l6),l6),QIList(l5372,QIList(l462,l5376,l6),l6),l6),QIList(l33,QIList(l22,l5376,l5372,l6),QIList(l57,l5372,l5406,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var v4678=l488.fvalue(pv,1,l5405);
+var v4679=l462.fvalue(pv,1,v4678);
+return (v4678===v4679?l5.value:l6.value)!==l6.value?l57.fvalue(pv,2,v4679,l5406):l6.value;
+})(),l5407);
+var l5408=make_lisp_string('a fool');
+var l5409=make_lisp_string('a Fool');
+var l5410=QIList(l843,QIList(QIList(l5376,QIList(l488,l5408,l6),l6),QIList(l5372,QIList(l462,l5376,l456,2,l457,l6,l6),l6),l6),QIList(l57,l5372,l5409,l6),l6);
+l4369.fvalue(pv,2,(function(){var v4680=l488.fvalue(pv,1,l5408);
+var v4681=l462.fvalue(pv,5,v4680,l456.value,2,l457.value,l6.value);
+return l57.fvalue(pv,2,v4681,l5409);
+})(),l5410);
+var l5411=make_lisp_string('abc');
+var l5412=make_lisp_string('abcaakaaakabcaaa');
+var l5413=make_lisp_string('kaaak');
+var l5414=QIList(l57,QIList(l465,l5411,l5412,l6),l5413,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5411,l5412),l5413),l5414);
+var l5415=make_lisp_string(' (*)');
+var l5416=make_lisp_string(' ( *three (silly) words* ) ');
+var l5417=make_lisp_string('three (silly) words');
+var l5418=QIList(l57,QIList(l465,l5415,l5416,l6),l5417,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5415,l5416),l5417),l5418);
+var l5419=make_lisp_string('abc');
+var l5420=make_lisp_string('labcabcabc');
+var l5421=make_lisp_string('labcabcabc');
+var l5422=QIList(l57,QIList(l467,l5419,l5420,l6),l5421,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5419,l5420),l5421),l5422);
+var l5423=make_lisp_string(' (*)');
+var l5424=make_lisp_string(' ( *three (silly) words* ) ');
+var l5425=make_lisp_string('three (silly) words* ) ');
+var l5426=QIList(l57,QIList(l467,l5423,l5424,l6),l5425,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5423,l5424),l5425),l5426);
+var l5427=make_lisp_string(' (*)');
+var l5428=make_lisp_string(' ( *three (silly) words* ) ');
+var l5429=make_lisp_string(' ( *three (silly) words');
+var l5430=QIList(l57,QIList(l466,l5427,l5428,l6),l5429,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5427,l5428),l5429),l5430);
+var l5431=make_lisp_string('ABC');
+var l5432=make_lisp_string('abc');
+var l5433=make_lisp_string('abc');
+var l5434=QIList(l57,QIList(l465,l5431,l5432,l6),l5433,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5431,l5432),l5433),l5434);
+var l5435=make_lisp_string('AABBCC');
+var l5436=make_lisp_string('abc');
+var l5437=make_lisp_string('abc');
+var l5438=QIList(l57,QIList(l465,l5435,l5436,l6),l5437,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5435,l5436),l5437),l5438);
+var l5439=make_lisp_string('abc');
+var l5440=make_lisp_string('abc');
+var l5441=QIList(l57,QIList(l465,l101,l5439,l6),l5440,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l101,l5439),l5440),l5441);
+var l5442=make_lisp_string('ABC');
+var l5443=QIList(l57,QIList(l465,l5442,l101,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5442,l101),l101),l5443);
+var l5444=make_lisp_string('cba');
+var l5445=make_lisp_string('abc');
+var l5446=QIList(l57,QIList(l465,l5444,l5445,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5444,l5445),l101),l5446);
+var l5447=make_lisp_string('cba');
+var l5448=make_lisp_string('abccba');
+var l5449=QIList(l57,QIList(l465,l5447,l5448,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5447,l5448),l101),l5449);
+var l5450=make_lisp_string('ccbbba');
+var l5451=make_lisp_string('abccba');
+var l5452=QIList(l57,QIList(l465,l5450,l5451,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5450,l5451),l101),l5452);
+var l5453=make_lisp_string('cba');
+var l5454=make_lisp_string('abcxabc');
+var l5455=make_lisp_string('x');
+var l5456=QIList(l57,QIList(l465,l5453,l5454,l6),l5455,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5453,l5454),l5455),l5456);
+var l5457=make_lisp_string('xyz');
+var l5458=make_lisp_string('xxyabcxyyz');
+var l5459=make_lisp_string('abc');
+var l5460=QIList(l57,QIList(l465,l5457,l5458,l6),l5459,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5457,l5458),l5459),l5460);
+var l5461=make_lisp_string('CBA');
+var l5462=new Symbol(make_lisp_string('ABCXABC'));
+var l5463=make_lisp_string('X');
+var l5464=QIList(l57,QIList(l465,l5461,QIList(l747,l5462,l6),l6),l5463,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5461,l5462),l5463),l5464);
+var l5465=make_lisp_string('a');
+var l5466=QIList(l57,QIList(l465,l5465,'a',l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l465.fvalue(pv,2,l5465,'a'),l101),l5466);
+var l5467=make_lisp_string('ABC');
+var l5468=make_lisp_string('abc');
+var l5469=make_lisp_string('abc');
+var l5470=QIList(l57,QIList(l467,l5467,l5468,l6),l5469,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5467,l5468),l5469),l5470);
+var l5471=make_lisp_string('abc');
+var l5472=make_lisp_string('abc');
+var l5473=QIList(l57,QIList(l467,l101,l5471,l6),l5472,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l101,l5471),l5472),l5473);
+var l5474=make_lisp_string('ABC');
+var l5475=QIList(l57,QIList(l467,l5474,l101,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5474,l101),l101),l5475);
+var l5476=make_lisp_string('cba');
+var l5477=make_lisp_string('abc');
+var l5478=QIList(l57,QIList(l467,l5476,l5477,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5476,l5477),l101),l5478);
+var l5479=make_lisp_string('cba');
+var l5480=make_lisp_string('abccba');
+var l5481=QIList(l57,QIList(l467,l5479,l5480,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5479,l5480),l101),l5481);
+var l5482=make_lisp_string('cba');
+var l5483=make_lisp_string('abcxabc');
+var l5484=make_lisp_string('xabc');
+var l5485=QIList(l57,QIList(l467,l5482,l5483,l6),l5484,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5482,l5483),l5484),l5485);
+var l5486=make_lisp_string('xyz');
+var l5487=make_lisp_string('xxyabcxyz');
+var l5488=make_lisp_string('abcxyz');
+var l5489=QIList(l57,QIList(l467,l5486,l5487,l6),l5488,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5486,l5487),l5488),l5489);
+var l5490=make_lisp_string('CBA');
+var l5491=make_lisp_string('XABC');
+var l5492=QIList(l57,QIList(l467,l5490,QIList(l747,l5462,l6),l6),l5491,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5490,l5462),l5491),l5492);
+var l5493=make_lisp_string('a');
+var l5494=QIList(l57,QIList(l467,l5493,'a',l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l467.fvalue(pv,2,l5493,'a'),l101),l5494);
+var l5495=make_lisp_string('ABC');
+var l5496=make_lisp_string('abc');
+var l5497=make_lisp_string('abc');
+var l5498=QIList(l57,QIList(l466,l5495,l5496,l6),l5497,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5495,l5496),l5497),l5498);
+var l5499=make_lisp_string('abc');
+var l5500=make_lisp_string('abc');
+var l5501=QIList(l57,QIList(l466,l101,l5499,l6),l5500,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l101,l5499),l5500),l5501);
+var l5502=make_lisp_string('ABC');
+var l5503=QIList(l57,QIList(l466,l5502,l101,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5502,l101),l101),l5503);
+var l5504=make_lisp_string('cba');
+var l5505=make_lisp_string('abc');
+var l5506=QIList(l57,QIList(l466,l5504,l5505,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5504,l5505),l101),l5506);
+var l5507=make_lisp_string('cba');
+var l5508=make_lisp_string('abccba');
+var l5509=QIList(l57,QIList(l466,l5507,l5508,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5507,l5508),l101),l5509);
+var l5510=make_lisp_string('cba');
+var l5511=make_lisp_string('abcxabc');
+var l5512=make_lisp_string('abcx');
+var l5513=QIList(l57,QIList(l466,l5510,l5511,l6),l5512,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5510,l5511),l5512),l5513);
+var l5514=make_lisp_string('xyz');
+var l5515=make_lisp_string('xxyabcxyz');
+var l5516=make_lisp_string('xxyabc');
+var l5517=QIList(l57,QIList(l466,l5514,l5515,l6),l5516,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5514,l5515),l5516),l5517);
+var l5518=make_lisp_string('CBA');
+var l5519=make_lisp_string('ABCX');
+var l5520=QIList(l57,QIList(l466,l5518,QIList(l747,l5462,l6),l6),l5519,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5518,l5462),l5519),l5520);
+var l5521=make_lisp_string('a');
+var l5522=QIList(l57,QIList(l466,l5521,'a',l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l466.fvalue(pv,2,l5521,'a'),l101),l5522);
+var l5523=make_lisp_string('already a string');
+var l5524=make_lisp_string('already a string');
+var l5525=QIList(l57,QIList(l116,l5523,l6),l5524,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l5523),l5524),l5525);
+var l5526=new Symbol(make_lisp_string('ELM'));
+var l5527=make_lisp_string('ELM');
+var l5528=QIList(l57,QIList(l116,QIList(l747,l5526,l6),l6),l5527,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,l5526),l5527),l5528);
+var l5529=make_lisp_string('c');
+var l5530=QIList(l57,QIList(l116,'c',l6),l5529,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l116.fvalue(pv,1,'c'),l5529),l5530);
+var l5531=make_lisp_string('foo');
+var l5532=make_lisp_string('foo');
+var l5533=QIList(l57,l5531,l5532,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5531,l5532),l5533);
+var l5534=make_lisp_string('foo');
+var l5535=make_lisp_string('Foo');
+var l5536=QIList(l24,QIList(l57,l5534,l5535,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5534,l5535)),l5536);
+var l5537=make_lisp_string('foo');
+var l5538=make_lisp_string('bar');
+var l5539=QIList(l24,QIList(l57,l5537,l5538,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5537,l5538)),l5539);
+var l5540=make_lisp_string('together');
+var l5541=make_lisp_string('frog');
+var l5542=QIList(l57,l5540,l5541,l442,1,l443,3,l444,2,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,8,l5540,l5541,l442.value,1,l443.value,3,l444.value,2),l5542);
+var l5543=make_lisp_string('foo');
+var l5544=make_lisp_string('Foo');
+var l5545=QIList(l463,l5543,l5544,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,2,l5543,l5544),l5545);
+var l5546=make_lisp_string('abcd');
+var l5547=make_lisp_string('01234abcd9012');
+var l5548=QIList(l57,l5546,l5547,l444,5,l445,9,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,6,l5546,l5547,l444.value,5,l445.value,9),l5548);
+var l5549=make_lisp_string('aaaa');
+var l5550=make_lisp_string('aaab');
+var l5551=QIList(l23,QIList(l448,l5549,l5550,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,2,l5549,l5550),3),l5551);
+var l5552=make_lisp_string('aaaaa');
+var l5553=make_lisp_string('aaaa');
+var l5554=QIList(l23,QIList(l451,l5552,l5553,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5552,l5553),4),l5554);
+var l5555=make_lisp_string('Abcde');
+var l5556=make_lisp_string('abcdE');
+var l5557=QIList(l23,QIList(l454,l5555,l5556,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l5555,l5556),5),l5557);
+var l5558=make_lisp_string('012AAAA789');
+var l5559=make_lisp_string('01aaab6');
+var l5560=QIList(l23,QIList(l452,l5558,l5559,l442,3,l443,7,l444,2,l445,6,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,10,l5558,l5559,l442.value,3,l443.value,7,l444.value,2,l445.value,6),6),l5560);
+var l5561=make_lisp_string('AAAA');
+var l5562=make_lisp_string('aaaA');
+var l5563=QIList(l24,QIList(l464,l5561,l5562,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,l5561,l5562)),l5563);
+var l5564=QIList(l57,l101,l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l101,l101),l5564);
+var l5565=make_lisp_string('abc');
+var l5566=QIList(l24,QIList(l57,l5565,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5565,l101)),l5566);
+var l5567=make_lisp_string('abc');
+var l5568=QIList(l24,QIList(l57,l101,l5567,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l101,l5567)),l5568);
+var l5569=make_lisp_string('A');
+var l5570=make_lisp_string('a');
+var l5571=QIList(l24,QIList(l57,l5569,l5570,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5569,l5570)),l5571);
+var l5572=make_lisp_string('abc');
+var l5573=make_lisp_string('xyz');
+var l5574=QIList(l57,l5572,l5573,l442,3,l444,3,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,6,l5572,l5573,l442.value,3,l444.value,3),l5574);
+var l5575=make_lisp_string('abc');
+var l5576=make_lisp_string('xyz');
+var l5577=QIList(l57,l5575,l5576,l442,1,l443,1,l444,0,l445,0,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,10,l5575,l5576,l442.value,1,l443.value,1,l444.value,0,l445.value,0),l5577);
+var l5578=make_lisp_string('axyza');
+var l5579=make_lisp_string('xyz');
+var l5580=QIList(l57,l5578,l5579,l442,1,l443,4,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,6,l5578,l5579,l442.value,1,l443.value,4),l5580);
+var l5581=make_lisp_string('axyza');
+var l5582=make_lisp_string('xyz');
+var l5583=QIList(l57,l5581,l5582,l442,1,l443,4,l444,0,l445,l6,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,10,l5581,l5582,l442.value,1,l443.value,4,l444.value,0,l445.value,l6.value),l5583);
+var l5584=make_lisp_string('abxyz');
+var l5585=make_lisp_string('xyabz');
+var l5586=QIList(l57,l5584,l5585,l443,2,l444,2,l445,4,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,8,l5584,l5585,l443.value,2,l444.value,2,l445.value,4),l5586);
+var l5587=make_lisp_string('love');
+var l5588=make_lisp_string('hate');
+var l5589=QIList(l24,QIList(l57,l5587,l5588,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5587,l5588)),l5589);
+var l5590=new Symbol(make_lisp_string('LOVE'));
+var l5591=QIList(l57,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l5590,l5590),l5591);
+var l5592=make_lisp_string('hate');
+var l5593=QIList(l24,QIList(l57,QIList(l747,l5590,l6),l5592,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l57.fvalue(pv,2,l5590,l5592)),l5593);
+var l5594=QIList(l57,'a','a',l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,'a','a'),l5594);
+var l5595=QIList(l24,QIList(l446,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,2,l101,l101)),l5595);
+var l5596=make_lisp_string('abc');
+var l5597=QIList(l23,QIList(l446,l5596,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5596,l101),0),l5597);
+var l5598=make_lisp_string('abc');
+var l5599=QIList(l23,QIList(l446,l101,l5598,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l101,l5598),0),l5599);
+var l5600=make_lisp_string('A');
+var l5601=make_lisp_string('a');
+var l5602=QIList(l23,QIList(l446,l5600,l5601,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5600,l5601),0),l5602);
+var l5603=make_lisp_string('abc');
+var l5604=make_lisp_string('xyz');
+var l5605=QIList(l24,QIList(l446,l5603,l5604,l442,3,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,6,l5603,l5604,l442.value,3,l444.value,3)),l5605);
+var l5606=make_lisp_string('abc');
+var l5607=make_lisp_string('xyz');
+var l5608=QIList(l24,QIList(l446,l5606,l5607,l442,1,l443,1,l444,0,l445,0,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,10,l5606,l5607,l442.value,1,l443.value,1,l444.value,0,l445.value,0)),l5608);
+var l5609=make_lisp_string('axyza');
+var l5610=make_lisp_string('xyz');
+var l5611=QIList(l24,QIList(l446,l5609,l5610,l442,1,l443,4,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,6,l5609,l5610,l442.value,1,l443.value,4)),l5611);
+var l5612=make_lisp_string('axyza');
+var l5613=make_lisp_string('xyz');
+var l5614=QIList(l24,QIList(l446,l5612,l5613,l442,1,l443,4,l444,0,l445,l6,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,10,l5612,l5613,l442.value,1,l443.value,4,l444.value,0,l445.value,l6.value)),l5614);
+var l5615=make_lisp_string('abxyz');
+var l5616=make_lisp_string('xyabz');
+var l5617=QIList(l24,QIList(l446,l5615,l5616,l443,2,l444,2,l445,4,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,8,l5615,l5616,l443.value,2,l444.value,2,l445.value,4)),l5617);
+var l5618=make_lisp_string('love');
+var l5619=make_lisp_string('hate');
+var l5620=QIList(l23,QIList(l446,l5618,l5619,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5618,l5619),0),l5620);
+var l5621=make_lisp_string('love');
+var l5622=make_lisp_string('loVe');
+var l5623=QIList(l23,QIList(l446,l5621,l5622,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5621,l5622),2),l5623);
+var l5624=make_lisp_string('life');
+var l5625=make_lisp_string('death');
+var l5626=QIList(l24,QIList(l446,l5624,l5625,l442,3,l444,1,l445,2,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,8,l5624,l5625,l442.value,3,l444.value,1,l445.value,2)),l5626);
+var l5627=make_lisp_string('abcxyz');
+var l5628=make_lisp_string('ABCxyZ');
+var l5629=QIList(l23,QIList(l446,l5627,l5628,l442,3,l444,3,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,6,l5627,l5628,l442.value,3,l444.value,3),5),l5629);
+var l5630=make_lisp_string('abcxyz');
+var l5631=make_lisp_string('ABCxyZ');
+var l5632=QIList(l23,QIList(l446,l5630,l5631,l442,3,l443,l6,l444,3,l445,l6,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,10,l5630,l5631,l442.value,3,l443.value,l6.value,l444.value,3,l445.value,l6.value),5),l5632);
+var l5633=make_lisp_string('abcxyz');
+var l5634=make_lisp_string('ABCxyZ');
+var l5635=QIList(l23,QIList(l446,l5633,l5634,l443,l6,l444,3,l445,3,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,8,l5633,l5634,l443.value,l6.value,l444.value,3,l445.value,3),0),l5635);
+var l5636=make_lisp_string('abc');
+var l5637=make_lisp_string('abcxyz');
+var l5638=QIList(l23,QIList(l446,l5636,l5637,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5636,l5637),3),l5638);
+var l5639=make_lisp_string('abcxyz');
+var l5640=make_lisp_string('abc');
+var l5641=QIList(l23,QIList(l446,l5639,l5640,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5639,l5640),3),l5641);
+var l5642=make_lisp_string('abcxyz');
+var l5643=QIList(l23,QIList(l446,l5642,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,2,l5642,l101),0),l5643);
+var l5644=make_lisp_string('AbcDef');
+var l5645=make_lisp_string('cdef');
+var l5646=QIList(l23,QIList(l446,l5644,l5645,l442,2,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,4,l5644,l5645,l442.value,2),3),l5646);
+var l5647=make_lisp_string('cdef');
+var l5648=make_lisp_string('AbcDef');
+var l5649=QIList(l23,QIList(l446,l5647,l5648,l444,2,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l446.fvalue(pv,4,l5647,l5648,l444.value,2),1),l5649);
+var l5650=make_lisp_string('hate');
+var l5651=QIList(l141,QIList(l446,QIList(l747,l5590,l6),l5650,l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l446.fvalue(pv,2,l5590,l5650);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5651);
+var l5652=QIList(l24,QIList(l446,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,2,l5590,l5590)),l5652);
+var l5653=QIList(l24,QIList(l446,'a','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l446.fvalue(pv,2,'a','a')),l5653);
+var l5654=QIList(l141,QIList(l446,'a','b',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l446.fvalue(pv,2,'a','b');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5654);
+var l5655=QIList(l24,QIList(l448,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l101,l101)),l5655);
+var l5656=make_lisp_string('dog');
+var l5657=make_lisp_string('dog');
+var l5658=QIList(l24,QIList(l448,l5656,l5657,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5656,l5657)),l5658);
+var l5659=make_lisp_string(' ');
+var l5660=make_lisp_string(' ');
+var l5661=QIList(l24,QIList(l448,l5659,l5660,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5659,l5660)),l5661);
+var l5662=make_lisp_string('abc');
+var l5663=QIList(l24,QIList(l448,l5662,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5662,l101)),l5663);
+var l5664=make_lisp_string('abc');
+var l5665=QIList(l23,QIList(l448,l101,l5664,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,2,l101,l5664),0),l5665);
+var l5666=make_lisp_string('ab');
+var l5667=make_lisp_string('abc');
+var l5668=QIList(l23,QIList(l448,l5666,l5667,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,2,l5666,l5667),2),l5668);
+var l5669=make_lisp_string('abc');
+var l5670=make_lisp_string('ab');
+var l5671=QIList(l24,QIList(l448,l5669,l5670,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5669,l5670)),l5671);
+var l5672=make_lisp_string('aaa');
+var l5673=make_lisp_string('aba');
+var l5674=QIList(l23,QIList(l448,l5672,l5673,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,2,l5672,l5673),1),l5674);
+var l5675=make_lisp_string('aba');
+var l5676=make_lisp_string('aaa');
+var l5677=QIList(l24,QIList(l448,l5675,l5676,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5675,l5676)),l5677);
+var l5678=make_lisp_string('my cat food');
+var l5679=make_lisp_string('your dog food');
+var l5680=QIList(l24,QIList(l448,l5678,l5679,l442,6,l444,8,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,6,l5678,l5679,l442.value,6,l444.value,8)),l5680);
+var l5681=make_lisp_string('cat food 2 dollars');
+var l5682=make_lisp_string('dog food 3 dollars');
+var l5683=QIList(l24,QIList(l448,l5681,l5682,l442,3,l443,9,l444,3,l445,9,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,10,l5681,l5682,l442.value,3,l443.value,9,l444.value,3,l445.value,9)),l5683);
+var l5684=make_lisp_string('xyzabc');
+var l5685=make_lisp_string('abcd');
+var l5686=QIList(l23,QIList(l448,l5684,l5685,l442,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,4,l5684,l5685,l442.value,3),6),l5686);
+var l5687=make_lisp_string('abc');
+var l5688=make_lisp_string('abc');
+var l5689=QIList(l23,QIList(l448,l5687,l5688,l443,1,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,4,l5687,l5688,l443.value,1),1),l5689);
+var l5690=make_lisp_string('xyzabc');
+var l5691=make_lisp_string('abc');
+var l5692=QIList(l23,QIList(l448,l5690,l5691,l442,3,l443,5,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,6,l5690,l5691,l442.value,3,l443.value,5),5),l5692);
+var l5693=make_lisp_string('xyz');
+var l5694=make_lisp_string('abcxyzXYZ');
+var l5695=QIList(l23,QIList(l448,l5693,l5694,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,4,l5693,l5694,l444.value,3),3),l5695);
+var l5696=make_lisp_string('abc');
+var l5697=make_lisp_string('abcxyz');
+var l5698=QIList(l24,QIList(l448,l5696,l5697,l445,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,4,l5696,l5697,l445.value,3)),l5698);
+var l5699=make_lisp_string('xyz');
+var l5700=make_lisp_string('abcxyz');
+var l5701=QIList(l23,QIList(l448,l5699,l5700,l443,2,l444,3,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,6,l5699,l5700,l443.value,2,l444.value,3),2),l5701);
+var l5702=make_lisp_string('xyzabc');
+var l5703=make_lisp_string('abcdef');
+var l5704=QIList(l24,QIList(l448,l5702,l5703,l442,3,l445,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,6,l5702,l5703,l442.value,3,l445.value,3)),l5704);
+var l5705=make_lisp_string('aaaa');
+var l5706=make_lisp_string('z');
+var l5707=QIList(l23,QIList(l448,l5705,l5706,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,2,l5705,l5706),0),l5707);
+var l5708=make_lisp_string('pppTTTaTTTqqq');
+var l5709=make_lisp_string('pTTTxTTT');
+var l5710=QIList(l23,QIList(l448,l5708,l5709,l442,3,l444,1,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,6,l5708,l5709,l442.value,3,l444.value,1),6),l5710);
+var l5711=make_lisp_string('pppTTTaTTTqqq');
+var l5712=make_lisp_string('pTTTxTTT');
+var l5713=QIList(l23,QIList(l448,l5711,l5712,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l448.fvalue(pv,10,l5711,l5712,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l5713);
+var l5714=new Symbol(make_lisp_string('HATE'));
+var l5715=QIList(l24,QIList(l448,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5590,l5714)),l5715);
+var l5716=new Symbol(make_lisp_string('PEACE'));
+var l5717=new Symbol(make_lisp_string('WAR'));
+var l5718=QIList(l141,QIList(l448,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l448.fvalue(pv,2,l5716,l5717);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5718);
+var l5719=QIList(l24,QIList(l448,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,l5590,l5590)),l5719);
+var l5720=QIList(l24,QIList(l448,'a','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l448.fvalue(pv,2,'a','a')),l5720);
+var l5721=QIList(l141,QIList(l448,'a','b',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l448.fvalue(pv,2,'a','b');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5721);
+var l5722=QIList(l24,QIList(l449,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l101,l101)),l5722);
+var l5723=make_lisp_string('dog');
+var l5724=make_lisp_string('dog');
+var l5725=QIList(l24,QIList(l449,l5723,l5724,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l5723,l5724)),l5725);
+var l5726=make_lisp_string(' ');
+var l5727=make_lisp_string(' ');
+var l5728=QIList(l24,QIList(l449,l5726,l5727,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l5726,l5727)),l5728);
+var l5729=make_lisp_string('abc');
+var l5730=QIList(l23,QIList(l449,l5729,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,2,l5729,l101),0),l5730);
+var l5731=make_lisp_string('abc');
+var l5732=QIList(l24,QIList(l449,l101,l5731,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l101,l5731)),l5732);
+var l5733=make_lisp_string('ab');
+var l5734=make_lisp_string('abc');
+var l5735=QIList(l24,QIList(l449,l5733,l5734,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l5733,l5734)),l5735);
+var l5736=make_lisp_string('abc');
+var l5737=make_lisp_string('ab');
+var l5738=QIList(l23,QIList(l449,l5736,l5737,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,2,l5736,l5737),2),l5738);
+var l5739=make_lisp_string('aba');
+var l5740=make_lisp_string('aaa');
+var l5741=QIList(l23,QIList(l449,l5739,l5740,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,2,l5739,l5740),1),l5741);
+var l5742=make_lisp_string('aaa');
+var l5743=make_lisp_string('aba');
+var l5744=QIList(l24,QIList(l449,l5742,l5743,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l5742,l5743)),l5744);
+var l5745=make_lisp_string('my cat food');
+var l5746=make_lisp_string('your dog food');
+var l5747=QIList(l24,QIList(l449,l5745,l5746,l442,6,l444,8,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,6,l5745,l5746,l442.value,6,l444.value,8)),l5747);
+var l5748=make_lisp_string('cat food 2 dollars');
+var l5749=make_lisp_string('dog food 3 dollars');
+var l5750=QIList(l24,QIList(l449,l5748,l5749,l442,3,l443,9,l444,3,l445,9,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,10,l5748,l5749,l442.value,3,l443.value,9,l444.value,3,l445.value,9)),l5750);
+var l5751=make_lisp_string('xyzabcde');
+var l5752=make_lisp_string('abcd');
+var l5753=QIList(l23,QIList(l449,l5751,l5752,l442,3,l6),7,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,4,l5751,l5752,l442.value,3),7),l5753);
+var l5754=make_lisp_string('abc');
+var l5755=make_lisp_string('abc');
+var l5756=QIList(l24,QIList(l449,l5754,l5755,l443,1,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,4,l5754,l5755,l443.value,1)),l5756);
+var l5757=make_lisp_string('xyzabc');
+var l5758=make_lisp_string('a');
+var l5759=QIList(l23,QIList(l449,l5757,l5758,l442,3,l443,5,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,6,l5757,l5758,l442.value,3,l443.value,5),4),l5759);
+var l5760=make_lisp_string('xyzXYZ');
+var l5761=make_lisp_string('abcxyz');
+var l5762=QIList(l23,QIList(l449,l5760,l5761,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,4,l5760,l5761,l444.value,3),3),l5762);
+var l5763=make_lisp_string('abcxyz');
+var l5764=make_lisp_string('abcxyz');
+var l5765=QIList(l23,QIList(l449,l5763,l5764,l445,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,4,l5763,l5764,l445.value,3),3),l5765);
+var l5766=make_lisp_string('xyzXYZ');
+var l5767=make_lisp_string('abcxyz');
+var l5768=QIList(l24,QIList(l449,l5766,l5767,l443,2,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,6,l5766,l5767,l443.value,2,l444.value,3)),l5768);
+var l5769=make_lisp_string('xyzabc');
+var l5770=make_lisp_string('abcdef');
+var l5771=QIList(l24,QIList(l449,l5769,l5770,l442,3,l445,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,6,l5769,l5770,l442.value,3,l445.value,3)),l5771);
+var l5772=make_lisp_string('z');
+var l5773=make_lisp_string('aaaa');
+var l5774=QIList(l23,QIList(l449,l5772,l5773,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,2,l5772,l5773),0),l5774);
+var l5775=make_lisp_string('pTTTxTTTqqq');
+var l5776=make_lisp_string('pppTTTaTTT');
+var l5777=QIList(l23,QIList(l449,l5775,l5776,l442,1,l444,3,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,6,l5775,l5776,l442.value,1,l444.value,3),4),l5777);
+var l5778=make_lisp_string('pppTTTxTTTqqq');
+var l5779=make_lisp_string('pTTTaTTT');
+var l5780=QIList(l23,QIList(l449,l5778,l5779,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l449.fvalue(pv,10,l5778,l5779,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l5780);
+var l5781=QIList(l141,QIList(l449,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l449.fvalue(pv,2,l5590,l5714);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5781);
+var l5782=QIList(l24,QIList(l449,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l5716,l5717)),l5782);
+var l5783=QIList(l24,QIList(l449,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,l5590,l5590)),l5783);
+var l5784=QIList(l24,QIList(l449,'a','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,'a','a')),l5784);
+var l5785=QIList(l24,QIList(l449,'a','b',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l449.fvalue(pv,2,'a','b')),l5785);
+var l5786=QIList(l141,QIList(l449,'z','a',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l449.fvalue(pv,2,'z','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5786);
+var l5787=QIList(l23,QIList(l450,l101,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,2,l101,l101),0),l5787);
+var l5788=make_lisp_string('dog');
+var l5789=make_lisp_string('dog');
+var l5790=QIList(l23,QIList(l450,l5788,l5789,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,2,l5788,l5789),3),l5790);
+var l5791=make_lisp_string(' ');
+var l5792=make_lisp_string(' ');
+var l5793=QIList(l23,QIList(l450,l5791,l5792,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,2,l5791,l5792),1),l5793);
+var l5794=make_lisp_string('abc');
+var l5795=QIList(l24,QIList(l450,l5794,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l450.fvalue(pv,2,l5794,l101)),l5795);
+var l5796=make_lisp_string('ab');
+var l5797=make_lisp_string('abc');
+var l5798=QIList(l23,QIList(l450,l5796,l5797,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,2,l5796,l5797),2),l5798);
+var l5799=make_lisp_string('aaa');
+var l5800=make_lisp_string('aba');
+var l5801=QIList(l23,QIList(l450,l5799,l5800,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,2,l5799,l5800),1),l5801);
+var l5802=make_lisp_string('aba');
+var l5803=make_lisp_string('aaa');
+var l5804=QIList(l24,QIList(l450,l5802,l5803,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l450.fvalue(pv,2,l5802,l5803)),l5804);
+var l5805=make_lisp_string('my cat food');
+var l5806=make_lisp_string('your dog food');
+var l5807=QIList(l23,QIList(l450,l5805,l5806,l442,6,l444,8,l6),11,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,6,l5805,l5806,l442.value,6,l444.value,8),11),l5807);
+var l5808=make_lisp_string('cat food 2 dollars');
+var l5809=make_lisp_string('dog food 3 dollars');
+var l5810=QIList(l23,QIList(l450,l5808,l5809,l442,3,l443,9,l444,3,l445,9,l6),9,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,10,l5808,l5809,l442.value,3,l443.value,9,l444.value,3,l445.value,9),9),l5810);
+var l5811=make_lisp_string('xyzabc');
+var l5812=make_lisp_string('abcd');
+var l5813=QIList(l23,QIList(l450,l5811,l5812,l442,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,4,l5811,l5812,l442.value,3),6),l5813);
+var l5814=make_lisp_string('abc');
+var l5815=make_lisp_string('abc');
+var l5816=QIList(l23,QIList(l450,l5814,l5815,l443,1,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,4,l5814,l5815,l443.value,1),1),l5816);
+var l5817=make_lisp_string('xyzabc');
+var l5818=make_lisp_string('abc');
+var l5819=QIList(l23,QIList(l450,l5817,l5818,l442,3,l443,5,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,6,l5817,l5818,l442.value,3,l443.value,5),5),l5819);
+var l5820=make_lisp_string('xyz');
+var l5821=make_lisp_string('abcxyzXYZ');
+var l5822=QIList(l23,QIList(l450,l5820,l5821,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,4,l5820,l5821,l444.value,3),3),l5822);
+var l5823=make_lisp_string('abc');
+var l5824=make_lisp_string('abcxyz');
+var l5825=QIList(l23,QIList(l450,l5823,l5824,l445,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,4,l5823,l5824,l445.value,3),3),l5825);
+var l5826=make_lisp_string('xyz');
+var l5827=make_lisp_string('abcxyz');
+var l5828=QIList(l23,QIList(l450,l5826,l5827,l443,2,l444,3,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,6,l5826,l5827,l443.value,2,l444.value,3),2),l5828);
+var l5829=make_lisp_string('xyzabc');
+var l5830=make_lisp_string('abcdef');
+var l5831=QIList(l23,QIList(l450,l5829,l5830,l442,3,l445,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,6,l5829,l5830,l442.value,3,l445.value,3),6),l5831);
+var l5832=make_lisp_string('aaaa');
+var l5833=make_lisp_string('z');
+var l5834=QIList(l23,QIList(l450,l5832,l5833,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,2,l5832,l5833),0),l5834);
+var l5835=make_lisp_string('pppTTTaTTTqqq');
+var l5836=make_lisp_string('pTTTxTTT');
+var l5837=QIList(l23,QIList(l450,l5835,l5836,l442,3,l444,1,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,6,l5835,l5836,l442.value,3,l444.value,1),6),l5837);
+var l5838=make_lisp_string('pppTTTaTTTqqq');
+var l5839=make_lisp_string('pTTTxTTT');
+var l5840=QIList(l23,QIList(l450,l5838,l5839,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l450.fvalue(pv,10,l5838,l5839,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l5840);
+var l5841=QIList(l24,QIList(l450,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l450.fvalue(pv,2,l5590,l5714)),l5841);
+var l5842=QIList(l141,QIList(l450,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l450.fvalue(pv,2,l5716,l5717);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5842);
+var l5843=QIList(l141,QIList(l450,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),4,l6);
+l4369.fvalue(pv,2,(function(){var x1=l450.fvalue(pv,2,l5590,l5590);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==4?l5.value:l6.value;
+})(),l5843);
+var l5844=QIList(l141,QIList(l450,'a','a',l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l450.fvalue(pv,2,'a','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l5844);
+var l5845=QIList(l141,QIList(l450,'a','b',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l450.fvalue(pv,2,'a','b');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5845);
+var l5846=QIList(l24,QIList(l450,'z','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l450.fvalue(pv,2,'z','a')),l5846);
+var l5847=QIList(l23,QIList(l451,l101,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l101,l101),0),l5847);
+var l5848=make_lisp_string('dog');
+var l5849=make_lisp_string('dog');
+var l5850=QIList(l23,QIList(l451,l5848,l5849,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5848,l5849),3),l5850);
+var l5851=make_lisp_string(' ');
+var l5852=make_lisp_string(' ');
+var l5853=QIList(l23,QIList(l451,l5851,l5852,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5851,l5852),1),l5853);
+var l5854=make_lisp_string('abc');
+var l5855=QIList(l23,QIList(l451,l5854,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5854,l101),0),l5855);
+var l5856=make_lisp_string('abc');
+var l5857=QIList(l24,QIList(l451,l101,l5856,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,2,l101,l5856)),l5857);
+var l5858=make_lisp_string('ab');
+var l5859=make_lisp_string('abc');
+var l5860=QIList(l24,QIList(l451,l5858,l5859,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,2,l5858,l5859)),l5860);
+var l5861=make_lisp_string('abc');
+var l5862=make_lisp_string('ab');
+var l5863=QIList(l23,QIList(l451,l5861,l5862,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5861,l5862),2),l5863);
+var l5864=make_lisp_string('aba');
+var l5865=make_lisp_string('aaa');
+var l5866=QIList(l23,QIList(l451,l5864,l5865,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5864,l5865),1),l5866);
+var l5867=make_lisp_string('aaa');
+var l5868=make_lisp_string('aba');
+var l5869=QIList(l24,QIList(l451,l5867,l5868,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,2,l5867,l5868)),l5869);
+var l5870=make_lisp_string('my cat food');
+var l5871=make_lisp_string('your dog food');
+var l5872=QIList(l23,QIList(l451,l5870,l5871,l442,6,l444,8,l6),11,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,6,l5870,l5871,l442.value,6,l444.value,8),11),l5872);
+var l5873=make_lisp_string('cat food 2 dollars');
+var l5874=make_lisp_string('dog food 3 dollars');
+var l5875=QIList(l23,QIList(l451,l5873,l5874,l442,3,l443,9,l444,3,l445,9,l6),9,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,10,l5873,l5874,l442.value,3,l443.value,9,l444.value,3,l445.value,9),9),l5875);
+var l5876=make_lisp_string('xyzabcde');
+var l5877=make_lisp_string('abcd');
+var l5878=QIList(l23,QIList(l451,l5876,l5877,l442,3,l6),7,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,4,l5876,l5877,l442.value,3),7),l5878);
+var l5879=make_lisp_string('abc');
+var l5880=make_lisp_string('abc');
+var l5881=QIList(l24,QIList(l451,l5879,l5880,l443,1,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,4,l5879,l5880,l443.value,1)),l5881);
+var l5882=make_lisp_string('xyzabc');
+var l5883=make_lisp_string('a');
+var l5884=QIList(l23,QIList(l451,l5882,l5883,l442,3,l443,5,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,6,l5882,l5883,l442.value,3,l443.value,5),4),l5884);
+var l5885=make_lisp_string('xyzXYZ');
+var l5886=make_lisp_string('abcxyz');
+var l5887=QIList(l23,QIList(l451,l5885,l5886,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,4,l5885,l5886,l444.value,3),3),l5887);
+var l5888=make_lisp_string('abcxyz');
+var l5889=make_lisp_string('abcxyz');
+var l5890=QIList(l23,QIList(l451,l5888,l5889,l445,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,4,l5888,l5889,l445.value,3),3),l5890);
+var l5891=make_lisp_string('xyzXYZ');
+var l5892=make_lisp_string('abcxyz');
+var l5893=QIList(l24,QIList(l451,l5891,l5892,l443,2,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,6,l5891,l5892,l443.value,2,l444.value,3)),l5893);
+var l5894=make_lisp_string('xyzabc');
+var l5895=make_lisp_string('abcdef');
+var l5896=QIList(l23,QIList(l451,l5894,l5895,l442,3,l445,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,6,l5894,l5895,l442.value,3,l445.value,3),6),l5896);
+var l5897=make_lisp_string('z');
+var l5898=make_lisp_string('aaaa');
+var l5899=QIList(l23,QIList(l451,l5897,l5898,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,2,l5897,l5898),0),l5899);
+var l5900=make_lisp_string('pTTTxTTTqqq');
+var l5901=make_lisp_string('pppTTTaTTT');
+var l5902=QIList(l23,QIList(l451,l5900,l5901,l442,1,l444,3,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,6,l5900,l5901,l442.value,1,l444.value,3),4),l5902);
+var l5903=make_lisp_string('pppTTTxTTTqqq');
+var l5904=make_lisp_string('pTTTaTTT');
+var l5905=QIList(l23,QIList(l451,l5903,l5904,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l451.fvalue(pv,10,l5903,l5904,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l5905);
+var l5906=QIList(l141,QIList(l451,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l451.fvalue(pv,2,l5590,l5714);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5906);
+var l5907=QIList(l24,QIList(l451,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,2,l5716,l5717)),l5907);
+var l5908=QIList(l141,QIList(l451,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),4,l6);
+l4369.fvalue(pv,2,(function(){var x1=l451.fvalue(pv,2,l5590,l5590);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==4?l5.value:l6.value;
+})(),l5908);
+var l5909=QIList(l141,QIList(l451,'a','a',l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l451.fvalue(pv,2,'a','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l5909);
+var l5910=QIList(l24,QIList(l451,'a','b',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l451.fvalue(pv,2,'a','b')),l5910);
+var l5911=QIList(l141,QIList(l451,'z','a',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l451.fvalue(pv,2,'z','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l5911);
+var l5912=QIList(l463,l101,l101,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,2,l101,l101),l5912);
+var l5913=make_lisp_string('abc');
+var l5914=QIList(l24,QIList(l463,l5913,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,l5913,l101)),l5914);
+var l5915=make_lisp_string('abc');
+var l5916=QIList(l24,QIList(l463,l101,l5915,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,l101,l5915)),l5916);
+var l5917=make_lisp_string('A');
+var l5918=make_lisp_string('a');
+var l5919=QIList(l463,l5917,l5918,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,2,l5917,l5918),l5919);
+var l5920=make_lisp_string('abc');
+var l5921=make_lisp_string('xyz');
+var l5922=QIList(l463,l5920,l5921,l442,3,l444,3,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,6,l5920,l5921,l442.value,3,l444.value,3),l5922);
+var l5923=make_lisp_string('abc');
+var l5924=make_lisp_string('xyz');
+var l5925=QIList(l463,l5923,l5924,l442,1,l443,1,l444,0,l445,0,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,10,l5923,l5924,l442.value,1,l443.value,1,l444.value,0,l445.value,0),l5925);
+var l5926=make_lisp_string('axyza');
+var l5927=make_lisp_string('xyz');
+var l5928=QIList(l463,l5926,l5927,l442,1,l443,4,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,6,l5926,l5927,l442.value,1,l443.value,4),l5928);
+var l5929=make_lisp_string('axyza');
+var l5930=make_lisp_string('xyz');
+var l5931=QIList(l463,l5929,l5930,l442,1,l443,4,l444,0,l445,l6,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,10,l5929,l5930,l442.value,1,l443.value,4,l444.value,0,l445.value,l6.value),l5931);
+var l5932=make_lisp_string('abxyz');
+var l5933=make_lisp_string('xyabz');
+var l5934=QIList(l463,l5932,l5933,l443,2,l444,2,l445,4,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,8,l5932,l5933,l443.value,2,l444.value,2,l445.value,4),l5934);
+var l5935=make_lisp_string('love');
+var l5936=make_lisp_string('hate');
+var l5937=QIList(l24,QIList(l463,l5935,l5936,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,l5935,l5936)),l5937);
+var l5938=make_lisp_string('xyz');
+var l5939=make_lisp_string('XYZ');
+var l5940=QIList(l463,l5938,l5939,l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,2,l5938,l5939),l5940);
+var l5941=QIList(l24,QIList(l463,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,l5590,l5714)),l5941);
+var l5942=QIList(l24,QIList(l463,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,l5716,l5717)),l5942);
+var l5943=QIList(l463,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,2,l5590,l5590),l5943);
+var l5944=QIList(l463,'a','a',l6);
+l4369.fvalue(pv,2,l463.fvalue(pv,2,'a','a'),l5944);
+var l5945=QIList(l24,QIList(l463,'a','b',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,'a','b')),l5945);
+var l5946=QIList(l24,QIList(l463,'z','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l463.fvalue(pv,2,'z','a')),l5946);
+var l5947=QIList(l24,QIList(l464,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,l101,l101)),l5947);
+var l5948=make_lisp_string('abc');
+var l5949=QIList(l23,QIList(l464,l5948,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,2,l5948,l101),0),l5949);
+var l5950=make_lisp_string('abc');
+var l5951=QIList(l23,QIList(l464,l101,l5950,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,2,l101,l5950),0),l5951);
+var l5952=make_lisp_string('A');
+var l5953=make_lisp_string('a');
+var l5954=QIList(l24,QIList(l464,l5952,l5953,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,l5952,l5953)),l5954);
+var l5955=make_lisp_string('abc');
+var l5956=make_lisp_string('xyz');
+var l5957=QIList(l24,QIList(l464,l5955,l5956,l442,3,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,6,l5955,l5956,l442.value,3,l444.value,3)),l5957);
+var l5958=make_lisp_string('abc');
+var l5959=make_lisp_string('xyz');
+var l5960=QIList(l24,QIList(l464,l5958,l5959,l442,1,l443,1,l444,0,l445,0,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,10,l5958,l5959,l442.value,1,l443.value,1,l444.value,0,l445.value,0)),l5960);
+var l5961=make_lisp_string('axyza');
+var l5962=make_lisp_string('xyz');
+var l5963=QIList(l24,QIList(l464,l5961,l5962,l442,1,l443,4,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,6,l5961,l5962,l442.value,1,l443.value,4)),l5963);
+var l5964=make_lisp_string('axyza');
+var l5965=make_lisp_string('xyz');
+var l5966=QIList(l24,QIList(l464,l5964,l5965,l442,1,l443,4,l444,0,l445,l6,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,10,l5964,l5965,l442.value,1,l443.value,4,l444.value,0,l445.value,l6.value)),l5966);
+var l5967=make_lisp_string('abxyz');
+var l5968=make_lisp_string('xyabz');
+var l5969=QIList(l24,QIList(l464,l5967,l5968,l443,2,l444,2,l445,4,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,8,l5967,l5968,l443.value,2,l444.value,2,l445.value,4)),l5969);
+var l5970=make_lisp_string('love');
+var l5971=make_lisp_string('hate');
+var l5972=QIList(l23,QIList(l464,l5970,l5971,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,2,l5970,l5971),0),l5972);
+var l5973=make_lisp_string('love');
+var l5974=make_lisp_string('loVe');
+var l5975=QIList(l24,QIList(l464,l5973,l5974,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,l5973,l5974)),l5975);
+var l5976=make_lisp_string('life');
+var l5977=make_lisp_string('death');
+var l5978=QIList(l24,QIList(l464,l5976,l5977,l442,3,l444,1,l445,2,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,8,l5976,l5977,l442.value,3,l444.value,1,l445.value,2)),l5978);
+var l5979=make_lisp_string('abcxyz');
+var l5980=make_lisp_string('ABCxyZ');
+var l5981=QIList(l24,QIList(l464,l5979,l5980,l442,3,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,6,l5979,l5980,l442.value,3,l444.value,3)),l5981);
+var l5982=make_lisp_string('abcxyz');
+var l5983=make_lisp_string('ABCxyZ');
+var l5984=QIList(l24,QIList(l464,l5982,l5983,l442,3,l443,l6,l444,3,l445,l6,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,10,l5982,l5983,l442.value,3,l443.value,l6.value,l444.value,3,l445.value,l6.value)),l5984);
+var l5985=make_lisp_string('abcxyz');
+var l5986=make_lisp_string('ABCxyZ');
+var l5987=QIList(l23,QIList(l464,l5985,l5986,l443,l6,l444,3,l445,3,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,8,l5985,l5986,l443.value,l6.value,l444.value,3,l445.value,3),0),l5987);
+var l5988=make_lisp_string('abc');
+var l5989=make_lisp_string('abcxyz');
+var l5990=QIList(l23,QIList(l464,l5988,l5989,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,2,l5988,l5989),3),l5990);
+var l5991=make_lisp_string('abcxyz');
+var l5992=make_lisp_string('abc');
+var l5993=QIList(l23,QIList(l464,l5991,l5992,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,2,l5991,l5992),3),l5993);
+var l5994=make_lisp_string('abcxyz');
+var l5995=QIList(l23,QIList(l464,l5994,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l464.fvalue(pv,2,l5994,l101),0),l5995);
+var l5996=make_lisp_string('AbcDef');
+var l5997=make_lisp_string('cdef');
+var l5998=QIList(l24,QIList(l464,l5996,l5997,l442,2,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,4,l5996,l5997,l442.value,2)),l5998);
+var l5999=make_lisp_string('cdef');
+var l6000=make_lisp_string('AbcDef');
+var l6001=QIList(l24,QIList(l464,l5999,l6000,l444,2,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,4,l5999,l6000,l444.value,2)),l6001);
+var l6002=make_lisp_string('ABC');
+var l6003=make_lisp_string('abc');
+var l6004=QIList(l24,QIList(l464,l6002,l6003,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,l6002,l6003)),l6004);
+var l6005=QIList(l141,QIList(l464,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l464.fvalue(pv,2,l5590,l5714);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6005);
+var l6006=QIList(l141,QIList(l464,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l464.fvalue(pv,2,l5716,l5717);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6006);
+var l6007=QIList(l24,QIList(l464,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,l5590,l5590)),l6007);
+var l6008=QIList(l24,QIList(l464,'a','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l464.fvalue(pv,2,'a','a')),l6008);
+var l6009=QIList(l141,QIList(l464,'a','b',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l464.fvalue(pv,2,'a','b');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6009);
+var l6010=QIList(l141,QIList(l464,'z','a',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l464.fvalue(pv,2,'z','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6010);
+var l6011=QIList(l24,QIList(l452,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l101,l101)),l6011);
+var l6012=make_lisp_string('dog');
+var l6013=make_lisp_string('dog');
+var l6014=QIList(l24,QIList(l452,l6012,l6013,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l6012,l6013)),l6014);
+var l6015=make_lisp_string(' ');
+var l6016=make_lisp_string(' ');
+var l6017=QIList(l24,QIList(l452,l6015,l6016,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l6015,l6016)),l6017);
+var l6018=make_lisp_string('abc');
+var l6019=QIList(l24,QIList(l452,l6018,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l6018,l101)),l6019);
+var l6020=make_lisp_string('abc');
+var l6021=QIList(l23,QIList(l452,l101,l6020,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,2,l101,l6020),0),l6021);
+var l6022=make_lisp_string('ab');
+var l6023=make_lisp_string('abc');
+var l6024=QIList(l23,QIList(l452,l6022,l6023,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,2,l6022,l6023),2),l6024);
+var l6025=make_lisp_string('abc');
+var l6026=make_lisp_string('ab');
+var l6027=QIList(l24,QIList(l452,l6025,l6026,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l6025,l6026)),l6027);
+var l6028=make_lisp_string('aaa');
+var l6029=make_lisp_string('aba');
+var l6030=QIList(l23,QIList(l452,l6028,l6029,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,2,l6028,l6029),1),l6030);
+var l6031=make_lisp_string('aba');
+var l6032=make_lisp_string('aaa');
+var l6033=QIList(l24,QIList(l452,l6031,l6032,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l6031,l6032)),l6033);
+var l6034=make_lisp_string('my cat food');
+var l6035=make_lisp_string('your dog food');
+var l6036=QIList(l24,QIList(l452,l6034,l6035,l442,6,l444,8,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,6,l6034,l6035,l442.value,6,l444.value,8)),l6036);
+var l6037=make_lisp_string('cat food 2 dollars');
+var l6038=make_lisp_string('dog food 3 dollars');
+var l6039=QIList(l24,QIList(l452,l6037,l6038,l442,3,l443,9,l444,3,l445,9,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,10,l6037,l6038,l442.value,3,l443.value,9,l444.value,3,l445.value,9)),l6039);
+var l6040=make_lisp_string('xyzabc');
+var l6041=make_lisp_string('abcd');
+var l6042=QIList(l23,QIList(l452,l6040,l6041,l442,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,4,l6040,l6041,l442.value,3),6),l6042);
+var l6043=make_lisp_string('abc');
+var l6044=make_lisp_string('abc');
+var l6045=QIList(l23,QIList(l452,l6043,l6044,l443,1,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,4,l6043,l6044,l443.value,1),1),l6045);
+var l6046=make_lisp_string('xyzabc');
+var l6047=make_lisp_string('abc');
+var l6048=QIList(l23,QIList(l452,l6046,l6047,l442,3,l443,5,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,6,l6046,l6047,l442.value,3,l443.value,5),5),l6048);
+var l6049=make_lisp_string('xyz');
+var l6050=make_lisp_string('abcxyzXYZ');
+var l6051=QIList(l23,QIList(l452,l6049,l6050,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,4,l6049,l6050,l444.value,3),3),l6051);
+var l6052=make_lisp_string('abc');
+var l6053=make_lisp_string('abcxyz');
+var l6054=QIList(l24,QIList(l452,l6052,l6053,l445,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,4,l6052,l6053,l445.value,3)),l6054);
+var l6055=make_lisp_string('xyz');
+var l6056=make_lisp_string('abcxyz');
+var l6057=QIList(l23,QIList(l452,l6055,l6056,l443,2,l444,3,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,6,l6055,l6056,l443.value,2,l444.value,3),2),l6057);
+var l6058=make_lisp_string('xyzabc');
+var l6059=make_lisp_string('abcdef');
+var l6060=QIList(l24,QIList(l452,l6058,l6059,l442,3,l445,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,6,l6058,l6059,l442.value,3,l445.value,3)),l6060);
+var l6061=make_lisp_string('aaaa');
+var l6062=make_lisp_string('z');
+var l6063=QIList(l23,QIList(l452,l6061,l6062,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,2,l6061,l6062),0),l6063);
+var l6064=make_lisp_string('pppTTTaTTTqqq');
+var l6065=make_lisp_string('pTTTxTTT');
+var l6066=QIList(l23,QIList(l452,l6064,l6065,l442,3,l444,1,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,6,l6064,l6065,l442.value,3,l444.value,1),6),l6066);
+var l6067=make_lisp_string('pppTTTaTTTqqq');
+var l6068=make_lisp_string('pTTTxTTT');
+var l6069=QIList(l23,QIList(l452,l6067,l6068,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l452.fvalue(pv,10,l6067,l6068,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l6069);
+var l6070=make_lisp_string('abc');
+var l6071=make_lisp_string('ABC');
+var l6072=make_lisp_string('ABC');
+var l6073=make_lisp_string('abc');
+var l6074=QIList(l33,QIList(l24,QIList(l452,l6070,l6071,l6),l6),QIList(l24,QIList(l452,l6072,l6073,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l6070,l6071))!==l6.value?l24.fvalue(pv,1,l452.fvalue(pv,2,l6072,l6073)):l6.value,l6074);
+var l6075=QIList(l24,QIList(l452,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l5590,l5714)),l6075);
+var l6076=QIList(l141,QIList(l452,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l452.fvalue(pv,2,l5716,l5717);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6076);
+var l6077=QIList(l24,QIList(l452,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,l5590,l5590)),l6077);
+var l6078=QIList(l24,QIList(l452,'a','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,'a','a')),l6078);
+var l6079=QIList(l141,QIList(l452,'a','b',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l452.fvalue(pv,2,'a','b');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6079);
+var l6080=QIList(l24,QIList(l452,'z','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l452.fvalue(pv,2,'z','a')),l6080);
+var l6081=QIList(l24,QIList(l453,l101,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l101,l101)),l6081);
+var l6082=make_lisp_string('dog');
+var l6083=make_lisp_string('dog');
+var l6084=QIList(l24,QIList(l453,l6082,l6083,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l6082,l6083)),l6084);
+var l6085=make_lisp_string(' ');
+var l6086=make_lisp_string(' ');
+var l6087=QIList(l24,QIList(l453,l6085,l6086,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l6085,l6086)),l6087);
+var l6088=make_lisp_string('abc');
+var l6089=QIList(l23,QIList(l453,l6088,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,2,l6088,l101),0),l6089);
+var l6090=make_lisp_string('abc');
+var l6091=QIList(l24,QIList(l453,l101,l6090,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l101,l6090)),l6091);
+var l6092=make_lisp_string('ab');
+var l6093=make_lisp_string('abc');
+var l6094=QIList(l24,QIList(l453,l6092,l6093,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l6092,l6093)),l6094);
+var l6095=make_lisp_string('abc');
+var l6096=make_lisp_string('ab');
+var l6097=QIList(l23,QIList(l453,l6095,l6096,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,2,l6095,l6096),2),l6097);
+var l6098=make_lisp_string('aba');
+var l6099=make_lisp_string('aaa');
+var l6100=QIList(l23,QIList(l453,l6098,l6099,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,2,l6098,l6099),1),l6100);
+var l6101=make_lisp_string('aaa');
+var l6102=make_lisp_string('aba');
+var l6103=QIList(l24,QIList(l453,l6101,l6102,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l6101,l6102)),l6103);
+var l6104=make_lisp_string('my cat food');
+var l6105=make_lisp_string('your dog food');
+var l6106=QIList(l24,QIList(l453,l6104,l6105,l442,6,l444,8,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,6,l6104,l6105,l442.value,6,l444.value,8)),l6106);
+var l6107=make_lisp_string('cat food 2 dollars');
+var l6108=make_lisp_string('dog food 3 dollars');
+var l6109=QIList(l24,QIList(l453,l6107,l6108,l442,3,l443,9,l444,3,l445,9,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,10,l6107,l6108,l442.value,3,l443.value,9,l444.value,3,l445.value,9)),l6109);
+var l6110=make_lisp_string('xyzabcde');
+var l6111=make_lisp_string('abcd');
+var l6112=QIList(l23,QIList(l453,l6110,l6111,l442,3,l6),7,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,4,l6110,l6111,l442.value,3),7),l6112);
+var l6113=make_lisp_string('abc');
+var l6114=make_lisp_string('abc');
+var l6115=QIList(l24,QIList(l453,l6113,l6114,l443,1,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,4,l6113,l6114,l443.value,1)),l6115);
+var l6116=make_lisp_string('xyzabc');
+var l6117=make_lisp_string('a');
+var l6118=QIList(l23,QIList(l453,l6116,l6117,l442,3,l443,5,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,6,l6116,l6117,l442.value,3,l443.value,5),4),l6118);
+var l6119=make_lisp_string('xyzXYZ');
+var l6120=make_lisp_string('abcxyz');
+var l6121=QIList(l23,QIList(l453,l6119,l6120,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,4,l6119,l6120,l444.value,3),3),l6121);
+var l6122=make_lisp_string('abcxyz');
+var l6123=make_lisp_string('abcxyz');
+var l6124=QIList(l23,QIList(l453,l6122,l6123,l445,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,4,l6122,l6123,l445.value,3),3),l6124);
+var l6125=make_lisp_string('xyzXYZ');
+var l6126=make_lisp_string('abcxyz');
+var l6127=QIList(l24,QIList(l453,l6125,l6126,l443,2,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,6,l6125,l6126,l443.value,2,l444.value,3)),l6127);
+var l6128=make_lisp_string('xyzabc');
+var l6129=make_lisp_string('abcdef');
+var l6130=QIList(l24,QIList(l453,l6128,l6129,l442,3,l445,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,6,l6128,l6129,l442.value,3,l445.value,3)),l6130);
+var l6131=make_lisp_string('z');
+var l6132=make_lisp_string('aaaa');
+var l6133=QIList(l23,QIList(l453,l6131,l6132,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,2,l6131,l6132),0),l6133);
+var l6134=make_lisp_string('pTTTxTTTqqq');
+var l6135=make_lisp_string('pppTTTaTTT');
+var l6136=QIList(l23,QIList(l453,l6134,l6135,l442,1,l444,3,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,6,l6134,l6135,l442.value,1,l444.value,3),4),l6136);
+var l6137=make_lisp_string('pppTTTxTTTqqq');
+var l6138=make_lisp_string('pTTTaTTT');
+var l6139=QIList(l23,QIList(l453,l6137,l6138,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l453.fvalue(pv,10,l6137,l6138,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l6139);
+var l6140=make_lisp_string('abc');
+var l6141=make_lisp_string('ABC');
+var l6142=make_lisp_string('ABC');
+var l6143=make_lisp_string('abc');
+var l6144=QIList(l33,QIList(l24,QIList(l453,l6140,l6141,l6),l6),QIList(l24,QIList(l453,l6142,l6143,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l6140,l6141))!==l6.value?l24.fvalue(pv,1,l453.fvalue(pv,2,l6142,l6143)):l6.value,l6144);
+var l6145=QIList(l141,QIList(l453,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l453.fvalue(pv,2,l5590,l5714);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6145);
+var l6146=QIList(l24,QIList(l453,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l5716,l5717)),l6146);
+var l6147=QIList(l24,QIList(l453,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,l5590,l5590)),l6147);
+var l6148=QIList(l24,QIList(l453,'a','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,'a','a')),l6148);
+var l6149=QIList(l24,QIList(l453,'a','b',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l453.fvalue(pv,2,'a','b')),l6149);
+var l6150=QIList(l141,QIList(l453,'z','a',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l453.fvalue(pv,2,'z','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6150);
+var l6151=QIList(l23,QIList(l454,l101,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l101,l101),0),l6151);
+var l6152=make_lisp_string('dog');
+var l6153=make_lisp_string('dog');
+var l6154=QIList(l23,QIList(l454,l6152,l6153,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l6152,l6153),3),l6154);
+var l6155=make_lisp_string(' ');
+var l6156=make_lisp_string(' ');
+var l6157=QIList(l23,QIList(l454,l6155,l6156,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l6155,l6156),1),l6157);
+var l6158=make_lisp_string('abc');
+var l6159=QIList(l24,QIList(l454,l6158,l101,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l454.fvalue(pv,2,l6158,l101)),l6159);
+var l6160=make_lisp_string('ab');
+var l6161=make_lisp_string('abc');
+var l6162=QIList(l23,QIList(l454,l6160,l6161,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l6160,l6161),2),l6162);
+var l6163=make_lisp_string('aaa');
+var l6164=make_lisp_string('aba');
+var l6165=QIList(l23,QIList(l454,l6163,l6164,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l6163,l6164),1),l6165);
+var l6166=make_lisp_string('aba');
+var l6167=make_lisp_string('aaa');
+var l6168=QIList(l24,QIList(l454,l6166,l6167,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l454.fvalue(pv,2,l6166,l6167)),l6168);
+var l6169=make_lisp_string('my cat food');
+var l6170=make_lisp_string('your dog food');
+var l6171=QIList(l23,QIList(l454,l6169,l6170,l442,6,l444,8,l6),11,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,6,l6169,l6170,l442.value,6,l444.value,8),11),l6171);
+var l6172=make_lisp_string('cat food 2 dollars');
+var l6173=make_lisp_string('dog food 3 dollars');
+var l6174=QIList(l23,QIList(l454,l6172,l6173,l442,3,l443,9,l444,3,l445,9,l6),9,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,10,l6172,l6173,l442.value,3,l443.value,9,l444.value,3,l445.value,9),9),l6174);
+var l6175=make_lisp_string('xyzabc');
+var l6176=make_lisp_string('abcd');
+var l6177=QIList(l23,QIList(l454,l6175,l6176,l442,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,4,l6175,l6176,l442.value,3),6),l6177);
+var l6178=make_lisp_string('abc');
+var l6179=make_lisp_string('abc');
+var l6180=QIList(l23,QIList(l454,l6178,l6179,l443,1,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,4,l6178,l6179,l443.value,1),1),l6180);
+var l6181=make_lisp_string('xyzabc');
+var l6182=make_lisp_string('abc');
+var l6183=QIList(l23,QIList(l454,l6181,l6182,l442,3,l443,5,l6),5,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,6,l6181,l6182,l442.value,3,l443.value,5),5),l6183);
+var l6184=make_lisp_string('xyz');
+var l6185=make_lisp_string('abcxyzXYZ');
+var l6186=QIList(l23,QIList(l454,l6184,l6185,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,4,l6184,l6185,l444.value,3),3),l6186);
+var l6187=make_lisp_string('abc');
+var l6188=make_lisp_string('abcxyz');
+var l6189=QIList(l23,QIList(l454,l6187,l6188,l445,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,4,l6187,l6188,l445.value,3),3),l6189);
+var l6190=make_lisp_string('xyz');
+var l6191=make_lisp_string('abcxyz');
+var l6192=QIList(l23,QIList(l454,l6190,l6191,l443,2,l444,3,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,6,l6190,l6191,l443.value,2,l444.value,3),2),l6192);
+var l6193=make_lisp_string('xyzabc');
+var l6194=make_lisp_string('abcdef');
+var l6195=QIList(l23,QIList(l454,l6193,l6194,l442,3,l445,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,6,l6193,l6194,l442.value,3,l445.value,3),6),l6195);
+var l6196=make_lisp_string('aaaa');
+var l6197=make_lisp_string('z');
+var l6198=QIList(l23,QIList(l454,l6196,l6197,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l6196,l6197),0),l6198);
+var l6199=make_lisp_string('pppTTTaTTTqqq');
+var l6200=make_lisp_string('pTTTxTTT');
+var l6201=QIList(l23,QIList(l454,l6199,l6200,l442,3,l444,1,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,6,l6199,l6200,l442.value,3,l444.value,1),6),l6201);
+var l6202=make_lisp_string('pppTTTaTTTqqq');
+var l6203=make_lisp_string('pTTTxTTT');
+var l6204=QIList(l23,QIList(l454,l6202,l6203,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,10,l6202,l6203,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l6204);
+var l6205=make_lisp_string('abc');
+var l6206=make_lisp_string('ABC');
+var l6207=make_lisp_string('ABC');
+var l6208=make_lisp_string('abc');
+var l6209=QIList(l33,QIList(l23,QIList(l454,l6205,l6206,l6),3,l6),QIList(l23,QIList(l454,l6207,l6208,l6),3,l6),l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l454.fvalue(pv,2,l6205,l6206),3)!==l6.value?l23.fvalue(pv,2,l454.fvalue(pv,2,l6207,l6208),3):l6.value,l6209);
+var l6210=QIList(l24,QIList(l454,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l454.fvalue(pv,2,l5590,l5714)),l6210);
+var l6211=QIList(l141,QIList(l454,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l454.fvalue(pv,2,l5716,l5717);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6211);
+var l6212=QIList(l141,QIList(l454,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),4,l6);
+l4369.fvalue(pv,2,(function(){var x1=l454.fvalue(pv,2,l5590,l5590);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==4?l5.value:l6.value;
+})(),l6212);
+var l6213=QIList(l141,QIList(l454,'a','a',l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l454.fvalue(pv,2,'a','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l6213);
+var l6214=QIList(l141,QIList(l454,'a','b',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l454.fvalue(pv,2,'a','b');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6214);
+var l6215=QIList(l24,QIList(l454,'z','a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l454.fvalue(pv,2,'z','a')),l6215);
+var l6216=QIList(l23,QIList(l455,l101,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l101,l101),0),l6216);
+var l6217=make_lisp_string('dog');
+var l6218=make_lisp_string('dog');
+var l6219=QIList(l23,QIList(l455,l6217,l6218,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6217,l6218),3),l6219);
+var l6220=make_lisp_string(' ');
+var l6221=make_lisp_string(' ');
+var l6222=QIList(l23,QIList(l455,l6220,l6221,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6220,l6221),1),l6222);
+var l6223=make_lisp_string('abc');
+var l6224=QIList(l23,QIList(l455,l6223,l101,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6223,l101),0),l6224);
+var l6225=make_lisp_string('abc');
+var l6226=QIList(l24,QIList(l455,l101,l6225,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,2,l101,l6225)),l6226);
+var l6227=make_lisp_string('ab');
+var l6228=make_lisp_string('abc');
+var l6229=QIList(l24,QIList(l455,l6227,l6228,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,2,l6227,l6228)),l6229);
+var l6230=make_lisp_string('abc');
+var l6231=make_lisp_string('ab');
+var l6232=QIList(l23,QIList(l455,l6230,l6231,l6),2,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6230,l6231),2),l6232);
+var l6233=make_lisp_string('aba');
+var l6234=make_lisp_string('aaa');
+var l6235=QIList(l23,QIList(l455,l6233,l6234,l6),1,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6233,l6234),1),l6235);
+var l6236=make_lisp_string('aaa');
+var l6237=make_lisp_string('aba');
+var l6238=QIList(l24,QIList(l455,l6236,l6237,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,2,l6236,l6237)),l6238);
+var l6239=make_lisp_string('my cat food');
+var l6240=make_lisp_string('your dog food');
+var l6241=QIList(l23,QIList(l455,l6239,l6240,l442,6,l444,8,l6),11,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,6,l6239,l6240,l442.value,6,l444.value,8),11),l6241);
+var l6242=make_lisp_string('cat food 2 dollars');
+var l6243=make_lisp_string('dog food 3 dollars');
+var l6244=QIList(l23,QIList(l455,l6242,l6243,l442,3,l443,9,l444,3,l445,9,l6),9,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,10,l6242,l6243,l442.value,3,l443.value,9,l444.value,3,l445.value,9),9),l6244);
+var l6245=make_lisp_string('xyzabcde');
+var l6246=make_lisp_string('abcd');
+var l6247=QIList(l23,QIList(l455,l6245,l6246,l442,3,l6),7,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,4,l6245,l6246,l442.value,3),7),l6247);
+var l6248=make_lisp_string('abc');
+var l6249=make_lisp_string('abc');
+var l6250=QIList(l24,QIList(l455,l6248,l6249,l443,1,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,4,l6248,l6249,l443.value,1)),l6250);
+var l6251=make_lisp_string('xyzabc');
+var l6252=make_lisp_string('a');
+var l6253=QIList(l23,QIList(l455,l6251,l6252,l442,3,l443,5,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,6,l6251,l6252,l442.value,3,l443.value,5),4),l6253);
+var l6254=make_lisp_string('xyzXYZ');
+var l6255=make_lisp_string('abcxyz');
+var l6256=QIList(l23,QIList(l455,l6254,l6255,l444,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,4,l6254,l6255,l444.value,3),3),l6256);
+var l6257=make_lisp_string('abcxyz');
+var l6258=make_lisp_string('abcxyz');
+var l6259=QIList(l23,QIList(l455,l6257,l6258,l445,3,l6),3,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,4,l6257,l6258,l445.value,3),3),l6259);
+var l6260=make_lisp_string('xyzXYZ');
+var l6261=make_lisp_string('abcxyz');
+var l6262=QIList(l24,QIList(l455,l6260,l6261,l443,2,l444,3,l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,6,l6260,l6261,l443.value,2,l444.value,3)),l6262);
+var l6263=make_lisp_string('xyzabc');
+var l6264=make_lisp_string('abcdef');
+var l6265=QIList(l23,QIList(l455,l6263,l6264,l442,3,l445,3,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,6,l6263,l6264,l442.value,3,l445.value,3),6),l6265);
+var l6266=make_lisp_string('z');
+var l6267=make_lisp_string('aaaa');
+var l6268=QIList(l23,QIList(l455,l6266,l6267,l6),0,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6266,l6267),0),l6268);
+var l6269=make_lisp_string('pTTTxTTTqqq');
+var l6270=make_lisp_string('pppTTTaTTT');
+var l6271=QIList(l23,QIList(l455,l6269,l6270,l442,1,l444,3,l6),4,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,6,l6269,l6270,l442.value,1,l444.value,3),4),l6271);
+var l6272=make_lisp_string('pppTTTxTTTqqq');
+var l6273=make_lisp_string('pTTTaTTT');
+var l6274=QIList(l23,QIList(l455,l6272,l6273,l442,6,l443,7,l444,4,l445,5,l6),6,l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,10,l6272,l6273,l442.value,6,l443.value,7,l444.value,4,l445.value,5),6),l6274);
+var l6275=make_lisp_string('abc');
+var l6276=make_lisp_string('ABC');
+var l6277=make_lisp_string('ABC');
+var l6278=make_lisp_string('abc');
+var l6279=QIList(l33,QIList(l23,QIList(l455,l6275,l6276,l6),3,l6),QIList(l23,QIList(l455,l6277,l6278,l6),3,l6),l6);
+l4369.fvalue(pv,2,l23.fvalue(pv,2,l455.fvalue(pv,2,l6275,l6276),3)!==l6.value?l23.fvalue(pv,2,l455.fvalue(pv,2,l6277,l6278),3):l6.value,l6279);
+var l6280=QIList(l141,QIList(l455,QIList(l747,l5590,l6),QIList(l747,l5714,l6),l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l455.fvalue(pv,2,l5590,l5714);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6280);
+var l6281=QIList(l24,QIList(l455,QIList(l747,l5716,l6),QIList(l747,l5717,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,2,l5716,l5717)),l6281);
+var l6282=QIList(l141,QIList(l455,QIList(l747,l5590,l6),QIList(l747,l5590,l6),l6),4,l6);
+l4369.fvalue(pv,2,(function(){var x1=l455.fvalue(pv,2,l5590,l5590);
+if (typeof x1!='number') throw 'Not a number!';
+return x1==4?l5.value:l6.value;
+})(),l6282);
+var l6283=QIList(l141,QIList(l455,'a','a',l6),1,l6);
+l4369.fvalue(pv,2,(function(){var x1=l455.fvalue(pv,2,'a','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==1?l5.value:l6.value;
+})(),l6283);
+var l6284=QIList(l24,QIList(l455,'a','b',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,l455.fvalue(pv,2,'a','b')),l6284);
+var l6285=QIList(l141,QIList(l455,'z','a',l6),0,l6);
+l4369.fvalue(pv,2,(function(){var x1=l455.fvalue(pv,2,'z','a');
+if (typeof x1!='number') throw 'Not a number!';
+return x1==0?l5.value:l6.value;
+})(),l6285);
+var l6286=make_lisp_string('aaaaaa');
+var l6287=QIList(l438,l6286,l6);
+l4369.fvalue(pv,2,(function(){var X=l6286;
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})(),l6287);
+var l6288=QIList(l438,QIList(l109,0,l413,QIList(l747,l178,l6),l6),l6);
+l4369.fvalue(pv,2,(function(){var X=l109.fvalue(pv,3,0,l413.value,l178);
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})(),l6288);
+var l6289=QIList(l24,QIList(l438,'a',l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X='a';
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})()),l6289);
+var l6290=QIList(l24,QIList(l438,QIList(l747,l4449,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=l4449;
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})()),l6290);
+var l6291=QIList(l116,l6);
+var l6292=QIList(l24,QIList(l438,QIList(l747,l6291,l6),l6),l6);
+l4369.fvalue(pv,2,l24.fvalue(pv,1,(function(){var X=l6291;
+return typeof X==='object'&&'length' in X&&X.stringp==1?l5.value:l6.value;
+})()),l6292);
+var l6293=make_lisp_string('aaa');
+var l6294=QIList(l57,QIList(l440,3,l414,'a',l6),l6293,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l440.fvalue(pv,3,3,l414.value,'a'),l6293),l6294);
+var l6295=QIList(l57,QIList(l440,0,l6),l101,l6);
+l4369.fvalue(pv,2,l57.fvalue(pv,2,l440.fvalue(pv,1,0),l101),l6295);
+var l6296=make_lisp_string('~%Finished. The execution took ~a seconds.~%');
+l93.fvalue(pv,3,l5.value,l6296,(function(){var x1=(function(){var x1=(new Date()).getTime();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=(function(){var SYMBOL=l4368,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x2!='number') throw 'Not a number!';
+return x1-x2;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=l85.value;
+if (typeof x2!='number') throw 'Not a number!';
+return x1/x2/1.0;
+})());
+var l6297=make_lisp_string('All the tests (~a) passed successfully.~%');
+var l6298=make_lisp_string('~a/~a test(s) passed successfully.~%');
+if ((function(){var x1=(function(){var SYMBOL=l4363,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x1!='number') throw 'Not a number!';
+var x2=(function(){var SYMBOL=l4362,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})();
+if (typeof x2!='number') throw 'Not a number!';
+return x1==x2?l5.value:l6.value;
+})()!==l6.value) l93.fvalue(pv,3,l5.value,l6297,(function(){var SYMBOL=l4362,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})());
+ else l93.fvalue(pv,4,l5.value,l6298,(function(){var SYMBOL=l4363,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})(),(function(){var SYMBOL=l4362,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})());
+var l6299=make_lisp_string('~a test(s) failed expectedly.~%');
+if (l112.fvalue(pv,1,(function(){var SYMBOL=l4365,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})())!==l6.value) l6.value;
+ else l93.fvalue(pv,3,l5.value,l6299,(function(){var SYMBOL=l4365,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})());
+var l6300=make_lisp_string('~a test(s) passed unexpectedly.~%');
+if (l112.fvalue(pv,1,(function(){var SYMBOL=l4366,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})())!==l6.value) l6.value;
+ else l93.fvalue(pv,3,l5.value,l6300,(function(){var SYMBOL=l4366,VALUE=SYMBOL.value;
+if (VALUE===undefined) throw 'Variable `'+xstring(SYMBOL.name)+"' is unbound.";
+return VALUE;
+})());
