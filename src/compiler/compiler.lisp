@@ -1155,9 +1155,6 @@
 (define-builtin functionp (x)
   `(bool (=== (typeof ,x) "function")))
 
-(define-builtin %write-string (x)
-  `(method-call |lisp| "write" ,x))
-
 (define-builtin /debug (x)
   `(method-call |console| "log" (call |xstring| ,x)))
 
@@ -1267,6 +1264,10 @@
 (define-builtin in (key object)
   `(bool (in (call |xstring| ,key) ,object)))
 
+(define-builtin delete-property (key object)
+  `(selfcall
+    (delete (property ,object (call |xstring| ,key)))))
+
 (define-builtin map-for-in (function object)
   `(selfcall
     (var (f ,function)
@@ -1355,14 +1356,14 @@
       #+jscl((symbolp function)
              `(call ,(convert `#',function) ,@arglist))
       ((and (consp function) (eq (car function) 'lambda))
-       `(call ,(convert `#',function) ,@arglist))
+       `(call ,(convert `(function ,function)) ,@arglist))
       ((and (consp function) (eq (car function) 'oget))
        `(call |js_to_lisp|
               (call ,(reduce (lambda (obj p)
                                `(property ,obj (call |xstring| ,p)))
                              (mapcar #'convert (cdr function)))
                     ,@(mapcar (lambda (s)
-                                `(call |lisp_to_js| ,s))
+                                `(call |lisp_to_js| ,(convert s)))
                               args))))
       (t
        (error "Bad function descriptor")))))

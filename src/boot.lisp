@@ -52,6 +52,7 @@
 (defconstant t 't)
 (defconstant nil 'nil)
 (%js-vset "nil" nil)
+(%js-vset "t" t)
 
 (defmacro lambda (args &body body)
   `(function (lambda ,args ,@body)))
@@ -391,13 +392,13 @@
            (value (second pairs)))
        (multiple-value-bind (vars vals store-vars writer-form reader-form)
            (!get-setf-expansion place)
+         (declare (ignorable reader-form))
          ;; TODO: Optimize the expansion a little bit to avoid let*
          ;; or multiple-value-bind when unnecesary.
          `(let* ,(mapcar #'list vars vals)
             (multiple-value-bind ,store-vars
                 ,value
-              ,writer-form
-              ,reader-form)))))
+              ,writer-form)))))
     (t
      `(progn
         ,@(do ((pairs pairs (cddr pairs))
