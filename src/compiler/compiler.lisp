@@ -154,6 +154,40 @@
   `(%define-symbol-macro ',name ',expansion))
 
 
+
+;;; Report functions which are called but not defined
+
+(defvar *fn-info* '())
+
+(def!struct fn-info
+  symbol
+  defined
+  called)
+
+(defun find-fn-info (symbol)
+  (let ((entry (find symbol *fn-info* :key #'fn-info-symbol)))
+    (unless entry
+      (setq entry (make-fn-info :symbol symbol))
+      (push entry *fn-info*))
+    entry))
+
+(defun fn-info (symbol &key defined called)
+  (let ((info (find-fn-info symbol)))
+    (when defined
+      (setf (fn-info-defined info) defined))
+    (when called
+      (setf (fn-info-called info) called))))
+
+(defun report-undefined-functions ()
+  (dolist (info *fn-info*)
+    (let ((symbol (fn-info-symbol info)))
+      (when (and (fn-info-called info)
+                 (not (fn-info-defined info)))
+        (warn "The function `~a' is undefined.~%" symbol))))
+  (setq *fn-info* nil))
+
+
+
 ;;; Special forms
 
 (defvar *compilations* nil)
@@ -406,12 +440,14 @@
 
 
 (defun setq-pair (var val)
+  (unless (symbolp var)
+    (error "~a is not a symbol" var))
   (let ((b (lookup-in-lexenv var *environment* 'variable)))
     (cond
       ((and b
-            (eq (binding-type b) 'variable)
-            (not (member 'special (binding-declarations b)))
-            (not (member 'constant (binding-declarations b))))
+	    (eq (binding-type b) 'variable)
+	    (not (member 'special (binding-declarations b)))
+	    (not (member 'constant (binding-declarations b))))
        `(= ,(binding-value b) ,(convert val)))
       ((and b (eq (binding-type b) 'macro))
        (convert `(setf ,var ,val)))
@@ -737,8 +773,7 @@
              (var (,idvar #()))
              ,cbody)
             (catch (cf)
-              (if (and (== (get cf "type") "block")
-                       (== (get cf "id") ,idvar))
+              (if (and (instanceof cf |BlockNLX|) (== (get cf "id") ,idvar))
                   ,(if *multiple-value-p*
                        `(return (method-call |values| "apply" this (call |forcemv| (get cf "values"))))
                        `(return (get cf "values")))
@@ -757,34 +792,27 @@
     ;; capture it in a closure.
     `(selfcall
       ,(when multiple-value-p `(var (|values| |mv|)))
-      (throw
-          (object
-           "type" "block"
-           "id" ,(binding-value b)
-           "values" ,(convert value multiple-value-p)
-           "message" ,(concat "Return from unknown block '" (symbol-name name) "'."))))))
+      (throw (new (call |BlockNLX|
+                        ,(binding-value b)
+                        ,(convert value multiple-value-p)
+                        ,(symbol-name name)))))))
 
 (define-compilation catch (id &rest body)
-  `(selfcall
-    (var (id ,(convert id)))
-    (try
-     ,(convert-block body t))
-    (catch (|cf|)
-      (if (and (== (get |cf| "type") "catch")
-               (== (get |cf| "id") id))
-          ,(if *multiple-value-p*
-               `(return (method-call |values| "apply" this (call |forcemv| (get |cf| "values"))))
-               `(return (method-call |pv|     "apply" this (call |forcemv| (get |cf| "values")))))
-          (throw |cf|)))))
+  (let ((values (if *multiple-value-p* '|values| '|pv|)))
+    `(selfcall
+      (var (id ,(convert id)))
+      (try
+       ,(convert-block body t))
+      (catch (cf)
+        (if (and (instanceof cf |CatchNLX|) (== (get cf "id") id))
+            (return (method-call ,values "apply" this (call |forcemv| (get cf "values"))))
+            (throw cf))))))
 
 (define-compilation throw (id value)
   `(selfcall
     (var (|values| |mv|))
-    (throw (object
-            "type" "catch"
-            "id" ,(convert id)
-            "values" ,(convert value t)
-            "message" "Throw uncatched."))))
+    (throw (new (call |CatchNLX| ,(convert id) ,(convert value t))))))
+
 
 (defun go-tag-p (x)
   (or (integerp x) (symbolp x)))
@@ -832,26 +860,19 @@
                           default
                           (break tbloop)))
                  (catch (jump)
-                   (if (and (== (get jump "type") "tagbody")
-                            (== (get jump "id") ,tbidx))
+                   (if (and (instanceof jump |TagNLX|) (== (get jump "id") ,tbidx))
                        (= ,branch (get jump "label"))
                        (throw jump)))))
         (return ,(convert nil))))))
 
 (define-compilation go (label)
-  (let ((b (lookup-in-lexenv label *environment* 'gotag))
-        (n (cond
-             ((symbolp label) (symbol-name label))
-             ((integerp label) (integer-to-string label)))))
+  (let ((b (lookup-in-lexenv label *environment* 'gotag)))
     (when (null b)
       (error "Unknown tag `~S'" label))
     `(selfcall
-      (throw
-          (object
-           "type" "tagbody"
-           "id" ,(first (binding-value b))
-           "label" ,(second (binding-value b))
-           "message" ,(concat "Attempt to GO to non-existing tag " n))))))
+      (throw (new (call |TagNLX|
+                        ,(first (binding-value b))
+                        ,(second (binding-value b))))))))
 
 (define-compilation unwind-protect (form &rest clean-up)
   `(selfcall
@@ -997,6 +1018,9 @@
 (define-builtin expt (x y)
   `(method-call |Math| "pow" ,x ,y))
 
+(define-builtin sqrt (x)
+  `(method-call |Math| "sqrt" ,x))
+
 (define-builtin float-to-string (x)
   `(call |make_lisp_string| (method-call ,x |toString|)))
 
@@ -1071,9 +1095,6 @@
     (if (=== func undefined)
         (throw (+ "Function `" (call |xstring| (get symbol "name")) "' is undefined.")))
     (return func)))
-
-(define-builtin symbol-plist (x)
-  `(or (get ,x "plist") ,(convert nil)))
 
 (define-builtin lambda-code (x)
   `(call |make_lisp_string| (method-call ,x "toString")))
@@ -1254,6 +1275,9 @@
 (define-raw-builtin oset (value object key &rest keys)
   (convert `(oset* (lisp-to-js ,value) ,object ,key ,@keys)))
 
+(define-builtin js-null-p (x)
+  `(bool (=== ,x null)))
+
 (define-builtin objectp (x)
   `(bool (=== (typeof ,x) "object")))
 
@@ -1352,9 +1376,11 @@
       ((and (symbolp function)
             #+jscl (eq (symbol-package function) (find-package "COMMON-LISP"))
             #-jscl t)
+       (fn-info function :called t)
        `(method-call ,(convert `',function) "fvalue" ,@arglist))
-      #+jscl((symbolp function)
-             `(call ,(convert `#',function) ,@arglist))
+      #+jscl
+      ((symbolp function)
+       `(call ,(convert `#',function) ,@arglist))
       ((and (consp function) (eq (car function) 'lambda))
        `(call ,(convert `(function ,function)) ,@arglist))
       ((and (consp function) (eq (car function) 'oget))

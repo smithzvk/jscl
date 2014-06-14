@@ -22,6 +22,8 @@
 
 (in-package :jscl)
 
+(defvar *version* "0.0.2")
+
 (defvar *base-directory*
   (or #.*load-pathname* *default-pathname-defaults*))
 
@@ -41,6 +43,7 @@
 (defvar *source*
   '(("boot"          :target)
     ("compat"        :host)
+    ("setf"          :target)
     ("utils"         :both)
     ("numbers"       :target)
     ("char"          :target)
@@ -54,8 +57,8 @@
     ("documentation" :target)
     ("misc"          :target)
     ("ffi"           :target)
+    ("symbol"        :target)
     ("package"       :target)
-
     ("read"          :both)
     ("defstruct"     :both)
     ("lambda-list"   :both)
@@ -64,6 +67,14 @@
      ("codegen"      :both)
      ("compiler"     :both))
     ("toplevel"      :target)))
+
+
+(defun source-pathname (filename &key (directory '(:relative "src")) (type nil) (defaults filename))
+  (merge-pathnames
+   (if type
+       (make-pathname :type type :directory directory :defaults defaults)
+       (make-pathname            :directory directory :defaults defaults))
+   *base-directory*))
 
 (defun get-files (file-list type dir)
   "Traverse FILE-LIST and retrieve a list of the files within which match
@@ -89,13 +100,6 @@
     (error "TYPE must be one of :HOST or :TARGET, not ~S" type))
   `(dolist (,name (get-files *source* ,type '(:relative "src")))
      ,@body))
-
-(defun source-pathname (filename &key (directory '(:relative "src")) (type nil) (defaults filename))
-  (merge-pathnames
-   (if type
-       (make-pathname :type type :directory directory :defaults defaults)
-       (make-pathname            :directory directory :defaults defaults))
-   *base-directory*))
 
 ;;; Compile jscl into the host
 (with-compilation-unit ()
@@ -159,17 +163,22 @@
     (setq *variable-counter* 0
           *gensym-counter* 0
           *literal-counter* 0)
-    (with-open-file (out (merge-pathnames "jscl.js" *base-directory*) :direction :output :if-exists :supersede)
+    (with-open-file (out (merge-pathnames "jscl.js" *base-directory*)
+                         :direction :output
+                         :if-exists :supersede)
       (write-string (read-whole-file (source-pathname "prelude.js")) out)
       (do-source input :target
         (!compile-file input out))
       (dump-global-environment out))
     ;; Tests
-    (with-open-file (out (merge-pathnames "tests.js" *base-directory*) :direction :output :if-exists :supersede)
+    (with-open-file (out (merge-pathnames "tests.js" *base-directory*)
+                         :direction :output
+                         :if-exists :supersede)
       (dolist (input (append (directory "tests.lisp")
                              (directory "tests/*.lisp")
                              (directory "tests-report.lisp")))
-        (!compile-file input out)))))
+        (!compile-file input out)))
+    (report-undefined-functions)))
 
 
 ;;; Run the tests in the host Lisp implementation. It is a quick way

@@ -151,3 +151,22 @@ function js_to_lisp (x) {
     });
   } else return x;
 }
+
+
+// Non-local exits
+
+function BlockNLX (id, values, name){
+  this.id = id;
+  this.values = values;
+  this.name = name;
+}
+
+function CatchNLX (id, values){
+  this.id = id;
+  this.values = values;
+}
+
+function TagNLX (id, label){
+  this.id = id;
+  this.label = label;
+}
