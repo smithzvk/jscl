@@ -1036,16 +1036,22 @@
 (define-builtin car (x)
   `(selfcall
     (var (tmp ,x))
-    (return (if (=== tmp ,(convert nil))
-                ,(convert nil)
-                (get tmp "car")))))
+    (if (=== tmp ,(convert nil))
+        (return ,(convert nil))
+        (if (and (== (typeof tmp) "object")
+                 (in "car" tmp))
+            (return (get tmp "car"))
+            (throw "CAR called on non-list argument")))))
 
 (define-builtin cdr (x)
   `(selfcall
     (var (tmp ,x))
-    (return (if (=== tmp ,(convert nil))
-                ,(convert nil)
-                (get tmp "cdr")))))
+    (if (=== tmp ,(convert nil))
+        (return ,(convert nil))
+        (if (and (== (typeof tmp) "object")
+                 (in "cdr" tmp))
+            (return (get tmp "cdr"))
+            (throw "CDR called on non-list argument")))))
 
 (define-builtin rplaca (x new)
   `(selfcall
@@ -1318,6 +1324,45 @@
             `(%js-vref ,var))))
 
 
+;; Catch any Javascript exception. Note that because all non-local
+;; exit are based on try-catch-finally, it will also catch them. We
+;; could provide a JS function to detect it, so the user could rethrow
+;; the error.
+;; 
+;; (%js-try
+;;  (progn
+;;    )
+;;  (catch (err)
+;;    )
+;;  (finally
+;;   ))
+;; 
+(define-compilation %js-try (form &optional catch-form finally-form)
+  (let ((catch-compilation
+         (and catch-form
+              (destructuring-bind (catch (var) &body body) catch-form
+                (unless (eq catch 'catch)
+                  (error "Bad CATCH clausule `~S'." catch-form))
+                (let* ((*environment* (extend-local-env (list var)))
+                       (tvar (translate-variable var)))
+                  `(catch (,tvar)
+                     (= ,tvar (call |js_to_lisp| ,tvar))
+                     ,(convert-block body t))))))
+        
+        (finally-compilation
+         (and finally-form
+              (destructuring-bind (finally &body body) finally-form
+                (unless (eq finally 'finally)
+                  (error "Bad FINALLY clausule `~S'." finally-form))
+                `(finally
+                  ,(convert-block body))))))
+
+    `(selfcall
+      (try (return ,(convert form)))
+      ,catch-compilation
+      ,finally-compilation)))
+
+
 #-jscl
 (defvar *macroexpander-cache*
   (make-hash-table :test #'eq))
@@ -1469,12 +1514,12 @@
       (t
        (when *compile-print-toplevels*
          (let ((form-string (prin1-to-string sexp)))
-           (format t "Compiling ~a..." (truncate-string form-string))))
+           (format t "Compiling ~a...~%" (truncate-string form-string))))
        (let ((code (convert sexp multiple-value-p)))
          `(progn
             ,@(get-toplevel-compilations)
             ,code))))))
 
 (defun compile-toplevel (sexp &optional multiple-value-p)
-  (with-output-to-string (*standard-output*)
+  (with-output-to-string (*js-output*)
     (js (convert-toplevel sexp multiple-value-p))))
