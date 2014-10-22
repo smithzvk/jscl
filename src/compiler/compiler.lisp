@@ -368,10 +368,9 @@
                                    `(!== (property |arguments| (+ i 2)) ,(convert keyword-name))))
                                keyword-arguments))
                      (throw (+ "Unknown keyword argument "
-                               (call |xstring|
-                                     (property
-                                      (property |arguments| (+ i 2))
-                                      "name")))))))))))
+                               (property
+                                (property |arguments| (+ i 2))
+                                "name"))))))))))
 
 (defun parse-lambda-list (ll)
   (values (ll-required-arguments ll)
@@ -502,16 +501,21 @@
   (make-symbol (concat "l" (integer-to-string *literal-counter*))))
 
 (defun dump-symbol (symbol)
-  #-jscl
   (let ((package (symbol-package symbol)))
-    (if (eq package (find-package "KEYWORD"))
-        `(new (call |Symbol| ,(dump-string (symbol-name symbol)) ,(dump-string (package-name package))))
-        `(new (call |Symbol| ,(dump-string (symbol-name symbol))))))
-  #+jscl
-  (let ((package (symbol-package symbol)))
-    (if (null package)
-        `(new (call |Symbol| ,(dump-string (symbol-name symbol))))
-        (convert `(intern ,(symbol-name symbol) ,(package-name package))))))
+    (cond
+      ;; Uninterned symbol
+      ((null package)
+       `(new (call |Symbol| ,(symbol-name symbol))))
+      ;; Special case for bootstrap. For now, we just load all the
+      ;; code with JSCL as the current package. We will compile the
+      ;; JSCL package as CL in the target.
+      #-jscl
+      ((or (eq package (find-package "JSCL"))
+           (eq package (find-package "CL")))
+       `(call |intern| ,(symbol-name symbol)))
+      ;; Interned symbol
+      (t
+       `(call |intern| ,(symbol-name symbol) ,(package-name package))))))
 
 (defun dump-cons (cons)
   (let ((head (butlast cons))
@@ -1070,10 +1074,10 @@
   `(bool (instanceof ,x |Symbol|)))
 
 (define-builtin make-symbol (name)
-  `(new (call |Symbol| ,name)))
+  `(new (call |Symbol| (call |lisp_to_js| ,name))))
 
-(define-builtin symbol-name (x)
-  `(get ,x "name"))
+(define-compilation symbol-name (x)
+  (convert `(oget ,x "name")))
 
 (define-builtin set (symbol value)
   `(= (get ,symbol "value") ,value))
@@ -1092,7 +1096,7 @@
     (var (symbol ,x)
          (value (get symbol "value")))
     (if (=== value undefined)
-        (throw (+ "Variable `" (call |xstring| (get symbol "name")) "' is unbound.")))
+        (throw (+ "Variable `" (get symbol "name") "' is unbound.")))
     (return value)))
 
 (define-builtin symbol-function (x)
@@ -1100,7 +1104,7 @@
     (var (symbol ,x)
          (func (get symbol "fvalue")))
     (if (=== func undefined)
-        (throw (+ "Function `" (call |xstring| (get symbol "name")) "' is undefined.")))
+        (throw (+ "Function `" (get symbol "name") "' is undefined.")))
     (return func)))
 
 (define-builtin lambda-code (x)
