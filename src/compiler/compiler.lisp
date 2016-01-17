@@ -80,7 +80,7 @@
 (defun emit (expr &optional var (target *target*))
   (when (eq var t)
     (setq var (gvarname))
-    (emit `(var ,var)))
+    (emit `(let ,var)))
   (let ((stmt (if var `(= ,var ,expr) expr)))
     (push-to-target stmt target)
     var))
