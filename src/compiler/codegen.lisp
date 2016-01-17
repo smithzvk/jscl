@@ -447,7 +447,7 @@
                (js-format "return ")
                (js-expr value)
                (js-end-stmt)))
-           (var
+           ((var let)
             (flet ((js-var (spec)
                      (destructuring-bind (variable &optional initial)
                          (ensure-list spec)
@@ -456,7 +456,9 @@
                          (js-format "=")
                          (js-expr initial no-comma)))))
               (destructuring-bind (var &rest vars) (cdr form)
-                (js-format "var ")
+                (js-format (if (eq (car form) 'var)
+                               "var "
+                               "let "))
                 (js-var var)
                 (dolist (var vars)
                   (js-format ",")
